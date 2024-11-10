@@ -22,7 +22,7 @@ export async function GET(
       return NextResponse.json({ error: 'athlete_id is missing' }, { status: 400 });
     }
 
-    // Validate that postId is a number
+    // Validate that athleteId is a number
     const athleteIdNumber = Number(athleteId);
     if (isNaN(athleteIdNumber)) {
       return NextResponse.json(

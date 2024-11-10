@@ -3,20 +3,16 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-// Change the type to match Next.js route parameters
-interface RouteParams {
-  params: {
-    postId: string;
-  }
-}
+type Params = Promise<{ postId: string }>;
+
 
 export async function GET(
   request: Request,
-  { params }: RouteParams
+  segmentData: {params: Params}
 ) {
   try {
-    const { postId } = await params;
-    console.log('PostId in API:', postId);
+    const params = await segmentData.params;
+    const postId = params.postId;
 
     if (!postId) {
       return NextResponse.json({ error: 'postId is missing' }, { status: 400 });
@@ -36,21 +32,20 @@ export async function GET(
       where: { post_id: postIdNumber },
     });
 
-    console.log('Found post:', post);
-
     if (!post) {
       return NextResponse.json({ error: 'Post not found' }, { status: 404 });
     }
 
     return NextResponse.json(post, { status: 200 });
   } catch (error) {
-    console.error('Error querying the database:', error);
+    console.error('Error fetching post data:', error);
     if (error instanceof Error) {
       return NextResponse.json(
         { error: "Internal server error", message: error.message },
         { status: 500 }
       );
     }
+    
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }
