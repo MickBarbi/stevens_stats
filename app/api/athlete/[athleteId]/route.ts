@@ -29,6 +29,10 @@ interface Bests {
   rank_position_outdoor: number | null;
 }
 
+interface Award {
+  award: string;
+}
+
 export async function GET(request: Request, { params }: { params: { athleteId: string } }) {
   const athleteId = params.athleteId;  // Get athleteId from query params
 
@@ -55,20 +59,14 @@ export async function GET(request: Request, { params }: { params: { athleteId: s
       WHERE b.athlete_id = ${athleteId};`
     ;
 
-    //if (!bests || bests.length === 0) {
-    //  return NextResponse.json({ error: 'No bests found for this athlete' }, { status: 404 });
-    //}
-
+    // Fetch college progression
     const college_progression = await prisma.$queryRaw<Performance[]>
       `SELECT *
       FROM Performances
       WHERE athlete_id = ${athleteId}`
     ;
 
-    //if (!college_progression || college_progression.length === 0) {
-    //  return NextResponse.json({ error: 'College Progression not found' }, { status: 404 });
-    //}
-
+    // Fetch other athletes
     const other_athletes = await prisma.$queryRaw<Athlete[]>
       `SELECT *
       FROM Athletes a
@@ -79,14 +77,14 @@ export async function GET(request: Request, { params }: { params: { athleteId: s
       return NextResponse.json({ error: 'Could not find all_athletes' }, { status: 404 });
     }
 
-    const awards = await prisma.$queryRaw<[{ award: string }]>
+    // Fetch awards
+    const awards = await prisma.$queryRaw<Award[]>
       `SELECT award
       FROM Awards
       WHERE athlete_id = ${athleteId};`
     ;
 
-    const formattedAwards = awards.map((awardObj) => awardObj.award);
-
+    const formattedAwards = awards.map((awardObj: Award) => awardObj.award);
 
     // Combine athlete data with best performances
     const athleteData = {
