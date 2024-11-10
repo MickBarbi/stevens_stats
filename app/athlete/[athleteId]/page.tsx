@@ -101,7 +101,7 @@ const EventCharts: React.FC<EventChartsProps> = ({ data }) => {
 
 const numConvert = (seconds: number | string) => {
   if (seconds === "-" || seconds === null) {
-    return seconds;
+    return "-";
   }
   seconds = String(seconds);
   if (!seconds.includes(".")) {
@@ -109,18 +109,13 @@ const numConvert = (seconds: number | string) => {
   }
   seconds = Number(seconds);
   if (seconds > 60) {
-  seconds = Number(seconds);
-  if (seconds > 60) {
     let minutes = 0;
-    while (seconds > 60) {
     while (seconds > 60) {
       minutes++;
       seconds -= 60;
     }
     return `${minutes}:${seconds.toFixed(2).toString().padStart(5, "0")}`;
-    return `${minutes}:${seconds.toFixed(2).toString().padStart(5, "0")}`;
   }
-  return seconds;
   return seconds;
 };
 
