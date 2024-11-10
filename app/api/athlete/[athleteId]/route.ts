@@ -64,6 +64,7 @@ export async function GET(
 
     const formattedAwards = awards.map((awardObj: Award) => awardObj.award);
 
+    // Combine athlete data with best performances
     const athleteData = {
       ...athlete,
       bests,
