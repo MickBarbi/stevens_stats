@@ -1,5 +1,7 @@
 import { PrismaClient } from '@prisma/client';
+import { NextResponse } from 'next/server';
 
+// Instantiate Prisma Client outside of the handler to reuse the connection
 const prisma = new PrismaClient();
 
 export async function GET() {
@@ -13,19 +15,20 @@ export async function GET() {
                 year: true,
                 image_path: true,
             },
-            where: {year: {not: -1}},
+            where: { year: { not: -1 } },  // Filter out athletes with year = -1
             orderBy: {
                 last_name: 'asc', // Order athletes by last name in ascending order
             },
         });
-        return new Response(JSON.stringify(athletes), {
-            status: 200,
-            headers: { 'Content-Type': 'application/json' },
-        });
+
+        // Return athletes data as a JSON response
+        return NextResponse.json(athletes, { status: 200});
     } catch (error) {
-        return new Response('Error querying the database: ' + error, {
-            status: 500,
-        });
+        console.error('Database query error:', error);
+        return NextResponse.json(
+            { error: 'An error occurred while fetching athletes' },
+            { status: 500 }
+        );
     } finally {
         await prisma.$disconnect(); // Close the connection when done
     }

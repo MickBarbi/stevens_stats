@@ -3,103 +3,92 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-interface Athlete {
-  athlete_id: number;
-  first_name: string;
-  last_name: string;
-  year: number;
-  graduation_date: number;
-  sex: string;
-  nickname: string | null;
-  bio: string | null;
-  image_path: string | null;
+interface Award {
+  award: string;
 }
 
-interface Bests {
-  result_id: number;
-  athlete_id: number;
-  event_id: number;
-  season_best_indoor: number | null;
-  season_best_outdoor: number | null;
-  overall_best_indoor: number | null;
-  overall_best_outdoor: number | null;
-  collegiate_best: number | null;
-  personal_best: number;
-  rank_position_indoor: number | null;
-  rank_position_outdoor: number | null;
-}
+type Params = Promise<{ athleteId: string }>;
 
-export async function GET(request: Request, { params }: { params: { athleteId: string } }) {
-  const athleteId = params.athleteId;  // Get athleteId from query params
-
-  if (!athleteId) {
-    return NextResponse.json({ error: 'athlete_id is missing' }, { status: 400 });
-  }
-
+export async function GET(
+  request: Request,
+  segmentData: { params: Params }
+) {
   try {
-    // Fetch athlete data
-    const athlete = await prisma.$queryRaw<Athlete[]>
-      `SELECT *
-      FROM Athletes a
-      WHERE a.athlete_id = ${athleteId}`
-    ;
+    // Await the params
+    const params = await segmentData.params;
+    const athleteId = params.athleteId;
+  
+    if (!athleteId) {
+      return NextResponse.json({ error: 'athlete_id is missing' }, { status: 400 });
+    }
 
-    if (!athlete || athlete.length === 0) {
+    // Validate that postId is a number
+    const athleteIdNumber = Number(athleteId);
+    if (isNaN(athleteIdNumber)) {
+      return NextResponse.json(
+        { error: "athlete_id should be a valid number" },
+        { status: 400 }
+      );
+    }
+
+    // Query for the specific athlete
+    const athlete = await prisma.athletes.findUnique({
+      where: { athlete_id: Number(athleteId) },
+    });
+
+    if (!athlete) {
       return NextResponse.json({ error: 'Athlete not found' }, { status: 404 });
     }
 
-    // Fetch best performances
-    const bests = await prisma.$queryRaw<Bests[]>
-      `SELECT *
-      FROM Bests b
-      WHERE b.athlete_id = ${athleteId};`
-    ;
+    const bests = await prisma.bests.findMany({
+      where: { athlete_id: Number(athleteId) },
+    });
 
-    //if (!bests || bests.length === 0) {
-    //  return NextResponse.json({ error: 'No bests found for this athlete' }, { status: 404 });
-    //}
+    const college_progression = await prisma.performances.findMany({
+      where: { athlete_id: Number(athleteId) },
+    });
 
-    const college_progression = await prisma.$queryRaw<Performance[]>
-      `SELECT *
-      FROM Performances
-      WHERE athlete_id = ${athleteId}`
-    ;
-
-    //if (!college_progression || college_progression.length === 0) {
-    //  return NextResponse.json({ error: 'College Progression not found' }, { status: 404 });
-    //}
-
-    const other_athletes = await prisma.$queryRaw<Athlete[]>
-      `SELECT *
-      FROM Athletes a
-      ORDER BY last_name`
-    ;
+    const other_athletes = await prisma.athletes.findMany({
+      orderBy: { last_name: 'asc' },
+      where: { year: { not: -1 } },
+    });
 
     if (!other_athletes || other_athletes.length === 0) {
-      return NextResponse.json({ error: 'Could not find all_athletes' }, { status: 404 });
+      return NextResponse.json({ error: 'Could not find all athletes' }, { status: 404 });
     }
 
-    const awards = await prisma.$queryRaw<[{ award: string }]>
-      `SELECT award
-      FROM Awards
-      WHERE athlete_id = ${athleteId};`
-    ;
+    const awards = await prisma.awards.findMany({
+      where: { athlete_id: Number(athleteId) },
+      select: { award: true },
+    });
 
-    const formattedAwards = awards.map((awardObj) => awardObj.award);
+    const formattedAwards = awards.map((awardObj: Award) => awardObj.award);
 
-
-    // Combine athlete data with best performances
     const athleteData = {
-      ...athlete[0],  // Spread the athlete info
-      bests,          // Add the bests performances data
+      ...athlete,
+      bests,
       college_progression,
       other_athletes,
-      awards: formattedAwards
+      awards: formattedAwards,
     };
 
-    return NextResponse.json(athleteData, { status: 200 });  // Send back the athlete data
+    return NextResponse.json(athleteData, { status: 200 });
   } catch (error) {
+    //Log detailed error for debugging
     console.error('Error fetching athlete data:', error);
-    return NextResponse.json({ error: 'An error occurred while fetching athlete data' }, { status: 500 });
+    // More detailed error handling
+    if (error instanceof Error) {
+      return NextResponse.json(
+        { error: "Internal server error", message: error.message },
+        { status: 500 }
+      );
+    }
+    
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
+  } finally {
+    await prisma.$disconnect();
   }
 }

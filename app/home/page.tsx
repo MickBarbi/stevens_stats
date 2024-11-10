@@ -1,26 +1,40 @@
 // app/home/page.js
-import { PrismaClient } from "@prisma/client";
+'use client';
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import './styles.css'
 
-const prisma = new PrismaClient();
+interface Post {
+  author: string;
+  title: string;
+  created_on: Date;
+  subheading: string;
+  post_id: number;
+}
 
-export default async function HomePage() {
-  // Fetching only the fields we need
-  const posts = await prisma.blog_Posts.findMany({
-    select: {
-      post_id: true,
-      title: true,
-      created_on: true,
-      author: true,
-      subheading: true
-    },
-    orderBy: { created_on: 'desc' },
-  });
+export default function HomePage() {
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch("/api/home");
+        const data = await response.json();
+        setPosts(data);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
+
 
   return (
     <div className="grid-container">
-      {posts.map((post) => (
+      {posts.map((post: Post) => (
         <Link href={`/home/${post.post_id}`} key={post.post_id}>
         <div className="post-box">
           <h2>{post.title}</h2>

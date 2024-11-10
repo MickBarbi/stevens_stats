@@ -7,6 +7,7 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContai
 import moment from 'moment';
 import Image from "next/image";
 import useMediaQuery from 'react-responsive';
+import { notFound } from "next/navigation";
 
 const get_index = (performance_id: number, performances: Performance[]) => {
   for (let i = 0; i < performances.length; i++){
@@ -208,34 +209,51 @@ interface EventChartsProps {
   data: Performance[]; // Expecting an array of Performance objects
 }
 
-const AthletePage = ({ params }: { params: { athleteId: string } }) => {
+type Params = Promise<{ athleteId: string }>;
+
+interface PageProps {
+  params: Params;
+}
+
+const AthletePage = ({ params }: PageProps) => {
   const [athlete, setAthlete] = useState<Athlete | null>(null);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
-  const athleteId = params.athleteId;
+  const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);
+        const resolvedParams = await params;
+        const athleteId = resolvedParams.athleteId;
+
         const response = await fetch(`/api/athlete/${athleteId}`); // Fetch data from the API route
+        if (!response.ok){
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const result = await response.json();
-        console.log(result); // Check the structure of the fetched data
         setAthlete(result);
       } catch (error) {
         console.log("Error fetching athlete data:", error);
+        setError(error instanceof Error ? error : new Error('Unknown error occurred'));
       } finally {
         setLoading(false);
       }
     };
     fetchData();
-  }, [athleteId]);
+  }, [params]);
 
   if (loading) {
     return <h1>Loading...</h1>;
   }
 
+  if (error){
+    return <div>Error: {error.message}</div>
+  }
+
   if (!athlete) {
-    return <p>Athlete not found</p>;
+    notFound();
   }
 
   const thStyle: React.CSSProperties = {

@@ -3,47 +3,41 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-interface Athlete {
-  athlete_id: number;
-  first_name: string;
-  last_name: string;
-  year: number;
-  graduation_date: number;
-  sex: string;
-}
-
 export async function GET() {
   try {
-    // Fetch athlete data
-    const athlete = await prisma.$queryRaw<Athlete[]>
-      `SELECT *
-      FROM Athletes a
-      WHERE a.athlete_id = 8327859`
-    ;
+    // Fetch a specific athlete by ID
+    const athlete = await prisma.athletes.findUnique({
+      where: { athlete_id: 8327859 },  // Use the specific athlete_id
+    });
 
-    if (!athlete || athlete.length === 0) {
+    if (!athlete) {
       return NextResponse.json({ error: 'Athlete not found' }, { status: 404 });
     }
 
-    const other_athletes = await prisma.$queryRaw<Athlete[]>
-      `SELECT *
-      FROM Athletes a
-      ORDER BY last_name`
-    ;
+    // Fetch other athletes ordered by last name (limit to avoid large data)
+    const other_athletes = await prisma.athletes.findMany({
+      orderBy: {
+        last_name: 'asc',  // Ensure ascending order of last_name
+      },
+      take: 100,  // Limit the number of athletes returned (adjust as needed)
+    });
 
     if (!other_athletes || other_athletes.length === 0) {
-      return NextResponse.json({ error: 'Could not find all_athletes' }, { status: 404 });
+      return NextResponse.json({ error: 'Could not find all athletes' }, { status: 404 });
     }
 
-    // Combine athlete data with best performances
+    // Combine the athlete data with the other athletes
     const athleteData = {
-      ...athlete[0],  // Spread the athlete info
-      other_athletes
+      ...athlete,  // Spread the specific athlete data
+      other_athletes,  // Add the list of other athletes
     };
 
-    return NextResponse.json(athleteData, { status: 200 });  // Send back the athlete data
+    return NextResponse.json(athleteData, { status: 200 });  // Send back the combined data
   } catch (error) {
     console.error('Error fetching athlete data:', error);
     return NextResponse.json({ error: 'An error occurred while fetching athlete data' }, { status: 500 });
+  } finally {
+    // Ensure Prisma client is properly disconnected
+    await prisma.$disconnect();
   }
 }

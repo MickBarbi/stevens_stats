@@ -1,27 +1,64 @@
-import { PrismaClient } from "@prisma/client";
+"use client";
+
+import { notFound } from "next/navigation";
+import React, { useEffect, useState } from "react";
 import './styles.css';
 
-// Initialize Prisma Client
-const prisma = new PrismaClient();
-
-// Define the type for the params prop
-interface PostPageProps {
-  params: {
-    post_id: string;
-  };
+interface Post {
+  author: string;
+  title: string;
+  created_on: Date;
+  subheading: string;
+  post_id: number;
+  body: string;
 }
 
-export default async function PostPage({ params }: PostPageProps) {
-  const { post_id } = params;
+type Params = Promise<{ postId: string }>;
 
-  // Fetch the post data using Prisma
-  const post = await prisma.blog_Posts.findUnique({
-    where: { post_id: parseInt(post_id) }, // Parsing post_id to integer
-  });
+interface PageProps {
+  params: Params;
+}
+
+export default function PostPage({ params }: PageProps) {
+  const [post, setPost] = useState<Post | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      try {
+        setLoading(true);
+        const resolvedParams = await params;
+        const postId = resolvedParams.postId;
+
+        const response = await fetch(`/api/home/${postId}`);
+        if (!response.ok){
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setPost(data);
+      } catch (error) {
+        console.error("Error fetching post:", error);
+        setError(error instanceof Error ? error : new Error('Unknown error occurred'));
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPost();
+  }, [params]);
+
+  if (loading){
+    return <div>Loading...</div>
+  }
+
+  if (error){
+    return <div>Error: {error.message}</div>
+  }
 
   // If no post found, display a 404 or return null
   if (!post) {
-    return <p>Post not found</p>;
+    notFound();
   }
 
   return (
