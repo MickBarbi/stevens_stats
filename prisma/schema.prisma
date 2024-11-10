@@ -1,0 +1,150 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model Athletes {
+  athlete_id              Int                       @id(map: "PK_Athletes")
+  first_name              String                    @db.VarChar(50)
+  last_name               String                    @db.VarChar(50)
+  year                    Int
+  graduation_year         Int?
+  sex                     String?                   @db.Char(1)
+  nickname                String?                   @db.VarChar(50)
+  bio                     String?                   @db.NVarChar(Max)
+  image_path              String?                   @db.VarChar(50)
+  Awards                  Awards[]
+  Bests                   Bests[]
+  Collegiate_Best_History Collegiate_Best_History[]
+  Performances            Performances[]
+  Rankings                Rankings[]
+}
+
+model Bests {
+  result_id                                             Int           @id(map: "PK_Results") @default(autoincrement())
+  athlete_id                                            Int
+  event_id                                              Int
+  season_best_indoor                                    Int?
+  season_best_outdoor                                   Int?
+  overall_best_indoor                                   Int?
+  overall_best_outdoor                                  Int?
+  collegiate_best                                       Int?
+  personal_best                                         Int
+  rank_position_indoor                                  Int?
+  rank_position_outdoor                                 Int?
+  Athletes                                              Athletes      @relation(fields: [athlete_id], references: [athlete_id], onUpdate: NoAction, map: "FK_Bests_Athletes")
+  Events                                                Events        @relation(fields: [event_id], references: [event_id], onUpdate: NoAction, map: "FK_Bests_Events")
+  Performances_Bests_season_best_indoorToPerformances   Performances? @relation("Bests_season_best_indoorToPerformances", fields: [season_best_indoor], references: [performance_id], onDelete: NoAction, onUpdate: NoAction, map: "FK_Bests_Performances")
+  Performances_Bests_season_best_outdoorToPerformances  Performances? @relation("Bests_season_best_outdoorToPerformances", fields: [season_best_outdoor], references: [performance_id], onDelete: NoAction, onUpdate: NoAction, map: "FK_Bests_Performances1")
+  Performances_Bests_overall_best_indoorToPerformances  Performances? @relation("Bests_overall_best_indoorToPerformances", fields: [overall_best_indoor], references: [performance_id], onDelete: NoAction, onUpdate: NoAction, map: "FK_Bests_Performances2")
+  Performances_Bests_overall_best_outdoorToPerformances Performances? @relation("Bests_overall_best_outdoorToPerformances", fields: [overall_best_outdoor], references: [performance_id], onDelete: NoAction, onUpdate: NoAction, map: "FK_Bests_Performances3")
+  Performances_Bests_collegiate_bestToPerformances      Performances? @relation("Bests_collegiate_bestToPerformances", fields: [collegiate_best], references: [performance_id], onDelete: NoAction, onUpdate: NoAction, map: "FK_Bests_Performances4")
+  Performances_Bests_personal_bestToPerformances        Performances  @relation("Bests_personal_bestToPerformances", fields: [personal_best], references: [performance_id], onUpdate: NoAction, map: "FK_Bests_Performances5")
+}
+
+model Collegiate_Best_History {
+  history_id    Int      @id(map: "PK_Personal_Best_History")
+  athlete_id    Int
+  event_id      Int
+  personal_best Decimal  @db.Decimal(10, 2)
+  record_date   DateTime @db.Date
+  Athletes      Athletes @relation(fields: [athlete_id], references: [athlete_id], onUpdate: NoAction, map: "FK_Personal_Best_History_Athletes")
+  Events        Events   @relation(fields: [event_id], references: [event_id], onUpdate: NoAction, map: "FK_Personal_Best_History_Events")
+}
+
+model Events {
+  event_id                Int                       @id(map: "PK_Events")
+  event_name              String                    @db.VarChar(50)
+  event_season            String                    @db.VarChar(7)
+  Bests                   Bests[]
+  Collegiate_Best_History Collegiate_Best_History[]
+  Performances            Performances[]
+  Qualifying_Standards    Qualifying_Standards[]
+  Rankings                Rankings[]
+}
+
+model Performances {
+  performance_id                                 Int      @id(map: "PK_Performances") @default(autoincrement())
+  athlete_id                                     Int
+  event_id                                       Int
+  mark                                           Decimal  @db.Decimal(10, 2)
+  season                                         String   @db.NChar(1)
+  date                                           DateTime @db.Date
+  result_link                                    String?  @db.NVarChar(Max)
+  ranking                                        Int?
+  Bests_Bests_season_best_indoorToPerformances   Bests[]  @relation("Bests_season_best_indoorToPerformances")
+  Bests_Bests_season_best_outdoorToPerformances  Bests[]  @relation("Bests_season_best_outdoorToPerformances")
+  Bests_Bests_overall_best_indoorToPerformances  Bests[]  @relation("Bests_overall_best_indoorToPerformances")
+  Bests_Bests_overall_best_outdoorToPerformances Bests[]  @relation("Bests_overall_best_outdoorToPerformances")
+  Bests_Bests_collegiate_bestToPerformances      Bests[]  @relation("Bests_collegiate_bestToPerformances")
+  Bests_Bests_personal_bestToPerformances        Bests[]  @relation("Bests_personal_bestToPerformances")
+  Events                                         Events   @relation(fields: [event_id], references: [event_id], onUpdate: NoAction, map: "FK_Performances_Events")
+  Athletes                                       Athletes @relation(fields: [athlete_id], references: [athlete_id], onUpdate: NoAction, map: "FK_Performances_Performances")
+}
+
+model Qualifying_Standards {
+  event_id                   Int
+  gender                     String   @db.VarChar(10)
+  season                     String   @db.VarChar(10)
+  mac_qualifying_standard    Decimal? @db.Decimal(10, 2)
+  aartfc_qualifying_standard Decimal? @db.Decimal(10, 2)
+  Events                     Events   @relation(fields: [event_id], references: [event_id], onUpdate: NoAction, map: "FK_Qualifying_Standards_Events")
+
+  @@id([event_id, gender, season], map: "PK_Qualifying_Standards")
+}
+
+model Rankings {
+  ranking_id    Int      @id(map: "PK_Rankings")
+  event_id      Int
+  athlete_id    Int
+  ranking_type  String   @db.VarChar(20)
+  rank_position Int
+  mark          Decimal  @db.Decimal(10, 2)
+  rank_date     DateTime @db.Date
+  Athletes      Athletes @relation(fields: [athlete_id], references: [athlete_id], onUpdate: NoAction, map: "FK_Rankings_Athletes")
+  Events        Events   @relation(fields: [event_id], references: [event_id], onUpdate: NoAction, map: "FK_Rankings_Events")
+}
+
+model Blog_Posts {
+  post_id    Int      @id(map: "PK_Blog_Posts") @default(autoincrement())
+  title      String   @db.NVarChar(50)
+  body       String   @db.NVarChar(Max)
+  created_on DateTime @db.Date
+  author     String   @db.NVarChar(50)
+  subheading String   @db.NVarChar(Max)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model college_history {
+  Athlete_ID String?   @map("Athlete ID") @db.VarChar(50)
+  Event_ID   String?   @map("Event ID") @db.VarChar(50)
+  Mark       Float?    @db.Real
+  Season     String?   @db.VarChar(50)
+  Date       DateTime? @db.DateTime
+  Link       String?   @db.VarChar(Max)
+
+  @@ignore
+}
+
+model Staging {
+  performance_id Int      @id(map: "PK__Performa__8C2C0F60E168F04E") @default(autoincrement())
+  athlete_id     Int
+  event_id       Int
+  mark           Decimal  @db.Decimal(10, 2)
+  season         String   @db.NChar(1)
+  p_date         DateTime @db.Date
+  result_link    String?  @db.NVarChar(Max)
+  ranking        Int?
+}
+
+model Awards {
+  athlete_id Int
+  award      String   @db.NVarChar(100)
+  Athletes   Athletes @relation(fields: [athlete_id], references: [athlete_id], onUpdate: NoAction, map: "FK_Awards_Athletes")
+
+  @@id([athlete_id, award], map: "PK_Awards")
+}

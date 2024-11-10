@@ -1,0 +1,60 @@
+/* Table Styles */
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+  
+  .responsive-table th {
+    background-color: #921;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .responsive-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  /* Container Styles for Table */
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Sticky First Column */
+  .sticky-first-column {
+    position: sticky;
+    left: 0;
+    background-color: #f9f9f9;
+    z-index: 1;
+    border-right: 5px solid #f9f9f9;
+  }
+  
+  /* Layout Styles */
+  .athlete-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .bio {
+    flex: 1;
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 640px) {
+    .bio {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  

@@ -1,0 +1,102 @@
+/* Navbar styling */
+.nav {
+  background-color: #921;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;  /* Fixed position so navbar stays on top */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;  /* Ensure navbar stays on top of other elements */
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.logo {
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-right: 40px;
+  align-items: center;
+  flex-direction: row;
+}
+
+.li {
+  margin: 10px;
+  color: #FFFFFE;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.li:hover {
+  color: #ddd;
+}
+
+/* Hamburger Menu styling */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav {
+    padding: 15px;  /* Adjust padding as needed */
+  }
+
+  .ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on the height of your navbar */
+    left: 0;
+    background-color: #921;
+    width: 100%;
+    padding: 15px;
+    gap: 10px;
+    display: none;  /* Hide the menu by default */
+  }
+
+  .ul.open {
+    display: flex; /* Show menu when open */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon on mobile */
+  }
+
+  .ul li {
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .logoContainer {
+    margin-right: 0;
+  }
+
+  /* Add some margin-top for the content under the navbar */
+  .rosterContainer {
+    margin-top: 100px;  /* Increase this if your navbar is taller */
+  }
+}
