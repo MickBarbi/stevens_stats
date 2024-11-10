@@ -99,26 +99,24 @@ const EventCharts: React.FC<EventChartsProps> = ({ data }) => {
   );
 };
 
-const numConvert = (seconds: number | string | null) => {
-  if (seconds === 'null'){
-    return '-';
+const numConvert = (seconds: number | string) => {
+  if (seconds === "-" || seconds === null) {
+    return seconds;
   }
-  seconds = Number(seconds)
-  if (seconds === 0){
-    return '-';
+  seconds = String(seconds);
+  if (!seconds.includes(".")) {
+    return seconds;
   }
-  if (seconds > 2000){
-    return seconds
-  }
-  if (seconds > 60){
+  seconds = Number(seconds);
+  if (seconds > 60) {
     let minutes = 0;
-    while (seconds > 60){
+    while (seconds > 60) {
       minutes++;
       seconds -= 60;
     }
-    return `${minutes}:${seconds.toFixed(2).toString().padStart(5, '0')}`;
+    return `${minutes}:${seconds.toFixed(2).toString().padStart(5, "0")}`;
   }
-  return seconds.toFixed(2)
+  return seconds;
 };
 
 const event_name_key: {[key: string]: string} = {
