@@ -5,6 +5,14 @@ import './styles.css'
 
 const prisma = new PrismaClient();
 
+interface Post {
+  author: string;
+  title: string;
+  created_on: Date;
+  subheading: string;
+  post_id: number;
+}
+
 export default async function HomePage() {
   // Fetching only the fields we need
   const posts = await prisma.blog_Posts.findMany({
@@ -20,7 +28,7 @@ export default async function HomePage() {
 
   return (
     <div className="grid-container">
-      {posts.map((post) => (
+      {posts.map((post: Post) => (
         <Link href={`/home/${post.post_id}`} key={post.post_id}>
         <div className="post-box">
           <h2>{post.title}</h2>
