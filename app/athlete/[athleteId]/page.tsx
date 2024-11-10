@@ -116,7 +116,7 @@ const numConvert = (seconds: number | string) => {
     }
     return `${minutes}:${seconds.toFixed(2).toString().padStart(5, "0")}`;
   }
-  return seconds;
+  return seconds.toFixed(2).toString().padStart(5, "0");
 };
 
 const event_name_key: {[key: string]: string} = {
