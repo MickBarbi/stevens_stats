@@ -280,7 +280,7 @@ const AthletePage = ({ params }: PageProps) => {
 
   // Filter athletes based on search term
   const filteredAthletes = athlete.other_athletes.filter((other) =>
-    `${other.first_name} ${other.last_name}`
+    `${other.nickname ? other.nickname : other.first_name} ${other.last_name}`
       .toLowerCase()
       .includes(searchTerm.toLowerCase())
   );
@@ -350,7 +350,7 @@ const AthletePage = ({ params }: PageProps) => {
           {/* Image Section */}
           <Image
             src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/f_auto,q_100/${athlete.athlete_id}_${athlete.image_path}.webp`}
-            alt={`Roster photo for ${athlete.first_name}`}
+            alt={`Roster photo for ${athlete.nickname ? athlete.nickname : athlete.first_name}`}
             width={300}
             height={400}
           />

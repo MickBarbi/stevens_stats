@@ -52,7 +52,7 @@ const AthletePage = () => {
 
   // Filter athletes based on search term
   const filteredAthletes = athlete.other_athletes.filter((other) =>
-    `${other.first_name} ${other.last_name}`
+    `${other.nickname ? other.nickname : other.first_name} ${other.last_name}`
       .toLowerCase()
       .includes(searchTerm.toLowerCase())
   );
