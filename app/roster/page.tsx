@@ -12,6 +12,7 @@ interface Athlete {
   sex: string;
   year: number;
   image_path: string; // Assuming there's an image path in the API
+  nickname: string;
 }
 
 const RosterPage = () => {
@@ -73,7 +74,7 @@ const RosterPage = () => {
               <div className={styles.imageWrapper}>
                 <Image
                   src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/f_auto,q_100/${athlete.athlete_id}_${athlete.image_path}.webp`}
-                  alt={`Roster photo for ${athlete.first_name}`}
+                  alt={`Roster photo for ${athlete.nickname ? athlete.nickname : athlete.first_name}`}
                   width={300}
                   height={400}
                   className={styles.athleteImage}
@@ -81,7 +82,7 @@ const RosterPage = () => {
               </div>
               <div className={styles.cardContent}>
                 <h2 className={styles.athleteName}>
-                  {athlete.first_name} {athlete.last_name}
+                  {athlete.nickname ? athlete.nickname : athlete.first_name} {athlete.last_name}
                 </h2>
                 <p className={styles.year}>Year: {athlete.year}</p>
                 <Link

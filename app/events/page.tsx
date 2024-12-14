@@ -450,7 +450,7 @@ const EventPage = () => {
                   <tr key={athlete.result_id}>
                     <td>
                       <b>
-                        {athlete.Athletes.first_name}{" "}
+                        {athlete.Athletes.nickname ? athlete.Athletes.nickname : athlete.Athletes.first_name}{" "}
                         {athlete.Athletes.last_name}
                       </b>
                     </td>

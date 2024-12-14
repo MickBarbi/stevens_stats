@@ -8,6 +8,7 @@ type Others = {
   athlete_id: number;
   first_name: string;
   last_name: string;
+  nickname: string;
 }
 
 type Athlete = {
@@ -87,7 +88,7 @@ const AthletePage = () => {
                           active ? 'bg-blue-100 text-blue-900' : 'text-gray-700'
                         } block px-4 py-2 text-sm`}
                       >
-                        {other.first_name} {other.last_name}
+                        {other.nickname ? other.nickname : other.first_name} {other.last_name}
                       </a>
                     )}
                   </Menu.Item>

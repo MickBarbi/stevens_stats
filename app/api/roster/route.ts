@@ -14,6 +14,7 @@ export async function GET() {
                 sex: true,
                 year: true,
                 image_path: true,
+                nickname: true,
             },
             where: { year: { not: -1 } },  // Filter out athletes with year = -1
             orderBy: {
