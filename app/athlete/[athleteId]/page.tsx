@@ -341,8 +341,9 @@ const AthletePage = ({ params }: PageProps) => {
         </Menu>
 
         <h1 className="text-3xl font-bold mt-6">
-          {athlete.first_name} {athlete.last_name}  -  Year: {athlete.year}
+          {athlete.nickname ? athlete.nickname : athlete.first_name} {athlete.last_name} - Year: {athlete.year}
         </h1>
+
         {/* Flexbox layout for image and text */}
         <div className="flex flex-row items-start gap-5 mt-5 flex-wrap">
           {/* Image Section */}
