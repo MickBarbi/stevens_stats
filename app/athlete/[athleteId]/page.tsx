@@ -148,7 +148,11 @@ const event_name_key: {[key: string]: string} = {
   26: "Javelin",
   27: "Pentathlon",
   28: "Heptathlon",
-  29: "Decathlon"
+  29: "Decathlon",
+  30: "300 Meters",
+  31: "500 Meters",
+  32: "55 Meters",
+  33: "55 Hurdles"
 };
 
 // Function to get the event name from a number
