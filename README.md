@@ -134,4 +134,4 @@ Built by [Mick Barbi](https://github.com/MickBarbi).
 
 ## License
 
-No license has been chosen yet. Until a license is added, all rights are reserved. If you'd like to reuse this code, please reach out.
+Released under the [MIT License](LICENSE).

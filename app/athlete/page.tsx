@@ -31,7 +31,6 @@ const AthletePage = () => {
       try {
         const response = await fetch(`/api/athlete/7892451`); // Fetch data from the API route
         const result = await response.json();
-        console.log(result); // Check the structure of the fetched data
         setAthlete(result);
       } catch (error) {
         console.log("Error fetching athlete data:", error);
