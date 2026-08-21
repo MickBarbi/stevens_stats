@@ -4,6 +4,26 @@ A full-stack web app for tracking and visualizing a college track & field team's
 
 > Personal project. The live site connects to a private database of real athlete results; this repository contains the application code only (no data).
 
+## Screenshots
+
+> The screenshots below are rendered with seeded demo data (invented athletes and results), not real athlete records.
+
+**Team roster**
+
+![Roster page showing athlete cards with class year and profile links](public/screenshots/roster.png)
+
+**Athlete profile — career bests and performance progression charts**
+
+![Athlete profile page with a bests table and line charts of results over time](public/screenshots/athlete.png)
+
+**Event leaderboards with conference qualifying standards**
+
+![Events page with sortable per-event tables and MAC/AARTFC qualifying standards](public/screenshots/events.png)
+
+**Home / team news**
+
+![Home page showing team news posts](public/screenshots/home.png)
+
 ## Features
 
 - **Roster** — browse athletes with photos, class year, and event specialties.
