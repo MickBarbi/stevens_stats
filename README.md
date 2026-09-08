@@ -1,8 +1,8 @@
 # Stevens Stats
 
-A full-stack web app for tracking and visualizing a college track & field team's statistics — athlete rosters, event bests, ranking progressions, qualifying standards, and team news. Built with Next.js (App Router), TypeScript, Prisma, and SQL Server.
+A static web app for tracking and visualizing a college track & field team's statistics — athlete rosters, event bests, performance progressions, qualifying standards, and team news. Built with Next.js (App Router) and TypeScript.
 
-> Personal project. The live site connects to a private database of real athlete results; this repository contains the application code only (no data).
+> Personal project. The team's results are scraped from TFRRS by [`scraper/`](scraper/README.md) into the JSON files in [`data/`](data/README.md), which the site imports at build time — no database, no server-side code at request time.
 
 ## Screenshots
 
@@ -34,76 +34,69 @@ A full-stack web app for tracking and visualizing a college track & field team's
 
 ## Tech stack
 
-| Area        | Choice |
-|-------------|--------|
-| Framework   | Next.js 15 (App Router, React 18, TypeScript) |
-| Data access | Prisma ORM |
-| Database    | Microsoft SQL Server (hosted on AWS RDS) |
-| Images      | Cloudinary (`next-cloudinary`) |
-| Charts      | Recharts |
-| Styling     | Tailwind CSS, Bootstrap, CSS modules |
-| Validation  | Zod |
+| Area     | Choice |
+|----------|--------|
+| Framework| Next.js 15 (App Router, React 18, TypeScript), statically prerendered |
+| Data     | JSON files in [`data/`](data/README.md), imported at build time via `lib/data.ts` |
+| Ingestion| Python scraper ([`scraper/`](scraper/README.md)) — TFRRS → JSON |
+| Images   | Cloudinary (public URLs) |
+| Charts   | Recharts |
+| Styling  | Tailwind CSS, Bootstrap, CSS modules |
 
 ## Architecture
 
 ```
-scraper/ (Python, TFRRS) ──► SQL Server database
-                                (Athletes, Events, Performances, Awards,
-                                 Qualifying_Standards, Blog_Posts)
-                                     ▲
-Browser (React client components)    │  Prisma Client
-   │  fetch()                        │
-   ▼                                 │
-Next.js Route Handlers  (app/api/**) ┘
+scraper/ (Python, TFRRS)  ──►  data/*.json  ──►  lib/data.ts  ──►  app/** (prerendered pages)
+                                (in the repo)      (build time)
 
 Athlete photos are served from Cloudinary via public image URLs.
 ```
 
-- Pages under `app/` are mostly client components that fetch from the JSON API routes under `app/api/`.
-- API routes are **read-only** (`GET`) and use Prisma (a shared client, `lib/prisma.ts`) with typed, parameterized queries and basic input validation.
-- The data model lives in [`prisma/schema.prisma`](prisma/schema.prisma). `Performances` is the single fact table; a "career best" is just a row there with an `is_*_best` flag set, recomputed by the scraper on every run.
-- Data collection lives in [`scraper/`](scraper/README.md) (TFRRS → CSV / SQL Server).
+- Every route is prerendered at build time. Pages are Server Components that read
+  from `lib/data.ts`; the interactive bits (filters, sorting, the athlete picker,
+  the charts) are small Client Components they hand data to.
+- There are **no API routes and no database**. A "career best" is a
+  `data/performances.json` row with an `is_*_best` flag set, computed by the
+  scraper. `prisma/schema.prisma` is kept as the data-model reference and the
+  target for `scraper/load.py --push` if a live DB is ever wanted again.
+- The old DB-backed API routes live in [`archive/`](archive/README.md), excluded
+  from the build.
 
 ## Project structure
 
 ```
 app/
-  api/            Route handlers (athlete, roster, events, home)
-  athlete/        Athlete picker + individual athlete pages
+  athlete/        Athlete picker (page.tsx) + profile pages ([athleteId]/)
   roster/         Team roster
-  events/         Event bests & qualifying standards
+  events/         Event leaderboards & qualifying standards
   home/           News posts + post detail
   layout.tsx      Root layout + navbar
 components/        Navbar and shared UI
-prisma/            Prisma schema (SQL Server)
-public/            Logo, favicons
-scraper/           Python data collection (TFRRS -> CSV / SQL Server); see scraper/README.md
+lib/data.ts       Typed loaders/helpers over data/*.json
+data/             The dataset (see data/README.md)
+scraper/          Python data collection (see scraper/README.md)
+prisma/           Data-model reference + optional --push target
+archive/          Old DB-backed API routes, not built
+public/           Logo, favicons
 ```
 
 ## Getting started
 
 ### Prerequisites
 - Node.js 18.18+ (Node 20 recommended)
-- Access to a SQL Server database matching `prisma/schema.prisma`
+- Python 3.10+ (only to refresh the data)
 - A Cloudinary account (for athlete images)
 
 ### Setup
 
 ```bash
-# 1. Install dependencies
 npm install
+cp .env.example .env          # set NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
 
-# 2. Configure environment
-cp .env.example .env      # then edit .env with your real values
+# refresh the data (optional — data/*.json is committed)
+pip install -r scraper/requirements.txt
+npm run data
 
-# 3. Generate the Prisma client
-npx prisma generate
-
-# 4. Create / update the database tables to match the schema
-npx prisma db push
-
-# 5. Load data, then run the dev server
-python scraper/roster.py && python scraper/history.py && python scraper/load.py --push
 npm run dev
 ```
 
@@ -111,29 +104,34 @@ Open http://localhost:3000 (the root path redirects to `/home`).
 
 ### Environment variables
 
-See [`.env.example`](.env.example). Copy it to `.env` (which is git-ignored) and fill in:
-
 | Variable | Purpose |
 |----------|---------|
-| `DATABASE_URL` | Prisma SQL Server connection string. |
-| `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` | Cloudinary cloud name used to build public image URLs (exposed to the browser by design). |
+| `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` | Cloudinary cloud name used to build public image URLs. |
 
 ## Scripts
 
 | Command | Description |
 |---------|-------------|
 | `npm run dev` | Start the development server |
-| `npm run build` | Production build |
-| `npm run start` | Serve the production build |
+| `npm run build` | Static production build |
+| `npm run start` | Serve the build |
 | `npm run lint` | Run ESLint |
+| `npm run data` | Re-scrape TFRRS and regenerate `data/*.json` |
 
 ## Deployment
 
-Designed for deployment on Vercel. Set the environment variables above in the hosting dashboard and ensure the database is reachable from the deployment environment.
+Deploys on Vercel as a fully static site (no server functions, no env vars beyond
+the Cloudinary name). To refresh: run `npm run data`, commit the changed
+`data/*.json`, and push — the deploy rebuilds. A scheduled GitHub Action can do
+this automatically. Portable to any static host by adding `output: 'export'` +
+`images.unoptimized` to `next.config.mjs`.
 
 ## Status & roadmap
 
-Actively maintained personal project. The site is read-only; data is refreshed by re-running [`scraper/`](scraper/README.md). Possible future work: an authenticated admin flow for editing results, scheduled scraper runs, and test coverage.
+Actively maintained personal project. Possible future work: repopulate
+`data/qualifying_standards.json` and `data/blog_posts.json`, a scheduled scraper
+Action, and an authenticated admin flow (which is where a live DB — see
+`archive/` — would come back).
 
 ## Author
 
