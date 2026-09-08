@@ -1,28 +1,24 @@
-import { PrismaClient } from '@prisma/client';
 import { NextResponse } from 'next/server';
-
-// Instantiate Prisma Client outside of the handler to reuse the connection
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/prisma';
 
 export async function GET() {
     try {
         const athletes = await prisma.athletes.findMany({
             select: {
-                athlete_id: true, // Include id to use it as a key
-                first_name: true, // Adjust to your actual column name for names
+                athlete_id: true,
+                first_name: true,
                 last_name: true,
                 sex: true,
                 year: true,
                 image_path: true,
                 nickname: true,
             },
-            where: { year: { not: -1 } },  // Filter out athletes with year = -1
+            where: { active: true },
             orderBy: {
-                last_name: 'asc', // Order athletes by last name in ascending order
+                last_name: 'asc',
             },
         });
 
-        // Return athletes data as a JSON response
         return NextResponse.json(athletes, { status: 200});
     } catch (error) {
         console.error('Database query error:', error);
@@ -30,7 +26,5 @@ export async function GET() {
             { error: 'An error occurred while fetching athletes' },
             { status: 500 }
         );
-    } finally {
-        await prisma.$disconnect(); // Close the connection when done
     }
 }

@@ -1,14 +1,11 @@
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/prisma';
 
 type Params = Promise<{ postId: string }>;
 
-
 export async function GET(
   request: Request,
-  segmentData: {params: Params}
+  segmentData: { params: Params }
 ) {
   try {
     const params = await segmentData.params;
@@ -45,12 +42,10 @@ export async function GET(
         { status: 500 }
       );
     }
-    
+
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }
     );
-  } finally {
-    await prisma.$disconnect();
   }
 }

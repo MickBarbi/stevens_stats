@@ -1,11 +1,5 @@
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
-
-interface Award {
-  award: string;
-}
+import { prisma } from '@/lib/prisma';
 
 type Params = Promise<{ athleteId: string }>;
 
@@ -14,82 +8,68 @@ export async function GET(
   segmentData: { params: Params }
 ) {
   try {
-    // Await the params
     const params = await segmentData.params;
-    const athleteId = params.athleteId;
-  
-    if (!athleteId) {
+    const athleteId = Number(params.athleteId);
+
+    if (!params.athleteId) {
       return NextResponse.json({ error: 'athlete_id is missing' }, { status: 400 });
     }
-
-    // Validate that athleteId is a number
-    const athleteIdNumber = Number(athleteId);
-    if (isNaN(athleteIdNumber)) {
+    if (isNaN(athleteId)) {
       return NextResponse.json(
-        { error: "athlete_id should be a valid number" },
+        { error: 'athlete_id should be a valid number' },
         { status: 400 }
       );
     }
 
-    // Query for the specific athlete
     const athlete = await prisma.athletes.findUnique({
-      where: { athlete_id: Number(athleteId) },
+      where: { athlete_id: athleteId },
     });
 
     if (!athlete) {
       return NextResponse.json({ error: 'Athlete not found' }, { status: 404 });
     }
 
-    const bests = await prisma.bests.findMany({
-      where: { athlete_id: Number(athleteId) },
-    });
-
+    // Every result this athlete has recorded. The career-best table and the
+    // progression charts are both derived from this one list on the client -
+    // the "best" rows are just the ones with an is_*_best flag set.
     const college_progression = await prisma.performances.findMany({
-      where: { athlete_id: Number(athleteId) },
+      where: { athlete_id: athleteId },
+      orderBy: { date: 'asc' },
+      include: { Events: { select: { event_name: true } } },
     });
 
     const other_athletes = await prisma.athletes.findMany({
+      where: { active: true },
       orderBy: { last_name: 'asc' },
-      where: { year: { not: -1 } },
+      select: {
+        athlete_id: true,
+        first_name: true,
+        last_name: true,
+        nickname: true,
+      },
     });
 
-    if (!other_athletes || other_athletes.length === 0) {
-      return NextResponse.json({ error: 'Could not find all athletes' }, { status: 404 });
-    }
-
     const awards = await prisma.awards.findMany({
-      where: { athlete_id: Number(athleteId) },
+      where: { athlete_id: athleteId },
       select: { award: true },
     });
 
-    const formattedAwards = awards.map((awardObj: Award) => awardObj.award);
-
-    // Combine athlete data with best performances
     const athleteData = {
       ...athlete,
-      bests,
       college_progression,
       other_athletes,
-      awards: formattedAwards,
+      awards: awards.map((a) => a.award),
     };
 
     return NextResponse.json(athleteData, { status: 200 });
   } catch (error) {
-    //Log detailed error for debugging
     console.error('Error fetching athlete data:', error);
-    // More detailed error handling
     if (error instanceof Error) {
       return NextResponse.json(
-        { error: "Internal server error", message: error.message },
+        { error: 'Internal server error', message: error.message },
         { status: 500 }
       );
     }
-    
-    return NextResponse.json(
-      { error: "Internal server error" },
-      { status: 500 }
-    );
-  } finally {
-    await prisma.$disconnect();
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

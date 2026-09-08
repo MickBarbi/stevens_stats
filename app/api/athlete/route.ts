@@ -1,7 +1,5 @@
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/prisma';
 
 export async function GET() {
   try {
@@ -16,6 +14,7 @@ export async function GET() {
 
     // Fetch other athletes ordered by last name (limit to avoid large data)
     const other_athletes = await prisma.athletes.findMany({
+      where: { active: true },
       orderBy: {
         last_name: 'asc',  // Ensure ascending order of last_name
       },
@@ -36,8 +35,5 @@ export async function GET() {
   } catch (error) {
     console.error('Error fetching athlete data:', error);
     return NextResponse.json({ error: 'An error occurred while fetching athlete data' }, { status: 500 });
-  } finally {
-    // Ensure Prisma client is properly disconnected
-    await prisma.$disconnect();
   }
 }
