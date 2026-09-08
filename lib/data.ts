@@ -208,3 +208,11 @@ export const sortedPosts = (): BlogPost[] =>
 
 export const getPost = (id: number): BlogPost | null =>
   blogPosts.find((p) => p.post_id === id) ?? null;
+
+// ---- Season -----------------------------------------------------------------
+export type Season = "indoor" | "outdoor";
+
+// Which season the events page defaults to. Indoor runs its core Dec-Feb;
+// everything else (including the March outdoor openers) defaults to outdoor.
+export const currentSeason = (date: Date = new Date()): Season =>
+  [11, 0, 1].includes(date.getMonth()) ? "indoor" : "outdoor";

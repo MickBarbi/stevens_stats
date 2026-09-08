@@ -39,8 +39,18 @@ python scraper/roster.py && python scraper/history.py && python scraper/load.py
 }
 ```
 
-`gender` is `"m"` / `"f"`. Marks use the same unit-less convention as performances
-(`null` if there's no standard).
+- `gender` is `"m"` / `"f"`, `season` is `"indoor"` / `"outdoor"` — one row per
+  combination.
+- Marks use the same unit-less convention as `performances.json`.
+- A row with **both** standards `null` marks the event as *not contested* at MAC
+  / AARTFC for that season+gender; the events page shows a note instead of
+  standard values. One `null` (and one number) just means that meet has no
+  standard for it.
+- On the events page an athlete's name turns blue if their best for the selected
+  season clears the AARTFC standard, red if it clears the MAC standard.
+
+The events page opens on the current season (indoor Dec–Feb, outdoor otherwise);
+`lib/data.ts` `currentSeason()` sets the boundary.
 
 **`blog_posts.json`** — array of:
 

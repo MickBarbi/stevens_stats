@@ -50,9 +50,18 @@
   .mac-standard {
     color: #FF3131; /* Red for MAC */
   }
-  
+
   .aartfc-standard {
     color: #1F51FF; /* Blue for AARTFC */
+  }
+
+  /* Athlete name in the leaderboard, coloured by best standard cleared */
+  .qualified-mac {
+    color: #FF3131;
+  }
+
+  .qualified-aartfc {
+    color: #1F51FF;
   }
   
   /* Table Styling */
