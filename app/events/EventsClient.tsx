@@ -2,6 +2,7 @@
 
 import React, { useMemo, useState } from "react";
 import type { BestCell, LeaderboardEvent, LeaderboardRow, QualifyingStandard } from "@/lib/data";
+import { formatMark, markKind, type MarkKind } from "@/lib/format";
 
 type SortKey =
   | "name"
@@ -11,22 +12,6 @@ type SortKey =
   | "personal"
   | "rank_indoor"
   | "rank_outdoor";
-
-const numConvert = (value: string | number | null) => {
-  if (value === null || value === undefined || value === "-") return "-";
-  const str = String(value);
-  if (!str.includes(".")) return str;
-  let seconds = Number(str);
-  if (seconds > 60) {
-    let minutes = 0;
-    while (seconds > 60) {
-      minutes++;
-      seconds -= 60;
-    }
-    return `${minutes}:${seconds.toFixed(2).padStart(5, "0")}`;
-  }
-  return seconds.toFixed(2);
-};
 
 const cellMark = (c: BestCell) => (c ? Number(c.mark) : null);
 const cellRank = (c: BestCell) => (c ? c.ranking : null);
@@ -105,9 +90,9 @@ const EventsClient = ({
       (selectedSex === "" || e.rows.some((r) => r.sex === selectedSex))
   );
 
-  const markCell = (c: BestCell) => (
+  const markCell = (c: BestCell, kind: MarkKind) => (
     <a href={c?.result_link ?? undefined} target="_blank" rel="noopener noreferrer">
-      {numConvert(c ? c.mark : "-")}
+      {formatMark(c ? c.mark : "-", kind)}
     </a>
   );
 
@@ -133,6 +118,7 @@ const EventsClient = ({
       {visibleEvents.map((event) => {
         const showIndoor = event.event_season !== "Outdoor";
         const showOutdoor = event.event_season !== "Indoor";
+        const kind = markKind(event.event_id);
         const rows = sortRows(
           event.rows.filter((r) => selectedSex === "" || r.sex === selectedSex)
         );
@@ -144,13 +130,13 @@ const EventsClient = ({
                 {standardsByEvent[event.event_id]?.m && (
                   <p>
                     Men&apos;s MAC Standard:{" "}
-                    {numConvert(standardsByEvent[event.event_id].m.mac_qualifying_standard || "-")}
+                    {formatMark(standardsByEvent[event.event_id].m.mac_qualifying_standard ?? "-", kind)}
                   </p>
                 )}
                 {standardsByEvent[event.event_id]?.f && (
                   <p>
                     Women&apos;s MAC Standard:{" "}
-                    {numConvert(standardsByEvent[event.event_id].f.mac_qualifying_standard || "-")}
+                    {formatMark(standardsByEvent[event.event_id].f.mac_qualifying_standard ?? "-", kind)}
                   </p>
                 )}
               </div>
@@ -158,13 +144,13 @@ const EventsClient = ({
                 {standardsByEvent[event.event_id]?.m && (
                   <p>
                     Men&apos;s AARTFC Standard:{" "}
-                    {numConvert(standardsByEvent[event.event_id].m.aartfc_qualifying_standard || "-")}
+                    {formatMark(standardsByEvent[event.event_id].m.aartfc_qualifying_standard ?? "-", kind)}
                   </p>
                 )}
                 {standardsByEvent[event.event_id]?.f && (
                   <p>
                     Women&apos;s AARTFC Standard:{" "}
-                    {numConvert(standardsByEvent[event.event_id].f.aartfc_qualifying_standard || "-")}
+                    {formatMark(standardsByEvent[event.event_id].f.aartfc_qualifying_standard ?? "-", kind)}
                   </p>
                 )}
               </div>
@@ -205,10 +191,10 @@ const EventsClient = ({
                         {row.nickname ? row.nickname : row.first_name} {row.last_name}
                       </b>
                     </td>
-                    {showIndoor && <td>{markCell(row.indoor_best)}</td>}
-                    {showOutdoor && <td>{markCell(row.outdoor_best)}</td>}
-                    <td>{markCell(row.collegiate_best)}</td>
-                    <td>{markCell(row.personal_best)}</td>
+                    {showIndoor && <td>{markCell(row.indoor_best, kind)}</td>}
+                    {showOutdoor && <td>{markCell(row.outdoor_best, kind)}</td>}
+                    <td>{markCell(row.collegiate_best, kind)}</td>
+                    <td>{markCell(row.personal_best, kind)}</td>
                     {showIndoor && <td>{row.indoor_best?.ranking ?? "-"}</td>}
                     {showOutdoor && <td>{row.outdoor_best?.ranking ?? "-"}</td>}
                   </tr>

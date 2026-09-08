@@ -8,25 +8,9 @@ import useMediaQuery from "react-responsive";
 import AthletePicker from "../AthletePicker";
 import type { Athlete, PickerAthlete, ProgressionPerformance } from "@/lib/data";
 import { athletePhotoUrl } from "@/lib/photo";
+import { formatMark, markKind } from "@/lib/format";
 
 type Perf = ProgressionPerformance;
-
-// seconds -> "m:ss.hh"; leaves field marks / points (no decimal, or < 60) as-is
-const numConvert = (value: number | string | null) => {
-  if (value === "-" || value === null || value === undefined) return "-";
-  const str = String(value);
-  if (!str.includes(".")) return str;
-  let seconds = Number(str);
-  if (seconds > 60) {
-    let minutes = 0;
-    while (seconds > 60) {
-      minutes++;
-      seconds -= 60;
-    }
-    return `${minutes}:${seconds.toFixed(2).padStart(5, "0")}`;
-  }
-  return seconds.toFixed(2).padStart(5, "0");
-};
 
 const groupDataByEventAndSeason = (data: Perf[]) => {
   return data.reduce((acc: { [key: string]: Perf[] }, item) => {
@@ -78,6 +62,7 @@ const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
         const chartData = bestProgression(group, group[0].higher_is_better);
         if (chartData.length <= 1) return null;
         const season = key.split("-")[1];
+        const kind = markKind(group[0].event_id);
         const [minMark, maxMark] = getMinMaxWithPadding(chartData);
         return (
           <div key={key} style={{ marginBottom: "40px", marginLeft: "30px" }}>
@@ -90,11 +75,11 @@ const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
                 <XAxis dataKey="date" tickFormatter={(d) => moment(d).format("MM/DD/YYYY")} />
                 <YAxis
                   domain={[minMark, maxMark]}
-                  tickFormatter={(value) => numConvert(value).toString()}
+                  tickFormatter={(value) => formatMark(value, kind)}
                 />
                 <Tooltip
                   labelFormatter={(d) => moment(d).format("MM/DD/YYYY")}
-                  formatter={(value: number) => numConvert(value)}
+                  formatter={(value: number) => formatMark(value, kind)}
                 />
                 <Line dataKey="mark" stroke="#8884d8" activeDot={{ r: 8 }} />
               </LineChart>
@@ -179,7 +164,7 @@ const AthleteProfile = ({
   const markLink = (p: Perf | null) =>
     p ? (
       <a href={p.result_link ?? undefined} target="_blank" rel="noopener noreferrer">
-        {numConvert(p.mark)}
+        {formatMark(p.mark, markKind(p.event_id))}
       </a>
     ) : null;
 
