@@ -52,13 +52,29 @@ const getMinMaxWithPadding = (data: Perf[]) => {
   return range === 0 ? [min - 1, max + 1] : [min - padding, max + padding];
 };
 
+// Keep only the results that were a best-to-date, so the line only ever moves
+// in the improving direction (down for races, up for jumps/throws/multis).
+const bestProgression = (sortedAsc: Perf[], higherIsBetter: boolean): Perf[] => {
+  const out: Perf[] = [];
+  let best = higherIsBetter ? -Infinity : Infinity;
+  for (const p of sortedAsc) {
+    const m = Number(p.mark);
+    if (higherIsBetter ? m > best : m < best) {
+      best = m;
+      out.push({ ...p, mark: m });
+    }
+  }
+  return out;
+};
+
 const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
   const isSmallScreen = useMediaQuery({ maxWidth: 640 });
   const grouped = sortDataByDate(groupDataByEventAndSeason(data));
 
   return (
     <div>
-      {Object.entries(grouped).map(([key, chartData]) => {
+      {Object.entries(grouped).map(([key, group]) => {
+        const chartData = bestProgression(group, group[0].higher_is_better);
         if (chartData.length <= 1) return null;
         const season = key.split("-")[1];
         const [minMark, maxMark] = getMinMaxWithPadding(chartData);

@@ -272,8 +272,15 @@ def write_site_json(site_dir: pathlib.Path, athletes, events, performances) -> N
     merged = _merge_athletes(athletes, site_dir / "athletes.json")
     _dump_json(site_dir / "athletes.json", merged)
 
-    _dump_json(site_dir / "events.json",
-               [{"event_id": e, "event_name": n, "event_season": s} for e, n, s in events])
+    _dump_json(site_dir / "events.json", [
+        {
+            "event_id": e,
+            "event_name": n,
+            "event_season": s,
+            "higher_is_better": e in tfrrs.HIGHER_IS_BETTER_EVENTS,
+        }
+        for e, n, s in events
+    ])
 
     _dump_json(site_dir / "performances.json", [
         {

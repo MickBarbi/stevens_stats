@@ -27,6 +27,7 @@ export type EventInfo = {
   event_id: number;
   event_name: string;
   event_season: string; // "Indoor" | "Outdoor" | "Both"
+  higher_is_better: boolean; // jumps / throws / multis; false for races
 };
 
 export type Performance = {
@@ -68,6 +69,7 @@ export const qualifyingStandards = standardsJson as unknown as QualifyingStandar
 export const blogPosts = postsJson as unknown as BlogPost[];
 
 const eventNameById = new Map(events.map((e) => [e.event_id, e.event_name]));
+const higherIsBetterById = new Map(events.map((e) => [e.event_id, e.higher_is_better]));
 
 const byName = (a: { last_name: string; first_name: string }, b: typeof a) =>
   a.last_name.localeCompare(b.last_name) || a.first_name.localeCompare(b.first_name);
@@ -91,12 +93,19 @@ export const athletePickerList = (): PickerAthlete[] =>
     nickname,
   }));
 
-export type ProgressionPerformance = Performance & { event_name: string };
+export type ProgressionPerformance = Performance & {
+  event_name: string;
+  higher_is_better: boolean;
+};
 
 export const progressionForAthlete = (id: number): ProgressionPerformance[] =>
   performances
     .filter((p) => p.athlete_id === id)
-    .map((p) => ({ ...p, event_name: eventNameById.get(p.event_id) ?? String(p.event_id) }))
+    .map((p) => ({
+      ...p,
+      event_name: eventNameById.get(p.event_id) ?? String(p.event_id),
+      higher_is_better: higherIsBetterById.get(p.event_id) ?? false,
+    }))
     .sort((a, b) => a.date.localeCompare(b.date));
 
 // ---- Events leaderboard -------------------------------------------------------
@@ -154,7 +163,12 @@ export const eventLeaderboard = (): LeaderboardEvent[] => {
     if (!group) {
       const info = eventNameById.has(p.event_id)
         ? events.find((e) => e.event_id === p.event_id)!
-        : { event_id: p.event_id, event_name: String(p.event_id), event_season: "Both" };
+        : {
+            event_id: p.event_id,
+            event_name: String(p.event_id),
+            event_season: "Both",
+            higher_is_better: false,
+          };
       group = { ...info, rows: [] };
       groups.set(p.event_id, group);
     }

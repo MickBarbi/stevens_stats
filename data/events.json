@@ -2,166 +2,199 @@
   {
     "event_id": 1,
     "event_name": "60 Meters",
-    "event_season": "Indoor"
+    "event_season": "Indoor",
+    "higher_is_better": false
   },
   {
     "event_id": 2,
     "event_name": "100 Meters",
-    "event_season": "Outdoor"
+    "event_season": "Outdoor",
+    "higher_is_better": false
   },
   {
     "event_id": 3,
     "event_name": "200 Meters",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": false
   },
   {
     "event_id": 4,
     "event_name": "400 Meters",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": false
   },
   {
     "event_id": 5,
     "event_name": "600 Meters",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": false
   },
   {
     "event_id": 6,
     "event_name": "800 Meters",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": false
   },
   {
     "event_id": 7,
     "event_name": "1000 Meters",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": false
   },
   {
     "event_id": 8,
     "event_name": "1500 Meters",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": false
   },
   {
     "event_id": 9,
     "event_name": "Mile",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": false
   },
   {
     "event_id": 10,
     "event_name": "3000 Meters",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": false
   },
   {
     "event_id": 11,
     "event_name": "5000 Meters",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": false
   },
   {
     "event_id": 12,
     "event_name": "10,000 Meters",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": false
   },
   {
     "event_id": 13,
     "event_name": "60 Hurdles",
-    "event_season": "Indoor"
+    "event_season": "Indoor",
+    "higher_is_better": false
   },
   {
     "event_id": 14,
     "event_name": "100 Hurdles",
-    "event_season": "Outdoor"
+    "event_season": "Outdoor",
+    "higher_is_better": false
   },
   {
     "event_id": 15,
     "event_name": "110 Hurdles",
-    "event_season": "Outdoor"
+    "event_season": "Outdoor",
+    "higher_is_better": false
   },
   {
     "event_id": 16,
     "event_name": "400 Hurdles",
-    "event_season": "Outdoor"
+    "event_season": "Outdoor",
+    "higher_is_better": false
   },
   {
     "event_id": 17,
     "event_name": "3000 Steeplechase",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": false
   },
   {
     "event_id": 18,
     "event_name": "High Jump",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": true
   },
   {
     "event_id": 19,
     "event_name": "Pole Vault",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": true
   },
   {
     "event_id": 20,
     "event_name": "Long Jump",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": true
   },
   {
     "event_id": 21,
     "event_name": "Triple Jump",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": true
   },
   {
     "event_id": 22,
     "event_name": "Shot Put",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": true
   },
   {
     "event_id": 23,
     "event_name": "Discus",
-    "event_season": "Outdoor"
+    "event_season": "Outdoor",
+    "higher_is_better": true
   },
   {
     "event_id": 24,
     "event_name": "Hammer",
-    "event_season": "Outdoor"
+    "event_season": "Outdoor",
+    "higher_is_better": true
   },
   {
     "event_id": 25,
     "event_name": "Weight Throw",
-    "event_season": "Indoor"
+    "event_season": "Indoor",
+    "higher_is_better": true
   },
   {
     "event_id": 26,
     "event_name": "Javelin",
-    "event_season": "Outdoor"
+    "event_season": "Outdoor",
+    "higher_is_better": true
   },
   {
     "event_id": 27,
     "event_name": "Pentathlon",
-    "event_season": "Indoor"
+    "event_season": "Indoor",
+    "higher_is_better": true
   },
   {
     "event_id": 28,
     "event_name": "Heptathlon",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": true
   },
   {
     "event_id": 29,
     "event_name": "Decathlon",
-    "event_season": "Outdoor"
+    "event_season": "Outdoor",
+    "higher_is_better": true
   },
   {
     "event_id": 30,
     "event_name": "300 Meters",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": false
   },
   {
     "event_id": 31,
     "event_name": "500 Meters",
-    "event_season": "Both"
+    "event_season": "Both",
+    "higher_is_better": false
   },
   {
     "event_id": 32,
     "event_name": "55 Meters",
-    "event_season": "Indoor"
+    "event_season": "Indoor",
+    "higher_is_better": false
   },
   {
     "event_id": 33,
     "event_name": "55 Hurdles",
-    "event_season": "Indoor"
+    "event_season": "Indoor",
+    "higher_is_better": false
   }
 ]
