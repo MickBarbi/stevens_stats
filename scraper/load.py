@@ -1,33 +1,36 @@
-"""Turn the scraped CSVs into rows the website's database expects.
+"""Turn the scraped CSVs into the data the website ships.
 
 Reads   data/roster_raw.csv        (from roster.py)
         data/performances_raw.csv   (from history.py)
 
-Writes  data/athletes.csv      athlete_id, first_name, last_name, year, sex, active
-        data/events.csv        event_id, event_name, event_season
-        data/performances.csv  performance_id, athlete_id, event_id, mark, season, date,
-                               result_link, ranking,
-                               is_personal_best, is_collegiate_best,
-                               is_overall_best, is_season_best
+Writes  ../data/athletes.json       what the static site imports at build time
+        ../data/events.json
+        ../data/performances.json
+        (../data/qualifying_standards.json and ../data/blog_posts.json are
+         hand-maintained; created empty here only if missing)
 
-There is no separate "bests" table any more. A career best is just a
-Performances row with the matching is_*_best flag set, and those flags are
-recomputed from the full performance list on every run (see schema.prisma).
+        data/athletes.csv  data/events.csv  data/performances.csv
+        (the same rows as CSV, for the optional SQL Server path below)
 
-Optional direct load into the site's SQL Server database:
+There is no separate "bests" table. A career best is just a performances row
+with the matching is_*_best flag set, recomputed from the full list each run.
+
+Hand-maintained athlete fields (nickname, bio, image_path, graduation_year,
+awards) are preserved across re-scrapes; athletes no longer on the roster are
+kept in athletes.json with "active": false.
+
+Optional direct load into a SQL Server database (see prisma/schema.prisma):
 
     python load.py --push
-        # connection from $STEVENS_DATABASE_URL (a Prisma sqlserver:// URL, e.g.
-        # the site's own DATABASE_URL) or the $STEVENS_DB_* vars below.
-        # - MERGEs Events and Athletes (never touches nickname/bio/image_path/
-        #   graduation_year; sets active=0 for anyone no longer on the roster)
-        # - MERGEs Performances on their natural key, refreshing the flags
+        # connection from $STEVENS_DATABASE_URL (a Prisma sqlserver:// URL) or
+        # the $STEVENS_DB_* vars. MERGEs Events/Athletes/Performances.
 """
 
 from __future__ import annotations
 
 import argparse
 import csv
+import json
 import os
 import pathlib
 import sys
@@ -38,6 +41,17 @@ from decimal import Decimal
 import tfrrs
 
 DATA_DIR = pathlib.Path(__file__).resolve().parent / "data"
+SITE_DATA_DIR = pathlib.Path(__file__).resolve().parent.parent / "data"
+
+# Athlete fields the scraper owns vs. fields a human edits through/for the site.
+_SCRAPED_ATHLETE_FIELDS = ("first_name", "last_name", "year", "sex", "active")
+_MANUAL_ATHLETE_DEFAULTS = {
+    "nickname": None,
+    "bio": None,
+    "image_path": None,
+    "graduation_year": None,
+    "awards": [],
+}
 
 _CENTS = Decimal("0.01")
 _FLAGS = ("is_personal_best", "is_collegiate_best", "is_overall_best", "is_season_best")
@@ -206,6 +220,84 @@ def write_csvs(out_dir: pathlib.Path, athletes, events, performances) -> None:
 
 
 # ---------------------------------------------------------------------------
+# JSON output — what the static site imports at build time
+# ---------------------------------------------------------------------------
+def _dump_json(path: pathlib.Path, data) -> None:
+    with path.open("w", encoding="utf-8") as fh:
+        json.dump(data, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+    n = len(data) if isinstance(data, list) else 1
+    print(f"  wrote {n:>5}  {path}")
+
+
+def _merge_athletes(scraped: list[dict], existing_path: pathlib.Path) -> list[dict]:
+    """Combine the scraped roster with what's already in athletes.json, keeping
+    the human-edited fields and demoting anyone no longer on the roster."""
+    prior: dict[int, dict] = {}
+    if existing_path.exists():
+        try:
+            prior = {a["athlete_id"]: a for a in json.loads(existing_path.read_text("utf-8"))}
+        except (json.JSONDecodeError, KeyError, TypeError):
+            print(f"  note: could not parse existing {existing_path.name}; starting fresh")
+
+    scraped_by_id = {a["athlete_id"]: a for a in scraped}
+    out: list[dict] = []
+
+    for athlete_id, a in scraped_by_id.items():
+        base = dict(_MANUAL_ATHLETE_DEFAULTS)
+        base.update({k: v for k, v in prior.get(athlete_id, {}).items() if k in base})
+        base["athlete_id"] = athlete_id
+        for field in _SCRAPED_ATHLETE_FIELDS:
+            base[field] = a[field]
+        out.append(base)
+
+    # Keep athletes who have dropped off the roster, flagged inactive.
+    for athlete_id, a in prior.items():
+        if athlete_id in scraped_by_id:
+            continue
+        a = dict(a)
+        a["active"] = False
+        for field, default in _MANUAL_ATHLETE_DEFAULTS.items():
+            a.setdefault(field, default)
+        out.append(a)
+
+    out.sort(key=lambda r: (str(r.get("last_name", "")).lower(),
+                            str(r.get("first_name", "")).lower()))
+    return out
+
+
+def write_site_json(site_dir: pathlib.Path, athletes, events, performances) -> None:
+    site_dir.mkdir(parents=True, exist_ok=True)
+
+    merged = _merge_athletes(athletes, site_dir / "athletes.json")
+    _dump_json(site_dir / "athletes.json", merged)
+
+    _dump_json(site_dir / "events.json",
+               [{"event_id": e, "event_name": n, "event_season": s} for e, n, s in events])
+
+    _dump_json(site_dir / "performances.json", [
+        {
+            "performance_id": p["performance_id"],
+            "athlete_id": p["athlete_id"],
+            "event_id": p["event_id"],
+            "mark": float(p["mark"]),
+            "season": p["season"],
+            "date": p["date"],
+            "result_link": p["result_link"],
+            "ranking": p["ranking"],
+            **{flag: bool(p[flag]) for flag in _FLAGS},
+        }
+        for p in performances
+    ])
+
+    # Human-maintained files: only create them if they don't exist yet.
+    for name in ("qualifying_standards.json", "blog_posts.json"):
+        path = site_dir / name
+        if not path.exists():
+            _dump_json(path, [])
+
+
+# ---------------------------------------------------------------------------
 # Optional: push straight into the site's SQL Server database
 # ---------------------------------------------------------------------------
 def _sqlserver_conn_str() -> str:
@@ -325,9 +417,13 @@ def push_to_sqlserver(athletes, events, performances) -> None:
 # ---------------------------------------------------------------------------
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--data-dir", type=pathlib.Path, default=DATA_DIR)
+    ap.add_argument("--data-dir", type=pathlib.Path, default=DATA_DIR,
+                    help="scratch dir for the raw + CSV files (default: scraper/data)")
+    ap.add_argument("--site-dir", type=pathlib.Path, default=SITE_DATA_DIR,
+                    help="where the site's JSON is written (default: stevens_stats/data)")
     ap.add_argument("--since", default=None,
                     help="season-best cutoff date YYYY-MM-DD (default: Sep 1 of the current academic year)")
+    ap.add_argument("--no-site-json", action="store_true", help="skip writing the site JSON")
     ap.add_argument("--push", action="store_true", help="also write to the SQL Server database")
     args = ap.parse_args(argv)
 
@@ -344,6 +440,9 @@ def main(argv: list[str] | None = None) -> int:
           f"performances={len(performances)}  athlete-event groups={n_groups}")
 
     write_csvs(args.data_dir, athletes, events, performances)
+
+    if not args.no_site_json:
+        write_site_json(args.site_dir, athletes, events, performances)
 
     if args.push:
         print("pushing to SQL Server ...")
