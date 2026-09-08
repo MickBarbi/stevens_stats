@@ -1,66 +1,21 @@
-"use client";
-
 import { notFound } from "next/navigation";
-import React, { useEffect, useState } from "react";
-import './styles.css';
+import { blogPosts, getPost } from "@/lib/data";
+import "./styles.css";
 
-type Post = {
-  author: string;
-  title: string;
-  created_on: Date;
-  subheading: string;
-  post_id: number;
-  body: string;
+export function generateStaticParams() {
+  return blogPosts.map((p) => ({ post_id: String(p.post_id) }));
 }
 
-type Params = Promise<{ post_id: string }>;
+export const dynamicParams = false;
 
-interface PageProps {
-  params: Params;
-}
-
-const PostPage = ({ params }: PageProps) => {
-  const [post, setPost] = useState<Post | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<Error | null>(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        // No need to await params anymore since it's not a Promise
-        const resolvedParams = await params;
-        const postId = resolvedParams.post_id;
-
-        const response = await fetch(`/api/home/${postId}`);
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const result = await response.json();
-        setPost(result);
-      } catch (error) {
-        console.log("Error fetching post data:", error);
-        setError(error instanceof Error ? error : new Error('Unknown error occurred'));
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [params]); // Change dependency to params.postId
-
-  if (loading) {
-    return <h1>Loading...</h1>;
-  }
-
-  if (error){
-    return <div>Error: {error.message}</div>
-  }
-
-  if (!post) {
-    notFound();
-  }
+export default async function PostPage({
+  params,
+}: {
+  params: Promise<{ post_id: string }>;
+}) {
+  const { post_id } = await params;
+  const post = getPost(Number(post_id));
+  if (!post) notFound();
 
   return (
     <div className="post-container">
@@ -72,6 +27,4 @@ const PostPage = ({ params }: PageProps) => {
       <div className="post-body">{post.body}</div>
     </div>
   );
-};
-
-export default PostPage;
+}
