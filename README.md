@@ -47,20 +47,22 @@ A full-stack web app for tracking and visualizing a college track & field team's
 ## Architecture
 
 ```
-Browser (React client components)
-   │  fetch()
-   ▼
-Next.js Route Handlers  (app/api/**)
-   │  Prisma Client
-   ▼
-SQL Server database  (Athletes, Events, Performances, Bests, Rankings, …)
+scraper/ (Python, TFRRS) ──► SQL Server database
+                                (Athletes, Events, Performances, Awards,
+                                 Qualifying_Standards, Blog_Posts)
+                                     ▲
+Browser (React client components)    │  Prisma Client
+   │  fetch()                        │
+   ▼                                 │
+Next.js Route Handlers  (app/api/**) ┘
 
 Athlete photos are served from Cloudinary via public image URLs.
 ```
 
 - Pages under `app/` are mostly client components that fetch from the JSON API routes under `app/api/`.
-- API routes are **read-only** (`GET`) and use Prisma with typed, parameterized queries and basic input validation.
-- The data model lives in [`prisma/schema.prisma`](prisma/schema.prisma).
+- API routes are **read-only** (`GET`) and use Prisma (a shared client, `lib/prisma.ts`) with typed, parameterized queries and basic input validation.
+- The data model lives in [`prisma/schema.prisma`](prisma/schema.prisma). `Performances` is the single fact table; a "career best" is just a row there with an `is_*_best` flag set, recomputed by the scraper on every run.
+- Data collection lives in [`scraper/`](scraper/README.md) (TFRRS → CSV / SQL Server).
 
 ## Project structure
 
@@ -75,6 +77,7 @@ app/
 components/        Navbar and shared UI
 prisma/            Prisma schema (SQL Server)
 public/            Logo, favicons
+scraper/           Python data collection (TFRRS -> CSV / SQL Server); see scraper/README.md
 ```
 
 ## Getting started
@@ -96,7 +99,11 @@ cp .env.example .env      # then edit .env with your real values
 # 3. Generate the Prisma client
 npx prisma generate
 
-# 4. Run the dev server
+# 4. Create / update the database tables to match the schema
+npx prisma db push
+
+# 5. Load data, then run the dev server
+python scraper/roster.py && python scraper/history.py && python scraper/load.py --push
 npm run dev
 ```
 
@@ -126,7 +133,7 @@ Designed for deployment on Vercel. Set the environment variables above in the ho
 
 ## Status & roadmap
 
-Actively maintained personal project. Current data is read-only; possible future work includes an authenticated admin flow for editing results, automated data ingestion, and test coverage.
+Actively maintained personal project. The site is read-only; data is refreshed by re-running [`scraper/`](scraper/README.md). Possible future work: an authenticated admin flow for editing results, scheduled scraper runs, and test coverage.
 
 ## Author
 
