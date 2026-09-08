@@ -10,6 +10,10 @@ no database. Files are small enough to keep in git — the history *is* the back
 | File | Contents |
 |---|---|
 | `athletes.json` | One entry per athlete. `first_name`, `last_name`, `year`, `sex`, `active` come from the roster scrape. `nickname`, `bio`, `image_path`, `graduation_year`, `awards` are **preserved** across re-scrapes — edit those here. Athletes no longer on the roster stay in the file with `"active": false`. |
+
+Roster photos are served from Cloudinary with the athlete's **TFRRS id** as the
+`public_id` (e.g. `8327859.webp`). Set `image_path` on an athlete only to point
+at a differently-named upload; leave it `null` otherwise.
 | `events.json` | The 33 events (`event_id`, `event_name`, `event_season`). |
 | `performances.json` | Every result, with `is_personal_best` / `is_collegiate_best` / `is_overall_best` / `is_season_best` flags. `mark` is unit-less (track = seconds, field = metres, multis = points). |
 

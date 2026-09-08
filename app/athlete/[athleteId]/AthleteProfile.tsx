@@ -7,6 +7,7 @@ import Image from "next/image";
 import useMediaQuery from "react-responsive";
 import AthletePicker from "../AthletePicker";
 import type { Athlete, PickerAthlete, ProgressionPerformance } from "@/lib/data";
+import { athletePhotoUrl } from "@/lib/photo";
 
 type Perf = ProgressionPerformance;
 
@@ -194,7 +195,7 @@ const AthleteProfile = ({
 
         <div className="flex flex-row items-start gap-5 mt-5 flex-wrap">
           <Image
-            src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/f_auto,q_100/${athlete.athlete_id}_${athlete.image_path}.webp`}
+            src={athletePhotoUrl(athlete)}
             alt={`Roster photo for ${athlete.nickname ? athlete.nickname : athlete.first_name}`}
             width={300}
             height={400}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./RosterPage.module.css";
 import type { Athlete } from "@/lib/data";
+import { athletePhotoUrl } from "@/lib/photo";
 
 const RosterClient = ({ athletes }: { athletes: Athlete[] }) => {
   const [selectedYear, setSelectedYear] = useState("");
@@ -49,7 +50,7 @@ const RosterClient = ({ athletes }: { athletes: Athlete[] }) => {
           <div className={styles.card} key={athlete.athlete_id}>
             <div className={styles.imageWrapper}>
               <Image
-                src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/f_auto,q_100/${athlete.athlete_id}_${athlete.image_path}.webp`}
+                src={athletePhotoUrl(athlete)}
                 alt={`Roster photo for ${athlete.nickname ? athlete.nickname : athlete.first_name}`}
                 width={300}
                 height={400}
