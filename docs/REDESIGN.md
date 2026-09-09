@@ -211,7 +211,11 @@ personal investment).
   gridless-vertical axes, a rotated Y-axis unit label (Time / Meters / Points),
   a dashed **PB reference line**, tighter height (210px), fewer X ticks. Token
   tooltip. Dropped the unused `react-responsive` import.
-- [ ] **T2.4 Prev/next athlete nav + a share button.**
+- [x] **T2.4 Prev/next athlete nav + a share button.** ✅ Roster-order prev/next
+  links (`adjacentActiveAthletes()`, wraps) in a row by the picker; a
+  `ShareButton` (Web Share API → clipboard fallback) by the name. Also added
+  per-athlete `generateMetadata` so tabs / shared links read
+  "Name — Stevens Stats" (full OG images remain T4.3).
 
 ### Tier 3 — Events & roster
 
@@ -267,6 +271,14 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-09 — T2.4 prev/next + share (Tier 2 complete)
+- `adjacentActiveAthletes(id)` in `lib/data.ts` → prev/next athlete in roster
+  order (wraps); rendered as links in the row beside the picker.
+- `components/ui/ShareButton.tsx` — Web Share API on mobile, clipboard copy
+  ("Copied" state) elsewhere. Sits by the name in the player card.
+- `generateMetadata` on the athlete route → per-athlete `<title>` and
+  description. **Tier 2 done.**
 
 ### 2026-09-09 — T2.3 charts + T2.2 tweaks (feedback)
 - Feedback on T2.2: don't lose data / every mark should be clickable. Tile

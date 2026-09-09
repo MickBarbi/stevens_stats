@@ -12,13 +12,18 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import moment from "moment";
-import { Medal } from "lucide-react";
+import Link from "next/link";
+import { Medal, ChevronLeft, ChevronRight } from "lucide-react";
 import AthletePicker from "../AthletePicker";
 import { teamRank, type Athlete, type PickerAthlete, type ProgressionPerformance } from "@/lib/data";
 import { formatMark, markKind, type MarkKind } from "@/lib/format";
 import Badge from "@/components/ui/Badge";
 import Card from "@/components/ui/Card";
 import AthletePhoto from "@/components/ui/AthletePhoto";
+import ShareButton from "@/components/ui/ShareButton";
+
+const pickerLabel = (a: PickerAthlete) =>
+  `${a.nickname ? a.nickname : a.first_name} ${a.last_name}`;
 
 type Perf = ProgressionPerformance;
 
@@ -282,10 +287,14 @@ const AthleteProfile = ({
   athlete,
   progression,
   others,
+  prev,
+  next,
 }: {
   athlete: Athlete;
   progression: Perf[];
   others: PickerAthlete[];
+  prev: PickerAthlete | null;
+  next: PickerAthlete | null;
 }) => {
   const bestsRows = buildBests(progression);
   const displayName = athlete.nickname ? athlete.nickname : athlete.first_name;
@@ -302,14 +311,41 @@ const AthleteProfile = ({
 
   return (
     <div className="space-y-8">
-      <AthletePicker athletes={others} />
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <AthletePicker athletes={others} />
+        {(prev || next) && (
+          <nav className="ml-auto flex items-center gap-1 text-sm">
+            {prev && (
+              <Link
+                href={`/athlete/${prev.athlete_id}`}
+                className="inline-flex max-w-[9rem] items-center gap-0.5 rounded-md px-2 py-1 text-fg-muted transition-colors hover:bg-surface hover:text-fg"
+              >
+                <ChevronLeft className="h-4 w-4 shrink-0" aria-hidden />
+                <span className="truncate">{pickerLabel(prev)}</span>
+              </Link>
+            )}
+            {next && (
+              <Link
+                href={`/athlete/${next.athlete_id}`}
+                className="inline-flex max-w-[9rem] items-center gap-0.5 rounded-md px-2 py-1 text-fg-muted transition-colors hover:bg-surface hover:text-fg"
+              >
+                <span className="truncate">{pickerLabel(next)}</span>
+                <ChevronRight className="h-4 w-4 shrink-0" aria-hidden />
+              </Link>
+            )}
+          </nav>
+        )}
+      </div>
 
       <Card className="flex flex-wrap items-start gap-5 p-5 sm:gap-6 sm:p-6">
         <div className="relative aspect-[3/4] w-full max-w-[200px] shrink-0 overflow-hidden rounded-card border border-border sm:w-[200px]">
           <AthletePhoto athlete={athlete} sizes="200px" priority />
         </div>
         <div className="min-w-[15rem] flex-1">
-          <h1 className="page-title">{fullName}</h1>
+          <div className="flex items-start justify-between gap-3">
+            <h1 className="page-title">{fullName}</h1>
+            <ShareButton title={`${fullName} — Stevens Stats`} />
+          </div>
 
           <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-fg-muted">
             <span className="chip">{YEAR_LABEL[athlete.year] ?? `Year ${athlete.year}`}</span>

@@ -91,13 +91,27 @@ export type PickerAthlete = Pick<
   "athlete_id" | "first_name" | "last_name" | "nickname"
 >;
 
-export const athletePickerList = (): PickerAthlete[] =>
-  activeAthletes().map(({ athlete_id, first_name, last_name, nickname }) => ({
-    athlete_id,
-    first_name,
-    last_name,
-    nickname,
-  }));
+const toPicker = ({ athlete_id, first_name, last_name, nickname }: Athlete): PickerAthlete => ({
+  athlete_id,
+  first_name,
+  last_name,
+  nickname,
+});
+
+export const athletePickerList = (): PickerAthlete[] => activeAthletes().map(toPicker);
+
+/** Previous / next athlete in the roster order (wraps around). */
+export const adjacentActiveAthletes = (
+  id: number
+): { prev: PickerAthlete | null; next: PickerAthlete | null } => {
+  const list = activeAthletes();
+  const i = list.findIndex((a) => a.athlete_id === id);
+  if (i === -1 || list.length < 2) return { prev: null, next: null };
+  return {
+    prev: toPicker(list[(i - 1 + list.length) % list.length]),
+    next: toPicker(list[(i + 1) % list.length]),
+  };
+};
 
 export type ProgressionPerformance = Performance & {
   event_name: string;
