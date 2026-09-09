@@ -234,9 +234,13 @@ personal investment).
   roster becomes a mini-leaderboard: only athletes with a PB in it, ranked by
   that mark, card shows the mark + `#N`. Year / gender filters kept; athlete
   count shown. `rosterEntries()` in `lib/data.ts` feeds it.
-- [ ] **T3.3 Navigation.** Active-link state; a proper slide-in mobile menu; a
-  bottom tab bar on mobile (Home / Roster / Events / Athletes) for one-thumb
-  use at a meet.
+- [x] **T3.3 Navigation.** ✅ Header hamburger opens a real right-side **slide-in
+  drawer** (backdrop dims everything incl. the header, animates both ways,
+  closes on backdrop / Escape / link-tap / route change, locks body scroll).
+  New `components/BottomTabs.tsx` — a mobile-only **bottom tab bar** (Home /
+  Roster / Events / Athletes, icons + labels, brand-coloured active). `<main>`
+  gets `pb-24` on mobile so content clears the bar. `aria-current="page"` on
+  every active link.
 
 ### Tier 4 — Delight & finish
 
@@ -279,6 +283,14 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-09 — T3.3 navigation (Tier 3 complete)
+- `Navbar.tsx`: the abrupt drop-down block is now a right-side slide-in drawer
+  (fixed backdrop + panel, animates both ways, closes on backdrop / Escape /
+  link / route change, body-scroll lock).
+- `components/BottomTabs.tsx` — mobile-only bottom tab bar (Home / Roster /
+  Events / Athletes), rendered from `layout.tsx`; `<main>` padded `pb-24` on
+  mobile. `aria-current="page"` on active links across nav. **Tier 3 done.**
 
 ### 2026-09-09 — T3.2 roster cards
 - `rosterEntries()` in `lib/data.ts` — per active athlete: top-2 event

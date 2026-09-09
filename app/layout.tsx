@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ReactNode } from "react";
 import localFont from "next/font/local";
 import Navbar from "../components/Navbar";
+import BottomTabs from "../components/BottomTabs";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -45,7 +46,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <Navbar />
-        <main className="mx-auto max-w-6xl px-4 py-6 sm:py-8">{children}</main>
+        <main className="mx-auto max-w-6xl px-4 pt-6 pb-24 sm:pt-8 sm:pb-8">{children}</main>
+        <BottomTabs />
       </body>
     </html>
   );
