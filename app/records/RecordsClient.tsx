@@ -2,8 +2,32 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import type { TopTenList } from "@/lib/data";
+import type { TopTenList, TopTenEntry } from "@/lib/data";
 import PageHeader from "@/components/ui/PageHeader";
+
+// The season year a mark counts for: indoor marks from Dec roll into the next
+// calendar year (matches scraper/load.py's Dec-1 cutoff).
+const seasonYearOf = (d: Date) => d.getFullYear() + (d.getMonth() >= 11 ? 1 : 0);
+const CURRENT_SEASON_YEAR = seasonYearOf(new Date());
+
+const entrySeasonYear = (e: TopTenEntry): number | null => {
+  if (e.date) {
+    const d = new Date(`${e.date}T00:00:00`);
+    return Number.isNaN(d.getTime()) ? null : seasonYearOf(d);
+  }
+  return e.year ?? null;
+};
+
+const fmtDate = (iso: string): string => {
+  const d = new Date(`${iso}T00:00:00`);
+  return Number.isNaN(d.getTime())
+    ? iso
+    : d.toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+      });
+};
 
 // `!font-sans` beats `.data-table a { font-mono }` (equal specificity, so the
 // utility needs the bang) — names read as names, not monospaced marks.
@@ -76,6 +100,15 @@ export default function RecordsClient({ lists }: { lists: TopTenList[] }) {
         </select>
       </PageHeader>
 
+      <p className="mb-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-fg-muted">
+        <span className="inline-flex items-center gap-1.5">
+          <span className="h-3 w-1 rounded-sm bg-brand" aria-hidden /> this season
+        </span>
+        <span className="inline-flex items-center gap-1.5">
+          <span className="h-3 w-1 rounded-sm bg-fg-subtle" aria-hidden /> last season
+        </span>
+      </p>
+
       {visible.length === 0 ? (
         <p className="text-fg-muted">No lists for this selection.</p>
       ) : (
@@ -103,31 +136,44 @@ export default function RecordsClient({ lists }: { lists: TopTenList[] }) {
                     {l.entries
                       .slice()
                       .sort((a, b) => a.rank - b.rank)
-                      .map((e, i) => (
-                        <tr key={i}>
-                          <td className={e.rank === 1 ? "font-semibold text-brand" : undefined}>
-                            {e.rank}
-                          </td>
-                          <td className="text-left">{nameCol(l, e)}</td>
-                          <td className="font-mono tabular-nums">
-                            {e.link ? (
-                              <a
-                                href={e.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-link no-underline hover:underline"
-                              >
-                                {e.mark}
-                              </a>
-                            ) : (
-                              e.mark
-                            )}
-                          </td>
-                          <td className="text-fg-muted tabular-nums">
-                            {l.relay ? e.year ?? "" : e.date ?? ""}
-                          </td>
-                        </tr>
-                      ))}
+                      .map((e, i) => {
+                        const sy = entrySeasonYear(e);
+                        const rowCls =
+                          sy === CURRENT_SEASON_YEAR
+                            ? "row-current"
+                            : sy === CURRENT_SEASON_YEAR - 1
+                              ? "row-prior"
+                              : undefined;
+                        return (
+                          <tr key={i} className={rowCls}>
+                            <td
+                              className={
+                                e.rank === 1 ? "font-semibold text-brand" : undefined
+                              }
+                            >
+                              {e.rank}
+                            </td>
+                            <td className="text-left">{nameCol(l, e)}</td>
+                            <td className="font-mono tabular-nums">
+                              {e.link ? (
+                                <a
+                                  href={e.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-link no-underline hover:underline"
+                                >
+                                  {e.mark}
+                                </a>
+                              ) : (
+                                e.mark
+                              )}
+                            </td>
+                            <td className="whitespace-nowrap text-fg-muted">
+                              {l.relay ? e.year ?? "" : e.date ? fmtDate(e.date) : ""}
+                            </td>
+                          </tr>
+                        );
+                      })}
                   </tbody>
                 </table>
               </div>

@@ -226,6 +226,29 @@
   .data-table th.sortable {
     @apply cursor-pointer select-none transition-colors hover:bg-brand-hover;
   }
+
+  /* Recency accent on the Top 10 lists — a mark from this season stands out,
+     one from last season is still tinted but quieter. `color-mix` keeps the
+     row opaque so hover still reads. */
+  .data-table tr.row-current > td {
+    background: color-mix(in srgb, var(--brand) 11%, var(--bg));
+  }
+  .data-table tr.row-current > td:first-child {
+    box-shadow: inset 3px 0 0 var(--brand);
+    font-weight: 600;
+  }
+  .data-table tbody tr.row-current:hover > td {
+    background: color-mix(in srgb, var(--brand) 17%, var(--bg));
+  }
+  .data-table tr.row-prior > td {
+    background: color-mix(in srgb, var(--fg) 6%, var(--bg));
+  }
+  .data-table tr.row-prior > td:first-child {
+    box-shadow: inset 3px 0 0 color-mix(in srgb, var(--fg) 35%, transparent);
+  }
+  .data-table tbody tr.row-prior:hover > td {
+    background: color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
 }
 
 @layer utilities {
