@@ -55,13 +55,17 @@ const MarkStat = ({
   cell,
   kind,
   muted,
+  className = "",
 }: {
   label?: string;
   cell: BestCell;
   kind: MarkKind;
   muted?: boolean;
+  className?: string;
 }) => (
-  <span className={`font-mono text-sm tabular-nums ${muted ? "text-fg-muted" : "text-fg"}`}>
+  <span
+    className={`font-mono text-sm tabular-nums ${muted ? "text-fg-muted" : "text-fg"} ${className}`}
+  >
     {label && <span className="font-sans text-xs text-fg-subtle">{label} </span>}
     {cell?.result_link ? (
       <a
@@ -298,38 +302,48 @@ const EventsClient = ({
                       const tr = teamRank(row.athlete_id, event.event_id, season, row.sex);
                       return (
                         <React.Fragment key={row.athlete_id}>
-                          <li className="flex flex-wrap items-baseline gap-x-2 rounded-md px-2 py-1.5 odd:bg-surface">
-                            <span className="w-6 shrink-0 text-right text-sm tabular-nums text-fg-subtle">
+                          <li className="grid grid-cols-[1.5rem_1fr] items-baseline gap-x-2 gap-y-1 rounded-md px-2 py-1.5 odd:bg-surface sm:grid-cols-[1.5rem_13rem_1fr] sm:gap-x-3">
+                            <span className="text-right text-sm tabular-nums text-fg-subtle">
                               {sort === "rank" ? idx + 1 : ""}
                             </span>
                             <a
                               href={`/athlete/${row.athlete_id}`}
-                              className={`font-medium hover:text-link ${nameClass(best)}`}
+                              title={`${row.first_name} ${row.last_name}`}
+                              className={`truncate font-medium hover:text-link ${nameClass(best)}`}
                             >
                               {row.nickname ? row.nickname : row.first_name} {row.last_name}
                             </a>
-                            <MarkStat cell={best} kind={kind} />
-                            {best &&
-                              row.personal_best &&
-                              formatMark(row.personal_best.mark, kind) !==
-                                formatMark(best.mark, kind) && (
-                                <MarkStat
-                                  label="PB"
-                                  cell={row.personal_best}
-                                  kind={kind}
-                                  muted
-                                />
+                            {/* marks group — indented under the name on mobile,
+                                its own column on desktop. The primary mark has a
+                                fixed width so every row's mark aligns. */}
+                            <div className="col-start-2 flex items-baseline gap-x-3 whitespace-nowrap sm:col-start-3">
+                              <MarkStat
+                                cell={best}
+                                kind={kind}
+                                className="inline-block w-[4.5rem] shrink-0 text-right"
+                              />
+                              {best &&
+                                row.personal_best &&
+                                formatMark(row.personal_best.mark, kind) !==
+                                  formatMark(best.mark, kind) && (
+                                  <MarkStat
+                                    label="PB"
+                                    cell={row.personal_best}
+                                    kind={kind}
+                                    muted
+                                  />
+                                )}
+                              {tr != null && (
+                                <span
+                                  title={`#${tr} on the all-time team list`}
+                                  className={`font-mono text-sm ${
+                                    tr === 1 ? "font-semibold text-brand" : "text-fg-subtle"
+                                  }`}
+                                >
+                                  #{tr}
+                                </span>
                               )}
-                            {tr != null && (
-                              <span
-                                title={`#${tr} on the all-time team list`}
-                                className={`font-mono text-sm ${
-                                  tr === 1 ? "font-semibold text-brand" : "text-fg-subtle"
-                                }`}
-                              >
-                                #{tr}
-                              </span>
-                            )}
+                            </div>
                           </li>
                           {idx === aartfcIdx && idx !== macIdx && (
                             <CutLine
