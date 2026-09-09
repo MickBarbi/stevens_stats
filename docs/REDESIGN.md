@@ -244,8 +244,11 @@ personal investment).
 
 ### Tier 4 — Delight & finish
 
-- [ ] **T4.1 Micro-interactions.** Press/hover states; a celebratory accent on a
-  new-PB row; respect `prefers-reduced-motion`.
+- [x] **T4.1 Micro-interactions.** ✅ `active:` press feedback on the pieces you
+  tap — interactive `Card`s (scale + settle), segmented controls, jump-bar
+  chips, bottom-tab items, `ShareButton`. A new personal best in the home feed
+  gets a green tint + left accent bar (`.feed-pb`). All of it rides on the
+  global `prefers-reduced-motion` reset from T4.4.
 - [ ] **T4.2 Empty states with personality** (no posts / no marks / no standards).
 - [ ] **T4.3 Per-athlete OG images** so a texted link previews nicely.
 - [x] **T4.4 Accessibility pass.** ✅ One global `:focus-visible` outline
@@ -289,6 +292,16 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-09 — Top 10 recency accent + T4.1 micro-interactions
+- `RecordsClient`: rows from the current season get a brand tint + left bar +
+  bold rank; the season before gets a quieter grey version. Legend under the
+  header. Dates now read "May 15, 2025". `.row-current` / `.row-prior` in
+  `globals.css` (color-mix so hover still works).
+- T4.1: `active:` press feedback on `Card` (interactive), the segmented
+  controls, jump-bar chips, bottom tabs and `ShareButton`; `.feed-pb` green
+  accent on new-personal-best rows in the home feed. Reduced motion already
+  covered globally.
 
 ### 2026-09-09 — T4.4 accessibility pass
 - Global `:focus-visible` outline in `globals.css` (`!important` to beat the

@@ -228,7 +228,7 @@ const EventsClient = ({
             key={e.event_id}
             type="button"
             onClick={() => scrollTo(e.event_id)}
-            className="chip shrink-0 whitespace-nowrap hover:border-link hover:text-fg"
+            className="chip shrink-0 whitespace-nowrap transition-transform hover:border-link hover:text-fg active:scale-95"
           >
             {e.event_name}
           </button>

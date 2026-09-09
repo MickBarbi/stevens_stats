@@ -42,7 +42,9 @@ export default function LatestResults() {
               return (
                 <li
                   key={r.performance_id}
-                  className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1 px-4 py-2.5"
+                  className={`flex flex-wrap items-baseline gap-x-2.5 gap-y-1 px-4 py-2.5 ${
+                    r.is_personal_best ? "feed-pb" : ""
+                  }`}
                 >
                   <Link
                     href={`/athlete/${r.athlete.athlete_id}`}

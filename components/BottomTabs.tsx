@@ -30,7 +30,7 @@ export default function BottomTabs() {
             key={href}
             href={href}
             aria-current={active ? "page" : undefined}
-            className={`flex flex-1 flex-col items-center gap-0.5 py-2 text-[0.65rem] font-medium transition-colors ${
+            className={`flex flex-1 flex-col items-center gap-0.5 py-2 text-[0.65rem] font-medium transition-colors active:bg-surface ${
               active ? "text-brand" : "text-fg-muted hover:text-fg"
             }`}
           >

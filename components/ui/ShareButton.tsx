@@ -29,7 +29,7 @@ export default function ShareButton({ title }: { title: string }) {
     <button
       type="button"
       onClick={onClick}
-      className="inline-flex shrink-0 items-center gap-1.5 rounded-md border border-border px-2.5 py-1 text-sm text-fg-muted transition-colors hover:bg-surface hover:text-fg"
+      className="inline-flex shrink-0 items-center gap-1.5 rounded-md border border-border px-2.5 py-1 text-sm text-fg-muted transition-[transform,color,background-color] hover:bg-surface hover:text-fg active:scale-95"
     >
       {copied ? (
         <Check className="h-4 w-4 text-pb" aria-hidden />
