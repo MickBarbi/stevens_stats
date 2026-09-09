@@ -9,6 +9,7 @@ import type {
   Season,
 } from "@/lib/data";
 import { formatMark, markKind, type MarkKind } from "@/lib/format";
+import PageHeader from "@/components/ui/PageHeader";
 
 type SeasonFilter = Season | "all";
 
@@ -184,9 +185,7 @@ const EventsClient = ({
 
   return (
     <div>
-      <h1 className="mb-4 text-3xl font-bold text-fg">Events</h1>
-
-      <div className="mb-6 flex flex-wrap gap-3">
+      <PageHeader title="Events">
         <select
           className="field-select"
           onChange={(e) => setSelectedEvent(e.target.value)}
@@ -219,7 +218,7 @@ const EventsClient = ({
           <option value="outdoor">Outdoor</option>
           <option value="all">All Seasons</option>
         </select>
-      </div>
+      </PageHeader>
 
       <div className="space-y-8">
         {visibleEvents.map((event) => {

@@ -6,6 +6,7 @@ import Image from "next/image";
 import type { Athlete } from "@/lib/data";
 import { athletePhotoUrl } from "@/lib/photo";
 import Card from "@/components/ui/Card";
+import PageHeader from "@/components/ui/PageHeader";
 
 const RosterClient = ({ athletes }: { athletes: Athlete[] }) => {
   const [selectedYear, setSelectedYear] = useState("");
@@ -20,9 +21,7 @@ const RosterClient = ({ athletes }: { athletes: Athlete[] }) => {
 
   return (
     <div>
-      <h1 className="mb-6 text-center text-3xl font-bold text-fg">Roster</h1>
-
-      <div className="mb-6 flex flex-wrap justify-center gap-3">
+      <PageHeader title="Roster">
         <select
           className="field-select"
           onChange={(e) => setSelectedYear(e.target.value)}
@@ -45,7 +44,7 @@ const RosterClient = ({ athletes }: { athletes: Athlete[] }) => {
           <option value="m">Men</option>
           <option value="f">Women</option>
         </select>
-      </div>
+      </PageHeader>
 
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
         {visible.map((athlete) => (

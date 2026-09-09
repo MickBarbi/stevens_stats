@@ -183,7 +183,7 @@ const AthleteProfile = ({
           className="rounded-card border border-border object-cover"
         />
         <div className="min-w-[16rem] flex-1">
-          <h1 className="text-3xl font-bold text-fg">
+          <h1 className="page-title">
             {displayName} {athlete.last_name}
           </h1>
           <p className="mt-1 text-fg-muted">Year {athlete.year}</p>
@@ -206,7 +206,7 @@ const AthleteProfile = ({
       </div>
 
       <div>
-        <h2 className="mb-4 text-2xl font-bold text-fg">Bests</h2>
+        <h2 className="section-title mb-4">Bests</h2>
         {bestsRows.length > 0 ? (
           <div className="space-y-8">
             <div className="overflow-x-auto">

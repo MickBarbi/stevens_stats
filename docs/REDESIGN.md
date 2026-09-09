@@ -155,13 +155,14 @@ personal investment).
   the header; leaking global `body` rule deleted with its file; palette checked
   for AA both ways. Verified with screenshots (roster / events / athlete / home
   × light / dark × mobile / desktop). *(fixes P1)*
-- [ ] **T0.3 Typography.** Wire Geist (already in `app/fonts/`), set a modular
-  type scale, `font-variant-numeric: tabular-nums` on all marks/times, fix
-  line-heights. *(fixes P4)* — `.data-table` already sets `tabular-nums`.
-- [~] **T0.4 App shell.** Mostly done alongside T0.2/T0.5: sticky `<header>` (no
-  more fixed + `margin-top` hacks), one `<main>` max-width container in
-  `app/layout.tsx`. **Still to do:** a reusable `PageHeader` component (pages
-  currently inline their own `<h1>` + filter row). *(fixes P5)*
+- [x] **T0.3 Typography.** ✅ Geist Sans + Geist Mono wired via `next/font/local`
+  in `layout.tsx`, exposed as `font-sans` / `font-mono` in the Tailwind config;
+  body on `font-sans`, marks/times on `font-mono` + `tabular-nums` (via
+  `.data-table a`). `.page-title` / `.section-title` component classes give a
+  consistent heading scale; base `line-height` 1.6 (1.2 + balance for h1–h4).
+- [x] **T0.4 App shell.** ✅ Sticky `<header>` (no fixed + `margin-top` hacks),
+  one `<main>` max-width container, and `components/ui/PageHeader.tsx` (title +
+  filters slot) used by roster / events / home.
 - [x] **T0.5 Consolidate styling.** ✅ One system: Tailwind + design tokens + a
   few `@layer components` classes (`.card`, `.data-table`, `.field-select`,
   `.chip`) in `globals.css`. All 6 per-page `.css` / `.module.css` files
@@ -251,6 +252,21 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-08 — T0.3 typography + T0.4 shell finish
+- Geist Sans + Geist Mono wired with `next/font/local` (`app/layout.tsx`),
+  exposed as `font-sans` / `font-mono` in `tailwind.config.ts`. `html` uses
+  `font-sans`; marks/times render in `font-mono` + `tabular-nums` so columns
+  line up.
+- `globals.css`: base `line-height: 1.6`, h1–h4 `line-height: 1.2` + balance;
+  new `.page-title` / `.section-title` component classes for a consistent
+  heading scale.
+- `components/ui/PageHeader.tsx` (title + right-aligned filter slot) now used by
+  roster / events / home; home gained a "Team News" heading. Athlete name and
+  post title use `.page-title`; "Bests" uses `.section-title`.
+- Tailwind's built-in spacing/size scale is the scale — no custom tokens.
+- Verified with light/dark screenshots. (Tip: a stale `next start` on a reused
+  port will serve a wiped build as unstyled HTML — start on a fresh port.)
 
 ### 2026-09-08 — T0.2 dark mode + T0.5 style consolidation
 Moved the whole site onto the token system in one pass.

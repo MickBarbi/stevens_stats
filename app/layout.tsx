@@ -1,7 +1,22 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
+import localFont from "next/font/local";
 import Navbar from "../components/Navbar";
+
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+  display: "swap",
+});
+
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Stevens Stats",
@@ -20,7 +35,11 @@ const themeScript = `(function(){try{var s=localStorage.getItem('theme');var m=w
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable}`}
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

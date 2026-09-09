@@ -121,9 +121,20 @@
   body {
     background: var(--bg);
     color: var(--fg);
-    font-family: Arial, Helvetica, sans-serif; /* Geist wiring is T0.3 */
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+  }
+  /* font-family comes from tailwind.config.ts fontFamily.sans (Geist + fallbacks) */
+  html {
+    @apply font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.2;
+    text-wrap: balance;
   }
   a {
     color: inherit;
@@ -137,6 +148,13 @@
 /* Shared component classes — the "few @layer components" from T0.5. Pages use
    these plus Tailwind utilities; no per-page .css files, no inline style={{}}. */
 @layer components {
+  .page-title {
+    @apply text-2xl font-bold tracking-tight text-fg sm:text-3xl;
+  }
+  .section-title {
+    @apply text-xl font-semibold text-fg sm:text-2xl;
+  }
+
   .card {
     @apply rounded-card border border-border bg-surface-raised shadow-card;
   }
@@ -165,7 +183,7 @@
     @apply bg-surface;
   }
   .data-table a {
-    @apply text-link no-underline hover:underline;
+    @apply font-mono tabular-nums text-link no-underline hover:underline;
   }
   .data-table th.sortable {
     @apply cursor-pointer select-none transition-colors hover:bg-brand-hover;

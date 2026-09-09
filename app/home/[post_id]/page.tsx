@@ -19,7 +19,7 @@ export default async function PostPage({
 
   return (
     <Card as="article" className="mx-auto max-w-3xl p-6 sm:p-8">
-      <h1 className="text-3xl font-bold text-fg">{post.title}</h1>
+      <h1 className="page-title">{post.title}</h1>
       {post.subheading && <p className="mt-2 text-lg text-fg-muted">{post.subheading}</p>}
       <p className="mt-3 text-sm text-fg-subtle">
         {new Date(post.created_on).toLocaleDateString()}
