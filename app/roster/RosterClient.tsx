@@ -2,11 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import type { Athlete } from "@/lib/data";
-import { athletePhotoUrl } from "@/lib/photo";
 import Card from "@/components/ui/Card";
 import PageHeader from "@/components/ui/PageHeader";
+import AthletePhoto from "@/components/ui/AthletePhoto";
 
 const RosterClient = ({ athletes }: { athletes: Athlete[] }) => {
   const [selectedYear, setSelectedYear] = useState("");
@@ -51,12 +50,9 @@ const RosterClient = ({ athletes }: { athletes: Athlete[] }) => {
           <Link key={athlete.athlete_id} href={`/athlete/${athlete.athlete_id}`} className="block">
             <Card interactive className="h-full overflow-hidden">
               <div className="relative aspect-[3/4] bg-surface">
-                <Image
-                  src={athletePhotoUrl(athlete)}
-                  alt={`Roster photo for ${athlete.nickname ? athlete.nickname : athlete.first_name}`}
-                  fill
+                <AthletePhoto
+                  athlete={athlete}
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="object-cover"
                 />
               </div>
               <div className="p-3 text-center">

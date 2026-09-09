@@ -3,15 +3,62 @@
 import React from "react";
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
 import moment from "moment";
-import Image from "next/image";
 import useMediaQuery from "react-responsive";
+import { Medal } from "lucide-react";
 import AthletePicker from "../AthletePicker";
 import { teamRank, type Athlete, type PickerAthlete, type ProgressionPerformance } from "@/lib/data";
-import { athletePhotoUrl } from "@/lib/photo";
 import { formatMark, markKind } from "@/lib/format";
 import Badge from "@/components/ui/Badge";
+import Card from "@/components/ui/Card";
+import AthletePhoto from "@/components/ui/AthletePhoto";
 
 type Perf = ProgressionPerformance;
+
+const YEAR_LABEL: Record<number, string> = {
+  1: "First-Year",
+  2: "Sophomore",
+  3: "Junior",
+  4: "Senior",
+  5: "Grad Student",
+  6: "Grad Student",
+};
+
+type Specialty = { event_id: number; event_name: string; count: number; rank: number | null };
+
+// The events an athlete is known for: those they hold a team ranking in first
+// (best rank wins), then their most-competed events.
+const deriveSpecialties = (
+  prog: Perf[],
+  athleteId: number,
+  sex: string | null
+): Specialty[] => {
+  const byEvent = new Map<number, { name: string; count: number }>();
+  for (const p of prog) {
+    const e = byEvent.get(p.event_id);
+    if (e) e.count += 1;
+    else byEvent.set(p.event_id, { name: p.event_name, count: 1 });
+  }
+  const specs: Specialty[] = [];
+  for (const [event_id, e] of byEvent) {
+    const ranks = [
+      teamRank(athleteId, event_id, "indoor", sex),
+      teamRank(athleteId, event_id, "outdoor", sex),
+    ].filter((r): r is number => r != null);
+    specs.push({
+      event_id,
+      event_name: e.name,
+      count: e.count,
+      rank: ranks.length ? Math.min(...ranks) : null,
+    });
+  }
+  specs.sort((a, b) => {
+    if (a.rank != null && b.rank != null) return a.rank - b.rank || b.count - a.count;
+    if (a.rank != null) return -1;
+    if (b.rank != null) return 1;
+    return b.count - a.count;
+  });
+  return specs;
+};
 
 const groupDataByEventAndSeason = (data: Perf[]) => {
   return data.reduce((acc: { [key: string]: Perf[] }, item) => {
@@ -163,6 +210,13 @@ const AthleteProfile = ({
 }) => {
   const bestsRows = buildBests(progression);
   const displayName = athlete.nickname ? athlete.nickname : athlete.first_name;
+  const fullName = `${displayName} ${athlete.last_name}`;
+
+  const specialties = deriveSpecialties(progression, athlete.athlete_id, athlete.sex);
+  const headline = specialties[0] ?? null;
+  const headlinePB = headline
+    ? progression.find((p) => p.event_id === headline.event_id && p.is_personal_best) ?? null
+    : null;
 
   const rankOf = (season: "indoor" | "outdoor", eventId: number) =>
     teamRank(athlete.athlete_id, eventId, season, athlete.sex);
@@ -184,28 +238,61 @@ const AthleteProfile = ({
     <div className="space-y-8">
       <AthletePicker athletes={others} />
 
-      <div className="flex flex-wrap items-start gap-6">
-        <Image
-          src={athletePhotoUrl(athlete)}
-          alt={`Roster photo for ${displayName}`}
-          width={260}
-          height={347}
-          className="rounded-card border border-border object-cover"
-        />
-        <div className="min-w-[16rem] flex-1">
-          <h1 className="page-title">
-            {displayName} {athlete.last_name}
-          </h1>
-          <p className="mt-1 text-fg-muted">Year {athlete.year}</p>
+      <Card className="flex flex-wrap items-start gap-5 p-5 sm:gap-6 sm:p-6">
+        <div className="relative aspect-[3/4] w-full max-w-[200px] shrink-0 overflow-hidden rounded-card border border-border sm:w-[200px]">
+          <AthletePhoto athlete={athlete} sizes="200px" priority />
+        </div>
+        <div className="min-w-[15rem] flex-1">
+          <h1 className="page-title">{fullName}</h1>
+
+          <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-fg-muted">
+            <span className="chip">{YEAR_LABEL[athlete.year] ?? `Year ${athlete.year}`}</span>
+            {athlete.sex && (
+              <span>{athlete.sex === "m" ? "Men's" : "Women's"} Track &amp; Field</span>
+            )}
+          </div>
+
+          {headline && headlinePB && (
+            <p className="mt-3 text-lg text-fg">
+              <span className="font-semibold">{headline.event_name}</span>{" "}
+              <span className="font-mono tabular-nums text-fg-muted">
+                PB {formatMark(headlinePB.mark, markKind(headline.event_id))}
+              </span>
+              {headline.rank != null && (
+                <>
+                  {" · "}
+                  {headline.rank === 1 ? (
+                    <span className="font-semibold text-brand">School Record</span>
+                  ) : (
+                    <span className="text-fg-muted">#{headline.rank} all-time</span>
+                  )}
+                </>
+              )}
+            </p>
+          )}
+
+          {specialties.length > 0 && (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {specialties.slice(0, 4).map((s) => (
+                <span key={s.event_id} className="chip">
+                  {s.event_name}
+                  {s.rank != null && <span className="text-fg-subtle">#{s.rank}</span>}
+                </span>
+              ))}
+            </div>
+          )}
+
           {athlete.bio && <p className="mt-4 leading-relaxed text-fg">{athlete.bio}</p>}
+
           {athlete.awards.length > 0 && (
             <div className="mt-4">
-              <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-fg-muted">
+              <h2 className="mb-2 text-xs font-semibold uppercase tracking-wide text-fg-muted">
                 Awards
               </h2>
               <ul className="flex flex-wrap gap-2">
                 {athlete.awards.map((award, i) => (
                   <li key={i} className="chip">
+                    <Medal className="h-3.5 w-3.5 shrink-0 text-sb" aria-hidden />
                     {award}
                   </li>
                 ))}
@@ -213,7 +300,7 @@ const AthleteProfile = ({
             </div>
           )}
         </div>
-      </div>
+      </Card>
 
       <div>
         <h2 className="section-title mb-4">Bests</h2>

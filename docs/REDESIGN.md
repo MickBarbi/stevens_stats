@@ -192,9 +192,14 @@ personal investment).
 
 ### Tier 2 — Athlete page: personable
 
-- [ ] **T2.1 Profile as a "player card".** Big photo, name, class year, auto-derived
-  **event specialties**, one headline stat; bio + awards as designed sections
-  (awards as medal chips). *(fixes P9; Jakob's Law)*
+- [x] **T2.1 Profile as a "player card".** ✅ Header is a `Card` panel: photo,
+  name (nickname wins), class-year chip + "Men's/Women's Track & Field", a
+  headline line (`deriveSpecialties()` → top event · PB · `#N all-time` /
+  "School Record"), specialty chips (events ranked by best team rank then
+  competes-most), bio, and awards as medal chips (`Medal` icon).
+  Also added `components/ui/AthletePhoto.tsx` — an **initials fallback** for
+  athletes with no Cloudinary upload — used here and on the roster (that's the
+  T3.2 "fallback avatar" bullet, done early).
 - [ ] **T2.2 Bests as a stat-tile grid**, not the 9-column scroll table. One tile
   per event: PB big, SB / indoor / outdoor secondary, inline sparkline, link to
   results. Stacks on mobile. *(progressive disclosure; fixes P6)*
@@ -208,8 +213,9 @@ personal investment).
   jump-list / sticky sub-nav; each event a card with a compact leaderboard;
   **on mobile stack columns into rows** instead of horizontal scroll; draw the
   standard as a "cut line" in the table. *(responsive table patterns; fixes P6)*
-- [ ] **T3.2 Roster cards.** Event-specialty tags, a "recent PB" dot, filter/sort
-  by event, visual parity with the athlete card.
+- [~] **T3.2 Roster cards.** Fallback avatar done (T2.1). Still: event-specialty
+  tags, a "recent PB" dot, filter/sort by event, visual parity with the athlete
+  card.
 - [ ] **T3.3 Navigation.** Active-link state; a proper slide-in mobile menu; a
   bottom tab bar on mobile (Home / Roster / Events / Athletes) for one-thumb
   use at a meet.
@@ -255,6 +261,17 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-09 — T2.1 player card
+- Athlete profile header is now a `Card` panel: photo, name (nickname wins),
+  class-year chip + squad, a headline stat line, event-specialty chips, bio,
+  and awards as medal chips.
+- Specialties/headline derived in `deriveSpecialties()` — events sorted by best
+  team rank (then most-competed). Headline shows `Event · PB · #N all-time`, or
+  "School Record" when the rank is #1.
+- `components/ui/AthletePhoto.tsx`: initials fallback for athletes without a
+  Cloudinary photo (no more broken-image icon). Wired into the profile card and
+  the roster grid — covers the T3.2 fallback-avatar item.
 
 ### 2026-09-09 — top 10 fixes (ties + wrong outdoor sheet)
 - **Ties:** the converter treated a blank Rank cell (a tie continuation) as the
