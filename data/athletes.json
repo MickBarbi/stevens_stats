@@ -14,7 +14,7 @@
   },
   {
     "nickname": null,
-    "bio": null,
+    "bio": "Hey, my name is Gianna. I am a junior electrical engineering major. I run long distance events, including the 3k, 5k, and 3k Steeplechase. I enjoy listening to music, baking, and hanging with friends.",
     "image_path": null,
     "graduation_year": null,
     "awards": [],
@@ -144,7 +144,7 @@
   },
   {
     "nickname": null,
-    "bio": null,
+    "bio": "Hi I'm Cate Bondi! I am from Irondequoit, New York. I run XC and distance and steeple on the track. I love going for short swims during my races. I can do a Rubik's in a moderately impressive amount of time. I also enjoy singing with friends.",
     "image_path": null,
     "graduation_year": null,
     "awards": [],
@@ -157,10 +157,12 @@
   },
   {
     "nickname": null,
-    "bio": null,
+    "bio": "Hey! I'm Kate. My running events are the 400 and 800m. Outside of running, my hobbies include hiking, biking, and TIKTOK. Also, fun fact: I've competed in the world championships for cheerleading.",
     "image_path": null,
     "graduation_year": null,
-    "awards": [],
+    "awards": [
+      "Dean's List"
+    ],
     "athlete_id": 8681469,
     "first_name": "Kate",
     "last_name": "Cen",
@@ -286,11 +288,15 @@
     "active": true
   },
   {
-    "nickname": null,
-    "bio": null,
+    "nickname": "Izzy",
+    "bio": "I'm a visual arts/technology major and run mid-distance (800-3K). KT Tape's #1 fan and head chef at Papa's Susheria.",
     "image_path": null,
     "graduation_year": null,
-    "awards": [],
+    "awards": [
+      "2024 USTFCCCA All-Academic",
+      "2024 YMCA J. Barry Stanford Special Achievement",
+      "2024 River Dell Outstanding Illustrator Award"
+    ],
     "athlete_id": 8919557,
     "first_name": "Isabella",
     "last_name": "Gabay",
@@ -339,10 +345,16 @@
   },
   {
     "nickname": null,
-    "bio": null,
+    "bio": "World's biggest Sonic fan, professional at napping, and still 1-0 to Enrico on the track.",
     "image_path": null,
     "graduation_year": null,
-    "awards": [],
+    "awards": [
+      "4x All-Conference",
+      "2x All-County",
+      "Second at States",
+      "Federation Qualifier",
+      "All-Regional in Cross Country"
+    ],
     "athlete_id": 8919567,
     "first_name": "Luke",
     "last_name": "Giangrande",
@@ -430,7 +442,7 @@
   },
   {
     "nickname": null,
-    "bio": null,
+    "bio": "Hi, I'm Matt Hods. I am a mid distance runner and my favorite event is the 800. I am part of the greatest lineage on the team. Outside of running, I am a slightly avid juggler and a more avid guitar player.",
     "image_path": null,
     "graduation_year": null,
     "awards": [],
@@ -482,10 +494,13 @@
   },
   {
     "nickname": null,
-    "bio": null,
+    "bio": "I'm a multi - my favorite event switches between pole vault and javelin depending on the day - and I'm a Mechanical Engineering major.",
     "image_path": null,
     "graduation_year": null,
-    "awards": [],
+    "awards": [
+      "3x MAC Champion",
+      "4x All-Region Selection"
+    ],
     "athlete_id": 8327852,
     "first_name": "Brandon",
     "last_name": "Kiefer",
@@ -638,10 +653,13 @@
   },
   {
     "nickname": null,
-    "bio": null,
+    "bio": "Hi I'm Kevin! I am a Chemistry undergrad student from Fair Haven, New Jersey. I like food. I have a pet fish named Dale.",
     "image_path": null,
     "graduation_year": null,
-    "awards": [],
+    "awards": [
+      "Eagle Scout",
+      "Spanish State Seal of Biliteracy"
+    ],
     "athlete_id": 8919572,
     "first_name": "Kevin",
     "last_name": "Medrow",
@@ -781,10 +799,17 @@
   },
   {
     "nickname": null,
-    "bio": null,
+    "bio": "I am a middle distance runner. I played basketball throughout most of high school, and stopped during my junior year to start running track. I started distance running with cross country my senior year, as I sprinted and jumped during my junior year.",
     "image_path": null,
     "graduation_year": null,
-    "awards": [],
+    "awards": [
+      "High School - NJ State Champ in the 4x800",
+      "High School - State Sectional Champ in the 3200m",
+      "High School - League Champ in the 1600m",
+      "High School - 1st Team All-State 4x800",
+      "High School - 1st Team All-Bergen County 4x800m",
+      "High School - 1st Team All-League 1600m"
+    ],
     "athlete_id": 8919574,
     "first_name": "Enrico",
     "last_name": "Parrella",
@@ -833,7 +858,7 @@
   },
   {
     "nickname": null,
-    "bio": null,
+    "bio": "Hi I'm Breona! I am a computer science major with an interest in AI and machine learning. I started track and field my freshman year of high school right before covid. Since then I have been high jumping and starting to do throws as well!",
     "image_path": null,
     "graduation_year": null,
     "awards": [],
@@ -846,7 +871,7 @@
   },
   {
     "nickname": null,
-    "bio": null,
+    "bio": "Maggie is a jumper, specializing in high jump. She is majoring in biology on the pre-veterinary track. In her free time, Maggie likes to bring her dog Moose to the dog park and try new coffee shops around Hoboken.",
     "image_path": null,
     "graduation_year": null,
     "awards": [],
@@ -950,7 +975,7 @@
   },
   {
     "nickname": null,
-    "bio": null,
+    "bio": "Hi, I'm Anya! I'm from Parsippany, NJ. I run cross country and run sprints/hurdles during the track seasons. I love running full speed at stationary objects during my races. I can do a Rubik's cube in a slightly more than moderately impressive time. I also enjoy singing (preferably alone).",
     "image_path": null,
     "graduation_year": null,
     "awards": [],
@@ -1028,10 +1053,15 @@
   },
   {
     "nickname": null,
-    "bio": null,
+    "bio": "The day you see my mustache come off is the day I stop running.",
     "image_path": null,
     "graduation_year": null,
-    "awards": [],
+    "awards": [
+      "Dean's List",
+      "MAC Academic",
+      "2023 West Point 1k Champ",
+      "Monarch Invite 800m Champ"
+    ],
     "athlete_id": 8327855,
     "first_name": "Caleb",
     "last_name": "Stephen",
