@@ -68,7 +68,11 @@ export default function LatestResults() {
                     )}
                   </span>
 
-                  {r.team_rank === 1 && <Badge kind="sr" />}
+                  {/* SR only when THIS mark is the record — i.e. the athlete
+                      holds the #1 all-time spot for this event+season AND this
+                      result is their best-ever for it. Otherwise every result a
+                      record-holder posts wrongly reads as a new record. */}
+                  {r.team_rank === 1 && r.is_overall_best && <Badge kind="sr" />}
                   {r.is_personal_best && <Badge kind="pb" />}
                   {!r.is_personal_best && r.is_season_best && <Badge kind="sb" />}
 
