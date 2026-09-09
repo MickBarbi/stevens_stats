@@ -87,13 +87,19 @@ def load_athletes(roster_csv: pathlib.Path) -> list[dict]:
     out = []
     with roster_csv.open(encoding="utf-8") as fh:
         for row in csv.DictReader(fh):
+            active = str(row.get("active", "1")).strip().lower() not in (
+                "0",
+                "false",
+                "no",
+                "",
+            )
             out.append({
                 "athlete_id": int(row["athlete_id"]),
                 "first_name": row["first_name"].strip()[:50],
                 "last_name": row["last_name"].strip()[:50],
                 "year": class_year_to_int(row.get("class_year")),
                 "sex": (row.get("sex") or "").strip()[:1] or None,
-                "active": True,
+                "active": active,
             })
     return out
 
@@ -141,7 +147,7 @@ def load_performances(perf_csv: pathlib.Path, known_athletes: set[int]) -> list[
         row["performance_id"] = i
 
     if dropped_unknown:
-        print(f"  note: {dropped_unknown} performance rows skipped (athlete not on current roster)")
+        print(f"  note: {dropped_unknown} performance rows skipped (athlete not in roster_raw.csv)")
     return rows
 
 

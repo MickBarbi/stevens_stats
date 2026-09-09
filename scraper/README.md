@@ -49,15 +49,40 @@ python history.py --resume               # continue an interrupted run
 python load.py --since 2025-09-01         # season-best cutoff (see below)
 ```
 
+### Backfilling alumni
+
+Past-season roster pages have their own (unguessable) TFRRS URLs. Paste them,
+one per line, into `scraper/rosters.txt`:
+
+```
+m  https://www.tfrrs.org/.../roster/...     # men's indoor 2023
+f  https://www.tfrrs.org/.../roster/...     # women's outdoor 2022
+```
+
+Then re-run:
+
+```bash
+python roster.py            # current + rosters.txt -> roster_raw.csv (adds an `active` col)
+python history.py --resume  # scrape only the newly-added ids
+python load.py              # rebuild; alumni come out as active:false
+python top10_from_xlsx.py <xlsx>   # re-link the record board to the new profiles
+```
+
+Alumni get an `/athlete/<id>` page and Top 10 links but stay out of the roster,
+events leaderboards and home feed (those filter on `active`). Add a
+`graduation_year` by hand in `data/athletes.json` if you want it shown — the
+merge preserves it.
+
 ## What the files contain
 
 `load.py` produces rows that match `stevens_stats/prisma/schema.prisma` exactly:
 
 - **athletes.csv** — `athlete_id` is the TFRRS id. `year` is the class year as an
-  int (FR=1 … 5). `active` is 1 for everyone on the current roster. `--push`
-  MERGEs these, sets `active = 0` for anyone no longer on the roster, and
-  **never touches** `nickname`, `bio`, `image_path` or `graduation_year`, so
-  anything you edit through the site survives a re-scrape.
+  int (FR=1 … 5). `active` is 1 for the current roster, 0 for alumni pulled in
+  via `rosters.txt` (see *Backfilling alumni*). `--push` MERGEs these, sets
+  `active = 0` for anyone no longer scraped, and **never touches** `nickname`,
+  `bio`, `image_path` or `graduation_year`, so anything you edit through the
+  site survives a re-scrape.
 - **events.csv** — the 33 reference rows, derived from the event map in
   `tfrrs.py`. Static; only changes if you add an event.
 - **performances.csv** — one row per valid result, ever. `mark` is stored

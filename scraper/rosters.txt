@@ -1,0 +1,21 @@
+# Historical Stevens roster pages, for pulling in alumni.
+#
+# One line per season roster page:   <m|f>  <url>   [# any note]
+# Blank lines and lines starting with # are ignored.
+#
+# TFRRS's URL for a past season isn't predictable, so open each season's
+# team-roster page on tfrrs.org and paste the URL here. The men's and women's
+# pages are separate URLs — give each its own line with the right m/f tag.
+#
+# Then re-run the pipeline:
+#     python roster.py            # current + these -> data/roster_raw.csv
+#     python history.py --resume  # scrape only the newly-added ids
+#     python load.py              # rebuild ../data/*.json  (alumni = active:false)
+#     python top10_from_xlsx.py <xlsx>   # re-link the record board to the new profiles
+#
+# Alumni land on their own /athlete/<id> page and get linked from Top 10, but
+# stay out of the roster / events leaderboards / home feed.
+#
+# --- examples (delete these, add real ones) ---
+# m  https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?season=2023-indoor
+# f  https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?season=2023-indoor
