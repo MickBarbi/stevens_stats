@@ -9,8 +9,10 @@ import {
   type QualifyingStandard,
   type Season,
 } from "@/lib/data";
+import { CalendarOff } from "lucide-react";
 import { formatMark, markKind, type MarkKind } from "@/lib/format";
 import PageHeader from "@/components/ui/PageHeader";
+import EmptyState from "@/components/ui/EmptyState";
 
 type SexFilter = "" | "m" | "f";
 type SortKey = "rank" | "name";
@@ -218,6 +220,21 @@ const EventsClient = ({
         />
       </PageHeader>
 
+      {visibleEvents.length === 0 ? (
+        <EmptyState
+          icon={CalendarOff}
+          title={
+            scope === "season"
+              ? "No marks this season for this split yet"
+              : "Nothing here for this split"
+          }
+        >
+          {scope === "season"
+            ? "Try All-time, or switch season / gender above."
+            : "Try a different season or gender."}
+        </EmptyState>
+      ) : (
+        <>
       {/* jump-to-event bar — sticks just under the app header */}
       <nav
         aria-label="Jump to event"
@@ -398,6 +415,8 @@ const EventsClient = ({
           </div>
         ))}
       </div>
+        </>
+      )}
     </div>
   );
 };

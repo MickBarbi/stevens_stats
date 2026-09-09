@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { CalendarClock } from "lucide-react";
 import { latestResults, type FeedResult } from "@/lib/data";
 import { formatMark, markKind } from "@/lib/format";
 import Badge from "@/components/ui/Badge";
+import EmptyState from "@/components/ui/EmptyState";
 
 const dateLabel = (iso: string) =>
   new Date(iso + "T00:00:00").toLocaleDateString(undefined, {
@@ -16,9 +18,10 @@ export default function LatestResults() {
 
   if (results.length === 0) {
     return (
-      <p className="text-fg-muted">
-        No results yet — run the scraper (<code>npm run data</code>).
-      </p>
+      <EmptyState icon={CalendarClock} title="No results in yet">
+        Marks show up here as soon as the season gets going — check back after
+        the next meet.
+      </EmptyState>
     );
   }
 

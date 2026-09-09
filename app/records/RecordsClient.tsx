@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Trophy } from "lucide-react";
 import type { TopTenList, TopTenEntry } from "@/lib/data";
 import PageHeader from "@/components/ui/PageHeader";
+import EmptyState from "@/components/ui/EmptyState";
 
 // The season year a mark counts for: indoor marks from Dec roll into the next
 // calendar year (matches scraper/load.py's Dec-1 cutoff).
@@ -62,10 +64,9 @@ export default function RecordsClient({ lists }: { lists: TopTenList[] }) {
     return (
       <div>
         <PageHeader title="Top 10" />
-        <p className="text-fg-muted">
-          The all-time top-10 lists haven&apos;t been added yet — see{" "}
-          <code>data/top10.json</code>.
-        </p>
+        <EmptyState icon={Trophy} title="The record book is empty">
+          The all-time top-ten lists haven&apos;t been loaded yet.
+        </EmptyState>
       </div>
     );
   }
@@ -110,7 +111,9 @@ export default function RecordsClient({ lists }: { lists: TopTenList[] }) {
       </p>
 
       {visible.length === 0 ? (
-        <p className="text-fg-muted">No lists for this selection.</p>
+        <EmptyState icon={Trophy} title="No lists for this selection">
+          Try the other gender or season.
+        </EmptyState>
       ) : (
         <div className="space-y-8">
           {visible.map((l) => (

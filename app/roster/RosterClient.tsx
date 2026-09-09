@@ -2,11 +2,13 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { SearchX } from "lucide-react";
 import type { RosterEntry } from "@/lib/data";
 import { formatMark, markKind } from "@/lib/format";
 import Card from "@/components/ui/Card";
 import PageHeader from "@/components/ui/PageHeader";
 import AthletePhoto from "@/components/ui/AthletePhoto";
+import EmptyState from "@/components/ui/EmptyState";
 
 type EventOpt = { event_id: number; event_name: string; higher_is_better: boolean };
 
@@ -114,7 +116,19 @@ const RosterClient = ({
       </p>
 
       {visible.length === 0 ? (
-        <p className="text-fg-muted">No athletes match these filters.</p>
+        <EmptyState icon={SearchX} title="Nobody fits that combo">
+          <button
+            type="button"
+            onClick={() => {
+              setEventId("");
+              setYear("");
+              setSex("");
+            }}
+            className="mt-1 rounded-md border border-border px-3 py-1 font-medium text-fg transition-transform hover:bg-surface active:scale-95"
+          >
+            Clear filters
+          </button>
+        </EmptyState>
       ) : (
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {visible.map((e, i) => {

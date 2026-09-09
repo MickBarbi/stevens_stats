@@ -249,7 +249,12 @@ personal investment).
   chips, bottom-tab items, `ShareButton`. A new personal best in the home feed
   gets a green tint + left accent bar (`.feed-pb`). All of it rides on the
   global `prefers-reduced-motion` reset from T4.4.
-- [ ] **T4.2 Empty states with personality** (no posts / no marks / no standards).
+- [x] **T4.2 Empty states with personality.** ✅ One `components/ui/EmptyState`
+  (dashed card, icon, warm one-liner) wired into: home Team News (no posts) and
+  Latest Results (no results), a filtered-empty roster (+ "Clear filters"),
+  events with nothing for the chosen split (nudges toward All-time / other
+  season), Top 10 (empty book / no lists for the filter), and an athlete with
+  no marks on file.
 - [ ] **T4.3 Per-athlete OG images** so a texted link previews nicely.
 - [x] **T4.4 Accessibility pass.** ✅ One global `:focus-visible` outline
   (`!important`, beats the `outline-none` utilities); skip-to-content link +
@@ -292,6 +297,12 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-09 — T4.2 empty states
+- `components/ui/EmptyState.tsx` — dashed card + icon + friendly copy. Wired
+  into home Team News / Latest Results, roster (filtered-empty, with a "Clear
+  filters" reset), events (no marks for the split), Top 10 (empty / filtered),
+  and the athlete page (no marks on file).
 
 ### 2026-09-09 — Top 10 recency accent + T4.1 micro-interactions
 - `RecordsClient`: rows from the current season get a brand tint + left bar +

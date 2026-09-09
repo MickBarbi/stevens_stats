@@ -14,7 +14,7 @@ import {
 } from "recharts";
 import moment from "moment";
 import Link from "next/link";
-import { Medal, ChevronLeft, ChevronRight } from "lucide-react";
+import { Medal, ChevronLeft, ChevronRight, LineChart } from "lucide-react";
 import AthletePicker from "../AthletePicker";
 import { teamRank, type Athlete, type PickerAthlete, type ProgressionPerformance } from "@/lib/data";
 import { formatMark, markKind, type MarkKind } from "@/lib/format";
@@ -22,6 +22,7 @@ import Badge from "@/components/ui/Badge";
 import Card from "@/components/ui/Card";
 import AthletePhoto from "@/components/ui/AthletePhoto";
 import ShareButton from "@/components/ui/ShareButton";
+import EmptyState from "@/components/ui/EmptyState";
 
 const pickerLabel = (a: PickerAthlete) =>
   `${a.nickname ? a.nickname : a.first_name} ${a.last_name}`;
@@ -623,7 +624,10 @@ const AthleteProfile = ({
             </div>
           </div>
         ) : (
-          <p className="text-fg-muted">No best performances found.</p>
+          <EmptyState icon={LineChart} title="No results on file yet">
+            Once {athlete.nickname ?? athlete.first_name} has marks in the
+            system, bests and progression charts will show up here.
+          </EmptyState>
         )}
       </div>
     </div>

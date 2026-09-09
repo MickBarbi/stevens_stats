@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { Newspaper } from "lucide-react";
 import { sortedPosts } from "@/lib/data";
 import Card from "@/components/ui/Card";
 import PageHeader from "@/components/ui/PageHeader";
+import EmptyState from "@/components/ui/EmptyState";
 import LatestResults from "@/components/LatestResults";
 
 export default function HomePage() {
@@ -14,9 +16,14 @@ export default function HomePage() {
         <LatestResults />
       </section>
 
-      {posts.length > 0 && (
-        <section>
-          <h2 className="section-title mb-4">Team News</h2>
+      <section>
+        <h2 className="section-title mb-4">Team News</h2>
+        {posts.length === 0 ? (
+          <EmptyState icon={Newspaper} title="No team news yet">
+            Recaps and announcements will land here — check back after the next
+            meet.
+          </EmptyState>
+        ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (
               <Link key={post.post_id} href={`/home/${post.post_id}`} className="block">
@@ -31,8 +38,8 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-        </section>
-      )}
+        )}
+      </section>
     </div>
   );
 }
