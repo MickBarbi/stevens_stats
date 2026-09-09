@@ -1,18 +1,24 @@
 # scraper/ — Stevens Stats data collection
 
-One scraper, run on a schedule, that rebuilds the whole dataset from TFRRS.
+One scraper that rebuilds the whole dataset from TFRRS.
 
-There is **no incremental "after each meet" step**. TFRRS keeps every athlete's
-full career history on their profile page, so each run re-scrapes everything and
-recomputes the bests from scratch. That removes a whole class of bugs the old
-tools had (missed meets, meet-name matching, indoor marks leaking into outdoor
-records, running-best ordering).
+TFRRS keeps every athlete's full career history on their profile page, and
+`load.py` recomputes every best-flag from the full list each run, so there is no
+"apply just this meet" step to get wrong (missed meets, meet-name matching,
+indoor marks leaking into outdoor records, running-best ordering — all gone).
+
+What *is* incremental is which athletes get re-fetched. `performances_raw.csv` is
+a persistent cache; `history.py` re-scrapes only the active roster by default and
+splices the results back in. Graduated athletes don't compete any more, so
+there's no reason to pull a few hundred alumni pages every week. Run
+`history.py --all` after a season ends for a full reconciliation.
 
 ```
-roster.py   team pages ─────────────► data/roster_raw.csv
-history.py  each athlete's page ─────► data/performances_raw.csv
+roster.py   team pages (+ merge)  ───► data/roster_raw.csv
+history.py  active athletes' pages ──► data/performances_raw.csv   (a persistent cache)
+                                       data/scrape_state.json
 load.py     the two files above  ────► data/athletes.csv  data/events.csv
-                                       data/performances.csv
+                                       data/performances.csv  + ../data/*.json
             (--push) ───────────────► SQL Server (the site's database)
 ```
 
@@ -34,20 +40,29 @@ Run from anywhere (`python scraper/roster.py` from the repo root works too);
 output always lands in `scraper/data/`, which is git-ignored.
 
 ```bash
-python roster.py                 # ~90 athletes, a few seconds
-python history.py                # one page per athlete, ~2 sec each (be patient)
-python load.py                   # writes the 3 import-ready CSVs
+python roster.py                 # ~90 current athletes + merges in known ids, a few sec
+python history.py                # active roster only, ~1.5 sec/page
+python history.py --all          # every athlete (full sweep — do this after each season)
+python load.py                   # writes the 3 import-ready CSVs + the site JSON
 python load.py --push            # also writes them into SQL Server
 ```
 
-Handy flags while developing:
+`history.py` selection:
 
 ```bash
-python history.py --limit 5              # smoke test on 5 athletes
-python history.py --ids 8327859 7892451  # specific athletes
-python history.py --resume               # continue an interrupted run
-python load.py --since 2025-09-01         # season-best cutoff (see below)
+python history.py                       # active=1 in roster_raw.csv (default)
+python history.py --all                 # everyone in roster_raw.csv
+python history.py --missing             # + anyone with no cached rows yet (backfill)
+python history.py --stale 90            # + anyone not scraped in 90 days
+python history.py --ids 8327859 7892451 # exactly these, ignore the roster
+python history.py --limit 5             # first 5 of the selection (smoke test)
+python history.py --resume              # skip ids already scraped today (resume a run)
+python load.py --since 2025-09-01       # season-best cutoff (see below)
 ```
+
+It writes `data/scrape_state.json` (`{athlete_id: {last_scraped, n}}`) alongside
+the CSV; `--stale` and `--resume` read it. On a fatal error mid-run the cache is
+flushed every 25 athletes, so `--resume` picks up where it stopped.
 
 ### Backfilling alumni
 
@@ -59,19 +74,22 @@ m  https://www.tfrrs.org/.../roster/...     # men's indoor 2023
 f  https://www.tfrrs.org/.../roster/...     # women's outdoor 2022
 ```
 
-Then re-run:
+Then:
 
 ```bash
-python roster.py            # current + rosters.txt -> roster_raw.csv (adds an `active` col)
-python history.py --resume  # scrape only the newly-added ids
-python load.py              # rebuild; alumni come out as active:false
-python top10_from_xlsx.py <xlsx>   # re-link the record board to the new profiles
+python roster.py                     # merges the new ids into roster_raw.csv
+python history.py --missing --resume # scrape only the ids with no cached rows
+python load.py                       # rebuild; alumni come out as active:false
+python top10_from_xlsx.py <xlsx>     # re-link the record board to the new profiles
 ```
 
-Alumni get an `/athlete/<id>` page and Top 10 links but stay out of the roster,
-events leaderboards and home feed (those filter on `active`). Add a
-`graduation_year` by hand in `data/athletes.json` if you want it shown — the
-merge preserves it.
+`roster.py` now **merges** with the existing `roster_raw.csv` (recomputing
+`active` from the current team pages), so once you've scraped a season's URL once
+you can delete it from `rosters.txt` and those athletes stay in the file. Pass
+`--no-merge` for the old from-scratch behaviour. Alumni get an `/athlete/<id>`
+page and Top 10 links but stay out of the roster, events leaderboards and home
+feed (those filter on `active`). Fill in `graduation_year` / `status` / `bio` by
+hand in `data/athletes.json` — the merge preserves them.
 
 ### Roster photos → Cloudinary
 
@@ -110,11 +128,13 @@ python photos_upload.py --only 8919566,9251050
 `load.py` produces rows that match `stevens_stats/prisma/schema.prisma` exactly:
 
 - **athletes.csv** — `athlete_id` is the TFRRS id. `year` is the class year as an
-  int (FR=1 … 5). `active` is 1 for the current roster, 0 for alumni pulled in
-  via `rosters.txt` (see *Backfilling alumni*). `--push` MERGEs these, sets
-  `active = 0` for anyone no longer scraped, and **never touches** `nickname`,
-  `bio`, `image_path` or `graduation_year`, so anything you edit through the
-  site survives a re-scrape.
+  int (FR=1 … 5); set `year_override` in `data/athletes.json` to pin it when
+  TFRRS is wrong (e.g. a 5th-year still listed SO-2). `active` is 1 for the
+  current roster, 0 otherwise (see *Backfilling alumni*). The scrape owns
+  `first_name`, `last_name`, `year`, `sex`, `active`; everything else in
+  `athletes.json` (`nickname`, `bio`, `image_path`, `graduation_year`, `awards`,
+  `status`, `year_override`) is hand-maintained and preserved across re-scrapes
+  and `--push`.
 - **events.csv** — the 33 reference rows, derived from the event map in
   `tfrrs.py`. Static; only changes if you add an event.
 - **performances.csv** — one row per valid result, ever. `mark` is stored

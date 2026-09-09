@@ -6,11 +6,16 @@
 
 Output columns: athlete_id, first_name, last_name, class_year, sex, active
 
-`active` is 1 for anyone on a current team page, 0 for alumni pulled in only via
-the extra-URLs file. `history.py` then scrapes every id in roster_raw.csv (TFRRS
-keeps each athlete's whole career on one page); `load.py` keeps the alumni rows
-and flags them active=false, so they get an /athlete page but stay out of the
-roster / events / feed.
+`active` is 1 for anyone on a current team page, 0 otherwise. `history.py` then
+scrapes the athletes in roster_raw.csv (by default only the active ones); `load.py`
+keeps the inactive rows and flags them active=false, so alumni get an /athlete
+page but stay out of the roster / events / feed.
+
+By default this MERGES with the existing roster_raw.csv: every athlete_id ever
+written stays in the file, and `active` is recomputed from the current team pages
+each run. So once you've scraped a past season's roster URL once, you can delete
+it from rosters.txt -- those athletes persist. Pass --no-merge for the old
+from-scratch behaviour.
 
 The extra-URLs file (default: scraper/rosters.txt) is one roster page per line:
 
@@ -45,6 +50,26 @@ def _scrape(url: str, sex: str) -> list[tfrrs.RosterEntry]:
     return entries
 
 
+def _read_existing(path: pathlib.Path) -> dict[int, tfrrs.RosterEntry]:
+    """Reconstruct RosterEntry rows from a previously written roster_raw.csv."""
+    out: dict[int, tfrrs.RosterEntry] = {}
+    if not path.exists():
+        return out
+    with path.open(encoding="utf-8") as fh:
+        for r in csv.DictReader(fh):
+            if not r.get("athlete_id"):
+                continue
+            aid = int(r["athlete_id"])
+            out[aid] = tfrrs.RosterEntry(
+                aid,
+                (r.get("first_name") or "").strip(),
+                (r.get("last_name") or "").strip(),
+                (r.get("class_year") or "").strip() or None,
+                (r.get("sex") or "").strip().upper(),
+            )
+    return out
+
+
 def _read_extra(path: pathlib.Path) -> list[tuple[str, str]]:
     """[(sex, url), ...] from the hand-maintained roster-URL file."""
     out: list[tuple[str, str]] = []
@@ -76,6 +101,11 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="skip the current team pages (only scrape --extra-urls)",
     )
+    ap.add_argument(
+        "--no-merge",
+        action="store_true",
+        help="rewrite from scratch instead of merging with the existing roster_raw.csv",
+    )
     args = ap.parse_args(argv)
 
     pool: dict[int, tfrrs.RosterEntry] = {}
@@ -95,6 +125,24 @@ def main(argv: list[str] | None = None) -> int:
                 pool.setdefault(e.athlete_id, e)  # a current entry wins (fresher class year)
     elif args.extra_urls != DEFAULT_EXTRA:
         sys.exit(f"--extra-urls file not found: {args.extra_urls}")
+
+    if not current_ids and not args.no_current:
+        print(
+            "  ! no current-roster athletes scraped (TFRRS down?); "
+            "not touching roster_raw.csv so `active` flags stay correct.",
+            file=sys.stderr,
+        )
+        return 1
+
+    n_scraped = len(pool)
+    if not args.no_merge:
+        kept = 0
+        for aid, e in _read_existing(args.out).items():
+            if aid not in pool:
+                pool[aid] = e
+                kept += 1
+        if kept:
+            print(f"[merge] kept {kept} athlete(s) from the existing {args.out.name}")
 
     if not pool:
         print("No athletes scraped; leaving any existing file untouched.", file=sys.stderr)
@@ -118,8 +166,10 @@ def main(argv: list[str] | None = None) -> int:
             )
 
     n_alum = len(rows) - len(current_ids)
+    merged_note = "" if args.no_merge else f", {len(rows) - n_scraped} carried over"
     print(
-        f"Wrote {len(rows)} athletes ({len(current_ids)} current, {n_alum} alumni) -> {args.out}"
+        f"Wrote {len(rows)} athletes ({len(current_ids)} current, {n_alum} alumni"
+        f"{merged_note}) -> {args.out}"
     )
     return 0
 

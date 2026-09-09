@@ -54,6 +54,9 @@ _MANUAL_ATHLETE_DEFAULTS = {
     # for former athletes only: "graduated" | "left" | "transferred" (or null).
     # `active` is set by the scrape; `status` is hand-maintained here.
     "status": None,
+    # set to an int to override the class year TFRRS reports (e.g. a 5th-year
+    # TFRRS still lists as SO-2). null = use the scraped value.
+    "year_override": None,
 }
 
 _CENTS = Decimal("0.01")
@@ -117,11 +120,13 @@ def load_performances(perf_csv: pathlib.Path, known_athletes: set[int]) -> list[
     seen: set[tuple] = set()
     rows: list[dict] = []
     dropped_unknown = 0
+    dropped_ids: set[int] = set()
     with perf_csv.open(encoding="utf-8") as fh:
         for r in csv.DictReader(fh):
             athlete_id = int(r["athlete_id"])
             if known_athletes and athlete_id not in known_athletes:
                 dropped_unknown += 1
+                dropped_ids.add(athlete_id)
                 continue
             event_id = int(r["event_id"])
             mark = Decimal(r["mark"]).quantize(_CENTS)
@@ -150,7 +155,11 @@ def load_performances(perf_csv: pathlib.Path, known_athletes: set[int]) -> list[
         row["performance_id"] = i
 
     if dropped_unknown:
-        print(f"  note: {dropped_unknown} performance rows skipped (athlete not in roster_raw.csv)")
+        print(
+            f"  note: {dropped_unknown} cached performance rows from {len(dropped_ids)} "
+            f"athlete(s) skipped — not in roster_raw.csv. Re-run roster.py (it keeps known "
+            f"ids), or add their roster page to rosters.txt, to include them."
+        )
     return rows
 
 
@@ -258,6 +267,8 @@ def _merge_athletes(scraped: list[dict], existing_path: pathlib.Path) -> list[di
         base["athlete_id"] = athlete_id
         for field in _SCRAPED_ATHLETE_FIELDS:
             base[field] = a[field]
+        if base.get("year_override") is not None:
+            base["year"] = base["year_override"]
         out.append(base)
 
     # Keep athletes who have dropped off the roster, flagged inactive.
