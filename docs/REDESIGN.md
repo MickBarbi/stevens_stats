@@ -272,6 +272,19 @@ Adjust freely — this is a guide, not a contract.
 
 ## Progress log
 
+### 2026-09-09 — relay top-10: year instead of date, linked legs
+- `scraper/top10_from_xlsx.py`: relay blocks in the workbook are wider than the
+  individual ones (Name spans merged cells, Date at `rank_col + 8`). Relay
+  entries now carry `year` (not `date`) — a relay is tracked once per season
+  regardless of lineup; `season_year()` rolls a fall indoor mark into the
+  following spring (Dec 2025 → 2026 indoor).
+- Relay entries are now `members: [{ name, athlete_id }]` (was `names: []`), so
+  each leg links to `/athlete/<id>` like the individual lists. Regenerated
+  `data/top10.json`: name-links 154 → 274, distinct current athletes 44 → 50.
+- `RecordsClient`: relay tables show a **Year** column; `athleteLink` helper
+  (with `!font-sans` to beat `.data-table a { font-mono }`) linkifies both
+  individual names and relay legs.
+
 ### 2026-09-09 — progression charts, take 2 (feedback: "too bland")
 - `EventCharts` rewritten in `app/athlete/[athleteId]/AthleteProfile.tsx`.
 - **Time-scaled x-axis**: `type="number"` over epoch-ms, so horizontal spacing

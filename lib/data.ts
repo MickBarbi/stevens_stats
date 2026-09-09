@@ -245,13 +245,19 @@ export const currentSeason = (date: Date = new Date()): Season =>
 // scraped data (alumni, relays), so this — not the scraped performances — is
 // the source of truth for "team rank". See data/README.md.
 
+export type RelayMember = {
+  name: string;
+  athlete_id: number | null; // links to /athlete/<id> when the leg is in the system
+};
+
 export type TopTenEntry = {
   rank: number;
-  athlete_id: number | null; // links to /athlete/<id> when the person is in the system
+  athlete_id?: number | null; // individual: links to /athlete/<id> when in the system
   name?: string; // individual
-  names?: string[]; // relay legs
+  members?: RelayMember[]; // relay legs
   mark: string; // as written on the official list
-  date?: string;
+  date?: string; // individual
+  year?: number; // relay — tracked one per season, not one per lineup
   link?: string; // results page for the mark
   meet?: string;
 };

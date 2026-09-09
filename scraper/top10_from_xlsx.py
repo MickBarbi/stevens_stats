@@ -7,7 +7,9 @@
 Only the four current "{Mens,Womens} {Indoor,Outdoor} Top Ten List" sheets are
 read (the workbook also has "Outdoor Men" / "- Old" / "- New Print" sheets that
 are stale or formatting-only duplicates — do not use them). Each is a grid of
-4-column blocks: Rank, Mark, Name, Date.
+4-column blocks: Rank, Mark, Name, Date. Relay blocks are wider (Name spans
+merged cells, Date sits at Rank + 8); relay entries keep a `year`, not a `date`,
+because a relay is tracked once per season regardless of lineup.
 
 Ties in the source have a blank Rank cell (same rank as the row above); those
 rows are kept, not treated as the end of the list.
@@ -127,7 +129,19 @@ def iso(d) -> str | None:
     return None
 
 
-def parse_block(rows, header_i: int, j: int, relay: bool):
+def season_year(date_iso: str | None, season: str) -> int | None:
+    """Relays are tracked one per season, so we keep a year, not a date. An
+    indoor mark from the fall (Nov/Dec) belongs to the following spring's
+    season (Dec 2025 -> 2026 indoor)."""
+    if not date_iso:
+        return None
+    y, m = int(date_iso[:4]), int(date_iso[5:7])
+    if season == "indoor" and m >= 9:
+        y += 1
+    return y
+
+
+def parse_block(rows, header_i: int, j: int, relay: bool, season: str):
     """Read up to ~15 entries under a header, carrying a blank rank forward."""
     entries = []
     last_rank = 0
@@ -150,18 +164,32 @@ def parse_block(rows, header_i: int, j: int, relay: bool):
         if mark is None or nm is None:
             continue  # malformed row, but list continues
 
-        date = iso(r[j + 3] if j + 3 < len(r) else None)
-        link = r[j + 4] if j + 4 < len(r) else None
-        e = {"rank": rank, "athlete_id": None, "mark": mark}
         if relay:
-            e["names"] = [x.strip() for x in nm.split(",") if x.strip()]
+            # the relay blocks are wider — Name spans several merged cells and
+            # Date sits at rank_col + 8.
+            date = next(
+                (iso(r[j + k]) for k in range(6, 10) if j + k < len(r) and iso(r[j + k])),
+                None,
+            )
+            link = r[j + 9] if j + 9 < len(r) else None
         else:
-            e["name"] = nm
-            aid = match_id(nm)
-            if aid:
-                e["athlete_id"] = aid
-        if date:
-            e["date"] = date
+            date = iso(r[j + 3] if j + 3 < len(r) else None)
+            link = r[j + 4] if j + 4 < len(r) else None
+
+        if relay:
+            members = [x.strip() for x in nm.split(",") if x.strip()]
+            e = {
+                "rank": rank,
+                "mark": mark,
+                "members": [{"name": n, "athlete_id": match_id(n)} for n in members],
+            }
+            yr = season_year(date, season)
+            if yr:
+                e["year"] = yr
+        else:
+            e = {"rank": rank, "athlete_id": match_id(nm), "mark": mark, "name": nm}
+            if date:
+                e["date"] = date
         if isinstance(link, str) and link.startswith("http"):
             e["link"] = link
         entries.append(e)
@@ -201,7 +229,7 @@ def main(argv: list[str]) -> int:
                 eid, canon, relay = mapped
                 if (canon, gender, season) in seen:
                     continue
-                entries = parse_block(rows, i, j, relay)
+                entries = parse_block(rows, i, j, relay, season)
                 if not entries:
                     continue
                 seen.add((canon, gender, season))
@@ -214,10 +242,21 @@ def main(argv: list[str]) -> int:
     (ROOT / "data" / "top10.json").write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", "utf-8")
 
     names = {a["athlete_id"]: f"{a['first_name']} {a['last_name']}" for a in ATHLETES}
-    links = [(l, e) for l in out for e in l["entries"] if e.get("athlete_id")]
-    distinct = sorted({names[e["athlete_id"]] for _, e in links})
+    linked_ids = [
+        e["athlete_id"]
+        for l in out
+        for e in l["entries"]
+        if e.get("athlete_id")
+    ] + [
+        m["athlete_id"]
+        for l in out
+        for e in l["entries"]
+        for m in e.get("members", [])
+        if m["athlete_id"]
+    ]
+    distinct = sorted({names[i] for i in linked_ids})
     print(f"lists={len(out)}  entries={sum(len(l['entries']) for l in out)}  "
-          f"entry-links={len(links)}  distinct current athletes={len(distinct)}")
+          f"name-links={len(linked_ids)}  distinct current athletes={len(distinct)}")
     short = [l for l in out if not l["relay"] and len(l["entries"]) < 10]
     if short:
         print(f"note: {len(short)} individual lists still have <10 entries "

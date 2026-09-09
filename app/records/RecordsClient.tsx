@@ -5,15 +5,28 @@ import Link from "next/link";
 import type { TopTenList } from "@/lib/data";
 import PageHeader from "@/components/ui/PageHeader";
 
+// `!font-sans` beats `.data-table a { font-mono }` (equal specificity, so the
+// utility needs the bang) — names read as names, not monospaced marks.
+const athleteLink = (id: number, text: string) => (
+  <Link href={`/athlete/${id}`} className="!font-sans text-link hover:underline">
+    {text}
+  </Link>
+);
+
 const nameCol = (l: TopTenList, e: TopTenList["entries"][number]) => {
-  if (l.relay) return (e.names ?? []).join(", ");
-  if (e.athlete_id) {
+  if (l.relay) {
     return (
-      <Link href={`/athlete/${e.athlete_id}`} className="font-sans text-link hover:underline">
-        {e.name}
-      </Link>
+      <span className="font-sans">
+        {(e.members ?? []).map((m, i) => (
+          <span key={i}>
+            {i > 0 && ", "}
+            {m.athlete_id ? athleteLink(m.athlete_id, m.name) : m.name}
+          </span>
+        ))}
+      </span>
     );
   }
+  if (e.athlete_id) return athleteLink(e.athlete_id, e.name ?? "");
   return <span className="font-sans">{e.name}</span>;
 };
 
@@ -75,7 +88,7 @@ export default function RecordsClient({ lists }: { lists: TopTenList[] }) {
                       <th>#</th>
                       <th className="text-left">Athlete</th>
                       <th>Mark</th>
-                      <th>Date</th>
+                      <th>{l.relay ? "Year" : "Date"}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -102,7 +115,9 @@ export default function RecordsClient({ lists }: { lists: TopTenList[] }) {
                               e.mark
                             )}
                           </td>
-                          <td className="text-fg-muted">{e.date ?? ""}</td>
+                          <td className="text-fg-muted tabular-nums">
+                            {l.relay ? e.year ?? "" : e.date ?? ""}
+                          </td>
                         </tr>
                       ))}
                   </tbody>

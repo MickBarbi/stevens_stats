@@ -91,12 +91,14 @@ can't rank against alumni or handle relays). Array of:
 - `event_id` — the numeric id from `events.json` for individual events; `null`
   for relays. `event_name` is always shown as-is.
 - `gender` is `"m"` / `"f"`, `season` is `"indoor"` / `"outdoor"`.
-- Relay lists: `"relay": true` and each entry has `"names": ["A","B","C","D"]`
-  instead of `"name"`; `athlete_id` stays `null`.
-- `athlete_id` links the entry to `/athlete/<id>` when that person is on the
-  current site; `null` for anyone not in the system.
+- Relay lists: `"relay": true`. Each entry has no `name` / `athlete_id` / `date`;
+  instead it has `"members": [{ "name": "A", "athlete_id": 123 | null }, …]` (one
+  per leg, each linked to `/athlete/<id>` when that runner is on the current
+  site) and `"year"` — a relay is tracked once per season regardless of lineup.
+- `athlete_id` (individual entries) links to `/athlete/<id>` when that person is
+  on the current site; `null` for anyone not in the system.
 - `link` (optional) makes the mark a link to the result. `mark` is the string
-  as written on the official list. `date` is `YYYY-MM-DD`.
+  as written on the official list. `date` is `YYYY-MM-DD` (individual entries).
 - This file is generated from the official Excel lists (see
   `scraper/`-adjacent one-off scripts / the conversion in the redesign log) but
   is committed as data and can be hand-edited.

@@ -1516,113 +1516,233 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
         "mark": "1:45.87",
-        "names": [
-          "Laura Mathews",
-          "Allie Canciani",
-          "Stephanie Ryazanova",
-          "Isabella Shanley"
-        ]
+        "members": [
+          {
+            "name": "Laura Mathews",
+            "athlete_id": null
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Stephanie Ryazanova",
+            "athlete_id": 8327883
+          },
+          {
+            "name": "Isabella Shanley",
+            "athlete_id": 8681474
+          }
+        ],
+        "year": 2024
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "1:47.30",
-        "names": [
-          "Kristen Williams",
-          "Liana Meyer",
-          "Laura Mathews",
-          "Gina Dello Russo"
-        ]
+        "members": [
+          {
+            "name": "Kristen Williams",
+            "athlete_id": null
+          },
+          {
+            "name": "Liana Meyer",
+            "athlete_id": null
+          },
+          {
+            "name": "Laura Mathews",
+            "athlete_id": null
+          },
+          {
+            "name": "Gina Dello Russo",
+            "athlete_id": null
+          }
+        ],
+        "year": 2020
       },
       {
         "rank": 3,
-        "athlete_id": null,
         "mark": "1:47.52",
-        "names": [
-          "Isabella Shanley",
-          "Stephanie Ryazanova",
-          "Anya Sadowski",
-          "Lauren Alley"
-        ]
+        "members": [
+          {
+            "name": "Isabella Shanley",
+            "athlete_id": 8681474
+          },
+          {
+            "name": "Stephanie Ryazanova",
+            "athlete_id": 8327883
+          },
+          {
+            "name": "Anya Sadowski",
+            "athlete_id": 8919558
+          },
+          {
+            "name": "Lauren Alley",
+            "athlete_id": 8979796
+          }
+        ],
+        "year": 2025
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "1:49.13",
-        "names": [
-          "Laura Mathews",
-          "Allie Canciani",
-          "Liana Meyer",
-          "Kristen Williams"
-        ]
+        "members": [
+          {
+            "name": "Laura Mathews",
+            "athlete_id": null
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Liana Meyer",
+            "athlete_id": null
+          },
+          {
+            "name": "Kristen Williams",
+            "athlete_id": null
+          }
+        ],
+        "year": 2023
       },
       {
         "rank": 5,
-        "athlete_id": null,
         "mark": "1:49.66",
-        "names": [
-          "Laura Mathews",
-          "Liana Meyer",
-          "Allie Canciani",
-          "Nicole Waletzki"
-        ]
+        "members": [
+          {
+            "name": "Laura Mathews",
+            "athlete_id": null
+          },
+          {
+            "name": "Liana Meyer",
+            "athlete_id": null
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Nicole Waletzki",
+            "athlete_id": null
+          }
+        ],
+        "year": 2022
       },
       {
         "rank": 6,
-        "athlete_id": null,
         "mark": "1:50.38",
-        "names": [
-          "Isabella Shanley",
-          "Stephanie Ryazanova",
-          "Caitlyn Adamchuk",
-          "Lauren Alley"
-        ]
+        "members": [
+          {
+            "name": "Isabella Shanley",
+            "athlete_id": 8681474
+          },
+          {
+            "name": "Stephanie Ryazanova",
+            "athlete_id": 8327883
+          },
+          {
+            "name": "Caitlyn Adamchuk",
+            "athlete_id": 9251050
+          },
+          {
+            "name": "Lauren Alley",
+            "athlete_id": 8979796
+          }
+        ],
+        "year": 2026
       },
       {
         "rank": 7,
-        "athlete_id": null,
         "mark": "1:52.11",
-        "names": [
-          "Melissa Barnes",
-          "Gina Dello Russo",
-          "Sammi Pearson",
-          "Paige Metzheiser"
-        ]
+        "members": [
+          {
+            "name": "Melissa Barnes",
+            "athlete_id": null
+          },
+          {
+            "name": "Gina Dello Russo",
+            "athlete_id": null
+          },
+          {
+            "name": "Sammi Pearson",
+            "athlete_id": null
+          },
+          {
+            "name": "Paige Metzheiser",
+            "athlete_id": null
+          }
+        ],
+        "year": 2018
       },
       {
         "rank": 8,
-        "athlete_id": null,
         "mark": "1:56.07",
-        "names": [
-          "Tiffany Evangelu",
-          "Gina Salmins",
-          "Michelle Moriera",
-          "Glady Njoku"
-        ]
+        "members": [
+          {
+            "name": "Tiffany Evangelu",
+            "athlete_id": null
+          },
+          {
+            "name": "Gina Salmins",
+            "athlete_id": null
+          },
+          {
+            "name": "Michelle Moriera",
+            "athlete_id": null
+          },
+          {
+            "name": "Glady Njoku",
+            "athlete_id": null
+          }
+        ],
+        "year": 2014
       },
       {
         "rank": 9,
-        "athlete_id": null,
         "mark": "1:57.92",
-        "names": [
-          "Melissa Gibbons",
-          "Taylor Tonkinson",
-          "Gladys Njoku",
-          "Michelle Moriera"
-        ]
+        "members": [
+          {
+            "name": "Melissa Gibbons",
+            "athlete_id": null
+          },
+          {
+            "name": "Taylor Tonkinson",
+            "athlete_id": null
+          },
+          {
+            "name": "Gladys Njoku",
+            "athlete_id": null
+          },
+          {
+            "name": "Michelle Moriera",
+            "athlete_id": null
+          }
+        ],
+        "year": 2015
       },
       {
         "rank": 10,
-        "athlete_id": null,
         "mark": "1:59.88",
-        "names": [
-          "Chika Erweghariri",
-          "Amethysth Holder",
-          "Caroline Pawalowski",
-          "Lauren Griggs"
-        ]
+        "members": [
+          {
+            "name": "Chika Erweghariri",
+            "athlete_id": null
+          },
+          {
+            "name": "Amethysth Holder",
+            "athlete_id": null
+          },
+          {
+            "name": "Caroline Pawalowski",
+            "athlete_id": null
+          },
+          {
+            "name": "Lauren Griggs",
+            "athlete_id": null
+          }
+        ],
+        "year": 2009
       }
     ]
   },
@@ -1635,113 +1755,233 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
         "mark": "3:59.21",
-        "names": [
-          "Lauren Alley",
-          "Anya Sadowski",
-          "Isabel Vogel",
-          "Isabella Shanley"
-        ]
+        "members": [
+          {
+            "name": "Lauren Alley",
+            "athlete_id": 8979796
+          },
+          {
+            "name": "Anya Sadowski",
+            "athlete_id": 8919558
+          },
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          },
+          {
+            "name": "Isabella Shanley",
+            "athlete_id": 8681474
+          }
+        ],
+        "year": 2026
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "4:02.69",
-        "names": [
-          "Laura Mathews",
-          "Liana Meyer",
-          "Erica O'Kelly",
-          "Gina Dello Russo"
-        ]
+        "members": [
+          {
+            "name": "Laura Mathews",
+            "athlete_id": null
+          },
+          {
+            "name": "Liana Meyer",
+            "athlete_id": null
+          },
+          {
+            "name": "Erica O'Kelly",
+            "athlete_id": null
+          },
+          {
+            "name": "Gina Dello Russo",
+            "athlete_id": null
+          }
+        ],
+        "year": 2020
       },
       {
         "rank": 3,
-        "athlete_id": null,
         "mark": "4:03.77",
-        "names": [
-          "Laura Mathews",
-          "Allie Canciani",
-          "Stephanie Ryazanova",
-          "Isabella Shanley"
-        ]
+        "members": [
+          {
+            "name": "Laura Mathews",
+            "athlete_id": null
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Stephanie Ryazanova",
+            "athlete_id": 8327883
+          },
+          {
+            "name": "Isabella Shanley",
+            "athlete_id": 8681474
+          }
+        ],
+        "year": 2024
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "4:07.38",
-        "names": [
-          "Lauren Alley",
-          "Anya Sadowski",
-          "Isabel Vogel",
-          "Isabella Shanley"
-        ]
+        "members": [
+          {
+            "name": "Lauren Alley",
+            "athlete_id": 8979796
+          },
+          {
+            "name": "Anya Sadowski",
+            "athlete_id": 8919558
+          },
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          },
+          {
+            "name": "Isabella Shanley",
+            "athlete_id": 8681474
+          }
+        ],
+        "year": 2025
       },
       {
         "rank": 5,
-        "athlete_id": null,
         "mark": "4:08.62",
-        "names": [
-          "Salme Cook",
-          "Hilary Paul",
-          "Jill Price",
-          "Shannon Bearisto"
-        ]
+        "members": [
+          {
+            "name": "Salme Cook",
+            "athlete_id": null
+          },
+          {
+            "name": "Hilary Paul",
+            "athlete_id": null
+          },
+          {
+            "name": "Jill Price",
+            "athlete_id": null
+          },
+          {
+            "name": "Shannon Bearisto",
+            "athlete_id": null
+          }
+        ],
+        "year": 2010
       },
       {
         "rank": 6,
-        "athlete_id": null,
         "mark": "4:08.90",
-        "names": [
-          "Nina Burden",
-          "Liana Meyer",
-          "Nicole Waletzki",
-          "Allie Canciani"
-        ]
+        "members": [
+          {
+            "name": "Nina Burden",
+            "athlete_id": null
+          },
+          {
+            "name": "Liana Meyer",
+            "athlete_id": null
+          },
+          {
+            "name": "Nicole Waletzki",
+            "athlete_id": null
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          }
+        ],
+        "year": 2022
       },
       {
         "rank": 7,
-        "athlete_id": null,
         "mark": "4:10.05",
-        "names": [
-          "Melissa Barnes",
-          "Samantha Rokicsak",
-          "Claire Tantillo",
-          "Gina Dello Russo"
-        ]
+        "members": [
+          {
+            "name": "Melissa Barnes",
+            "athlete_id": null
+          },
+          {
+            "name": "Samantha Rokicsak",
+            "athlete_id": null
+          },
+          {
+            "name": "Claire Tantillo",
+            "athlete_id": null
+          },
+          {
+            "name": "Gina Dello Russo",
+            "athlete_id": null
+          }
+        ],
+        "year": 2019
       },
       {
         "rank": 8,
-        "athlete_id": null,
         "mark": "4:11.70",
-        "names": [
-          "Melissa Barnes",
-          "Claire Tantillo",
-          "Paige Metzheiser",
-          "Gina Dello Russo"
-        ]
+        "members": [
+          {
+            "name": "Melissa Barnes",
+            "athlete_id": null
+          },
+          {
+            "name": "Claire Tantillo",
+            "athlete_id": null
+          },
+          {
+            "name": "Paige Metzheiser",
+            "athlete_id": null
+          },
+          {
+            "name": "Gina Dello Russo",
+            "athlete_id": null
+          }
+        ],
+        "year": 2018
       },
       {
         "rank": 9,
-        "athlete_id": null,
         "mark": "4:13.86",
-        "names": [
-          "Kristen Williams",
-          "Allie Canciani",
-          "Stephanie Ryazanova",
-          "Laura Mathews"
-        ]
+        "members": [
+          {
+            "name": "Kristen Williams",
+            "athlete_id": null
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Stephanie Ryazanova",
+            "athlete_id": 8327883
+          },
+          {
+            "name": "Laura Mathews",
+            "athlete_id": null
+          }
+        ],
+        "year": 2023
       },
       {
         "rank": 10,
-        "athlete_id": null,
         "mark": "4:15.66",
-        "names": [
-          "Gina Dello Russo",
-          "Jackie Endres",
-          "Brea Veilleux",
-          "Claire Tantillo"
-        ]
+        "members": [
+          {
+            "name": "Gina Dello Russo",
+            "athlete_id": null
+          },
+          {
+            "name": "Jackie Endres",
+            "athlete_id": null
+          },
+          {
+            "name": "Brea Veilleux",
+            "athlete_id": null
+          },
+          {
+            "name": "Claire Tantillo",
+            "athlete_id": null
+          }
+        ],
+        "year": 2017
       }
     ]
   },
@@ -1754,113 +1994,233 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
         "mark": "9:41.50",
-        "names": [
-          "Claire Tantillo",
-          "Jackie Endres",
-          "Brea Veilleux",
-          "Kasey Suszko"
-        ]
+        "members": [
+          {
+            "name": "Claire Tantillo",
+            "athlete_id": null
+          },
+          {
+            "name": "Jackie Endres",
+            "athlete_id": null
+          },
+          {
+            "name": "Brea Veilleux",
+            "athlete_id": null
+          },
+          {
+            "name": "Kasey Suszko",
+            "athlete_id": null
+          }
+        ],
+        "year": 2017
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "9:41.95",
-        "names": [
-          "Isabel Vogel",
-          "Taylor Enes",
-          "Rachel Rouse",
-          "Nina Burden"
-        ]
+        "members": [
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          },
+          {
+            "name": "Taylor Enes",
+            "athlete_id": 8327884
+          },
+          {
+            "name": "Rachel Rouse",
+            "athlete_id": null
+          },
+          {
+            "name": "Nina Burden",
+            "athlete_id": null
+          }
+        ],
+        "year": 2024
       },
       {
         "rank": 3,
-        "athlete_id": null,
         "mark": "9:49.68",
-        "names": [
-          "Salme Cook",
-          "Hillary Paul",
-          "Shanna Bearisto",
-          "Ashley Princiotta"
-        ]
+        "members": [
+          {
+            "name": "Salme Cook",
+            "athlete_id": null
+          },
+          {
+            "name": "Hillary Paul",
+            "athlete_id": null
+          },
+          {
+            "name": "Shanna Bearisto",
+            "athlete_id": null
+          },
+          {
+            "name": "Ashley Princiotta",
+            "athlete_id": null
+          }
+        ],
+        "year": 2010
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "10:01.87",
-        "names": [
-          "Jacqueline Lulaj",
-          "Rachel Rouse",
-          "Isabel Vogel",
-          "Nina Burden"
-        ]
+        "members": [
+          {
+            "name": "Jacqueline Lulaj",
+            "athlete_id": null
+          },
+          {
+            "name": "Rachel Rouse",
+            "athlete_id": null
+          },
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          },
+          {
+            "name": "Nina Burden",
+            "athlete_id": null
+          }
+        ],
+        "year": 2023
       },
       {
         "rank": 5,
-        "athlete_id": null,
         "mark": "10:03.59",
-        "names": [
-          "Salme Cook",
-          "Hillary Paul",
-          "Shanna Bearisto",
-          "Melissa Franzese"
-        ]
+        "members": [
+          {
+            "name": "Salme Cook",
+            "athlete_id": null
+          },
+          {
+            "name": "Hillary Paul",
+            "athlete_id": null
+          },
+          {
+            "name": "Shanna Bearisto",
+            "athlete_id": null
+          },
+          {
+            "name": "Melissa Franzese",
+            "athlete_id": null
+          }
+        ],
+        "year": 2009
       },
       {
         "rank": 6,
-        "athlete_id": null,
         "mark": "10:08.75",
-        "names": [
-          "Anya Sadowski",
-          "Isabella Gabay",
-          "Taylor Enes",
-          "Isabel Vogel"
-        ]
+        "members": [
+          {
+            "name": "Anya Sadowski",
+            "athlete_id": 8919558
+          },
+          {
+            "name": "Isabella Gabay",
+            "athlete_id": 8919557
+          },
+          {
+            "name": "Taylor Enes",
+            "athlete_id": 8327884
+          },
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          }
+        ],
+        "year": 2026
       },
       {
         "rank": 7,
-        "athlete_id": null,
         "mark": "10:11.12",
-        "names": [
-          "Isabella Gabay",
-          "Allie Canciani",
-          "Taylor Enes",
-          "Isabel Vogel"
-        ]
+        "members": [
+          {
+            "name": "Isabella Gabay",
+            "athlete_id": 8919557
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Taylor Enes",
+            "athlete_id": 8327884
+          },
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          }
+        ],
+        "year": 2025
       },
       {
         "rank": 8,
-        "athlete_id": null,
         "mark": "10:15.17",
-        "names": [
-          "Kasey Suszko",
-          "Paige Metzheiser",
-          "Samantha Rokicsak",
-          "Jackie Endres"
-        ]
+        "members": [
+          {
+            "name": "Kasey Suszko",
+            "athlete_id": null
+          },
+          {
+            "name": "Paige Metzheiser",
+            "athlete_id": null
+          },
+          {
+            "name": "Samantha Rokicsak",
+            "athlete_id": null
+          },
+          {
+            "name": "Jackie Endres",
+            "athlete_id": null
+          }
+        ],
+        "year": 2016
       },
       {
         "rank": 9,
-        "athlete_id": null,
         "mark": "10:16.13",
-        "names": [
-          "Nina Burden",
-          "Fionna Feerick",
-          "Rachel Pinho",
-          "Nicole Waletzki"
-        ]
+        "members": [
+          {
+            "name": "Nina Burden",
+            "athlete_id": null
+          },
+          {
+            "name": "Fionna Feerick",
+            "athlete_id": null
+          },
+          {
+            "name": "Rachel Pinho",
+            "athlete_id": null
+          },
+          {
+            "name": "Nicole Waletzki",
+            "athlete_id": null
+          }
+        ],
+        "year": 2022
       },
       {
         "rank": 10,
-        "athlete_id": null,
         "mark": "10:17.15",
-        "names": [
-          "Erin Miceli",
-          "Caroline Corr",
-          "Trinity Lundemo",
-          "Erica O'Kelly"
-        ]
+        "members": [
+          {
+            "name": "Erin Miceli",
+            "athlete_id": null
+          },
+          {
+            "name": "Caroline Corr",
+            "athlete_id": null
+          },
+          {
+            "name": "Trinity Lundemo",
+            "athlete_id": null
+          },
+          {
+            "name": "Erica O'Kelly",
+            "athlete_id": null
+          }
+        ],
+        "year": 2020
       }
     ]
   },
@@ -1873,113 +2233,233 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
         "mark": "12:04.16",
-        "names": [
-          "Mary Visca",
-          "Jackie Endres",
-          "Samantha Rokicsak",
-          "Amy Regan"
-        ]
+        "members": [
+          {
+            "name": "Mary Visca",
+            "athlete_id": null
+          },
+          {
+            "name": "Jackie Endres",
+            "athlete_id": null
+          },
+          {
+            "name": "Samantha Rokicsak",
+            "athlete_id": null
+          },
+          {
+            "name": "Amy Regan",
+            "athlete_id": null
+          }
+        ],
+        "year": 2016
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "12:04.85",
-        "names": [
-          "Brea Veilleux",
-          "Gina Dello Russo",
-          "Claire Tantillo",
-          "Mary Visca"
-        ]
+        "members": [
+          {
+            "name": "Brea Veilleux",
+            "athlete_id": null
+          },
+          {
+            "name": "Gina Dello Russo",
+            "athlete_id": null
+          },
+          {
+            "name": "Claire Tantillo",
+            "athlete_id": null
+          },
+          {
+            "name": "Mary Visca",
+            "athlete_id": null
+          }
+        ],
+        "year": 2018
       },
       {
         "rank": 3,
-        "athlete_id": null,
         "mark": "12:18.11",
-        "names": [
-          "Jackie Endres",
-          "Gina Dello Russo",
-          "Claire Tantillo",
-          "Mary Visca"
-        ]
+        "members": [
+          {
+            "name": "Jackie Endres",
+            "athlete_id": null
+          },
+          {
+            "name": "Gina Dello Russo",
+            "athlete_id": null
+          },
+          {
+            "name": "Claire Tantillo",
+            "athlete_id": null
+          },
+          {
+            "name": "Mary Visca",
+            "athlete_id": null
+          }
+        ],
+        "year": 2017
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "12:18.33",
-        "names": [
-          "Kate Moyer",
-          "Samantha Rokicsak",
-          "Kaela Earrusso",
-          "Amy Regan"
-        ]
+        "members": [
+          {
+            "name": "Kate Moyer",
+            "athlete_id": null
+          },
+          {
+            "name": "Samantha Rokicsak",
+            "athlete_id": null
+          },
+          {
+            "name": "Kaela Earrusso",
+            "athlete_id": null
+          },
+          {
+            "name": "Amy Regan",
+            "athlete_id": null
+          }
+        ],
+        "year": 2015
       },
       {
         "rank": 5,
-        "athlete_id": null,
         "mark": "12:24.74",
-        "names": [
-          "Ashley Princiotta",
-          "Melissa Gibbons",
-          "Kelly Freed",
-          "Amy Regan"
-        ]
+        "members": [
+          {
+            "name": "Ashley Princiotta",
+            "athlete_id": null
+          },
+          {
+            "name": "Melissa Gibbons",
+            "athlete_id": null
+          },
+          {
+            "name": "Kelly Freed",
+            "athlete_id": null
+          },
+          {
+            "name": "Amy Regan",
+            "athlete_id": null
+          }
+        ],
+        "year": 2014
       },
       {
         "rank": 6,
-        "athlete_id": null,
         "mark": "12:33.08",
-        "names": [
-          "Nina Burden",
-          "Allie Canciani",
-          "Rachel Pinho",
-          "Rachel Rouse"
-        ]
+        "members": [
+          {
+            "name": "Nina Burden",
+            "athlete_id": null
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Rachel Pinho",
+            "athlete_id": null
+          },
+          {
+            "name": "Rachel Rouse",
+            "athlete_id": null
+          }
+        ],
+        "year": 2023
       },
       {
         "rank": 7,
-        "athlete_id": null,
         "mark": "12:36.89",
-        "names": [
-          "Nina Burden",
-          "Taylor Enes",
-          "Isabel Vogel",
-          "Rachel Rouse"
-        ]
+        "members": [
+          {
+            "name": "Nina Burden",
+            "athlete_id": null
+          },
+          {
+            "name": "Taylor Enes",
+            "athlete_id": 8327884
+          },
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          },
+          {
+            "name": "Rachel Rouse",
+            "athlete_id": null
+          }
+        ],
+        "year": 2024
       },
       {
         "rank": 8,
-        "athlete_id": null,
         "mark": "12:42.66",
-        "names": [
-          "Claire Tantillo",
-          "Melissa Barnes",
-          "Trinity Lundemo",
-          "Mary Visca"
-        ]
+        "members": [
+          {
+            "name": "Claire Tantillo",
+            "athlete_id": null
+          },
+          {
+            "name": "Melissa Barnes",
+            "athlete_id": null
+          },
+          {
+            "name": "Trinity Lundemo",
+            "athlete_id": null
+          },
+          {
+            "name": "Mary Visca",
+            "athlete_id": null
+          }
+        ],
+        "year": 2019
       },
       {
         "rank": 9,
-        "athlete_id": null,
         "mark": "12:48.81",
-        "names": [
-          "Shanna Beairsto",
-          "Hillary Paul",
-          "Salme Cook",
-          "Ashley Princiotta"
-        ]
+        "members": [
+          {
+            "name": "Shanna Beairsto",
+            "athlete_id": null
+          },
+          {
+            "name": "Hillary Paul",
+            "athlete_id": null
+          },
+          {
+            "name": "Salme Cook",
+            "athlete_id": null
+          },
+          {
+            "name": "Ashley Princiotta",
+            "athlete_id": null
+          }
+        ],
+        "year": 2010
       },
       {
         "rank": 10,
-        "athlete_id": null,
         "mark": "12:50.73",
-        "names": [
-          "Isabella Gabay",
-          "Taylor Enes",
-          "Isabel Vogel",
-          "Madeline Bender"
-        ]
+        "members": [
+          {
+            "name": "Isabella Gabay",
+            "athlete_id": 8919557
+          },
+          {
+            "name": "Taylor Enes",
+            "athlete_id": 8327884
+          },
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          },
+          {
+            "name": "Madeline Bender",
+            "athlete_id": 8919555
+          }
+        ],
+        "year": 2026
       }
     ]
   },
@@ -3569,113 +4049,233 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
         "mark": "1:31.20",
-        "names": [
-          "Amar Bindra",
-          "Dan Kaba",
-          "John Mullen",
-          "Nick DiMaria"
-        ]
+        "members": [
+          {
+            "name": "Amar Bindra",
+            "athlete_id": null
+          },
+          {
+            "name": "Dan Kaba",
+            "athlete_id": null
+          },
+          {
+            "name": "John Mullen",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick DiMaria",
+            "athlete_id": null
+          }
+        ],
+        "year": 2020
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "1:32.04",
-        "names": [
-          "Tyler Hackett",
-          "Douglas Winant",
-          "Chase Kosiba",
-          "Connor Robinson"
-        ]
+        "members": [
+          {
+            "name": "Tyler Hackett",
+            "athlete_id": 8681455
+          },
+          {
+            "name": "Douglas Winant",
+            "athlete_id": 8681460
+          },
+          {
+            "name": "Chase Kosiba",
+            "athlete_id": 8864648
+          },
+          {
+            "name": "Connor Robinson",
+            "athlete_id": 8327857
+          }
+        ],
+        "year": 2026
       },
       {
         "rank": 3,
-        "athlete_id": null,
         "mark": "1:32.06",
-        "names": [
-          "Andrew Loth",
-          "Alex Kainer",
-          "Vincent Russo",
-          "Nick DiMaria"
-        ]
+        "members": [
+          {
+            "name": "Andrew Loth",
+            "athlete_id": null
+          },
+          {
+            "name": "Alex Kainer",
+            "athlete_id": null
+          },
+          {
+            "name": "Vincent Russo",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick DiMaria",
+            "athlete_id": null
+          }
+        ],
+        "year": 2018
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "1:33.28",
-        "names": [
-          "Kyle Savino",
-          "Tyler Hackett",
-          "Douglas Winant",
-          "Connor Robinson"
-        ]
+        "members": [
+          {
+            "name": "Kyle Savino",
+            "athlete_id": null
+          },
+          {
+            "name": "Tyler Hackett",
+            "athlete_id": 8681455
+          },
+          {
+            "name": "Douglas Winant",
+            "athlete_id": 8681460
+          },
+          {
+            "name": "Connor Robinson",
+            "athlete_id": 8327857
+          }
+        ],
+        "year": 2024
       },
       {
         "rank": 5,
-        "athlete_id": null,
         "mark": "1:33.50",
-        "names": [
-          "Walter Goodwin",
-          "Shane Chiaravalle",
-          "Brian Fratto",
-          "Tom Halloran"
-        ]
+        "members": [
+          {
+            "name": "Walter Goodwin",
+            "athlete_id": null
+          },
+          {
+            "name": "Shane Chiaravalle",
+            "athlete_id": null
+          },
+          {
+            "name": "Brian Fratto",
+            "athlete_id": null
+          },
+          {
+            "name": "Tom Halloran",
+            "athlete_id": null
+          }
+        ],
+        "year": 2014
       },
       {
         "rank": 6,
-        "athlete_id": null,
         "mark": "1:34.78",
-        "names": [
-          "Greg McLeod",
-          "Olutossin Olugbenga",
-          "Richard Fox",
-          "David Echevarria"
-        ]
+        "members": [
+          {
+            "name": "Greg McLeod",
+            "athlete_id": null
+          },
+          {
+            "name": "Olutossin Olugbenga",
+            "athlete_id": null
+          },
+          {
+            "name": "Richard Fox",
+            "athlete_id": null
+          },
+          {
+            "name": "David Echevarria",
+            "athlete_id": null
+          }
+        ],
+        "year": 2010
       },
       {
         "rank": 7,
-        "athlete_id": null,
         "mark": "1:35.00",
-        "names": [
-          "Tyler Hackett",
-          "Connor Robinson",
-          "Doug Winant",
-          "Kyle Savino"
-        ]
+        "members": [
+          {
+            "name": "Tyler Hackett",
+            "athlete_id": 8681455
+          },
+          {
+            "name": "Connor Robinson",
+            "athlete_id": 8327857
+          },
+          {
+            "name": "Doug Winant",
+            "athlete_id": 8681460
+          },
+          {
+            "name": "Kyle Savino",
+            "athlete_id": null
+          }
+        ],
+        "year": 2025
       },
       {
         "rank": 8,
-        "athlete_id": null,
         "mark": "1:35.20",
-        "names": [
-          "Kris Alvarez",
-          "Brian Fratto",
-          "Shane Chiaravalle",
-          "Tom Halloran"
-        ]
+        "members": [
+          {
+            "name": "Kris Alvarez",
+            "athlete_id": null
+          },
+          {
+            "name": "Brian Fratto",
+            "athlete_id": null
+          },
+          {
+            "name": "Shane Chiaravalle",
+            "athlete_id": null
+          },
+          {
+            "name": "Tom Halloran",
+            "athlete_id": null
+          }
+        ],
+        "year": 2016
       },
       {
         "rank": 9,
-        "athlete_id": null,
         "mark": "1:35.95",
-        "names": [
-          "Kris Alvarez",
-          "Shane Chiaravalle",
-          "Brian Fratto",
-          "Tom Halloran"
-        ]
+        "members": [
+          {
+            "name": "Kris Alvarez",
+            "athlete_id": null
+          },
+          {
+            "name": "Shane Chiaravalle",
+            "athlete_id": null
+          },
+          {
+            "name": "Brian Fratto",
+            "athlete_id": null
+          },
+          {
+            "name": "Tom Halloran",
+            "athlete_id": null
+          }
+        ],
+        "year": 2015
       },
       {
         "rank": 10,
-        "athlete_id": null,
         "mark": "1:36.06",
-        "names": [
-          "Chris Rodriguez",
-          "Danny LaMastra",
-          "Steven Hoang",
-          "Kenny Howell"
-        ]
+        "members": [
+          {
+            "name": "Chris Rodriguez",
+            "athlete_id": null
+          },
+          {
+            "name": "Danny LaMastra",
+            "athlete_id": null
+          },
+          {
+            "name": "Steven Hoang",
+            "athlete_id": null
+          },
+          {
+            "name": "Kenny Howell",
+            "athlete_id": null
+          }
+        ],
+        "year": 2022
       }
     ]
   },
@@ -3688,113 +4288,233 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
         "mark": "3:20.58",
-        "names": [
-          "Dan Kaba",
-          "Trevor Ladue",
-          "Alex Kainer",
-          "Nick DiMaria"
-        ]
+        "members": [
+          {
+            "name": "Dan Kaba",
+            "athlete_id": null
+          },
+          {
+            "name": "Trevor Ladue",
+            "athlete_id": null
+          },
+          {
+            "name": "Alex Kainer",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick DiMaria",
+            "athlete_id": null
+          }
+        ],
+        "year": 2019
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "3:21.48",
-        "names": [
-          "Alex Kainer",
-          "Andrew Loth",
-          "Dan Kaba",
-          "Nick DiMaria"
-        ]
+        "members": [
+          {
+            "name": "Alex Kainer",
+            "athlete_id": null
+          },
+          {
+            "name": "Andrew Loth",
+            "athlete_id": null
+          },
+          {
+            "name": "Dan Kaba",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick DiMaria",
+            "athlete_id": null
+          }
+        ],
+        "year": 2018
       },
       {
         "rank": 3,
-        "athlete_id": null,
         "mark": "3:22.64",
-        "names": [
-          "Dan Kaba",
-          "Amar Bindra",
-          "Trevor Ladue",
-          "Nick DiMaria"
-        ]
+        "members": [
+          {
+            "name": "Dan Kaba",
+            "athlete_id": null
+          },
+          {
+            "name": "Amar Bindra",
+            "athlete_id": null
+          },
+          {
+            "name": "Trevor Ladue",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick DiMaria",
+            "athlete_id": null
+          }
+        ],
+        "year": 2020
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "3:25.11",
-        "names": [
-          "Andrew Loth",
-          "Nick DiMaria",
-          "Raouf Laadem",
-          "Alex Kainer"
-        ]
+        "members": [
+          {
+            "name": "Andrew Loth",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick DiMaria",
+            "athlete_id": null
+          },
+          {
+            "name": "Raouf Laadem",
+            "athlete_id": null
+          },
+          {
+            "name": "Alex Kainer",
+            "athlete_id": null
+          }
+        ],
+        "year": 2017
       },
       {
         "rank": 5,
-        "athlete_id": null,
         "mark": "3:25.91",
-        "names": [
-          "Shane Chiaravalle",
-          "Zach Andrews",
-          "Tom Halloran",
-          "Logan Bagarozy"
-        ]
+        "members": [
+          {
+            "name": "Shane Chiaravalle",
+            "athlete_id": null
+          },
+          {
+            "name": "Zach Andrews",
+            "athlete_id": null
+          },
+          {
+            "name": "Tom Halloran",
+            "athlete_id": null
+          },
+          {
+            "name": "Logan Bagarozy",
+            "athlete_id": null
+          }
+        ],
+        "year": 2016
       },
       {
         "rank": 6,
-        "athlete_id": null,
         "mark": "3:26.15",
-        "names": [
-          "Tom Halleran",
-          "Zach Andrews",
-          "Shane Chiaravalle",
-          "Victor Servito"
-        ]
+        "members": [
+          {
+            "name": "Tom Halleran",
+            "athlete_id": null
+          },
+          {
+            "name": "Zach Andrews",
+            "athlete_id": null
+          },
+          {
+            "name": "Shane Chiaravalle",
+            "athlete_id": null
+          },
+          {
+            "name": "Victor Servito",
+            "athlete_id": null
+          }
+        ],
+        "year": 2013
       },
       {
         "rank": 7,
-        "athlete_id": null,
         "mark": "3:26.63",
-        "names": [
-          "Zach Andrews",
-          "Shane Chiaravalle",
-          "Michael John",
-          "Tom Halleran"
-        ]
+        "members": [
+          {
+            "name": "Zach Andrews",
+            "athlete_id": null
+          },
+          {
+            "name": "Shane Chiaravalle",
+            "athlete_id": null
+          },
+          {
+            "name": "Michael John",
+            "athlete_id": null
+          },
+          {
+            "name": "Tom Halleran",
+            "athlete_id": null
+          }
+        ],
+        "year": 2014
       },
       {
         "rank": 8,
-        "athlete_id": null,
         "mark": "3:27.36",
-        "names": [
-          "Kevin Morgera",
-          "Mohamed Abuouf",
-          "Sean Fahy",
-          "Andrew Ballinger"
-        ]
+        "members": [
+          {
+            "name": "Kevin Morgera",
+            "athlete_id": null
+          },
+          {
+            "name": "Mohamed Abuouf",
+            "athlete_id": null
+          },
+          {
+            "name": "Sean Fahy",
+            "athlete_id": null
+          },
+          {
+            "name": "Andrew Ballinger",
+            "athlete_id": null
+          }
+        ],
+        "year": 2010
       },
       {
         "rank": 9,
-        "athlete_id": null,
         "mark": "3:28.45",
-        "names": [
-          "Brandon Kiefer",
-          "Ethan Stallone",
-          "Tyler Hackett",
-          "Kyle Savino"
-        ]
+        "members": [
+          {
+            "name": "Brandon Kiefer",
+            "athlete_id": 8327852
+          },
+          {
+            "name": "Ethan Stallone",
+            "athlete_id": null
+          },
+          {
+            "name": "Tyler Hackett",
+            "athlete_id": 8681455
+          },
+          {
+            "name": "Kyle Savino",
+            "athlete_id": null
+          }
+        ],
+        "year": 2025
       },
       {
         "rank": 10,
-        "athlete_id": null,
         "mark": "3:30.38",
-        "names": [
-          "Shane Chiaravalle",
-          "Tom Halleran",
-          "Nick Zickgraf",
-          "Michael John"
-        ]
+        "members": [
+          {
+            "name": "Shane Chiaravalle",
+            "athlete_id": null
+          },
+          {
+            "name": "Tom Halleran",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick Zickgraf",
+            "athlete_id": null
+          },
+          {
+            "name": "Michael John",
+            "athlete_id": null
+          }
+        ],
+        "year": 2015
       }
     ]
   },
@@ -3807,113 +4527,233 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
         "mark": "7:56.73",
-        "names": [
-          "Michael Hoffman",
-          "John Barnes",
-          "Philip Mainwaring",
-          "John Hoffman"
-        ]
+        "members": [
+          {
+            "name": "Michael Hoffman",
+            "athlete_id": null
+          },
+          {
+            "name": "John Barnes",
+            "athlete_id": null
+          },
+          {
+            "name": "Philip Mainwaring",
+            "athlete_id": null
+          },
+          {
+            "name": "John Hoffman",
+            "athlete_id": null
+          }
+        ],
+        "year": 2008
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "7:57.38",
-        "names": [
-          "Markus Soennichsen",
-          "Enrico Parrella",
-          "Christopher Reyes",
-          "Daniel Jutras"
-        ]
+        "members": [
+          {
+            "name": "Markus Soennichsen",
+            "athlete_id": 9205120
+          },
+          {
+            "name": "Enrico Parrella",
+            "athlete_id": 8919574
+          },
+          {
+            "name": "Christopher Reyes",
+            "athlete_id": 9205118
+          },
+          {
+            "name": "Daniel Jutras",
+            "athlete_id": 8327853
+          }
+        ],
+        "year": 2026
       },
       {
         "rank": 3,
-        "athlete_id": null,
         "mark": "7:57.57",
-        "names": [
-          "Andrew Ballinger",
-          "Kevin Morgera",
-          "Zane Brylinski",
-          "David Dewan"
-        ]
+        "members": [
+          {
+            "name": "Andrew Ballinger",
+            "athlete_id": null
+          },
+          {
+            "name": "Kevin Morgera",
+            "athlete_id": null
+          },
+          {
+            "name": "Zane Brylinski",
+            "athlete_id": null
+          },
+          {
+            "name": "David Dewan",
+            "athlete_id": null
+          }
+        ],
+        "year": 2010
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "8:00.02",
-        "names": [
-          "Ryan Paradine",
-          "Enrico Parrella",
-          "Jake Aylmer",
-          "Daniel Jutras"
-        ]
+        "members": [
+          {
+            "name": "Ryan Paradine",
+            "athlete_id": 8615539
+          },
+          {
+            "name": "Enrico Parrella",
+            "athlete_id": 8919574
+          },
+          {
+            "name": "Jake Aylmer",
+            "athlete_id": null
+          },
+          {
+            "name": "Daniel Jutras",
+            "athlete_id": 8327853
+          }
+        ],
+        "year": 2025
       },
       {
         "rank": 5,
-        "athlete_id": null,
         "mark": "8:01.53",
-        "names": [
-          "Ronnie Melao",
-          "Ryan Paradine",
-          "Daniel Jutras",
-          "Jake Aylmer"
-        ]
+        "members": [
+          {
+            "name": "Ronnie Melao",
+            "athlete_id": null
+          },
+          {
+            "name": "Ryan Paradine",
+            "athlete_id": 8615539
+          },
+          {
+            "name": "Daniel Jutras",
+            "athlete_id": 8327853
+          },
+          {
+            "name": "Jake Aylmer",
+            "athlete_id": null
+          }
+        ],
+        "year": 2024
       },
       {
         "rank": 6,
-        "athlete_id": null,
         "mark": "8:04.83",
-        "names": [
-          "Tom Selvaggi",
-          "Sean James",
-          "Ronnie Melao",
-          "Trevor Ladue"
-        ]
+        "members": [
+          {
+            "name": "Tom Selvaggi",
+            "athlete_id": null
+          },
+          {
+            "name": "Sean James",
+            "athlete_id": null
+          },
+          {
+            "name": "Ronnie Melao",
+            "athlete_id": null
+          },
+          {
+            "name": "Trevor Ladue",
+            "athlete_id": null
+          }
+        ],
+        "year": 2020
       },
       {
         "rank": 7,
-        "athlete_id": null,
         "mark": "8:05.87",
-        "names": [
-          "Jake Catalano",
-          "Raouf Laadem",
-          "Luke Skorka",
-          "Jeremy Savlov"
-        ]
+        "members": [
+          {
+            "name": "Jake Catalano",
+            "athlete_id": null
+          },
+          {
+            "name": "Raouf Laadem",
+            "athlete_id": null
+          },
+          {
+            "name": "Luke Skorka",
+            "athlete_id": null
+          },
+          {
+            "name": "Jeremy Savlov",
+            "athlete_id": null
+          }
+        ],
+        "year": 2017
       },
       {
         "rank": 8,
-        "athlete_id": null,
         "mark": "8:09.16",
-        "names": [
-          "John Hoffman",
-          "Philip Mainwaring",
-          "Kevin Morgera",
-          "Michael Hoffman"
-        ]
+        "members": [
+          {
+            "name": "John Hoffman",
+            "athlete_id": null
+          },
+          {
+            "name": "Philip Mainwaring",
+            "athlete_id": null
+          },
+          {
+            "name": "Kevin Morgera",
+            "athlete_id": null
+          },
+          {
+            "name": "Michael Hoffman",
+            "athlete_id": null
+          }
+        ],
+        "year": 2007
       },
       {
         "rank": 9,
-        "athlete_id": null,
         "mark": "8:09.86",
-        "names": [
-          "Louis Stengel",
-          "Andrew Parlette",
-          "Troy Kanaszka",
-          "Michael John"
-        ]
+        "members": [
+          {
+            "name": "Louis Stengel",
+            "athlete_id": null
+          },
+          {
+            "name": "Andrew Parlette",
+            "athlete_id": null
+          },
+          {
+            "name": "Troy Kanaszka",
+            "athlete_id": null
+          },
+          {
+            "name": "Michael John",
+            "athlete_id": null
+          }
+        ],
+        "year": 2014
       },
       {
         "rank": 10,
-        "athlete_id": null,
         "mark": "8:09.90",
-        "names": [
-          "Michael Pawalowski",
-          "Kevin Morgera",
-          "Drew Ballinger",
-          "Sean Vasquez"
-        ]
+        "members": [
+          {
+            "name": "Michael Pawalowski",
+            "athlete_id": null
+          },
+          {
+            "name": "Kevin Morgera",
+            "athlete_id": null
+          },
+          {
+            "name": "Drew Ballinger",
+            "athlete_id": null
+          },
+          {
+            "name": "Sean Vasquez",
+            "athlete_id": null
+          }
+        ],
+        "year": 2009
       }
     ]
   },
@@ -3926,113 +4766,233 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
         "mark": "9:55.09",
-        "names": [
-          "Michael John",
-          "Nick DiMaria",
-          "Tom Selvaggi",
-          "Nick Zickgraf"
-        ]
+        "members": [
+          {
+            "name": "Michael John",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick DiMaria",
+            "athlete_id": null
+          },
+          {
+            "name": "Tom Selvaggi",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick Zickgraf",
+            "athlete_id": null
+          }
+        ],
+        "year": 2018
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "10:04.54",
-        "names": [
-          "Greg Arabagian",
-          "Nick DiMaria",
-          "Tom Selvaggi",
-          "Nick Zickgraf"
-        ]
+        "members": [
+          {
+            "name": "Greg Arabagian",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick DiMaria",
+            "athlete_id": null
+          },
+          {
+            "name": "Tom Selvaggi",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick Zickgraf",
+            "athlete_id": null
+          }
+        ],
+        "year": 2017
       },
       {
         "rank": 3,
-        "athlete_id": null,
         "mark": "10:05.80",
-        "names": [
-          "Greg Arabagian",
-          "Shane Chiaravalle",
-          "Michael John",
-          "Nick Zickgraf"
-        ]
+        "members": [
+          {
+            "name": "Greg Arabagian",
+            "athlete_id": null
+          },
+          {
+            "name": "Shane Chiaravalle",
+            "athlete_id": null
+          },
+          {
+            "name": "Michael John",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick Zickgraf",
+            "athlete_id": null
+          }
+        ],
+        "year": 2016
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "10:17.98",
-        "names": [
-          "Danny Jutras",
-          "Mick Barbi",
-          "Jake Aylmer",
-          "Ronnie Melao"
-        ]
+        "members": [
+          {
+            "name": "Danny Jutras",
+            "athlete_id": 8327853
+          },
+          {
+            "name": "Mick Barbi",
+            "athlete_id": 8327859
+          },
+          {
+            "name": "Jake Aylmer",
+            "athlete_id": null
+          },
+          {
+            "name": "Ronnie Melao",
+            "athlete_id": null
+          }
+        ],
+        "year": 2024
       },
       {
         "rank": 5,
-        "athlete_id": null,
         "mark": "10:20.35",
-        "names": [
-          "Ryan Paradine",
-          "Christopher Reyes",
-          "Markus Soennichsen",
-          "Danny Jutras"
-        ]
+        "members": [
+          {
+            "name": "Ryan Paradine",
+            "athlete_id": 8615539
+          },
+          {
+            "name": "Christopher Reyes",
+            "athlete_id": 9205118
+          },
+          {
+            "name": "Markus Soennichsen",
+            "athlete_id": 9205120
+          },
+          {
+            "name": "Danny Jutras",
+            "athlete_id": 8327853
+          }
+        ],
+        "year": 2026
       },
       {
         "rank": 6,
-        "athlete_id": null,
         "mark": "10:20.40",
-        "names": [
-          "Michael Hoffman",
-          "Mohamed Abuouf",
-          "John Hoffman",
-          "Phil Mainwaring"
-        ]
+        "members": [
+          {
+            "name": "Michael Hoffman",
+            "athlete_id": null
+          },
+          {
+            "name": "Mohamed Abuouf",
+            "athlete_id": null
+          },
+          {
+            "name": "John Hoffman",
+            "athlete_id": null
+          },
+          {
+            "name": "Phil Mainwaring",
+            "athlete_id": null
+          }
+        ],
+        "year": 2008
       },
       {
         "rank": 7,
-        "athlete_id": null,
         "mark": "10:22.69",
-        "names": [
-          "Jake Catalano",
-          "Jon Cucci",
-          "Trevor Ladue",
-          "Robby Russo"
-        ]
+        "members": [
+          {
+            "name": "Jake Catalano",
+            "athlete_id": null
+          },
+          {
+            "name": "Jon Cucci",
+            "athlete_id": null
+          },
+          {
+            "name": "Trevor Ladue",
+            "athlete_id": null
+          },
+          {
+            "name": "Robby Russo",
+            "athlete_id": null
+          }
+        ],
+        "year": 2019
       },
       {
         "rank": 8,
-        "athlete_id": null,
         "mark": "10:24.50",
-        "names": [
-          "Ryan Paradine",
-          "Mick Barbi",
-          "Jake Aylmer",
-          "Enrico Parrella"
-        ]
+        "members": [
+          {
+            "name": "Ryan Paradine",
+            "athlete_id": 8615539
+          },
+          {
+            "name": "Mick Barbi",
+            "athlete_id": 8327859
+          },
+          {
+            "name": "Jake Aylmer",
+            "athlete_id": null
+          },
+          {
+            "name": "Enrico Parrella",
+            "athlete_id": 8919574
+          }
+        ],
+        "year": 2025
       },
       {
         "rank": 9,
-        "athlete_id": null,
         "mark": "10:25.26",
-        "names": [
-          "Jake Aylmer",
-          "Danny LaMastra",
-          "Kajetan Leitner",
-          "Ronnie Melao"
-        ]
+        "members": [
+          {
+            "name": "Jake Aylmer",
+            "athlete_id": null
+          },
+          {
+            "name": "Danny LaMastra",
+            "athlete_id": null
+          },
+          {
+            "name": "Kajetan Leitner",
+            "athlete_id": null
+          },
+          {
+            "name": "Ronnie Melao",
+            "athlete_id": null
+          }
+        ],
+        "year": 2023
       },
       {
         "rank": 10,
-        "athlete_id": null,
         "mark": "10:26.87",
-        "names": [
-          "Louis Stengel",
-          "Zach Andrews",
-          "Troy Kanaszka",
-          "Andrew Parlette"
-        ]
+        "members": [
+          {
+            "name": "Louis Stengel",
+            "athlete_id": null
+          },
+          {
+            "name": "Zach Andrews",
+            "athlete_id": null
+          },
+          {
+            "name": "Troy Kanaszka",
+            "athlete_id": null
+          },
+          {
+            "name": "Andrew Parlette",
+            "athlete_id": null
+          }
+        ],
+        "year": 2014
       }
     ]
   },
@@ -5625,113 +6585,233 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
         "mark": "48.61",
-        "names": [
-          "Kristen Williams",
-          "Allie Canciani",
-          "Laura Mathews",
-          "Gina Dello Russo"
-        ]
+        "members": [
+          {
+            "name": "Kristen Williams",
+            "athlete_id": null
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Laura Mathews",
+            "athlete_id": null
+          },
+          {
+            "name": "Gina Dello Russo",
+            "athlete_id": null
+          }
+        ],
+        "year": 2022
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "49.36",
-        "names": [
-          "Kristen Williams",
-          "Liana Meyer",
-          "Laura Mathews",
-          "Gina Dello Russo"
-        ]
+        "members": [
+          {
+            "name": "Kristen Williams",
+            "athlete_id": null
+          },
+          {
+            "name": "Liana Meyer",
+            "athlete_id": null
+          },
+          {
+            "name": "Laura Mathews",
+            "athlete_id": null
+          },
+          {
+            "name": "Gina Dello Russo",
+            "athlete_id": null
+          }
+        ],
+        "year": 2021
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "49.36",
-        "names": [
-          "Lauren Ingraham",
-          "Stephanie Ryazanova",
-          "Allie Canciani",
-          "Laura Mathews"
-        ]
+        "members": [
+          {
+            "name": "Lauren Ingraham",
+            "athlete_id": null
+          },
+          {
+            "name": "Stephanie Ryazanova",
+            "athlete_id": 8327883
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Laura Mathews",
+            "athlete_id": null
+          }
+        ],
+        "year": 2024
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "49.63",
-        "names": [
-          "Lauren Ingraham",
-          "Stephanie Ryazanova",
-          "Allie Canciani",
-          "Laura Mathews"
-        ]
+        "members": [
+          {
+            "name": "Lauren Ingraham",
+            "athlete_id": null
+          },
+          {
+            "name": "Stephanie Ryazanova",
+            "athlete_id": 8327883
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Laura Mathews",
+            "athlete_id": null
+          }
+        ],
+        "year": 2023
       },
       {
         "rank": 5,
-        "athlete_id": null,
         "mark": "51.20",
-        "names": [
-          "Lauren Alley",
-          "Allie Canciani",
-          "Anya Sadowski",
-          "Caroline Tighe"
-        ]
+        "members": [
+          {
+            "name": "Lauren Alley",
+            "athlete_id": 8979796
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Anya Sadowski",
+            "athlete_id": 8919558
+          },
+          {
+            "name": "Caroline Tighe",
+            "athlete_id": null
+          }
+        ],
+        "year": 2025
       },
       {
         "rank": 6,
-        "athlete_id": null,
         "mark": "51.28",
-        "names": [
-          "Tiffany Evangelou",
-          "Gladys Njoku",
-          "Michelle Moriera",
-          "Melissa Gibbons"
-        ]
+        "members": [
+          {
+            "name": "Tiffany Evangelou",
+            "athlete_id": null
+          },
+          {
+            "name": "Gladys Njoku",
+            "athlete_id": null
+          },
+          {
+            "name": "Michelle Moriera",
+            "athlete_id": null
+          },
+          {
+            "name": "Melissa Gibbons",
+            "athlete_id": null
+          }
+        ],
+        "year": 2014
       },
       {
         "rank": 7,
-        "athlete_id": null,
         "mark": "51.92",
-        "names": [
-          "Munachimso Nwadukwe",
-          "Lauren Alley",
-          "Stephanie Ryazanova",
-          "Anya Sadowski"
-        ]
+        "members": [
+          {
+            "name": "Munachimso Nwadukwe",
+            "athlete_id": 9251054
+          },
+          {
+            "name": "Lauren Alley",
+            "athlete_id": 8979796
+          },
+          {
+            "name": "Stephanie Ryazanova",
+            "athlete_id": 8327883
+          },
+          {
+            "name": "Anya Sadowski",
+            "athlete_id": 8919558
+          }
+        ],
+        "year": 2026
       },
       {
         "rank": 8,
-        "athlete_id": null,
         "mark": "52.78",
-        "names": [
-          "Chika Ekweghariri",
-          "Caroline Pawalowski",
-          "Laura Barito",
-          "Salme Cook"
-        ]
+        "members": [
+          {
+            "name": "Chika Ekweghariri",
+            "athlete_id": null
+          },
+          {
+            "name": "Caroline Pawalowski",
+            "athlete_id": null
+          },
+          {
+            "name": "Laura Barito",
+            "athlete_id": null
+          },
+          {
+            "name": "Salme Cook",
+            "athlete_id": null
+          }
+        ],
+        "year": 2008
       },
       {
         "rank": 9,
-        "athlete_id": null,
         "mark": "53.68",
-        "names": [
-          "Tiffany Evangelou",
-          "Sammi Devlin",
-          "Rebecca Tylock",
-          "Magdalena Kowalska"
-        ]
+        "members": [
+          {
+            "name": "Tiffany Evangelou",
+            "athlete_id": null
+          },
+          {
+            "name": "Sammi Devlin",
+            "athlete_id": null
+          },
+          {
+            "name": "Rebecca Tylock",
+            "athlete_id": null
+          },
+          {
+            "name": "Magdalena Kowalska",
+            "athlete_id": null
+          }
+        ],
+        "year": 2013
       },
       {
         "rank": 10,
-        "athlete_id": null,
         "mark": "53.87",
-        "names": [
-          "Laura Barito",
-          "Salme Cook",
-          "Caroline Pawaloski",
-          "Jenny Wehof"
-        ]
+        "members": [
+          {
+            "name": "Laura Barito",
+            "athlete_id": null
+          },
+          {
+            "name": "Salme Cook",
+            "athlete_id": null
+          },
+          {
+            "name": "Caroline Pawaloski",
+            "athlete_id": null
+          },
+          {
+            "name": "Jenny Wehof",
+            "athlete_id": null
+          }
+        ],
+        "year": 2010
       }
     ]
   },
@@ -5744,113 +6824,233 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
         "mark": "3:57.16",
-        "names": [
-          "Anya Sadowski",
-          "Lauren Alley",
-          "Isabel Vogel",
-          "Isabella Shanley"
-        ]
+        "members": [
+          {
+            "name": "Anya Sadowski",
+            "athlete_id": 8919558
+          },
+          {
+            "name": "Lauren Alley",
+            "athlete_id": 8979796
+          },
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          },
+          {
+            "name": "Isabella Shanley",
+            "athlete_id": 8681474
+          }
+        ],
+        "year": 2026
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "3:59.61",
-        "names": [
-          "Laura Mathews",
-          "Liana Meyer",
-          "Allie Canciani",
-          "Gina Dello Russo"
-        ]
+        "members": [
+          {
+            "name": "Laura Mathews",
+            "athlete_id": null
+          },
+          {
+            "name": "Liana Meyer",
+            "athlete_id": null
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Gina Dello Russo",
+            "athlete_id": null
+          }
+        ],
+        "year": 2022
       },
       {
         "rank": 3,
-        "athlete_id": null,
         "mark": "4:00.96",
-        "names": [
-          "Isabella Shanley",
-          "Isabel Vogel",
-          "Allie Canciani",
-          "Laura Mathews"
-        ]
+        "members": [
+          {
+            "name": "Isabella Shanley",
+            "athlete_id": 8681474
+          },
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Laura Mathews",
+            "athlete_id": null
+          }
+        ],
+        "year": 2024
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "4:03.75",
-        "names": [
-          "Paige Metzheiser",
-          "Samantha Rokicsak",
-          "Claire Tantillo",
-          "Gina Dello Russo"
-        ]
+        "members": [
+          {
+            "name": "Paige Metzheiser",
+            "athlete_id": null
+          },
+          {
+            "name": "Samantha Rokicsak",
+            "athlete_id": null
+          },
+          {
+            "name": "Claire Tantillo",
+            "athlete_id": null
+          },
+          {
+            "name": "Gina Dello Russo",
+            "athlete_id": null
+          }
+        ],
+        "year": 2018
       },
       {
         "rank": 5,
-        "athlete_id": null,
         "mark": "4:04.82",
-        "names": [
-          "Salme Cook",
-          "Caroline Pawaloski",
-          "Laura Barito",
-          "Shanna Bearisto"
-        ]
+        "members": [
+          {
+            "name": "Salme Cook",
+            "athlete_id": null
+          },
+          {
+            "name": "Caroline Pawaloski",
+            "athlete_id": null
+          },
+          {
+            "name": "Laura Barito",
+            "athlete_id": null
+          },
+          {
+            "name": "Shanna Bearisto",
+            "athlete_id": null
+          }
+        ],
+        "year": 2010
       },
       {
         "rank": 6,
-        "athlete_id": null,
         "mark": "4:04.91",
-        "names": [
-          "Melissa Barnes",
-          "Paige Metzheiser",
-          "Claire Tantillo",
-          "Gina Dello Russo"
-        ]
+        "members": [
+          {
+            "name": "Melissa Barnes",
+            "athlete_id": null
+          },
+          {
+            "name": "Paige Metzheiser",
+            "athlete_id": null
+          },
+          {
+            "name": "Claire Tantillo",
+            "athlete_id": null
+          },
+          {
+            "name": "Gina Dello Russo",
+            "athlete_id": null
+          }
+        ],
+        "year": 2019
       },
       {
         "rank": 7,
-        "athlete_id": null,
         "mark": "4:06.60",
-        "names": [
-          "Melissa Barnes",
-          "Laura Mathews",
-          "Liana Meyer",
-          "Gina Dello Russo"
-        ]
+        "members": [
+          {
+            "name": "Melissa Barnes",
+            "athlete_id": null
+          },
+          {
+            "name": "Laura Mathews",
+            "athlete_id": null
+          },
+          {
+            "name": "Liana Meyer",
+            "athlete_id": null
+          },
+          {
+            "name": "Gina Dello Russo",
+            "athlete_id": null
+          }
+        ],
+        "year": 2021
       },
       {
         "rank": 8,
-        "athlete_id": null,
         "mark": "4:07.68",
-        "names": [
-          "Lauren Alley",
-          "Allie Canciani",
-          "Anya Sadowski",
-          "Isabel Vogel"
-        ]
+        "members": [
+          {
+            "name": "Lauren Alley",
+            "athlete_id": 8979796
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Anya Sadowski",
+            "athlete_id": 8919558
+          },
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          }
+        ],
+        "year": 2025
       },
       {
         "rank": 9,
-        "athlete_id": null,
         "mark": "4:08.20",
-        "names": [
-          "Jacqueline Lulaj",
-          "Allie Canciani",
-          "Nina Burden",
-          "Rachel Pinho"
-        ]
+        "members": [
+          {
+            "name": "Jacqueline Lulaj",
+            "athlete_id": null
+          },
+          {
+            "name": "Allie Canciani",
+            "athlete_id": null
+          },
+          {
+            "name": "Nina Burden",
+            "athlete_id": null
+          },
+          {
+            "name": "Rachel Pinho",
+            "athlete_id": null
+          }
+        ],
+        "year": 2023
       },
       {
         "rank": 10,
-        "athlete_id": null,
         "mark": "4:14.26",
-        "names": [
-          "Salme Cook",
-          "Caroline Pawaloski",
-          "Laura Barito",
-          "Shanna Bearisto"
-        ]
+        "members": [
+          {
+            "name": "Salme Cook",
+            "athlete_id": null
+          },
+          {
+            "name": "Caroline Pawaloski",
+            "athlete_id": null
+          },
+          {
+            "name": "Laura Barito",
+            "athlete_id": null
+          },
+          {
+            "name": "Shanna Bearisto",
+            "athlete_id": null
+          }
+        ],
+        "year": 2009
       }
     ]
   },
@@ -5863,113 +7063,233 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
         "mark": "9:19.29",
-        "names": [
-          "Kasey Suszko",
-          "Samantha Rokiscsak",
-          "Jackie Enders",
-          "Paige Metzheiser"
-        ]
+        "members": [
+          {
+            "name": "Kasey Suszko",
+            "athlete_id": null
+          },
+          {
+            "name": "Samantha Rokiscsak",
+            "athlete_id": null
+          },
+          {
+            "name": "Jackie Enders",
+            "athlete_id": null
+          },
+          {
+            "name": "Paige Metzheiser",
+            "athlete_id": null
+          }
+        ],
+        "year": 2016
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "9:29.09",
-        "names": [
-          "Mary Visca",
-          "Claire Tantillo",
-          "Brea Veilleux",
-          "Paige Metzheiser"
-        ]
+        "members": [
+          {
+            "name": "Mary Visca",
+            "athlete_id": null
+          },
+          {
+            "name": "Claire Tantillo",
+            "athlete_id": null
+          },
+          {
+            "name": "Brea Veilleux",
+            "athlete_id": null
+          },
+          {
+            "name": "Paige Metzheiser",
+            "athlete_id": null
+          }
+        ],
+        "year": 2018
       },
       {
         "rank": 3,
-        "athlete_id": null,
         "mark": "9:34.46",
-        "names": [
-          "Rachel Rouse",
-          "Rachel Pinho",
-          "Isabel Vogel",
-          "Nina Burden"
-        ]
+        "members": [
+          {
+            "name": "Rachel Rouse",
+            "athlete_id": null
+          },
+          {
+            "name": "Rachel Pinho",
+            "athlete_id": null
+          },
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          },
+          {
+            "name": "Nina Burden",
+            "athlete_id": null
+          }
+        ],
+        "year": 2023
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "9:37.05",
-        "names": [
-          "Isabella Gabay",
-          "Taylor Enes",
-          "Nina Burden",
-          "Isabel Vogel"
-        ]
+        "members": [
+          {
+            "name": "Isabella Gabay",
+            "athlete_id": 8919557
+          },
+          {
+            "name": "Taylor Enes",
+            "athlete_id": 8327884
+          },
+          {
+            "name": "Nina Burden",
+            "athlete_id": null
+          },
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          }
+        ],
+        "year": 2025
       },
       {
         "rank": 5,
-        "athlete_id": null,
         "mark": "9:41.26",
-        "names": [
-          "Isabel Vogel",
-          "Taylor Enes",
-          "Rachel Rouse",
-          "Nina Burden"
-        ]
+        "members": [
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          },
+          {
+            "name": "Taylor Enes",
+            "athlete_id": 8327884
+          },
+          {
+            "name": "Rachel Rouse",
+            "athlete_id": null
+          },
+          {
+            "name": "Nina Burden",
+            "athlete_id": null
+          }
+        ],
+        "year": 2024
       },
       {
         "rank": 6,
-        "athlete_id": null,
         "mark": "9:42.93",
-        "names": [
-          "Isabella Gabay",
-          "Taylor Enes",
-          "Anya Sadowski",
-          "Isabel Vogel"
-        ]
+        "members": [
+          {
+            "name": "Isabella Gabay",
+            "athlete_id": 8919557
+          },
+          {
+            "name": "Taylor Enes",
+            "athlete_id": 8327884
+          },
+          {
+            "name": "Anya Sadowski",
+            "athlete_id": 8919558
+          },
+          {
+            "name": "Isabel Vogel",
+            "athlete_id": 8327885
+          }
+        ],
+        "year": 2026
       },
       {
         "rank": 7,
-        "athlete_id": null,
         "mark": "9:43.56",
-        "names": [
-          "Jackie Enders",
-          "Brea Veilleux",
-          "Claire Tantillo",
-          "Kasey Suszko"
-        ]
+        "members": [
+          {
+            "name": "Jackie Enders",
+            "athlete_id": null
+          },
+          {
+            "name": "Brea Veilleux",
+            "athlete_id": null
+          },
+          {
+            "name": "Claire Tantillo",
+            "athlete_id": null
+          },
+          {
+            "name": "Kasey Suszko",
+            "athlete_id": null
+          }
+        ],
+        "year": 2017
       },
       {
         "rank": 8,
-        "athlete_id": null,
         "mark": "9:44.94",
-        "names": [
-          "Samantha Rokicsak",
-          "Kiera Sheridan",
-          "Katie Brodecki",
-          "Kaela Earrusso"
-        ]
+        "members": [
+          {
+            "name": "Samantha Rokicsak",
+            "athlete_id": null
+          },
+          {
+            "name": "Kiera Sheridan",
+            "athlete_id": null
+          },
+          {
+            "name": "Katie Brodecki",
+            "athlete_id": null
+          },
+          {
+            "name": "Kaela Earrusso",
+            "athlete_id": null
+          }
+        ],
+        "year": 2015
       },
       {
         "rank": 9,
-        "athlete_id": null,
         "mark": "9:52.32",
-        "names": [
-          "Jacqueline Lulaj",
-          "Nina Burden",
-          "Rachel Pinho",
-          "Fionna Ferrick"
-        ]
+        "members": [
+          {
+            "name": "Jacqueline Lulaj",
+            "athlete_id": null
+          },
+          {
+            "name": "Nina Burden",
+            "athlete_id": null
+          },
+          {
+            "name": "Rachel Pinho",
+            "athlete_id": null
+          },
+          {
+            "name": "Fionna Ferrick",
+            "athlete_id": null
+          }
+        ],
+        "year": 2022
       },
       {
         "rank": 10,
-        "athlete_id": null,
         "mark": "9:58.64",
-        "names": [
-          "Amy Regan",
-          "Kaela Earrusso",
-          "Sarah Zahran",
-          "Kelly Freed"
-        ]
+        "members": [
+          {
+            "name": "Amy Regan",
+            "athlete_id": null
+          },
+          {
+            "name": "Kaela Earrusso",
+            "athlete_id": null
+          },
+          {
+            "name": "Sarah Zahran",
+            "athlete_id": null
+          },
+          {
+            "name": "Kelly Freed",
+            "athlete_id": null
+          }
+        ],
+        "year": 2014
       }
     ]
   },
@@ -7587,113 +8907,233 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
         "mark": "41.44",
-        "names": [
-          "Danny LaMastra",
-          "Alex Kainer",
-          "Nick DiMaria",
-          "Evan Kainer"
-        ]
+        "members": [
+          {
+            "name": "Danny LaMastra",
+            "athlete_id": null
+          },
+          {
+            "name": "Alex Kainer",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick DiMaria",
+            "athlete_id": null
+          },
+          {
+            "name": "Evan Kainer",
+            "athlete_id": null
+          }
+        ],
+        "year": 2019
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "42.17",
-        "names": [
-          "Brian Fratto",
-          "Alex Kainer",
-          "Evan Kainer",
-          "Andrew Loth"
-        ]
+        "members": [
+          {
+            "name": "Brian Fratto",
+            "athlete_id": null
+          },
+          {
+            "name": "Alex Kainer",
+            "athlete_id": null
+          },
+          {
+            "name": "Evan Kainer",
+            "athlete_id": null
+          },
+          {
+            "name": "Andrew Loth",
+            "athlete_id": null
+          }
+        ],
+        "year": 2017
       },
       {
         "rank": 3,
-        "athlete_id": null,
         "mark": "42.28",
-        "names": [
-          "Dan Kaba",
-          "Alex Kainer",
-          "Vincent Russo",
-          "Evan Kainer"
-        ]
+        "members": [
+          {
+            "name": "Dan Kaba",
+            "athlete_id": null
+          },
+          {
+            "name": "Alex Kainer",
+            "athlete_id": null
+          },
+          {
+            "name": "Vincent Russo",
+            "athlete_id": null
+          },
+          {
+            "name": "Evan Kainer",
+            "athlete_id": null
+          }
+        ],
+        "year": 2018
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "42.61",
-        "names": [
-          "Joseph Perriello",
-          "Kyle Savino",
-          "Connor Robinson",
-          "Douglas Winant"
-        ]
+        "members": [
+          {
+            "name": "Joseph Perriello",
+            "athlete_id": 8979738
+          },
+          {
+            "name": "Kyle Savino",
+            "athlete_id": null
+          },
+          {
+            "name": "Connor Robinson",
+            "athlete_id": 8327857
+          },
+          {
+            "name": "Douglas Winant",
+            "athlete_id": 8681460
+          }
+        ],
+        "year": 2025
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "42.61",
-        "names": [
-          "Chad Francis",
-          "Doug Winant",
-          "Asher Morgan",
-          "Chase Kosiba"
-        ]
+        "members": [
+          {
+            "name": "Chad Francis",
+            "athlete_id": 9251000
+          },
+          {
+            "name": "Doug Winant",
+            "athlete_id": 8681460
+          },
+          {
+            "name": "Asher Morgan",
+            "athlete_id": 9251005
+          },
+          {
+            "name": "Chase Kosiba",
+            "athlete_id": 8864648
+          }
+        ],
+        "year": 2026
       },
       {
         "rank": 6,
-        "athlete_id": null,
         "mark": "42.78",
-        "names": [
-          "Tyler Hackett",
-          "George Maroun",
-          "Connor Robinson",
-          "Kyle Savino"
-        ]
+        "members": [
+          {
+            "name": "Tyler Hackett",
+            "athlete_id": 8681455
+          },
+          {
+            "name": "George Maroun",
+            "athlete_id": 8681458
+          },
+          {
+            "name": "Connor Robinson",
+            "athlete_id": 8327857
+          },
+          {
+            "name": "Kyle Savino",
+            "athlete_id": null
+          }
+        ],
+        "year": 2024
       },
       {
         "rank": 7,
-        "athlete_id": null,
         "mark": "42.90",
-        "names": [
-          "TJ Magno",
-          "Alex Kainer",
-          "Evan Kainer",
-          "Brian Fratto"
-        ]
+        "members": [
+          {
+            "name": "TJ Magno",
+            "athlete_id": null
+          },
+          {
+            "name": "Alex Kainer",
+            "athlete_id": null
+          },
+          {
+            "name": "Evan Kainer",
+            "athlete_id": null
+          },
+          {
+            "name": "Brian Fratto",
+            "athlete_id": null
+          }
+        ],
+        "year": 2016
       },
       {
         "rank": 8,
-        "athlete_id": null,
         "mark": "43.27",
-        "names": [
-          "Greg McLeod",
-          "Olutossin Olugbenga",
-          "David Echevarria",
-          "Mohamed Abuouf"
-        ]
+        "members": [
+          {
+            "name": "Greg McLeod",
+            "athlete_id": null
+          },
+          {
+            "name": "Olutossin Olugbenga",
+            "athlete_id": null
+          },
+          {
+            "name": "David Echevarria",
+            "athlete_id": null
+          },
+          {
+            "name": "Mohamed Abuouf",
+            "athlete_id": null
+          }
+        ],
+        "year": 2010
       },
       {
         "rank": 9,
-        "athlete_id": null,
         "mark": "43.31",
-        "names": [
-          "Greg McLeod",
-          "Walter Goodwin",
-          "Kristopher Alvarez",
-          "Nicholas Lowe"
-        ]
+        "members": [
+          {
+            "name": "Greg McLeod",
+            "athlete_id": null
+          },
+          {
+            "name": "Walter Goodwin",
+            "athlete_id": null
+          },
+          {
+            "name": "Kristopher Alvarez",
+            "athlete_id": null
+          },
+          {
+            "name": "Nicholas Lowe",
+            "athlete_id": null
+          }
+        ],
+        "year": 2012
       },
       {
         "rank": 10,
-        "athlete_id": null,
         "mark": "43.34",
-        "names": [
-          "Mohamed Abuouf",
-          "Denzel Drye",
-          "Nicholas Lowe",
-          "Greg McLeod"
-        ]
+        "members": [
+          {
+            "name": "Mohamed Abuouf",
+            "athlete_id": null
+          },
+          {
+            "name": "Denzel Drye",
+            "athlete_id": null
+          },
+          {
+            "name": "Nicholas Lowe",
+            "athlete_id": null
+          },
+          {
+            "name": "Greg McLeod",
+            "athlete_id": null
+          }
+        ],
+        "year": 2011
       }
     ]
   },
@@ -7706,113 +9146,233 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
         "mark": "3:18.50",
-        "names": [
-          "Dan Kaba",
-          "Alex Kainer",
-          "Nick Dimaria",
-          "Zach Andrews"
-        ]
+        "members": [
+          {
+            "name": "Dan Kaba",
+            "athlete_id": null
+          },
+          {
+            "name": "Alex Kainer",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick Dimaria",
+            "athlete_id": null
+          },
+          {
+            "name": "Zach Andrews",
+            "athlete_id": null
+          }
+        ],
+        "year": 2017
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "3:20.51",
-        "names": [
-          "Danny LaMastra",
-          "Trevor LaDue",
-          "Alex Kainer",
-          "Nick DiMaria"
-        ]
+        "members": [
+          {
+            "name": "Danny LaMastra",
+            "athlete_id": null
+          },
+          {
+            "name": "Trevor LaDue",
+            "athlete_id": null
+          },
+          {
+            "name": "Alex Kainer",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick DiMaria",
+            "athlete_id": null
+          }
+        ],
+        "year": 2019
       },
       {
         "rank": 3,
-        "athlete_id": null,
         "mark": "3:21.20",
-        "names": [
-          "Raouf Laadem",
-          "Alex Kainer",
-          "Dan Kaba",
-          "Nick Dimaria"
-        ]
+        "members": [
+          {
+            "name": "Raouf Laadem",
+            "athlete_id": null
+          },
+          {
+            "name": "Alex Kainer",
+            "athlete_id": null
+          },
+          {
+            "name": "Dan Kaba",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick Dimaria",
+            "athlete_id": null
+          }
+        ],
+        "year": 2018
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "3:23.04",
-        "names": [
-          "Connor Robinson",
-          "Rai Bindra",
-          "Danny Jutras",
-          "Kyle Savino"
-        ]
+        "members": [
+          {
+            "name": "Connor Robinson",
+            "athlete_id": 8327857
+          },
+          {
+            "name": "Rai Bindra",
+            "athlete_id": null
+          },
+          {
+            "name": "Danny Jutras",
+            "athlete_id": 8327853
+          },
+          {
+            "name": "Kyle Savino",
+            "athlete_id": null
+          }
+        ],
+        "year": 2025
       },
       {
         "rank": 5,
-        "athlete_id": null,
         "mark": "3:23.06",
-        "names": [
-          "Shane Chiaravalle",
-          "Zach Andrews",
-          "Tom Halloran",
-          "Logan Bagarozy"
-        ]
+        "members": [
+          {
+            "name": "Shane Chiaravalle",
+            "athlete_id": null
+          },
+          {
+            "name": "Zach Andrews",
+            "athlete_id": null
+          },
+          {
+            "name": "Tom Halloran",
+            "athlete_id": null
+          },
+          {
+            "name": "Logan Bagarozy",
+            "athlete_id": null
+          }
+        ],
+        "year": 2016
       },
       {
         "rank": 6,
-        "athlete_id": null,
         "mark": "3:24.02",
-        "names": [
-          "Kevin Morgera",
-          "Drew Ballinger",
-          "Sean Vasquez",
-          "Trevor Currie"
-        ]
+        "members": [
+          {
+            "name": "Kevin Morgera",
+            "athlete_id": null
+          },
+          {
+            "name": "Drew Ballinger",
+            "athlete_id": null
+          },
+          {
+            "name": "Sean Vasquez",
+            "athlete_id": null
+          },
+          {
+            "name": "Trevor Currie",
+            "athlete_id": null
+          }
+        ],
+        "year": 2009
       },
       {
         "rank": 7,
-        "athlete_id": null,
         "mark": "3:24.46",
-        "names": [
-          "Daniel Jutras",
-          "Ian Rodriguez",
-          "Christopher Reyes",
-          "Steven Longo"
-        ]
+        "members": [
+          {
+            "name": "Daniel Jutras",
+            "athlete_id": 8327853
+          },
+          {
+            "name": "Ian Rodriguez",
+            "athlete_id": 9251009
+          },
+          {
+            "name": "Christopher Reyes",
+            "athlete_id": 9205118
+          },
+          {
+            "name": "Steven Longo",
+            "athlete_id": 9251003
+          }
+        ],
+        "year": 2026
       },
       {
         "rank": 8,
-        "athlete_id": null,
         "mark": "3:25.13",
-        "names": [
-          "Kyle Savino",
-          "Xavier McWilliams",
-          "Kajetan Leitner",
-          "Mick Barbi"
-        ]
+        "members": [
+          {
+            "name": "Kyle Savino",
+            "athlete_id": null
+          },
+          {
+            "name": "Xavier McWilliams",
+            "athlete_id": null
+          },
+          {
+            "name": "Kajetan Leitner",
+            "athlete_id": null
+          },
+          {
+            "name": "Mick Barbi",
+            "athlete_id": 8327859
+          }
+        ],
+        "year": 2024
       },
       {
         "rank": 9,
-        "athlete_id": null,
         "mark": "3:25.18",
-        "names": [
-          "Michael Hoffman",
-          "Mohammed Abuouf",
-          "John Hoffman",
-          "Matt Savary"
-        ]
+        "members": [
+          {
+            "name": "Michael Hoffman",
+            "athlete_id": null
+          },
+          {
+            "name": "Mohammed Abuouf",
+            "athlete_id": null
+          },
+          {
+            "name": "John Hoffman",
+            "athlete_id": null
+          },
+          {
+            "name": "Matt Savary",
+            "athlete_id": null
+          }
+        ],
+        "year": 2007
       },
       {
         "rank": 10,
-        "athlete_id": null,
         "mark": "3:25.42",
-        "names": [
-          "Chris Rodriquez",
-          "Kyle Savino",
-          "Kajetan Leitner",
-          "Danny LaMastra"
-        ]
+        "members": [
+          {
+            "name": "Chris Rodriquez",
+            "athlete_id": null
+          },
+          {
+            "name": "Kyle Savino",
+            "athlete_id": null
+          },
+          {
+            "name": "Kajetan Leitner",
+            "athlete_id": null
+          },
+          {
+            "name": "Danny LaMastra",
+            "athlete_id": null
+          }
+        ],
+        "year": 2023
       }
     ]
   },
@@ -7825,113 +9385,233 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
         "mark": "7:44.62",
-        "names": [
-          "Greg Arabagian",
-          "Michael John",
-          "Nick Zickgraf",
-          "Louis Stengal"
-        ]
+        "members": [
+          {
+            "name": "Greg Arabagian",
+            "athlete_id": null
+          },
+          {
+            "name": "Michael John",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick Zickgraf",
+            "athlete_id": null
+          },
+          {
+            "name": "Louis Stengal",
+            "athlete_id": null
+          }
+        ],
+        "year": 2015
       },
       {
         "rank": 2,
-        "athlete_id": null,
         "mark": "7:48.67",
-        "names": [
-          "Ryan Paradine",
-          "Kajetan Leitner",
-          "Jake Aylmer",
-          "Danny Jutras"
-        ]
+        "members": [
+          {
+            "name": "Ryan Paradine",
+            "athlete_id": 8615539
+          },
+          {
+            "name": "Kajetan Leitner",
+            "athlete_id": null
+          },
+          {
+            "name": "Jake Aylmer",
+            "athlete_id": null
+          },
+          {
+            "name": "Danny Jutras",
+            "athlete_id": 8327853
+          }
+        ],
+        "year": 2024
       },
       {
         "rank": 3,
-        "athlete_id": null,
         "mark": "7:50.80",
-        "names": [
-          "Mick Barbi",
-          "Caleb Stephen",
-          "Jake Aylmer",
-          "Danny Jutras"
-        ]
+        "members": [
+          {
+            "name": "Mick Barbi",
+            "athlete_id": 8327859
+          },
+          {
+            "name": "Caleb Stephen",
+            "athlete_id": 8327855
+          },
+          {
+            "name": "Jake Aylmer",
+            "athlete_id": null
+          },
+          {
+            "name": "Danny Jutras",
+            "athlete_id": 8327853
+          }
+        ],
+        "year": 2025
       },
       {
         "rank": 4,
-        "athlete_id": null,
         "mark": "7:52.18",
-        "names": [
-          "Ronnie Melao",
-          "Troy Tomasch",
-          "Jake Aylmer",
-          "Kajetan Leitner"
-        ]
+        "members": [
+          {
+            "name": "Ronnie Melao",
+            "athlete_id": null
+          },
+          {
+            "name": "Troy Tomasch",
+            "athlete_id": null
+          },
+          {
+            "name": "Jake Aylmer",
+            "athlete_id": null
+          },
+          {
+            "name": "Kajetan Leitner",
+            "athlete_id": null
+          }
+        ],
+        "year": 2023
       },
       {
         "rank": 5,
-        "athlete_id": null,
         "mark": "7:55.00",
-        "names": [
-          "Matt Bombard",
-          "Nick Zickgraf",
-          "Drew Knipfer",
-          "Louis Stengal"
-        ]
+        "members": [
+          {
+            "name": "Matt Bombard",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick Zickgraf",
+            "athlete_id": null
+          },
+          {
+            "name": "Drew Knipfer",
+            "athlete_id": null
+          },
+          {
+            "name": "Louis Stengal",
+            "athlete_id": null
+          }
+        ],
+        "year": 2014
       },
       {
         "rank": 6,
-        "athlete_id": null,
         "mark": "7:59.47",
-        "names": [
-          "Sean James",
-          "James Lawrence",
-          "Robby Russo",
-          "Trevor LaDue"
-        ]
+        "members": [
+          {
+            "name": "Sean James",
+            "athlete_id": null
+          },
+          {
+            "name": "James Lawrence",
+            "athlete_id": null
+          },
+          {
+            "name": "Robby Russo",
+            "athlete_id": null
+          },
+          {
+            "name": "Trevor LaDue",
+            "athlete_id": null
+          }
+        ],
+        "year": 2019
       },
       {
         "rank": 7,
-        "athlete_id": null,
         "mark": "8:00.01",
-        "names": [
-          "Enrico Parrella",
-          "Matt Hodorowski",
-          "Markus Soennichsen",
-          "Danny Jutras"
-        ]
+        "members": [
+          {
+            "name": "Enrico Parrella",
+            "athlete_id": 8919574
+          },
+          {
+            "name": "Matt Hodorowski",
+            "athlete_id": 8919570
+          },
+          {
+            "name": "Markus Soennichsen",
+            "athlete_id": 9205120
+          },
+          {
+            "name": "Danny Jutras",
+            "athlete_id": 8327853
+          }
+        ],
+        "year": 2026
       },
       {
         "rank": 8,
-        "athlete_id": null,
         "mark": "8:00.76",
-        "names": [
-          "Ronnie Melao",
-          "Kajetan Leitner",
-          "Dhavan Antala",
-          "Jake Aylmer"
-        ]
+        "members": [
+          {
+            "name": "Ronnie Melao",
+            "athlete_id": null
+          },
+          {
+            "name": "Kajetan Leitner",
+            "athlete_id": null
+          },
+          {
+            "name": "Dhavan Antala",
+            "athlete_id": null
+          },
+          {
+            "name": "Jake Aylmer",
+            "athlete_id": null
+          }
+        ],
+        "year": 2022
       },
       {
         "rank": 9,
-        "athlete_id": null,
         "mark": "8:01.34",
-        "names": [
-          "Greg Arabagian",
-          "Nick Zickgraf",
-          "Michael John",
-          "Ryan Little"
-        ]
+        "members": [
+          {
+            "name": "Greg Arabagian",
+            "athlete_id": null
+          },
+          {
+            "name": "Nick Zickgraf",
+            "athlete_id": null
+          },
+          {
+            "name": "Michael John",
+            "athlete_id": null
+          },
+          {
+            "name": "Ryan Little",
+            "athlete_id": null
+          }
+        ],
+        "year": 2016
       },
       {
         "rank": 10,
-        "athlete_id": null,
         "mark": "8:06.38",
-        "names": [
-          "Michael John",
-          "Nathan Schaefer",
-          "Raouf Laadem",
-          "Greg Arabagian"
-        ]
+        "members": [
+          {
+            "name": "Michael John",
+            "athlete_id": null
+          },
+          {
+            "name": "Nathan Schaefer",
+            "athlete_id": null
+          },
+          {
+            "name": "Raouf Laadem",
+            "athlete_id": null
+          },
+          {
+            "name": "Greg Arabagian",
+            "athlete_id": null
+          }
+        ],
+        "year": 2018
       }
     ]
   }
