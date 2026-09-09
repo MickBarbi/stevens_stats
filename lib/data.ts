@@ -128,6 +128,56 @@ export const progressionForAthlete = (id: number): ProgressionPerformance[] =>
     }))
     .sort((a, b) => a.date.localeCompare(b.date));
 
+// ---- Roster cards -----------------------------------------------------------
+// One entry per active athlete, carrying just what the roster card needs:
+// the events they're known for, their PB in each event (for the "filter by
+// event" mini-leaderboard), and whether their most recent result was a best.
+
+export type RosterMark = { event_id: number; mark: number };
+
+export type RosterEntry = {
+  athlete: Athlete;
+  specialties: { event_id: number; event_name: string }[];
+  recentBest: boolean;
+  marks: RosterMark[];
+};
+
+export const rosterEntries = (): RosterEntry[] => {
+  const byAthlete = new Map<number, Performance[]>();
+  for (const p of performances) {
+    const arr = byAthlete.get(p.athlete_id);
+    if (arr) arr.push(p);
+    else byAthlete.set(p.athlete_id, [p]);
+  }
+
+  return activeAthletes().map((athlete) => {
+    const ps = byAthlete.get(athlete.athlete_id) ?? [];
+
+    const count = new Map<number, number>();
+    for (const p of ps) count.set(p.event_id, (count.get(p.event_id) ?? 0) + 1);
+    const specialties = Array.from(count.entries())
+      .sort((a, b) => b[1] - a[1] || a[0] - b[0])
+      .slice(0, 3)
+      .map(([event_id]) => ({
+        event_id,
+        event_name: eventNameById.get(event_id) ?? String(event_id),
+      }));
+
+    const marks: RosterMark[] = ps
+      .filter((p) => p.is_personal_best)
+      .map((p) => ({ event_id: p.event_id, mark: p.mark }));
+
+    // "on a high note" — their most recent result was a lifetime PB
+    let recentBest = false;
+    if (ps.length) {
+      const latest = ps.reduce((a, b) => (b.date > a.date ? b : a));
+      recentBest = latest.is_personal_best;
+    }
+
+    return { athlete, specialties, recentBest, marks };
+  });
+};
+
 // ---- Events leaderboard -------------------------------------------------------
 // One row per athlete per event, carrying only the marks the events page shows.
 // Built from the flagged performances; indoor vs. outdoor comes from each row's

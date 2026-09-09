@@ -228,9 +228,12 @@ personal investment).
   until `qualifying_standards.json` has data). Dropped the "All seasons" option —
   indoor/outdoor are always separate tables (cleaner for the season-specific
   qualifiers). *(fixes P6)*
-- [~] **T3.2 Roster cards.** Fallback avatar done (T2.1). Still: event-specialty
-  tags, a "recent PB" dot, filter/sort by event, visual parity with the athlete
-  card.
+- [x] **T3.2 Roster cards.** ✅ Each card now carries a class-year `.chip`, up to
+  two event-specialty tags, and a green **recent-PB dot** (their most recent
+  result was a lifetime best). New **event filter** — pick an event and the
+  roster becomes a mini-leaderboard: only athletes with a PB in it, ranked by
+  that mark, card shows the mark + `#N`. Year / gender filters kept; athlete
+  count shown. `rosterEntries()` in `lib/data.ts` feeds it.
 - [ ] **T3.3 Navigation.** Active-link state; a proper slide-in mobile menu; a
   bottom tab bar on mobile (Home / Roster / Events / Athletes) for one-thumb
   use at a meet.
@@ -276,6 +279,14 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-09 — T3.2 roster cards
+- `rosterEntries()` in `lib/data.ts` — per active athlete: top-2 event
+  specialties (by mark count), PB per event, and `recentBest` (their latest
+  result was a lifetime PB).
+- `RosterClient` rebuilt: class-year chip + specialty tags + green recent-PB
+  dot on each card. Event filter turns the roster into a ranked mini-leaderboard
+  (mark + `#N` on the card). Year / gender filters kept; count line added.
 
 ### 2026-09-09 — T3.1 events page + season-best plumbing
 - **Data:** `scraper/load.py` `default_season_start()` now rolls over **Dec 1**
