@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { SearchX } from "lucide-react";
-import { alumniLabel, type RosterEntry } from "@/lib/data";
+import { alumniLabel, isFormerAthlete, type RosterEntry } from "@/lib/data";
 import { formatMark, markKind } from "@/lib/format";
 import Card from "@/components/ui/Card";
 import PageHeader from "@/components/ui/PageHeader";
@@ -34,8 +34,10 @@ const RosterClient = ({
   const [year, setYear] = useState("");
   const [sex, setSex] = useState("");
 
-  const inScope = (e: RosterEntry) =>
-    scope === "all" ? true : scope === "alumni" ? !e.athlete.active : e.athlete.active;
+  const inScope = (e: RosterEntry) => {
+    const former = isFormerAthlete(e.athlete);
+    return scope === "all" ? true : scope === "alumni" ? former : !former;
+  };
 
   // events someone in the current scope has actually competed in
   const eventOpts = useMemo(() => {
@@ -181,9 +183,9 @@ const RosterClient = ({
                     <h2 className="font-semibold leading-tight text-fg">{name}</h2>
                     <p className="mt-1.5">
                       <span className="chip">
-                        {a.active
-                          ? YEAR_LABEL[a.year] ?? `Year ${a.year}`
-                          : alumniLabel(a)}
+                        {isFormerAthlete(a)
+                          ? alumniLabel(a)
+                          : YEAR_LABEL[a.year] ?? `Year ${a.year}`}
                       </span>
                     </p>
 

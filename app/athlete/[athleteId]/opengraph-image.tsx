@@ -3,6 +3,7 @@ import {
   alumniLabel,
   athletes,
   getAthlete,
+  isFormerAthlete,
   progressionForAthlete,
   teamRank,
 } from "@/lib/data";
@@ -81,9 +82,9 @@ export default async function Image({
   const name = a ? `${a.nickname ?? a.first_name} ${a.last_name}` : "Athlete";
   const year = !a
     ? ""
-    : a.active
-      ? YEAR_LABEL[a.year] ?? `Year ${a.year}`
-      : alumniLabel(a);
+    : isFormerAthlete(a)
+      ? alumniLabel(a)
+      : YEAR_LABEL[a.year] ?? `Year ${a.year}`;
   const headline = a ? headlineFor(id, a.sex) : "";
   const photo = a ? await photoUrl(a.image_path, a.athlete_id) : null;
   const initials = a

@@ -18,6 +18,7 @@ import { Medal, ChevronLeft, ChevronRight, LineChart } from "lucide-react";
 import AthletePicker from "../AthletePicker";
 import {
   alumniLabel,
+  isFormerAthlete,
   teamRank,
   type Athlete,
   type PickerAthlete,
@@ -470,9 +471,9 @@ const AthleteProfile = ({
 
           <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-fg-muted">
             <span className="chip">
-              {athlete.active
-                ? YEAR_LABEL[athlete.year] ?? `Year ${athlete.year}`
-                : alumniLabel(athlete)}
+              {isFormerAthlete(athlete)
+                ? alumniLabel(athlete)
+                : YEAR_LABEL[athlete.year] ?? `Year ${athlete.year}`}
             </span>
             {athlete.sex && (
               <span>{athlete.sex === "m" ? "Men's" : "Women's"} Track &amp; Field</span>

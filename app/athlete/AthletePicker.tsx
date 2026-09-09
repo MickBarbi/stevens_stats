@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Menu } from "@headlessui/react";
 import { ChevronDown } from "lucide-react";
-import type { PickerAthlete } from "@/lib/data";
+import { isFormerAthlete, type PickerAthlete } from "@/lib/data";
 
 const label = (a: PickerAthlete) =>
   `${a.nickname ? a.nickname : a.first_name} ${a.last_name}`;
@@ -43,7 +43,7 @@ const AthletePicker = ({ athletes }: { athletes: PickerAthlete[] }) => {
                     }`}
                   >
                     {label(a)}
-                    {!a.active && (
+                    {isFormerAthlete(a) && (
                       <span className="shrink-0 rounded-full border border-current px-1.5 text-[0.6rem] font-semibold uppercase text-fg-subtle">
                         alum
                       </span>

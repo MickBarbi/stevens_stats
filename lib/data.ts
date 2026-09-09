@@ -27,6 +27,12 @@ export type Athlete = {
   status: string | null;
 };
 
+/** True for anyone no longer on the team — off the scraped roster, OR still on
+ *  it but hand-flagged with a `status` (they left / transferred before the
+ *  roster page caught up). */
+export const isFormerAthlete = (a: Pick<Athlete, "active" | "status">): boolean =>
+  !a.active || a.status != null;
+
 /** Short label for a former athlete's card / profile. */
 export const alumniLabel = (a: Pick<Athlete, "graduation_year" | "status">): string => {
   if (a.status === "transferred") return "Transferred";
@@ -91,14 +97,14 @@ const byName = (a: { last_name: string; first_name: string }, b: typeof a) =>
   a.last_name.localeCompare(b.last_name) || a.first_name.localeCompare(b.first_name);
 
 export const activeAthletes = (): Athlete[] =>
-  athletes.filter((a) => a.active).sort(byName);
+  athletes.filter((a) => !isFormerAthlete(a)).sort(byName);
 
 export const getAthlete = (id: number): Athlete | null =>
   athletes.find((a) => a.athlete_id === id) ?? null;
 
 export type PickerAthlete = Pick<
   Athlete,
-  "athlete_id" | "first_name" | "last_name" | "nickname" | "active"
+  "athlete_id" | "first_name" | "last_name" | "nickname" | "active" | "status"
 >;
 
 const toPicker = ({
@@ -107,12 +113,22 @@ const toPicker = ({
   last_name,
   nickname,
   active,
-}: Athlete): PickerAthlete => ({ athlete_id, first_name, last_name, nickname, active });
+  status,
+}: Athlete): PickerAthlete => ({
+  athlete_id,
+  first_name,
+  last_name,
+  nickname,
+  active,
+  status,
+});
 
-// Everyone, current team first then alumni — each block alphabetical.
+// Everyone, current team first then former athletes — each block alphabetical.
 export const athletePickerList = (): PickerAthlete[] =>
   [...athletes]
-    .sort((a, b) => Number(b.active) - Number(a.active) || byName(a, b))
+    .sort(
+      (a, b) => Number(isFormerAthlete(a)) - Number(isFormerAthlete(b)) || byName(a, b)
+    )
     .map(toPicker);
 
 /** Previous / next athlete in the roster order (wraps around). */
@@ -186,7 +202,7 @@ export const rosterEntries = (): RosterEntry[] => {
     // "on a high note" — a current athlete whose most recent result was a
     // lifetime PB. Not meaningful for alumni (their career already ended).
     let recentBest = false;
-    if (athlete.active && ps.length) {
+    if (!isFormerAthlete(athlete) && ps.length) {
       const latest = ps.reduce((a, b) => (b.date > a.date ? b : a));
       recentBest = latest.is_personal_best;
     }
