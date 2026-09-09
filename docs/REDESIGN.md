@@ -269,8 +269,13 @@ personal investment).
   `<select>`; drawer moves focus to its close button on open, traps Tab, and
   restores focus to the hamburger on close. Sorting is already button-based
   (segmented control), landmarks/headings already in place from Tier 0.
-- [ ] **T4.5 PWA-lite.** Installable with icon + offline shell — "check every
-  week" becomes an icon on the home screen.
+- [x] **T4.5 PWA-lite.** ✅ `app/manifest.ts` (standalone, brand theme, 192 /
+  512 / maskable icons generated from the logo), `apple-touch-icon` +
+  `theme-color` + `appleWebApp` meta, and a hand-rolled `public/sw.js`
+  (cache-first for `/_next/static`, network-first navigations falling back to
+  cache then `/offline`, SWR for data) registered in production by
+  `components/ServiceWorkerRegister.tsx`. `app/offline/page.tsx` is the shell
+  fallback. **Tier 4 complete — redesign done.**
 
 ---
 
@@ -302,6 +307,17 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-09 — T4.5 PWA-lite (redesign complete)
+- `app/manifest.ts` + PNG icons (192 / 512 / maskable, `apple-touch-icon`)
+  generated from `public/Designer.jpeg`; `theme-color` + `appleWebApp` meta and
+  a `viewport` export in `layout.tsx`.
+- `public/sw.js` — runtime caching only (cache-first `/_next/static`,
+  network-first navigations → cache → `/offline`, SWR for the rest); registered
+  in prod by `components/ServiceWorkerRegister.tsx`. `app/offline/page.tsx` is
+  the offline shell. Verified: SW activates, cached routes load offline, uncached
+  routes fall back to /offline.
+- **All tiers (0–4) done.**
 
 ### 2026-09-09 — T4.3 per-athlete OG images
 - `app/athlete/[athleteId]/opengraph-image.tsx`: 1200×630 `next/og` card

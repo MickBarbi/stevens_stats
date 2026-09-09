@@ -1,9 +1,10 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { ReactNode } from "react";
 import localFont from "next/font/local";
 import Navbar from "../components/Navbar";
 import BottomTabs from "../components/BottomTabs";
+import ServiceWorkerRegister from "../components/ServiceWorkerRegister";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,12 +33,21 @@ export const metadata: Metadata = {
   title: "Stevens Stats",
   description:
     "Track & field results for the Stevens team — rosters, event bests and season progressions.",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: "Stevens Stats",
+    statusBarStyle: "black-translucent",
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
-    other: { rel: "apple-touch-icon-precomposed", url: "/favicon.ico" },
+    apple: "/apple-touch-icon.png",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#992211",
 };
 
 // Runs before first paint so the saved theme is applied with no flash.
@@ -68,6 +78,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </main>
         <BottomTabs />
+        <ServiceWorkerRegister />
       </body>
     </html>
   );
