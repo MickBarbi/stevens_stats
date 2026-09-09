@@ -73,6 +73,38 @@ events leaderboards and home feed (those filter on `active`). Add a
 `graduation_year` by hand in `data/athletes.json` if you want it shown — the
 merge preserves it.
 
+### Roster photos → Cloudinary
+
+Separate from the TFRRS pipeline. Pulls headshots off the official Stevens site
+(`stevensducks.com`, a Sidearm build) and uploads them to Cloudinary keyed by
+TFRRS id, which is exactly what the site fetches
+(`res.cloudinary.com/<cloud>/image/upload/.../<athlete_id>`) — so no code or
+data change is needed once it runs.
+
+```bash
+python photos.py                 # scrape photo_rosters.txt, match names, download
+python photos.py --dry-run       #   match + coverage report only
+python photos_upload.py          # push data/photos/* to Cloudinary (overwrites)
+python photos_upload.py --dry-run
+python photos_upload.py --only 8919566,9251050
+```
+
+- `photo_rosters.txt` — the roster pages to scrape, **freshest first** (first
+  page an athlete appears on wins). Track before cross-country; XC is the
+  fallback headshot source for distance runners. URLs here *are* guessable
+  (`/sports/{mens,womens}-track-and-field/roster/2023-24`), unlike TFRRS's.
+- Name → id matching reuses the alias / accent-folding rules from
+  `top10_from_xlsx.py`, plus a tiny `NAME_OVERRIDES` map in `photos.py` for
+  preferred names that share no prefix (e.g. roster "Sarah" vs. data "Lillian").
+  `photos.py` prints every athlete left without a photo and every roster name
+  that matched nobody.
+- `photos_upload.py` needs `CLOUDINARY_API_KEY` / `CLOUDINARY_API_SECRET` (plus
+  `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`) in `../.env`. It uploads with
+  `public_id=<athlete_id>`, `overwrite=True`, `invalidate=True`, and stores the
+  athlete's name as the Cloudinary display name + context caption.
+- Output (`data/photos/`, `data/photos_manifest.csv`) is git-ignored like the
+  rest of `scraper/data/`.
+
 ## What the files contain
 
 `load.py` produces rows that match `stevens_stats/prisma/schema.prisma` exactly:
