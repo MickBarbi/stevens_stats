@@ -219,10 +219,15 @@ personal investment).
 
 ### Tier 3 — Events & roster
 
-- [ ] **T3.1 Events page.** Season control as a segmented control; an event
-  jump-list / sticky sub-nav; each event a card with a compact leaderboard;
-  **on mobile stack columns into rows** instead of horizontal scroll; draw the
-  standard as a "cut line" in the table. *(responsive table patterns; fixes P6)*
+- [x] **T3.1 Events page.** ✅ Segmented controls (Indoor/Outdoor · This
+  season/All-time · gender · sort); sticky horizontal event jump-bar; each event
+  a `.card` with a **ranked** leaderboard (was scraped order); rows are a
+  zebra-striped flex list — name + mark + all-time `#N` together, PB shown only
+  when it differs — that reflows to one line per row on mobile, no horizontal
+  scroll; flows into two columns on wide screens. Cut-line logic wired (dormant
+  until `qualifying_standards.json` has data). Dropped the "All seasons" option —
+  indoor/outdoor are always separate tables (cleaner for the season-specific
+  qualifiers). *(fixes P6)*
 - [~] **T3.2 Roster cards.** Fallback avatar done (T2.1). Still: event-specialty
   tags, a "recent PB" dot, filter/sort by event, visual parity with the athlete
   card.
@@ -271,6 +276,26 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-09 — T3.1 events page + season-best plumbing
+- **Data:** `scraper/load.py` `default_season_start()` now rolls over **Dec 1**
+  (was Sept 1), so the 25-26 season stays "current" through November. Re-ran
+  `load.py` (no re-scrape — same 3056 marks): `is_season_best` populated
+  0 → 473 (239 indoor / 234 outdoor). `events.json` also synced to
+  `tfrrs.py` — 8 endurance events now `"Both"` (was a stale committed copy).
+  Athlete bios / standards / posts untouched.
+- **Events page** (`EventsClient.tsx`) rebuilt: segmented controls, sticky
+  event jump-bar, ranked `.card` leaderboards, zebra rows, one-line-per-row on
+  mobile, two columns on wide screens. New **This season / All-time** toggle
+  (default This season → ranks by `is_season_best`; a faster all-time mark that
+  wasn't run this season drops down the list but its PB shows inline). "All
+  seasons" option removed — indoor and outdoor are always separate tables.
+- `.segmented` component class added to `globals.css`.
+
+### 2026-09-09 — SR badge only when the mark is the record
+- `components/LatestResults.tsx`: `team_rank === 1` means the athlete holds the
+  all-time #1 spot, not that this result is a record — gated the SR badge on
+  `is_overall_best` so it shows only on the record-setting mark.
 
 ### 2026-09-09 — relay top-10: year instead of date, linked legs
 - `scraper/top10_from_xlsx.py`: relay blocks in the workbook are wider than the

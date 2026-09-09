@@ -169,6 +169,22 @@
       bg-surface px-2.5 py-0.5 text-xs font-medium text-fg-muted;
   }
 
+  /* Segmented control — a compact row of mutually-exclusive options.
+     Buttons carry aria-pressed; the pressed one gets the brand fill. */
+  .segmented {
+    @apply inline-flex items-center gap-0.5 rounded-md border border-border
+      bg-surface p-0.5 text-sm;
+  }
+  .segmented > button {
+    @apply rounded px-2.5 py-1 font-medium text-fg-muted transition-colors;
+  }
+  .segmented > button:hover {
+    @apply text-fg;
+  }
+  .segmented > button[aria-pressed="true"] {
+    @apply bg-brand text-brand-fg;
+  }
+
   /* Data tables (events leaderboards, athlete bests) */
   .data-table {
     @apply w-full border-collapse text-sm tabular-nums;

@@ -12,21 +12,89 @@ import {
 import { formatMark, markKind, type MarkKind } from "@/lib/format";
 import PageHeader from "@/components/ui/PageHeader";
 
-type SeasonFilter = Season | "all";
+type SexFilter = "" | "m" | "f";
+type SortKey = "rank" | "name";
+type Scope = "season" | "alltime";
 
-type SortKey =
-  | "name"
-  | "indoor"
-  | "outdoor"
-  | "collegiate"
-  | "personal"
-  | "rank_indoor"
-  | "rank_outdoor";
-
-const cellMark = (c: BestCell) => (c ? Number(c.mark) : null);
+const num = (c: BestCell) => (c ? Number(c.mark) : null);
 
 const clears = (mark: number, standard: number, higherIsBetter: boolean) =>
   higherIsBetter ? mark >= standard : mark <= standard;
+
+// --- small building blocks --------------------------------------------------
+
+function Segmented<T extends string>({
+  label,
+  value,
+  onChange,
+  options,
+}: {
+  label: string;
+  value: T;
+  onChange: (v: T) => void;
+  options: { value: T; label: string }[];
+}) {
+  return (
+    <div className="segmented" role="group" aria-label={label}>
+      {options.map((o) => (
+        <button
+          key={o.value}
+          type="button"
+          aria-pressed={value === o.value}
+          onClick={() => onChange(o.value)}
+        >
+          {o.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+const MarkStat = ({
+  label,
+  cell,
+  kind,
+  muted,
+}: {
+  label?: string;
+  cell: BestCell;
+  kind: MarkKind;
+  muted?: boolean;
+}) => (
+  <span className={`font-mono text-sm tabular-nums ${muted ? "text-fg-muted" : "text-fg"}`}>
+    {label && <span className="font-sans text-xs text-fg-subtle">{label} </span>}
+    {cell?.result_link ? (
+      <a
+        href={cell.result_link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline"
+      >
+        {formatMark(cell.mark, kind)}
+      </a>
+    ) : cell ? (
+      formatMark(cell.mark, kind)
+    ) : (
+      "—"
+    )}
+  </span>
+);
+
+const CutLine = ({ label, tone }: { label: string; tone: "mac" | "aartfc" }) => (
+  <li aria-hidden className="flex items-center gap-2 px-2 py-1">
+    <span className={`h-px flex-1 ${tone === "aartfc" ? "bg-aartfc" : "bg-mac"}`} />
+    <span
+      className={`text-[0.65rem] font-bold uppercase tracking-wide ${
+        tone === "aartfc" ? "text-aartfc" : "text-mac"
+      }`}
+    >
+      {label} cut
+    </span>
+    <span className={`h-px flex-1 ${tone === "aartfc" ? "bg-aartfc" : "bg-mac"}`} />
+  </li>
+);
+
+// --- page -----------------------------------------------------------------
 
 const EventsClient = ({
   events,
@@ -37,13 +105,10 @@ const EventsClient = ({
   standards: QualifyingStandard[];
   defaultSeason: Season;
 }) => {
-  const [selectedEvent, setSelectedEvent] = useState("");
-  const [selectedSex, setSelectedSex] = useState("");
-  const [selectedSeason, setSelectedSeason] = useState<SeasonFilter>(defaultSeason);
-  const [sortConfig, setSortConfig] = useState<{
-    key: SortKey;
-    direction: "ascending" | "descending";
-  } | null>(null);
+  const [season, setSeason] = useState<Season>(defaultSeason);
+  const [scope, setScope] = useState<Scope>("season");
+  const [sex, setSex] = useState<SexFilter>("");
+  const [sort, setSort] = useState<SortKey>("rank");
 
   // event_id -> season -> gender -> standard
   const stdMap = useMemo(() => {
@@ -57,287 +122,232 @@ const EventsClient = ({
     return m;
   }, [standards]);
 
-  const standardsFor = (eventId: number, season: string): Record<string, QualifyingStandard> =>
-    stdMap.get(eventId)?.get(season) ?? {};
+  const standardFor = (eventId: number, s: string, g: string): QualifyingStandard | null =>
+    stdMap.get(eventId)?.get(s)?.[g] ?? null;
 
-  const sortValue = (
-    row: LeaderboardRow,
-    key: SortKey,
-    eventId: number
-  ): string | number | null => {
-    switch (key) {
-      case "name":
-        return row.last_name.toLowerCase();
-      case "indoor":
-        return cellMark(row.indoor_best);
-      case "outdoor":
-        return cellMark(row.outdoor_best);
-      case "collegiate":
-        return cellMark(row.collegiate_best);
-      case "personal":
-        return cellMark(row.personal_best);
-      case "rank_indoor":
-        return teamRank(row.athlete_id, eventId, "indoor", row.sex);
-      case "rank_outdoor":
-        return teamRank(row.athlete_id, eventId, "outdoor", row.sex);
-    }
+  // the mark to rank / headline by: this-season best or all-time best, for the
+  // chosen season half. Relays / mixed lists aren't in play here.
+  const bestOf = (r: LeaderboardRow): BestCell => {
+    if (season === "indoor")
+      return scope === "season" ? r.indoor_season_best : r.indoor_best;
+    return scope === "season" ? r.outdoor_season_best : r.outdoor_best;
   };
 
-  const sortRows = (rows: LeaderboardRow[], eventId: number) => {
-    if (!sortConfig) return rows;
-    const { key, direction } = sortConfig;
-    const dir = direction === "ascending" ? 1 : -1;
-    return [...rows].sort((a, b) => {
-      const av = sortValue(a, key, eventId);
-      const bv = sortValue(b, key, eventId);
-      if (av === bv) return 0;
-      if (av === null || av === "") return 1; // nulls always last
-      if (bv === null || bv === "") return -1;
-      if (typeof av === "string" && typeof bv === "string") {
-        return dir * av.localeCompare(bv);
-      }
-      return dir * (Number(av) - Number(bv));
-    });
-  };
-
-  const requestSort = (key: SortKey) =>
-    setSortConfig((prev) =>
-      prev && prev.key === key
-        ? { key, direction: prev.direction === "ascending" ? "descending" : "ascending" }
-        : { key, direction: "ascending" }
-    );
-
-  const sortIndicator = (key: SortKey) =>
-    sortConfig?.key === key ? (sortConfig.direction === "ascending" ? " ▲" : " ▼") : "";
+  // an event shows only if someone has a mark to rank under the current filters
+  const hasRow = (r: LeaderboardRow) => (sex === "" || r.sex === sex) && bestOf(r) != null;
 
   const visibleEvents = events.filter((e) => {
-    if (selectedEvent !== "" && e.event_name !== selectedEvent) return false;
-    if (selectedSex !== "" && !e.rows.some((r) => r.sex === selectedSex)) return false;
-    if (selectedSeason === "indoor" && e.event_season === "Outdoor") return false;
-    if (selectedSeason === "outdoor" && e.event_season === "Indoor") return false;
-    return true;
+    if (season === "indoor" && e.event_season === "Outdoor") return false;
+    if (season === "outdoor" && e.event_season === "Indoor") return false;
+    return e.rows.some(hasRow);
   });
 
-  const markCell = (c: BestCell, kind: MarkKind) => (
-    <a href={c?.result_link ?? undefined} target="_blank" rel="noopener noreferrer">
-      {formatMark(c ? c.mark : "-", kind)}
-    </a>
-  );
-
-  // Name colour: blue if the athlete's best for this event+season clears the
-  // AARTFC standard, red if it clears the MAC standard, default otherwise.
-  const nameClass = (event: LeaderboardEvent, row: LeaderboardRow): string => {
-    if (selectedSeason === "all" || !row.sex) return "";
-    const std = standardsFor(event.event_id, selectedSeason)[row.sex];
-    if (!std) return "";
-    const best = selectedSeason === "indoor" ? row.indoor_best : row.outdoor_best;
-    if (!best) return "";
-    const mark = Number(best.mark);
-    const { aartfc_qualifying_standard: aartfc, mac_qualifying_standard: mac } = std;
-    if (aartfc != null && clears(mark, Number(aartfc), event.higher_is_better))
-      return "text-aartfc";
-    if (mac != null && clears(mark, Number(mac), event.higher_is_better)) return "text-mac";
-    return "";
-  };
-
-  const StandardLines = ({ event, kind }: { event: LeaderboardEvent; kind: MarkKind }) => {
-    if (selectedSeason === "all") return null;
-    const bySex = standardsFor(event.event_id, selectedSeason);
-    const genders = (["m", "f"] as const).filter((g) => bySex[g]);
-    if (genders.length === 0) return null;
-
-    return (
-      <div className="mb-3 mt-1 space-y-0.5 text-sm text-fg-muted">
-        {genders.map((g) => {
-          const std = bySex[g];
-          const label = g === "m" ? "Men" : "Women";
-          const notContested =
-            std.mac_qualifying_standard == null && std.aartfc_qualifying_standard == null;
-          if (notContested) {
-            return (
-              <p key={g} className="text-fg-subtle">
-                <em>{label}: not contested at MAC / AARTFC ({selectedSeason})</em>
-              </p>
-            );
-          }
-          return (
-            <p key={g}>
-              {label} —{" "}
-              <span className="font-medium text-mac">
-                MAC{" "}
-                {std.mac_qualifying_standard != null
-                  ? formatMark(std.mac_qualifying_standard, kind)
-                  : "—"}
-              </span>
-              {"    "}
-              <span className="font-medium text-aartfc">
-                AARTFC{" "}
-                {std.aartfc_qualifying_standard != null
-                  ? formatMark(std.aartfc_qualifying_standard, kind)
-                  : "—"}
-              </span>
-            </p>
-          );
-        })}
-      </div>
-    );
-  };
-
-  const oneSeason = selectedSeason !== "all";
-  const bestKey: SortKey = selectedSeason === "outdoor" ? "outdoor" : "indoor";
-  const rankKey: SortKey = selectedSeason === "outdoor" ? "rank_outdoor" : "rank_indoor";
+  const scrollTo = (id: number) =>
+    document.getElementById(`ev-${id}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
     <div>
       <PageHeader title="Events">
-        <select
-          className="field-select"
-          onChange={(e) => setSelectedEvent(e.target.value)}
-          value={selectedEvent}
-        >
-          <option value="">All Events</option>
-          {events.map((e) => (
-            <option key={e.event_id} value={e.event_name}>
-              {e.event_name}
-            </option>
-          ))}
-        </select>
-
-        <select
-          className="field-select"
-          onChange={(e) => setSelectedSex(e.target.value)}
-          value={selectedSex}
-        >
-          <option value="">All Genders</option>
-          <option value="m">Men</option>
-          <option value="f">Women</option>
-        </select>
-
-        <select
-          className="field-select"
-          onChange={(e) => setSelectedSeason(e.target.value as SeasonFilter)}
-          value={selectedSeason}
-        >
-          <option value="indoor">Indoor</option>
-          <option value="outdoor">Outdoor</option>
-          <option value="all">All Seasons</option>
-        </select>
+        <Segmented
+          label="Season"
+          value={season}
+          onChange={setSeason}
+          options={[
+            { value: "indoor", label: "Indoor" },
+            { value: "outdoor", label: "Outdoor" },
+          ]}
+        />
+        <Segmented
+          label="Range"
+          value={scope}
+          onChange={setScope}
+          options={[
+            { value: "season", label: "This season" },
+            { value: "alltime", label: "All-time" },
+          ]}
+        />
+        <Segmented
+          label="Gender"
+          value={sex}
+          onChange={setSex}
+          options={[
+            { value: "", label: "All" },
+            { value: "m", label: "Men" },
+            { value: "f", label: "Women" },
+          ]}
+        />
+        <Segmented
+          label="Sort"
+          value={sort}
+          onChange={setSort}
+          options={[
+            { value: "rank", label: "By rank" },
+            { value: "name", label: "A–Z" },
+          ]}
+        />
       </PageHeader>
 
-      <div className="space-y-8">
-        {visibleEvents.map((event) => {
-        const kind = markKind(event.event_id);
-        const rows = sortRows(
-          event.rows.filter((r) => selectedSex === "" || r.sex === selectedSex),
-          event.event_id
-        );
-        const seasonCell = (r: LeaderboardRow) =>
-          selectedSeason === "outdoor" ? r.outdoor_best : r.indoor_best;
-        const rankCell = (n: number | null) =>
-          n == null ? (
-            "—"
-          ) : (
-            <span className={n === 1 ? "font-semibold text-brand" : undefined}>#{n}</span>
-          );
+      {/* jump-to-event bar — sticks just under the app header */}
+      <nav
+        aria-label="Jump to event"
+        className="sticky top-[87px] z-30 -mx-4 mb-6 flex gap-1.5 overflow-x-auto border-y border-border bg-bg px-4 py-2 sm:mx-0 sm:rounded-lg sm:border"
+      >
+        {visibleEvents.map((e) => (
+          <button
+            key={e.event_id}
+            type="button"
+            onClick={() => scrollTo(e.event_id)}
+            className="chip shrink-0 whitespace-nowrap hover:border-link hover:text-fg"
+          >
+            {e.event_name}
+          </button>
+        ))}
+      </nav>
 
-        return (
-          <section key={event.event_id}>
-            <h2 className="mb-1 text-2xl font-bold text-brand">{event.event_name}</h2>
-            <StandardLines event={event} kind={kind} />
-            <div className="overflow-x-auto">
-              <table className="data-table">
-                <thead>
-                  <tr>
-                    <th className="sortable" onClick={() => requestSort("name")}>
-                      Athlete Name{sortIndicator("name")}
-                    </th>
-                    {oneSeason ? (
-                      <th className="sortable" onClick={() => requestSort(bestKey)}>
-                        {selectedSeason === "outdoor" ? "Outdoor" : "Indoor"} Best
-                        {sortIndicator(bestKey)}
-                      </th>
+      {/* one column on narrow screens; flow into two on wide ones so the list
+          uses the width instead of stranding it on the right */}
+      <div className="mx-auto max-w-lg min-[1080px]:max-w-5xl min-[1080px]:columns-2 min-[1080px]:gap-6">
+        {visibleEvents.map((event) => {
+          const kind = markKind(event.event_id);
+          const hib = event.higher_is_better;
+
+          const rows = event.rows
+            .filter(hasRow)
+            .sort((a, b) => {
+              if (sort === "name")
+                return (
+                  a.last_name.localeCompare(b.last_name) ||
+                  a.first_name.localeCompare(b.first_name)
+                );
+              return hib
+                ? num(bestOf(b))! - num(bestOf(a))!
+                : num(bestOf(a))! - num(bestOf(b))!;
+            });
+
+          // A cut line only makes sense ranked and against one gender's standard.
+          const std = sex !== "" ? standardFor(event.event_id, season, sex) : null;
+          const aartfc = std?.aartfc_qualifying_standard ?? null;
+          const mac = std?.mac_qualifying_standard ?? null;
+          const notContested = std != null && aartfc == null && mac == null;
+
+          const lastClearing = (val: number | null): number => {
+            if (val == null || sort !== "rank") return -1;
+            let i = -1;
+            rows.forEach((r, idx) => {
+              const m = num(bestOf(r));
+              if (m != null && clears(m, val, hib)) i = idx;
+            });
+            return i < rows.length - 1 ? i : -1; // no line dangling at the bottom
+          };
+          const aartfcIdx = lastClearing(aartfc != null ? Number(aartfc) : null);
+          const macIdx = lastClearing(mac != null ? Number(mac) : null);
+
+          const nameClass = (best: BestCell): string => {
+            if (!best) return "";
+            const m = Number(best.mark);
+            if (aartfc != null && clears(m, Number(aartfc), hib)) return "text-aartfc";
+            if (mac != null && clears(m, Number(mac), hib)) return "text-mac";
+            return "";
+          };
+
+          return (
+            <section
+              key={event.event_id}
+              id={`ev-${event.event_id}`}
+              className="mb-5 break-inside-avoid scroll-mt-[144px]"
+            >
+              <div className="card p-4 sm:p-5">
+                <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                  <h2 className="section-title text-brand">{event.event_name}</h2>
+                  <span className="text-xs uppercase tracking-wide text-fg-subtle">
+                    {season === "indoor" ? "Indoor" : "Outdoor"}
+                    {" · "}
+                    {scope === "season" ? "this season" : "all-time"}
+                  </span>
+                </div>
+
+                {std && (
+                  <p className="mb-3 text-sm text-fg-muted">
+                    {notContested ? (
+                      <em>Not contested at MAC / AARTFC ({season}).</em>
                     ) : (
                       <>
-                        <th className="sortable" onClick={() => requestSort("indoor")}>
-                          Indoor Best{sortIndicator("indoor")}
-                        </th>
-                        <th className="sortable" onClick={() => requestSort("outdoor")}>
-                          Outdoor Best{sortIndicator("outdoor")}
-                        </th>
+                        Qualifying:{" "}
+                        {mac != null && (
+                          <span className="font-medium text-mac">
+                            MAC {formatMark(mac, kind)}
+                          </span>
+                        )}
+                        {mac != null && aartfc != null && " · "}
+                        {aartfc != null && (
+                          <span className="font-medium text-aartfc">
+                            AARTFC {formatMark(aartfc, kind)}
+                          </span>
+                        )}
                       </>
                     )}
-                    <th className="sortable" onClick={() => requestSort("collegiate")}>
-                      Collegiate Best{sortIndicator("collegiate")}
-                    </th>
-                    <th className="sortable" onClick={() => requestSort("personal")}>
-                      Personal Best{sortIndicator("personal")}
-                    </th>
-                    {oneSeason ? (
-                      <th className="sortable" onClick={() => requestSort(rankKey)}>
-                        Team Rank{sortIndicator(rankKey)}
-                      </th>
-                    ) : (
-                      <>
-                        <th className="sortable" onClick={() => requestSort("rank_indoor")}>
-                          Indoor Rank{sortIndicator("rank_indoor")}
-                        </th>
-                        <th className="sortable" onClick={() => requestSort("rank_outdoor")}>
-                          Outdoor Rank{sortIndicator("rank_outdoor")}
-                        </th>
-                      </>
-                    )}
-                  </tr>
-                </thead>
-                <tbody>
-                  {rows.map((row) => (
-                    <tr key={row.athlete_id}>
-                      <td className="text-left">
-                        <b className={nameClass(event, row)}>
-                          {row.nickname ? row.nickname : row.first_name} {row.last_name}
-                        </b>
-                      </td>
-                      {oneSeason ? (
-                        <td>{markCell(seasonCell(row), kind)}</td>
-                      ) : (
-                        <>
-                          <td>{markCell(row.indoor_best, kind)}</td>
-                          <td>{markCell(row.outdoor_best, kind)}</td>
-                        </>
-                      )}
-                      <td>{markCell(row.collegiate_best, kind)}</td>
-                      <td>{markCell(row.personal_best, kind)}</td>
-                      {oneSeason ? (
-                        <td>
-                          {rankCell(
-                            teamRank(
-                              row.athlete_id,
-                              event.event_id,
-                              selectedSeason as Season,
-                              row.sex
-                            )
+                  </p>
+                )}
+
+                {rows.length === 0 ? (
+                  <p className="py-1 text-sm text-fg-muted">No marks yet.</p>
+                ) : (
+                  <ol className="-mx-2">
+                    {rows.map((row, idx) => {
+                      const best = bestOf(row);
+                      const tr = teamRank(row.athlete_id, event.event_id, season, row.sex);
+                      return (
+                        <React.Fragment key={row.athlete_id}>
+                          <li className="flex flex-wrap items-baseline gap-x-2 rounded-md px-2 py-1.5 odd:bg-surface">
+                            <span className="w-6 shrink-0 text-right text-sm tabular-nums text-fg-subtle">
+                              {sort === "rank" ? idx + 1 : ""}
+                            </span>
+                            <a
+                              href={`/athlete/${row.athlete_id}`}
+                              className={`font-medium hover:text-link ${nameClass(best)}`}
+                            >
+                              {row.nickname ? row.nickname : row.first_name} {row.last_name}
+                            </a>
+                            <MarkStat cell={best} kind={kind} />
+                            {best &&
+                              row.personal_best &&
+                              formatMark(row.personal_best.mark, kind) !==
+                                formatMark(best.mark, kind) && (
+                                <MarkStat
+                                  label="PB"
+                                  cell={row.personal_best}
+                                  kind={kind}
+                                  muted
+                                />
+                              )}
+                            {tr != null && (
+                              <span
+                                title={`#${tr} on the all-time team list`}
+                                className={`font-mono text-sm ${
+                                  tr === 1 ? "font-semibold text-brand" : "text-fg-subtle"
+                                }`}
+                              >
+                                #{tr}
+                              </span>
+                            )}
+                          </li>
+                          {idx === aartfcIdx && idx !== macIdx && (
+                            <CutLine
+                              tone="aartfc"
+                              label={`AARTFC ${formatMark(Number(aartfc), kind)}`}
+                            />
                           )}
-                        </td>
-                      ) : (
-                        <>
-                          <td>
-                            {rankCell(
-                              teamRank(row.athlete_id, event.event_id, "indoor", row.sex)
-                            )}
-                          </td>
-                          <td>
-                            {rankCell(
-                              teamRank(row.athlete_id, event.event_id, "outdoor", row.sex)
-                            )}
-                          </td>
-                        </>
-                      )}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-        );
+                          {idx === macIdx && (
+                            <CutLine tone="mac" label={`MAC ${formatMark(Number(mac), kind)}`} />
+                          )}
+                        </React.Fragment>
+                      );
+                    })}
+                  </ol>
+                )}
+              </div>
+            </section>
+          );
         })}
       </div>
     </div>
