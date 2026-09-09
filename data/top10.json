@@ -47,6 +47,34 @@
         "mark": "8.40",
         "name": "Michelle Moreira",
         "date": "2016-02-21"
+      },
+      {
+        "rank": 6,
+        "athlete_id": null,
+        "mark": "8.40",
+        "name": "Kristen Williams",
+        "date": "2023-01-28"
+      },
+      {
+        "rank": 7,
+        "athlete_id": null,
+        "mark": "8.42",
+        "name": "Allie Canciani",
+        "date": "2024-02-03"
+      },
+      {
+        "rank": 8,
+        "athlete_id": 8327883,
+        "mark": "8.49",
+        "name": "Stephanie Ryazanova",
+        "date": "2024-01-20"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "8.58",
+        "name": "Lauren Ingraham",
+        "date": "2024-02-23"
       }
     ]
   },
@@ -263,6 +291,27 @@
         "mark": "1:46.88",
         "name": "Hilary Paul",
         "date": "2010-01-23"
+      },
+      {
+        "rank": 7,
+        "athlete_id": null,
+        "mark": "1:46.88",
+        "name": "Kasey Suszko",
+        "date": "2016-02-06"
+      },
+      {
+        "rank": 9,
+        "athlete_id": null,
+        "mark": "1:47.54",
+        "name": "Shanna Beairsto",
+        "date": "2009-01-24"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "1:47.94",
+        "name": "Paige Metzheiser",
+        "date": "2016-02-06"
       }
     ]
   },
@@ -816,6 +865,13 @@
         "mark": "1.48",
         "name": "Katie Brodecki",
         "date": "2015-01-31"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "1.48",
+        "name": "Sammi Pearson",
+        "date": "2018-02-24"
       }
     ]
   },
@@ -932,6 +988,48 @@
         "mark": "5.17",
         "name": "Gladys Njoku",
         "date": "2016-01-30"
+      },
+      {
+        "rank": 4,
+        "athlete_id": 8681471,
+        "mark": "5.17",
+        "name": "Maya Lapinski",
+        "date": "2026-02-14"
+      },
+      {
+        "rank": 6,
+        "athlete_id": null,
+        "mark": "5.16",
+        "name": "Sammi Pearson",
+        "date": "2018-01-27"
+      },
+      {
+        "rank": 7,
+        "athlete_id": 8327883,
+        "mark": "5.09",
+        "name": "Stephanie Ryazanova",
+        "date": "2026-01-24"
+      },
+      {
+        "rank": 8,
+        "athlete_id": null,
+        "mark": "5.08",
+        "name": "Tiffany Evangelou",
+        "date": "2014-02-01"
+      },
+      {
+        "rank": 8,
+        "athlete_id": null,
+        "mark": "5.08",
+        "name": "Amira Dardir",
+        "date": "2015-02-07"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "5.07",
+        "name": "Caroline Tighe",
+        "date": "2025-02-28"
       }
     ]
   },
@@ -1947,6 +2045,20 @@
         "mark": "7.20",
         "name": "Brandon Kiefer",
         "date": "2024-02-23"
+      },
+      {
+        "rank": 8,
+        "athlete_id": 8681455,
+        "mark": "7.20",
+        "name": "Tyler Hackett",
+        "date": "2025-02-28"
+      },
+      {
+        "rank": 10,
+        "athlete_id": 8864648,
+        "mark": "7.23",
+        "name": "Chase Kosiba",
+        "date": "2025-12-12"
       }
     ]
   },
@@ -2595,6 +2707,69 @@
         "mark": "8.33",
         "name": "Kris Alvarez",
         "date": "2016-03-04"
+      },
+      {
+        "rank": 1,
+        "athlete_id": null,
+        "mark": "8.33",
+        "name": "Ethan Stallone",
+        "date": "2025-03-01"
+      },
+      {
+        "rank": 3,
+        "athlete_id": null,
+        "mark": "8.41",
+        "name": "Federico Yacoubian",
+        "date": "2024-02-24"
+      },
+      {
+        "rank": 4,
+        "athlete_id": null,
+        "mark": "8.43",
+        "name": "Victor Servito",
+        "date": "2013-01-26"
+      },
+      {
+        "rank": 5,
+        "athlete_id": null,
+        "mark": "8.48",
+        "name": "Dan Kaba",
+        "date": "2019-02-22"
+      },
+      {
+        "rank": 6,
+        "athlete_id": null,
+        "mark": "8.51",
+        "name": "Steve McNally",
+        "date": "2017-02-10"
+      },
+      {
+        "rank": 7,
+        "athlete_id": null,
+        "mark": "8.52",
+        "name": "Mohamed Abuouf",
+        "date": "2010-01-08"
+      },
+      {
+        "rank": 8,
+        "athlete_id": 8979736,
+        "mark": "8.53",
+        "name": "William Ladd",
+        "date": "2026-02-28"
+      },
+      {
+        "rank": 9,
+        "athlete_id": 8979738,
+        "mark": "8.63",
+        "name": "Joseph Perriello",
+        "date": "2026-02-28"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "8.65",
+        "name": "Alex Kainer",
+        "date": "2017-02-19"
       }
     ]
   },
@@ -2646,6 +2821,34 @@
         "mark": "1.90",
         "name": "Victor Servito",
         "date": "2013-03-01"
+      },
+      {
+        "rank": 6,
+        "athlete_id": null,
+        "mark": "1.90",
+        "name": "Jonathan Scamardella",
+        "date": "2020-02-15"
+      },
+      {
+        "rank": 8,
+        "athlete_id": null,
+        "mark": "1.89",
+        "name": "Kevin Finck",
+        "date": "2020-02-28"
+      },
+      {
+        "rank": 9,
+        "athlete_id": null,
+        "mark": "1.87",
+        "name": "Olutossin Olugbenga",
+        "date": "2009-12-06"
+      },
+      {
+        "rank": 9,
+        "athlete_id": null,
+        "mark": "1.87",
+        "name": "Joshua Lim",
+        "date": "2023-12-02"
       }
     ]
   },
@@ -2669,6 +2872,62 @@
         "mark": "4.50",
         "name": "Andy Accardi",
         "date": "2018-02-10"
+      },
+      {
+        "rank": 2,
+        "athlete_id": null,
+        "mark": "4.50",
+        "name": "Enis Rama",
+        "date": "2020-02-28"
+      },
+      {
+        "rank": 4,
+        "athlete_id": null,
+        "mark": "4.46",
+        "name": "Nicolas Re",
+        "date": "2021-12-04"
+      },
+      {
+        "rank": 5,
+        "athlete_id": 8979730,
+        "mark": "4.20",
+        "name": "Michael Dao",
+        "date": "2026-01-31"
+      },
+      {
+        "rank": 5,
+        "athlete_id": 8327852,
+        "mark": "4.20",
+        "name": "Brandon Kiefer",
+        "date": "2026-02-28"
+      },
+      {
+        "rank": 7,
+        "athlete_id": null,
+        "mark": "4.11",
+        "name": "Sven Nguyen Northcott",
+        "date": "1999-02-19"
+      },
+      {
+        "rank": 8,
+        "athlete_id": 8327851,
+        "mark": "4.10",
+        "name": "Kyle Miller",
+        "date": "2026-02-21"
+      },
+      {
+        "rank": 9,
+        "athlete_id": 8681459,
+        "mark": "4.05",
+        "name": "Christopher Persico",
+        "date": "2026-01-31"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "4.00",
+        "name": "Ted D'Amico",
+        "date": "2014-01-10"
       }
     ]
   },
@@ -2748,6 +3007,13 @@
         "mark": "6.44",
         "name": "Jeff Houser",
         "date": "2002-12-08"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "6.44",
+        "name": "Brian Jefferson",
+        "date": "2018-12-01"
       }
     ]
   },
@@ -2785,6 +3051,48 @@
         "mark": "13.30",
         "name": "Andreas Diaz-Borda",
         "date": "2012-01-28"
+      },
+      {
+        "rank": 4,
+        "athlete_id": 9251001,
+        "mark": "13.30",
+        "name": "Konstantinos Georgiadis",
+        "date": "2026-01-17"
+      },
+      {
+        "rank": 6,
+        "athlete_id": null,
+        "mark": "13.17",
+        "name": "Hikmat Sabeh",
+        "date": "2020-02-28"
+      },
+      {
+        "rank": 7,
+        "athlete_id": null,
+        "mark": "13.16",
+        "name": "Naitik Vaghasia",
+        "date": "2010-01-31"
+      },
+      {
+        "rank": 8,
+        "athlete_id": null,
+        "mark": "13.12",
+        "name": "Adam Morninghoff",
+        "date": "2018-02-24"
+      },
+      {
+        "rank": 9,
+        "athlete_id": null,
+        "mark": "13.11",
+        "name": "Evan Kainer",
+        "date": "2016-02-13"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "12.93",
+        "name": "Danny LaMastra",
+        "date": "2019-02-22"
       }
     ]
   },
@@ -3128,6 +3436,48 @@
         "mark": "36.35",
         "name": "Amar Bindra",
         "date": "2019-12-07"
+      },
+      {
+        "rank": 4,
+        "athlete_id": 9251003,
+        "mark": "36.35",
+        "name": "Steven Longo",
+        "date": "2025-12-12"
+      },
+      {
+        "rank": 6,
+        "athlete_id": null,
+        "mark": "36.63",
+        "name": "Shane Chiaravalle",
+        "date": "2013-12-07"
+      },
+      {
+        "rank": 7,
+        "athlete_id": null,
+        "mark": "36.69",
+        "name": "Matt Savary",
+        "date": "2007-02-04"
+      },
+      {
+        "rank": 8,
+        "athlete_id": 8327852,
+        "mark": "36.70",
+        "name": "Brandon Kiefer",
+        "date": "2024-12-13"
+      },
+      {
+        "rank": 9,
+        "athlete_id": null,
+        "mark": "36.72",
+        "name": "Jon Cucci",
+        "date": "2018-12-01"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "36.81",
+        "name": "Ian Rodriquez",
+        "date": "2025-12-12"
       }
     ]
   },
@@ -3698,80 +4048,70 @@
         "athlete_id": null,
         "mark": "11.79",
         "name": "Laura Mathews",
-        "date": "2023-05-06",
-        "link": "https://www.tfrrs.org/results/78195/4908859/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/100-Meters"
+        "date": "2023-05-06"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "12.22",
         "name": "Gina Dello Russo",
-        "date": "2022-04-23",
-        "link": "https://www.tfrrs.org/results/71570/4517076/2022_Coach_Pollard_Invitational/100-Meters"
+        "date": "2022-04-23"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "12.71",
         "name": "Gladys Njoku",
-        "date": "2015-04-19",
-        "link": "https://www.tfrrs.org/results/40209/2495986/Empire_8_Outdoor_Track__Field_Championships/Womens-100-Meters"
+        "date": "2015-04-19"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "12.76",
         "name": "Laura Barito",
-        "date": "2011-04-30",
-        "link": "https://www.tfrrs.org/results/20203/1363330/TCNJ_Lions_Invitational/Womens-100-Meters"
+        "date": "2011-04-30"
       },
       {
         "rank": 5,
-        "athlete_id": null,
-        "mark": "13.06",
-        "name": "Michelle Moriera",
-        "date": "2016-04-23",
-        "link": "https://www.tfrrs.org/results/46109/2828075/Empire_8_Track__Field_Championships/100-Meters"
+        "athlete_id": 8681474,
+        "mark": "13.05",
+        "name": "Isabella Shanley",
+        "date": "2024-04-06"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "13.20",
-        "name": "Kristen Williams",
-        "date": "2023-05-05",
-        "link": "https://www.tfrrs.org/results/78195/4908859/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/100-Meters"
+        "mark": "13.06",
+        "name": "Michelle Moriera",
+        "date": "2016-04-23"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "13.24",
-        "name": "Allie Canciani",
-        "date": "2023-04-29",
-        "link": "https://www.tfrrs.org/results/80008/4880958/Kings_College_Monarch_Open/100-Meters"
+        "mark": "13.10",
+        "name": "Kristen Williams",
+        "date": "2024-04-20"
       },
       {
         "rank": 8,
-        "athlete_id": null,
-        "mark": "13.36",
-        "name": "Chika Ekweghariri",
-        "date": "2008-04-12",
-        "link": "https://stjohns_ftp.sidearmsports.com/custompages/sports/w-track/stats/041308aaa.html"
+        "athlete_id": 8327883,
+        "mark": "13.21",
+        "name": "Stephanie Ryazanova",
+        "date": "2026-05-07"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "13.38",
-        "name": "Lauren Ingraham",
-        "date": "2023-05-05",
-        "link": "https://www.tfrrs.org/results/78195/4908859/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/100-Meters"
+        "mark": "13.24",
+        "name": "Allie Canciani",
+        "date": "2023-04-29"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "13.54",
-        "name": "Twauna Allen",
-        "date": "1995-04-29",
-        "link": "https://web.archive.org/web/20040608201941/http://www.stevensducks.com/sports/track/record.pdf"
+        "mark": "13.36",
+        "name": "Chika Ekweghariri",
+        "date": "2008-04-12"
       }
     ]
   },
@@ -3787,80 +4127,70 @@
         "athlete_id": null,
         "mark": "23.87",
         "name": "Gina Dello Russo",
-        "date": "2022-05-28",
-        "link": "https://www.tfrrs.org/results/75041/4566035/NCAA_Division_III_Outdoor_Track__Field_Championships/200-Meters"
+        "date": "2022-05-28"
       },
       {
         "rank": 2,
         "athlete_id": null,
-        "mark": "24.42",
+        "mark": "24.23",
         "name": "Laura Mathews",
-        "date": "2023-05-06",
-        "link": "https://www.tfrrs.org/results/78195/4908840/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/200-Meters"
+        "date": "2024-05-23"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "25.62",
         "name": "Laura Barito",
-        "date": "2011-05-20",
-        "link": "https://www.tfrrs.org/results/21526/1390013/ECAC_Division_III_Outdoor_Track__Field_Championships/Womens-200-Meters"
+        "date": "2011-05-20"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "26.44",
-        "name": "Salme Cook",
-        "date": "2023-05-07",
-        "link": "https://www.tfrrs.org/results/13562/1124299/NYC_Qualifying_Challenge-College/Womens-200-Meters"
+        "mark": "26.08",
+        "name": "Gladys Njoku",
+        "date": "2016-04-23"
       },
       {
         "rank": 5,
-        "athlete_id": null,
-        "mark": "26.08",
-        "name": "Gladys Njoku",
-        "date": "2016-04-23",
-        "link": "https://www.tfrrs.org/results/46109/2828055/Empire_8_Track__Field_Championships/Womens-200-Meters"
+        "athlete_id": 8681474,
+        "mark": "26.14",
+        "name": "Isabella Shanley",
+        "date": "2025-05-03"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "26.95",
-        "name": "Allie Canciani",
-        "date": "2023-05-05",
-        "link": "https://www.tfrrs.org/results/78195/4908840/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/200-Meters"
+        "mark": "26.44",
+        "name": "Salme Cook",
+        "date": "2023-05-07"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "27.35",
-        "name": "Michelle Moreira",
-        "date": "2016-04-23",
-        "link": "https://www.tfrrs.org/results/46109/2828055/Empire_8_Track__Field_Championships/200-Meters"
+        "mark": "26.95",
+        "name": "Allie Canciani",
+        "date": "2023-05-05"
       },
       {
         "rank": 8,
-        "athlete_id": null,
-        "mark": "27.65",
-        "name": "Liana Meyer",
-        "date": "2022-05-04",
-        "link": "https://www.tfrrs.org/results/73629/4548285/2022_MAC_Outdoor_TF_Championships/200-Meters"
+        "athlete_id": 8979796,
+        "mark": "27.28",
+        "name": "Lauren Alley",
+        "date": "2026-03-21"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "27.96",
+        "mark": "27.29",
         "name": "Kristen Williams",
-        "date": "2021-04-24",
-        "link": "https://www.tfrrs.org/results/69390/4224003/DeSales_University_Invitational/Womens-200-Meters"
+        "date": "2024-04-20"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "27.97",
-        "name": "Amira Dardir",
-        "date": "2015-04-21",
-        "link": "https://www.tfrrs.org/results/40951/2517027/Penn_Relays_Combined_Events/200-Meters"
+        "mark": "27.35",
+        "name": "Michelle Moreira",
+        "date": "2016-04-23"
       }
     ]
   },
@@ -3876,80 +4206,70 @@
         "athlete_id": null,
         "mark": "54.17",
         "name": "Gina Dello Russo",
-        "date": "2021-05-29",
-        "link": "https://www.tfrrs.org/results/70179/4273569/NCAA_Division_III_Outdoor_Track__Field_Championships/Womens-400-Meters"
+        "date": "2021-05-29"
       },
       {
         "rank": 2,
-        "athlete_id": null,
-        "mark": "57.51",
-        "name": "Salme Cook",
-        "date": "2010-04-24",
-        "link": "https://web.archive.org/web/20110523211415/http://www.stevensducks.com/assets/sports/wotrack/Women%27s%20Outdoor%20Track%20Record%20Book.pdf"
+        "athlete_id": 8681474,
+        "mark": "57.11",
+        "name": "Isabella Shanley",
+        "date": "2025-05-03"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "58.45",
-        "name": "Laura Barito",
-        "date": "2011-04-17",
-        "link": "https://www.tfrrs.org/results/21472/1336905/Empire_8_Outdoor_Track_Championship/Womens-400-Meters"
+        "mark": "57.51",
+        "name": "Salme Cook",
+        "date": "2010-04-24"
       },
       {
         "rank": 4,
-        "athlete_id": 8327885,
-        "mark": "1:02.04",
-        "name": "Isabel Vogel",
-        "date": "2023-04-15",
-        "link": "https://www.tfrrs.org/results/77518/4825501/Middlesex_College_Invitational/Womens-400-Meters"
+        "athlete_id": null,
+        "mark": "58.45",
+        "name": "Laura Barito",
+        "date": "2011-04-17"
       },
       {
         "rank": 5,
-        "athlete_id": null,
-        "mark": "1:03.93",
-        "name": "Paige Metzheiser",
-        "date": "2016-04-01",
-        "link": "https://www.tfrrs.org/results/44235/2758671/Ramapo_College_Track__Field_Invitational/400-Meters"
+        "athlete_id": 8327885,
+        "mark": "1:01.29",
+        "name": "Isabel Vogel",
+        "date": "2026-04-03"
       },
       {
         "rank": 6,
-        "athlete_id": null,
-        "mark": "1:04.12",
-        "name": "Allie Canciani",
-        "date": "2023-04-01",
-        "link": "https://www.tfrrs.org/results/75370/4767443/2023_Danny_Curran_Invitational/400-Meters"
+        "athlete_id": 8979796,
+        "mark": "1:01.79",
+        "name": "Lauren Alley",
+        "date": "2025-04-05"
       },
       {
         "rank": 7,
-        "athlete_id": null,
-        "mark": "1:04.22",
-        "name": "Melissa Gibbons",
-        "date": "2014-04-19",
-        "link": "https://www.tfrrs.org/results/34237/2177879/2014_Empire_8_Conference_Outdoor_Track_and_Field_Championshi/400-Meters"
+        "athlete_id": 8919558,
+        "mark": "1:02.10",
+        "name": "Anya Sadowski",
+        "date": "2026-03-21"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "1:04.33",
-        "name": "Michelle Moreira",
-        "date": "2015-04-24",
-        "link": "https://www.tfrrs.org/results/39252/2516124/Lions_Invitational_/400-Meters"
+        "mark": "1:02.81",
+        "name": "Allie Canciani",
+        "date": "2025-04-25"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "1:04.45",
-        "name": "Melissa Barnes",
-        "date": "2019-05-04",
-        "link": "https://www.tfrrs.org/results/58897/3744630/TCNJ_Invitational/400-Meters"
+        "mark": "1:03.19",
+        "name": "Nina Burden",
+        "date": "2024-04-06"
       },
       {
         "rank": 10,
-        "athlete_id": null,
-        "mark": "1:04.50",
-        "name": "Samantha Rokicsak",
-        "date": "2016-04-23",
-        "link": "https://www.tfrrs.org/results/44333/2746561/21st_Annual_Monmouth_Season_Opener/400-Meters"
+        "athlete_id": 8327884,
+        "mark": "1:03.62",
+        "name": "Taylor Enes",
+        "date": "2026-04-03"
       }
     ]
   },
@@ -3965,80 +4285,70 @@
         "athlete_id": null,
         "mark": "2:12.88",
         "name": "Salme Cook",
-        "date": "2010-05-20",
-        "link": "https://www.tfrrs.org/results/17560/1137038/2010_Lions_Last_Chance/Womens-800-Meters"
+        "date": "2010-05-20"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "2:17.45",
         "name": "Brea Veilleux",
-        "date": "2018-05-14",
-        "link": "https://www.tfrrs.org/results/56833/3509457/Swarthmore_Final_Qualifier_Meet/Womens-800-Meters"
+        "date": "2018-05-14"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "2:18.07",
+        "mark": "2:17.98",
         "name": "Nina Burden",
-        "date": "2023-04-01",
-        "link": "https://www.tfrrs.org/results/78195/4908842/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/800-Meters"
+        "date": "2024-05-04"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "2:19.69",
         "name": "Paige Metzheiser",
-        "date": "2016-04-23",
-        "link": "https://www.tfrrs.org/results/46109/2828072/Empire_8_Track__Field_Championships/Womens-800-Meters"
+        "date": "2016-04-23"
       },
       {
         "rank": 5,
-        "athlete_id": null,
-        "mark": "2:20.30",
-        "name": "Mary Visca",
-        "date": "2016-03-25",
-        "link": "https://www.tfrrs.org/results/44333/2746569/21st_Annual_Monmouth_Season_Opener/800-Meters"
+        "athlete_id": 8327885,
+        "mark": "2:19.85",
+        "name": "Isabel Vogel",
+        "date": "2026-04-18"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "2:21.07",
-        "name": "Kasey Suszko",
-        "date": "2016-04-23",
-        "link": "https://www.tfrrs.org/results/46109/2828072/Empire_8_Track__Field_Championships/800-Meters"
+        "mark": "2:20.30",
+        "name": "Mary Visca",
+        "date": "2016-03-25"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "2:21.45",
-        "name": "Claire Tantillo",
-        "date": "2017-05-15",
-        "link": "https://www.tfrrs.org/results/51113/3192954/Swarthmore_Final_Qualifier/Womens-800-Meters"
+        "mark": "2:21.07",
+        "name": "Kasey Suszko",
+        "date": "2016-04-23"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "2:22.71",
-        "name": "Rachel Pinho",
-        "date": "2022-04-23",
-        "link": "https://www.tfrrs.org/results/71570/4517066/2022_Coach_Pollard_Invitational/800-Meters"
+        "mark": "2:21.45",
+        "name": "Claire Tantillo",
+        "date": "2017-05-15"
       },
       {
         "rank": 9,
-        "athlete_id": null,
-        "mark": "2:22.93",
-        "name": "Samantha Rokicsak",
-        "date": "2016-04-23",
-        "link": "https://www.tfrrs.org/results/46109/2828072/Empire_8_Track__Field_Championships/800-Meters"
+        "athlete_id": 8919558,
+        "mark": "2:21.65",
+        "name": "Anya Sadowski",
+        "date": "2026-03-28"
       },
       {
         "rank": 10,
-        "athlete_id": 8327884,
-        "mark": "2:23.60",
-        "name": "Taylor Enes",
-        "date": "2023-05-05",
-        "link": "https://www.tfrrs.org/results/78195/4908842/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/800-Meters"
+        "athlete_id": null,
+        "mark": "2:22.71",
+        "name": "Rachel Pinho",
+        "date": "2022-04-23"
       }
     ]
   },
@@ -4054,80 +4364,70 @@
         "athlete_id": null,
         "mark": "4:30.71",
         "name": "Amy Regan",
-        "date": "2016-05-19",
-        "link": "https://www.tfrrs.org/results/46655/2879747/ECAC_Division_III_Track__Field_Championships/Womens-1500-Meters"
+        "date": "2016-05-19"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "4:42.99",
         "name": "Mary Visca",
-        "date": "2018-05-04",
-        "link": "https://www.tfrrs.org/results/56318/3492575/Empire_8_Outdoor_Track__Field_Championships/1500-Meters"
+        "date": "2018-05-04"
       },
       {
         "rank": 3,
-        "athlete_id": null,
-        "mark": "4:47.62",
-        "name": "Brea Veilleux",
-        "date": "2018-04-14",
-        "link": "https://www.tfrrs.org/results/54590/3428539/Bison_Outdoor_Classic/1500-Meters"
+        "athlete_id": 8919557,
+        "mark": "4:46.38",
+        "name": "Isabella Gabay",
+        "date": "2026-05-02"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "4:54.03",
-        "name": "Rachel Rouse",
-        "date": "2023-05-06",
-        "link": "https://www.tfrrs.org/results/78195/4908834/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/1500-Meters"
+        "mark": "4:47.62",
+        "name": "Brea Veilleux",
+        "date": "2018-04-14"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "4:54.17",
-        "name": "Jackie Endres",
-        "date": "2017-05-05",
-        "link": "https://www.tfrrs.org/results/51079/3175385/Matthew_Vassar_Twilight_2017/Womens-1500-Meters"
+        "mark": "4:52.91",
+        "name": "Rachel Rouse",
+        "date": "2024-05-04"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "4:54.85",
-        "name": "Kelly Freed",
-        "date": "2011-05-16",
-        "link": "https://www.tfrrs.org/results/21134/1385984/Swarthmore_Twilight_Last_Chance_Meet/1500-Meters"
+        "mark": "4:54.17",
+        "name": "Jackie Endres",
+        "date": "2017-05-05"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "4:54.90",
-        "name": "Kate Moyer",
-        "date": "2015-05-01",
-        "link": "https://www.tfrrs.org/results/40453/2533705/Mathew_Vassar_Twilight_2015/Womens-1500-Meters"
+        "mark": "4:54.85",
+        "name": "Kelly Freed",
+        "date": "2011-05-16"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "4:54.94",
-        "name": "Paige Metzheiser",
-        "date": "2019-05-03",
-        "link": "https://www.tfrrs.org/results/62267/3827209/Empire_8_Outdoor_Track__Field_Championships/1500-Meters"
+        "mark": "4:54.90",
+        "name": "Kate Moyer",
+        "date": "2015-05-01"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "4:55.53",
-        "name": "Salme Cook",
-        "date": "2010-03-20",
-        "link": "https://www.tfrrs.org/results/15147/1044052/Battleground_Relays/1500-Meters"
+        "mark": "4:54.94",
+        "name": "Paige Metzheiser",
+        "date": "2019-05-03"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "4:57.68",
-        "name": "Claire Tantillo",
-        "date": "2018-04-14",
-        "link": "https://www.tfrrs.org/results/54590/3428539/Bison_Outdoor_Classic/Womens-1500-Meters"
+        "mark": "4:55.53",
+        "name": "Salme Cook",
+        "date": "2010-03-20"
       }
     ]
   },
@@ -4143,80 +4443,70 @@
         "athlete_id": null,
         "mark": "10:25.08",
         "name": "Amy Regan",
-        "date": "2013-03-23",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/woutdoorTop_Performances.pdf"
+        "date": "2013-03-23"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "10:28.01",
         "name": "Mary Visca",
-        "date": "2017-04-14",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/woutdoorTop_Performances.pdf"
+        "date": "2017-04-14"
       },
       {
         "rank": 3,
-        "athlete_id": null,
-        "mark": "10:51.83",
-        "name": "Kaela Earrusso",
-        "date": "2017-04-14",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/woutdoorTop_Performances.pdf"
+        "athlete_id": 8919557,
+        "mark": "10:39.29",
+        "name": "Isabella Gabay",
+        "date": "2026-03-21"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "11:03.53",
-        "name": "Kristin McAtee",
-        "date": "2019-04-05",
-        "link": "https://www.tfrrs.org/results/58897/3744613/TCNJ_Invitational/3000-Meters"
+        "mark": "10:51.83",
+        "name": "Kaela Earrusso",
+        "date": "2017-04-14"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "11:03.85",
-        "name": "Kate Moyer",
-        "date": "2013-03-23",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/woutdoorTop_Performances.pdf"
+        "mark": "11:03.53",
+        "name": "Kristin McAtee",
+        "date": "2019-04-05"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "11:07.19",
-        "name": "Fionna Feerick",
-        "date": "2023-03-25",
-        "link": "https://www.tfrrs.org/results/76374/4746679/Stockton_Invite/3000-Meters"
+        "mark": "11:03.85",
+        "name": "Kate Moyer",
+        "date": "2013-03-23"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "11:07.46",
-        "name": "Kiera Sheridan",
-        "date": "2019-04-15",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/woutdoorTop_Performances.pdf"
+        "mark": "11:07.19",
+        "name": "Fionna Feerick",
+        "date": "2023-03-25"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "11:13.15",
-        "name": "Kelly Freed",
-        "date": "2013-03-23",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/woutdoorTop_Performances.pdf"
+        "mark": "11:07.46",
+        "name": "Kiera Sheridan",
+        "date": "2019-04-15"
       },
       {
         "rank": 9,
-        "athlete_id": null,
-        "mark": "11:20.69",
-        "name": "Melissa Franzese",
-        "date": "2009-04-11",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/woutdoorTop_Performances.pdf"
+        "athlete_id": 8615541,
+        "mark": "11:08.08",
+        "name": "Kaitlyn Adams",
+        "date": "2026-03-22"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "11:21.54",
-        "name": "Jacqueline Lulaj",
-        "date": "2023-03-25",
-        "link": "https://www.tfrrs.org/results/76374/4746679/Stockton_Invite/3000-Meters"
+        "mark": "11:13.15",
+        "name": "Kelly Freed",
+        "date": "2013-03-23"
       }
     ]
   },
@@ -4232,80 +4522,70 @@
         "athlete_id": null,
         "mark": "16:27.32",
         "name": "Amy Regan",
-        "date": "2016-05-28",
-        "link": "https://www.tfrrs.org/results/46592/2882719/NCAA_Division_III_Outdoor_Track__Field_Championships/Womens-5000-Meters"
+        "date": "2016-05-28"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "17:04.79",
         "name": "Mary Visca",
-        "date": "2018-04-26",
-        "link": "https://www.tfrrs.org/results/56767/3476335/Penn_Relays/5000-Meters"
+        "date": "2018-04-26"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "17:57.08",
         "name": "Kate Moyer",
-        "date": "2015-05-14",
-        "link": "https://www.tfrrs.org/results/36235/2559408/ECAC_Division_III_Outdoor_Track__Field_Championships/Womens-5000-Meters"
+        "date": "2015-05-14"
       },
       {
         "rank": 4,
-        "athlete_id": null,
-        "mark": "18:38.10",
-        "name": "Kaela Earrusso",
-        "date": "2017-05-05",
-        "link": "https://www.tfrrs.org/results/51079/3175394/Matthew_Vassar_Twilight_2017/5000-Meters"
+        "athlete_id": 8919557,
+        "mark": "18:24.46",
+        "name": "Isabella Gabay",
+        "date": "2026-04-03"
       },
       {
         "rank": 5,
-        "athlete_id": null,
-        "mark": "18:49.94",
-        "name": "Christine Hecker",
-        "date": "2015-05-01",
-        "link": "https://www.tfrrs.org/results/40453/2533736/Mathew_Vassar_Twilight_2015/5000-Meters"
+        "athlete_id": 8615541,
+        "mark": "18:27.56",
+        "name": "Kaitlyn Adams",
+        "date": "2026-03-27"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "18:53.37",
-        "name": "Ashley Princiotta",
-        "date": "2013-03-29",
-        "link": "https://www.tfrrs.org/results/29997/1844396/Monmouth_Season_Opener/5000-Meters"
+        "mark": "18:32.40",
+        "name": "Fionna Feerick",
+        "date": "2025-04-18"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "19:03.74",
-        "name": "Kristen Okorn",
-        "date": "2015-05-01",
-        "link": "https://www.tfrrs.org/results/40453/2533736/Mathew_Vassar_Twilight_2015/Womens-5000-Meters"
+        "mark": "18:38.10",
+        "name": "Kaela Earrusso",
+        "date": "2017-05-05"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "19:04.23",
-        "name": "Sara Amitrani",
-        "date": "2008-05-02",
-        "link": "https://web.archive.org/web/20081231174849/http://www.stevensducks.com/sports/wotrack/release.asp?release_id=3816"
+        "mark": "18:48.99",
+        "name": "Rachel Rouse",
+        "date": "2024-05-10"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "19:12.67",
-        "name": "Melissa Franzese",
-        "date": "2008-04-19",
-        "link": "https://web.archive.org/web/20110523211415/http://www.stevensducks.com/assets/sports/wotrack/Women's%20Outdoor%20Track%20Record%20Book.pdf"
+        "mark": "18:49.94",
+        "name": "Christine Hecker",
+        "date": "2015-05-01"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "19:14.62",
-        "name": "Kristen McAtee",
-        "date": "2019-04-12",
-        "link": "https://www.tfrrs.org/results/57251/3768400/Coach_Pollard_Invite_/5000-Meters"
+        "mark": "18:53.37",
+        "name": "Ashley Princiotta",
+        "date": "2013-03-29"
       }
     ]
   },
@@ -4321,80 +4601,70 @@
         "athlete_id": null,
         "mark": "34:09.44",
         "name": "Amy Regan",
-        "date": "2016-04-28",
-        "link": "https://www.tfrrs.org/results/46385/2849671/Penn_Relays/Womens-10000-Meters"
+        "date": "2016-04-28"
       },
       {
         "rank": 2,
         "athlete_id": null,
-        "mark": "39:59.88",
-        "name": "Melissa Franzese",
-        "date": "2009-04-03",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/woutdoorTop_Performances.pdf"
+        "mark": "39:13.95",
+        "name": "Fionna Feerick",
+        "date": "2025-05-14"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "40:06.45",
-        "name": "Sara Amitrani",
-        "date": "2008-05-15",
-        "link": "https://web.archive.org/web/20081231180717/http://www.stevensducks.com/sports/wotrack/release.asp?release_id=3871"
+        "mark": "39:59.88",
+        "name": "Melissa Franzese",
+        "date": "2009-04-03"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "40:10.56",
-        "name": "Kristin McAtee",
-        "date": "2019-04-19",
-        "link": "https://www.tfrrs.org/results/57677/3791305/Widener_Invitational/10000-Meters"
+        "mark": "40:06.45",
+        "name": "Sara Amitrani",
+        "date": "2008-05-15"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "40:29.83",
-        "name": "Kiera Sheridan",
-        "date": "2019-03-29",
-        "link": "https://www.tfrrs.org/results/57676/3719650/Danny_Curran_Invitational/10000-Meters"
+        "mark": "40:10.56",
+        "name": "Kristin McAtee",
+        "date": "2019-04-19"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "41:02.55",
-        "name": "Fionna Ferrick",
-        "date": "2023-03-31",
-        "link": "https://www.tfrrs.org/results/75370/4767430/2023_Danny_Curran_Invitational/10000-Meters"
+        "mark": "40:29.83",
+        "name": "Kiera Sheridan",
+        "date": "2019-03-29"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "42:25.11",
-        "name": "Jamie Brabston",
-        "date": "2011-03-25",
-        "link": "https://www.tfrrs.org/results/19397/1281955/VMI-Washington_and_Lee_Track__Field_Carnival/10000-Meters"
+        "mark": "41:55.76",
+        "name": "Sam Rozek",
+        "date": "2025-03-28"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "42:59.16",
-        "name": "Sam Rozek",
-        "date": "2023-03-31",
-        "link": "https://www.tfrrs.org/results/75370/4767430/2023_Danny_Curran_Invitational/10000-Meters"
+        "mark": "42:25.11",
+        "name": "Jamie Brabston",
+        "date": "2011-03-25"
       },
       {
         "rank": 9,
         "athlete_id": null,
         "mark": "43:13.54",
         "name": "Laura Lemke",
-        "date": "2014-05-02",
-        "link": "https://www.tfrrs.org/results/35146/2213299/Mathew_Vassar_Twilight/10000-Meters"
+        "date": "2014-05-02"
       },
       {
         "rank": 10,
         "athlete_id": null,
         "mark": "43:23.70",
         "name": "Allison Donnely",
-        "date": "2004-04-17",
-        "link": "https://web.archive.org/web/20061118002940/http://www.stevensducks.com/sports/track/record.pdf"
+        "date": "2004-04-17"
       }
     ]
   },
@@ -4408,82 +4678,72 @@
       {
         "rank": 1,
         "athlete_id": null,
-        "mark": "13.74",
+        "mark": "13.61",
         "name": "Laura Mathews",
-        "date": "2023-05-27",
-        "link": "https://www.tfrrs.org/results/81073/4936118/NCAA_Division_III_Outdoor_Track__Field_Championships/Womens-100-Hurdles"
+        "date": "2024-05-16"
       },
       {
         "rank": 2,
         "athlete_id": null,
-        "mark": "15.02",
-        "name": "Tiffany Evangelou",
-        "date": "2014-05-16",
-        "link": "https://www.tfrrs.org/results/35387/2239630/ECAC_Division_III_Outdoor_Track__Field_Championships/Womens-100-Hurdles"
+        "mark": "14.60",
+        "name": "Kristen Williams",
+        "date": "2024-05-15"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "15.04",
-        "name": "Kristen Williams",
-        "date": "2023-05-06",
-        "link": "https://www.tfrrs.org/results/78195/4908824/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/Womens-100-Hurdles"
+        "mark": "15.02",
+        "name": "Tiffany Evangelou",
+        "date": "2014-05-16"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "15.19",
         "name": "Amira Dardir",
-        "date": "2015-04-19",
-        "link": "https://www.tfrrs.org/results/40209/2495967/Empire_8_Outdoor_Track__Field_Championships/Womens-100-Hurdles"
+        "date": "2015-04-19"
       },
       {
         "rank": 5,
         "athlete_id": null,
         "mark": "15.31",
         "name": "Laura Barito",
-        "date": "2011-05-19",
-        "link": "https://www.tfrrs.org/results/21526/1390069/ECAC_Division_III_Outdoor_Track__Field_Championships/100-Hurdles"
+        "date": "2011-05-19"
       },
       {
         "rank": 6,
-        "athlete_id": null,
-        "mark": "15.80",
-        "name": "Ashley Princiotta",
-        "date": "2012-05-17",
-        "link": "https://www.tfrrs.org/results/26096/1665441/ECAC_DIII_Outdoor_Track__Field_Championships/Womens-100-Hurdles"
+        "athlete_id": 8681474,
+        "mark": "15.48",
+        "name": "Isabella Shanley",
+        "date": "2026-05-02"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "15.96",
+        "mark": "15.97",
         "name": "Liana Meyer",
-        "date": "2023-05-04",
-        "link": "https://www.tfrrs.org/results/78195/4908829/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/100-Hurdles"
+        "date": "2023-05-04"
       },
       {
-        "rank": 8,
-        "athlete_id": null,
-        "mark": "16.63",
-        "name": "Melissa Barnes",
-        "date": "2019-05-04",
-        "link": "https://www.tfrrs.org/results/62267/3825664/Empire_8_Outdoor_Track__Field_Championships/Womens-100-Hurdles"
+        "rank": 7,
+        "athlete_id": 8979796,
+        "mark": "15.97",
+        "name": "Lauren Alley",
+        "date": "2025-05-02"
       },
       {
         "rank": 9,
-        "athlete_id": null,
-        "mark": "16.71",
-        "name": "Jenny Wehof",
-        "date": "2010-04-10",
-        "link": "https://www.tfrrs.org/results/15568/1057741/Delaware_Open_I/Womens-100-Hurdles"
+        "athlete_id": 8327883,
+        "mark": "16.55",
+        "name": "Stephanie Ryazanova",
+        "date": "2026-05-01"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "16.77",
-        "name": "Gina Salmins",
-        "date": "2015-04-19",
-        "link": "https://www.tfrrs.org/results/40209/2495967/Empire_8_Outdoor_Track__Field_Championships/Womens-100-Hurdles"
+        "mark": "16.63",
+        "name": "Melissa Barnes",
+        "date": "2019-05-04"
       }
     ]
   },
@@ -4499,80 +4759,70 @@
         "athlete_id": null,
         "mark": "59.49",
         "name": "Laura Barito",
-        "date": "2011-05-26",
-        "link": "https://www.tfrrs.org/results/21961/1391948/2011_NCAA_Division_III_Outdoor_Track__Field_Championships/400-Hurdles"
+        "date": "2011-05-26"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "1:03.21",
         "name": "Laura Mathews",
-        "date": "2022-04-15",
-        "link": "https://www.tfrrs.org/results/71568/4500975/2022_Greyhound_Invitational_/400-Hurdles"
+        "date": "2022-04-15"
       },
       {
         "rank": 3,
-        "athlete_id": null,
-        "mark": "1:08.57",
-        "name": "Melissa Barnes",
-        "date": "2019-04-12",
-        "link": "https://www.tfrrs.org/results/57251/3768398/Coach_Pollard_Invite_/400-Hurdles"
+        "athlete_id": 8979796,
+        "mark": "1:03.36",
+        "name": "Lauren Alley",
+        "date": "2025-05-03"
       },
       {
         "rank": 4,
-        "athlete_id": null,
-        "mark": "1:09.24",
-        "name": "Jacqueline Lulaj",
-        "date": "2023-05-06",
-        "link": "https://www.tfrrs.org/results/78195/4908873/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/400-Hurdles"
+        "athlete_id": 8919558,
+        "mark": "1:04.64",
+        "name": "Anya Sadowski",
+        "date": "2026-05-02"
       },
       {
         "rank": 5,
-        "athlete_id": null,
-        "mark": "1:11.33",
-        "name": "Samantha Rokicsak",
-        "date": "2018-04-21",
-        "link": "https://www.tfrrs.org/results/56318/3492576/Empire_8_Outdoor_Track__Field_Championships/400-Hurdles"
+        "athlete_id": 8681474,
+        "mark": "1:06.55",
+        "name": "Isabella Shanley",
+        "date": "2025-04-05"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "1:13.74",
-        "name": "Sophia Zuo",
-        "date": "2022-04-15",
-        "link": "https://www.tfrrs.org/results/71568/4500975/2022_Greyhound_Invitational_/400-Hurdles"
+        "mark": "1:08.57",
+        "name": "Melissa Barnes",
+        "date": "2019-04-12"
       },
       {
         "rank": 7,
-        "athlete_id": 8327884,
-        "mark": "1:14.12",
-        "name": "Taylor Enes",
-        "date": "2023-04-29",
-        "link": "https://www.tfrrs.org/results/80008/4880936/Kings_College_Monarch_Open/400-Hurdles"
+        "athlete_id": null,
+        "mark": "1:09.24",
+        "name": "Jacqueline Lulaj",
+        "date": "2023-05-06"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "1:15.08",
-        "name": "Shannon Rhatigan",
-        "date": "2022-04-08",
-        "link": "https://www.tfrrs.org/results/73948/4481282/Vassar_College_April_Invitational/400-Hurdles"
+        "mark": "1:11.33",
+        "name": "Samantha Rokicsak",
+        "date": "2018-04-21"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "1:15.83",
-        "name": "Ashley Princiotta",
-        "date": "2012-03-30",
-        "link": "https://www.tfrrs.org/results/22450/1560928/Army_Dick_Shea_Open/400-Hurdles"
+        "mark": "1:13.74",
+        "name": "Sophia Zuo",
+        "date": "2022-04-15"
       },
       {
         "rank": 10,
-        "athlete_id": null,
-        "mark": "1:16.07",
-        "name": "Kristen Wolf",
-        "date": "2006-04-01",
-        "link": "https://web.archive.org/web/20080411082246/http://www.stevensducks.com/sports/wotrack/release.asp?RELEASE_ID=3707"
+        "athlete_id": 8327884,
+        "mark": "1:14.12",
+        "name": "Taylor Enes",
+        "date": "2023-04-29"
       }
     ]
   },
@@ -4585,83 +4835,73 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
-        "mark": "11:47.25",
-        "name": "Rachel Rouse",
-        "date": "2023-05-05",
-        "link": "https://www.tfrrs.org/results/78195/4908853/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/Womens-3000-Steeplechase"
+        "athlete_id": 8615541,
+        "mark": "11:33.63",
+        "name": "Kaitlyn Adams",
+        "date": "2026-05-01"
       },
       {
         "rank": 2,
         "athlete_id": null,
-        "mark": "11:48.75",
-        "name": "Ashley Princiotta",
-        "date": "2013-05-16",
-        "link": "https://www.tfrrs.org/results/30698/1942547/ECAC_DIII_Outdoor_Track_and_Field_Championships/3000-Steeplechase"
+        "mark": "11:44.27",
+        "name": "Rachel Rouse",
+        "date": "2024-05-03"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "12:04.94",
-        "name": "Claire Tantillo",
-        "date": "2019-05-03",
-        "link": "https://www.tfrrs.org/results/62267/3825662/Empire_8_Outdoor_Track__Field_Championships/Womens-3000-Steeplechase"
+        "mark": "11:48.75",
+        "name": "Ashley Princiotta",
+        "date": "2013-05-16"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "12:08.62",
-        "name": "Kaela Earrusso",
-        "date": "2016-05-06",
-        "link": "https://www.tfrrs.org/results/46132/2863816/Matthew_Vassar_Twilight_2016/3000-Steeplechase"
+        "mark": "12:04.94",
+        "name": "Claire Tantillo",
+        "date": "2019-05-03"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "12:21.15",
-        "name": "Kristen Okorn",
-        "date": "2016-04-23",
-        "link": "https://www.tfrrs.org/results/46109/2828086/Empire_8_Track__Field_Championships/3000-Steeplechase"
+        "mark": "12:08.62",
+        "name": "Kaela Earrusso",
+        "date": "2016-05-06"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "12:25.15",
-        "name": "Jamie Brabtson",
-        "date": "2010-04-24",
-        "link": "https://www.tfrrs.org/results/16073/1093368/TCNJ_Lions_Invitational_2010/Womens-3000-Steeplechase"
+        "mark": "12:09.94",
+        "name": "Jacqueline Lulaj",
+        "date": "2024-05-03"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "12:47.07",
-        "name": "Trinity Lundemo",
-        "date": "2019-05-03",
-        "link": "https://www.tfrrs.org/results/62267/3825662/Empire_8_Outdoor_Track__Field_Championships/3000-Steeplechase"
+        "mark": "12:21.15",
+        "name": "Kristen Okorn",
+        "date": "2016-04-23"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "13:22.05",
-        "name": "Corrine Rybarski",
-        "date": "2019-04-05",
-        "link": "https://www.tfrrs.org/results/58897/3744598/TCNJ_Invitational/3000-Steeplechase"
+        "mark": "12:25.15",
+        "name": "Jamie Brabtson",
+        "date": "2010-04-24"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "14:19.77",
-        "name": "Rebecca Dougherty",
-        "date": "2002-04-21",
-        "link": "https://www.plattsys.com/results/res2002/ctco02.htm"
+        "mark": "12:47.07",
+        "name": "Trinity Lundemo",
+        "date": "2019-05-03"
       },
       {
         "rank": 10,
-        "athlete_id": null,
-        "mark": "14:45.31",
-        "name": "Veronica Smith",
-        "date": "2007-04-22",
-        "link": "https://www.plattsys.com/results/res2007/ctc422.htm"
+        "athlete_id": 8919556,
+        "mark": "13:17.75",
+        "name": "Catherine Bondi",
+        "date": "2025-05-08"
       }
     ]
   },
@@ -4677,40 +4917,70 @@
         "athlete_id": null,
         "mark": "1.77",
         "name": "Gladys Njoku",
-        "date": "2015-04-25",
-        "link": "https://www.tfrrs.org/results/39252/2516126/Lions_Invitational_/Womens-High-Jump"
+        "date": "2015-04-25"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "1.70",
         "name": "Amira Dardir",
-        "date": "2015-04-21",
-        "link": "https://www.tfrrs.org/results/40951/2517031/Penn_Relays_Combined_Events/Womens-High-Jump"
+        "date": "2015-04-21"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "1.63",
+        "mark": "1.66",
         "name": "Caroline Tighe",
-        "date": "2023-05-05",
-        "link": "https://www.tfrrs.org/results/78195/4908838/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/Womens-High-Jump"
+        "date": "2025-03-29"
       },
       {
         "rank": 4,
-        "athlete_id": null,
-        "mark": "1.61",
-        "name": "Gina Dello Russo",
-        "date": "2019-05-03",
-        "link": "https://www.tfrrs.org/results/62267/3827207/Empire_8_Outdoor_Track__Field_Championships/Womens-High-Jump"
+        "athlete_id": 8327879,
+        "mark": "1.63",
+        "name": "Maggie Previglian",
+        "date": "2026-05-01"
       },
       {
         "rank": 5,
         "athlete_id": null,
+        "mark": "1.61",
+        "name": "Gina Dello Russo",
+        "date": "2019-05-03"
+      },
+      {
+        "rank": 6,
+        "athlete_id": 8681471,
+        "mark": "1.61",
+        "name": "Maya Lapinski",
+        "date": "2024-05-16"
+      },
+      {
+        "rank": 7,
+        "athlete_id": null,
+        "mark": "1.59",
+        "name": "Laura Mathews",
+        "date": "2024-04-11"
+      },
+      {
+        "rank": 8,
+        "athlete_id": null,
         "mark": "1.57",
         "name": "Laura Goodman",
-        "date": "2007-05-05",
-        "link": "https://web.archive.org/web/20110523211415/http://www.stevensducks.com/assets/sports/wotrack/Women's%20Outdoor%20Track%20Record%20Book.pdf"
+        "date": "2007-05-05"
+      },
+      {
+        "rank": 8,
+        "athlete_id": null,
+        "mark": "1.57",
+        "name": "Allie Canciani",
+        "date": "2023-05-05"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "1.53",
+        "name": "Maggie Kowalska",
+        "date": "2012-04-27"
       }
     ]
   },
@@ -4726,56 +4996,63 @@
         "athlete_id": null,
         "mark": "3.50",
         "name": "Gina Dello Russo",
-        "date": "2022-05-07",
-        "link": "https://www.tfrrs.org/results/73629/4548254/2022_MAC_Outdoor_TF_Championships/Womens-Pole-Vault"
+        "date": "2022-05-07"
       },
       {
         "rank": 2,
-        "athlete_id": null,
-        "mark": "3.25",
-        "name": "Rebecca Tylock",
-        "date": "2011-04-21",
-        "link": "https://www.tfrrs.org/results/20087/1342522/Stockton_Quad/Womens-Pole-Vault"
+        "athlete_id": 8327882,
+        "mark": "3.40",
+        "name": "Alexis Merola",
+        "date": "2025-05-03"
       },
       {
         "rank": 3,
-        "athlete_id": 8327883,
-        "mark": "2.95",
-        "name": "Stephanie Ryazanova",
-        "date": "2023-04-21",
-        "link": "https://www.tfrrs.org/results/75322/4853093/2023_Coach_Pollard_Invitational/-Pole-Vault"
+        "athlete_id": null,
+        "mark": "3.25",
+        "name": "Rebecca Tylock",
+        "date": "2011-04-21"
       },
       {
         "rank": 4,
-        "athlete_id": null,
-        "mark": "2.85",
-        "name": "Victoria Agaliotis",
-        "date": "2019-03-30",
-        "link": "https://www.tfrrs.org/results/57676/3719654/Danny_Curran_Invitational/Womens-Pole-Vault"
+        "athlete_id": 8327883,
+        "mark": "3.10",
+        "name": "Stephanie Ryazanova",
+        "date": "2026-04-30"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "2.65",
-        "name": "Anjali Chandrasekhar",
-        "date": "2022-04-30",
-        "link": "https://www.tfrrs.org/results/73056/4536378/Kings_College_Monarch_Open/Womens-Pole-Vault"
+        "mark": "2.85",
+        "name": "Victoria Agaliotis",
+        "date": "2019-03-30"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "2.30",
-        "name": "Kira Power",
-        "date": "2018-05-05",
-        "link": "https://www.tfrrs.org/results/56318/3490125/Empire_8_Outdoor_Track__Field_Championships/Womens-Pole-Vault"
+        "mark": "2.80",
+        "name": "Anjali Chandrasekhar",
+        "date": "2024-04-27"
       },
       {
         "rank": 7,
+        "athlete_id": 8327881,
+        "mark": "2.60",
+        "name": "Gianna Adamo",
+        "date": "2026-04-24"
+      },
+      {
+        "rank": 8,
+        "athlete_id": null,
+        "mark": "2.30",
+        "name": "Kira Power",
+        "date": "2018-05-05"
+      },
+      {
+        "rank": 9,
         "athlete_id": null,
         "mark": "2.23",
         "name": "Christine Hecker",
-        "date": "2014-05-02",
-        "link": "https://www.tfrrs.org/results/35146/2213302/Mathew_Vassar_Twilight/-Pole-Vault"
+        "date": "2014-05-02"
       }
     ]
   },
@@ -4791,56 +5068,77 @@
         "athlete_id": null,
         "mark": "6.01",
         "name": "Gina Dello Russo",
-        "date": "2022-05-19",
-        "link": "https://www.tfrrs.org/results/74909/4563092/AARTFC_Outdoor_Track__Field_Championships/Womens-Long-Jump"
+        "date": "2022-05-19"
       },
       {
         "rank": 2,
         "athlete_id": null,
-        "mark": "5.51",
-        "name": "Gladys Njoku",
-        "date": "2014-04-19",
-        "link": "https://www.tfrrs.org/results/34237/2177877/2014_Empire_8_Conference_Outdoor_Track_and_Field_Championshi/Womens-Long-Jump"
+        "mark": "5.60",
+        "name": "Laura Mathews",
+        "date": "2024-04-12"
       },
       {
         "rank": 3,
-        "athlete_id": null,
-        "mark": "5.41",
-        "name": "Liana Meyer",
-        "date": "2023-05-05",
-        "link": "https://www.tfrrs.org/results/78195/4908833/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/Womens-Long-Jump"
+        "athlete_id": 8681471,
+        "mark": "5.58",
+        "name": "Maya Lapinski",
+        "date": "2026-05-13"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "5.25",
-        "name": "Amira Dardir",
-        "date": "2014-04-19",
-        "link": "https://www.tfrrs.org/results/34237/2177877/2014_Empire_8_Conference_Outdoor_Track_and_Field_Championshi/Womens-Long-Jump"
+        "mark": "5.51",
+        "name": "Gladys Njoku",
+        "date": "2014-04-19"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "5.24",
-        "name": "Tiffany Evangelou",
-        "date": "2014-05-02",
-        "link": "https://www.tfrrs.org/results/35146/2213283/Mathew_Vassar_Twilight/Womens-Long-Jump"
+        "mark": "5.41",
+        "name": "Liana Meyer",
+        "date": "2023-05-05"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "5.13",
-        "name": "Katie Weeks",
-        "date": "2015-04-24",
-        "link": "https://www.tfrrs.org/results/39252/2516116/Lions_Invitational_/-Long-Jump"
+        "mark": "5.25",
+        "name": "Amira Dardir",
+        "date": "2014-04-19"
       },
       {
-        "rank": 7,
+        "rank": 6,
+        "athlete_id": null,
+        "mark": "5.24",
+        "name": "Tiffany Evangelou",
+        "date": "2014-05-02"
+      },
+      {
+        "rank": 8,
+        "athlete_id": null,
+        "mark": "5.24",
+        "name": "Caroline Tighe",
+        "date": "2025-05-02"
+      },
+      {
+        "rank": 9,
+        "athlete_id": null,
+        "mark": "5.13",
+        "name": "Katie Weeks",
+        "date": "2015-04-24"
+      },
+      {
+        "rank": 10,
         "athlete_id": null,
         "mark": "5.10",
         "name": "Salme Cook",
-        "date": "2009-04-18",
-        "link": "https://static.nazathletics.com/custompages/mtrack/2008-09/stats_results/Results10.htm"
+        "date": "2009-04-18"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "5.10",
+        "name": "Sammi Pearson",
+        "date": "2017-04-22"
       }
     ]
   },
@@ -4856,80 +5154,70 @@
         "athlete_id": null,
         "mark": "11.13",
         "name": "Amira Dardir",
-        "date": "2015-05-08",
-        "link": "https://www.tfrrs.org/results/39704/2553250/UAlbany_Purple__Gold_Last_Chance_Meet/Womens-Triple-Jump"
+        "date": "2015-05-08"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "10.97",
         "name": "Kristen Williams",
-        "date": "2023-05-06",
-        "link": "https://www.tfrrs.org/results/75370/4767463/2023_Danny_Curran_Invitational/-Triple-Jump"
+        "date": "2023-05-06"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "10.79",
         "name": "Tiffany Evangelou",
-        "date": "2014-04-26",
-        "link": "https://www.tfrrs.org/results/34081/2200945/Lions_Invitational/Womens-Triple-Jump"
+        "date": "2014-04-26"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "10.75",
         "name": "Sammi Pearson",
-        "date": "2017-04-22",
-        "link": "https://www.tfrrs.org/results/50683/3141467/Empire_8_Outdoor_Track__Field_Championships/Womens-Triple-Jump"
+        "date": "2017-04-22"
       },
       {
         "rank": 5,
         "athlete_id": null,
         "mark": "10.68",
         "name": "Katie Weeks",
-        "date": "2015-04-25",
-        "link": "https://www.tfrrs.org/results/39252/2516108/Lions_Invitational_/-Triple-Jump"
+        "date": "2015-04-25"
       },
       {
         "rank": 6,
         "athlete_id": null,
         "mark": "10.57",
         "name": "Caroline Pawalowski",
-        "date": "2009-04-19",
-        "link": "https://static.nazathletics.com/custompages/mtrack/2008-09/stats_results/Results10.htm"
+        "date": "2009-04-19"
       },
       {
         "rank": 7,
         "athlete_id": null,
         "mark": "10.40",
         "name": "Ella Santoro",
-        "date": "2023-05-06",
-        "link": "https://www.tfrrs.org/results/78195/4908861/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/Womens-Triple-Jump"
+        "date": "2023-05-06"
       },
       {
         "rank": 8,
         "athlete_id": null,
         "mark": "10.19",
         "name": "Susan George",
-        "date": "2021-04-24",
-        "link": "https://www.tfrrs.org/results/69390/4227273/DeSales_University_Invitational/Womens-Triple-Jump"
+        "date": "2021-04-24"
       },
       {
         "rank": 9,
         "athlete_id": null,
         "mark": "10.09",
         "name": "Kristen Salmins",
-        "date": "2012-04-07",
-        "link": "https://www.tfrrs.org/results/23073/1573166/Ramapo_College_Roadrunner_Invitational/-Triple-Jump"
+        "date": "2012-04-07"
       },
       {
         "rank": 10,
         "athlete_id": null,
         "mark": "9.99",
         "name": "Ellie Savova",
-        "date": "2019-04-27",
-        "link": "https://www.tfrrs.org/results/59680/3813035/2019_Lions_Invitational_/-Triple-Jump"
+        "date": "2019-04-27"
       }
     ]
   },
@@ -4945,80 +5233,70 @@
         "athlete_id": null,
         "mark": "13.94",
         "name": "Katie Weeks",
-        "date": "2018-04-21",
-        "link": "https://www.tfrrs.org/results/56112/3454585/Vassar_Brewers_Invitational_/Womens-Shot-Put"
+        "date": "2018-04-21"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "11.83",
         "name": "AnaMaria Laccetti",
-        "date": "2019-05-04",
-        "link": "https://www.tfrrs.org/results/62267/3827216/Empire_8_Outdoor_Track__Field_Championships/Womens-Shot-Put"
+        "date": "2019-05-04"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "11.60",
         "name": "Alina Duran",
-        "date": "2012-04-06",
-        "link": "https://www.tfrrs.org/results/23073/1573155/Ramapo_College_Roadrunner_Invitational/-Shot-Put"
+        "date": "2012-04-06"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "11.49",
         "name": "Victoria Taibe",
-        "date": "2014-05-10",
-        "link": "https://www.tfrrs.org/results/34157/2232174/Oneonta_May_Meet/-Shot-Put"
+        "date": "2014-05-10"
       },
       {
         "rank": 5,
         "athlete_id": null,
         "mark": "11.38",
         "name": "Samantha Reilly",
-        "date": "2019-03-30",
-        "link": "https://www.tfrrs.org/results/57676/3719642/Danny_Curran_Invitational/Womens-Shot-Put"
+        "date": "2019-03-30"
       },
       {
         "rank": 6,
         "athlete_id": null,
         "mark": "11.31",
         "name": "Meghan Douglas",
-        "date": "2022-04-30",
-        "link": "https://www.tfrrs.org/results/73056/4536402/Kings_College_Monarch_Open/Womens-Shot-Put"
+        "date": "2022-04-30"
       },
       {
         "rank": 7,
         "athlete_id": null,
         "mark": "10.96",
         "name": "Rachel Cannell",
-        "date": "2007-04-21",
-        "link": "https://stevensducks.com/news/2007/4/23/WOTRACK_2721.aspx"
+        "date": "2007-04-21"
       },
       {
         "rank": 8,
         "athlete_id": null,
         "mark": "10.70",
         "name": "Allie Doyle",
-        "date": "2013-04-20",
-        "link": "https://www.tfrrs.org/results/27087/1890800/Empire_8_Outdoor_Track__Field_Championships/-Shot-Put"
+        "date": "2013-04-20"
       },
       {
         "rank": 9,
         "athlete_id": null,
         "mark": "10.33",
         "name": "Liana Grandinetti",
-        "date": "2011-03-25",
-        "link": "https://www.tfrrs.org/results/19397/1281972/VMI-Washington_and_Lee_Track__Field_Carnival/-Shot-Put"
+        "date": "2011-03-25"
       },
       {
         "rank": 10,
         "athlete_id": null,
         "mark": "10.31",
         "name": "Yanique Spigner",
-        "date": "2014-04-19",
-        "link": "https://www.tfrrs.org/results/34237/2177913/2014_Empire_8_Conference_Outdoor_Track_and_Field_Championshi/-Shot-Put"
+        "date": "2014-04-19"
       }
     ]
   },
@@ -5034,80 +5312,70 @@
         "athlete_id": null,
         "mark": "47.37",
         "name": "Katie Weeks",
-        "date": "2019-04-20",
-        "link": "https://www.tfrrs.org/results/57677/3791293/Widener_Invitational/Womens-Discus"
+        "date": "2019-04-20"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "40.54",
         "name": "AnaMaria Laccetti",
-        "date": "2022-04-15",
-        "link": "https://www.tfrrs.org/results/71568/4501000/2022_Greyhound_Invitational_/Womens-Discus"
+        "date": "2022-04-15"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "39.71",
+        "mark": "40.07",
         "name": "Ashley Muliawan",
-        "date": "2022-05-19",
-        "link": "https://www.tfrrs.org/results/74909/4562853/AARTFC_Outdoor_Track__Field_Championships/-Discus"
+        "date": "2025-05-14"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "38.55",
         "name": "Allie Doyle",
-        "date": "2013-04-05",
-        "link": "https://www.tfrrs.org/results/26890/1854042/Ramapo_College_Roadrunner_Invitational/Womens-Discus"
+        "date": "2013-04-05"
       },
       {
         "rank": 5,
-        "athlete_id": null,
-        "mark": "34.58",
-        "name": "Yanique Spigner",
-        "date": "2014-04-19",
-        "link": "https://www.tfrrs.org/results/34237/2177911/2014_Empire_8_Conference_Outdoor_Track_and_Field_Championshi/Womens-Discus"
+        "athlete_id": 8681475,
+        "mark": "35.69",
+        "name": "Anacarolina Ventura",
+        "date": "2025-03-28"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "33.27",
-        "name": "Samantha Reilly",
-        "date": "2019-04-13",
-        "link": "https://www.tfrrs.org/results/57251/3768395/Coach_Pollard_Invite_/Womens-Discus"
+        "mark": "34.58",
+        "name": "Yanique Spigner",
+        "date": "2014-04-19"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "32.40",
-        "name": "Brianna Marchal",
-        "date": "2013-04-05",
-        "link": "https://www.tfrrs.org/results/26890/1854042/Ramapo_College_Roadrunner_Invitational/-Discus"
+        "mark": "33.27",
+        "name": "Samantha Reilly",
+        "date": "2019-04-13"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "32.31",
-        "name": "Monica Johnson",
-        "date": "2001-04-07",
-        "link": "https://web.archive.org/web/20040608201941/http://www.stevensducks.com/sports/track/record.pdf"
+        "mark": "32.40",
+        "name": "Brianna Marchal",
+        "date": "2013-04-05"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "31.90",
-        "name": "Yona Bauzil",
-        "date": "2013-03-23",
-        "link": "https://www.tfrrs.org/results/27572/1813164/Richard_Stockton_College_Invitational/-Discus"
+        "mark": "32.31",
+        "name": "Monica Johnson",
+        "date": "2001-04-07"
       },
       {
         "rank": 10,
-        "athlete_id": null,
-        "mark": "31.87",
-        "name": "Victoria Taibe",
-        "date": "2014-03-22",
-        "link": "https://www.tfrrs.org/results/32033/2096235/Richard_Stockton_Invite_2014/-Discus"
+        "athlete_id": 8681470,
+        "mark": "32.29",
+        "name": "Claire Deatrick",
+        "date": "2026-04-18"
       }
     ]
   },
@@ -5123,80 +5391,70 @@
         "athlete_id": null,
         "mark": "52.81",
         "name": "Katie Weeks",
-        "date": "2019-04-19",
-        "link": "https://www.tfrrs.org/results/57677/3791296/Widener_Invitational/Womens-Hammer"
+        "date": "2019-04-19"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "51.13",
         "name": "Alina Duran",
-        "date": "2012-04-06",
-        "link": "https://www.tfrrs.org/results/23073/1573189/Ramapo_College_Roadrunner_Invitational/-Hammer"
+        "date": "2012-04-06"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "48.31",
         "name": "AnaMaria Laccetti",
-        "date": "2022-05-07",
-        "link": "https://www.tfrrs.org/results/73629/4548259/2022_MAC_Outdoor_TF_Championships/Womens-Hammer"
+        "date": "2022-05-07"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "47.70",
         "name": "Grace Python",
-        "date": "2012-03-30",
-        "link": "https://www.tfrrs.org/results/22450/1560871/Army_Dick_Shea_Open/-Hammer"
+        "date": "2012-03-30"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "39.74",
+        "mark": "41.44",
         "name": "Ashley Muliawan",
-        "date": "2022-04-08",
-        "link": "https://www.tfrrs.org/results/73948/4481255/Vassar_College_April_Invitational/Womens-Hammer"
+        "date": "2025-03-22"
       },
       {
         "rank": 6,
-        "athlete_id": null,
-        "mark": "38.22",
-        "name": "Jordan Detlet",
-        "date": "2019-03-29",
-        "link": "https://www.tfrrs.org/results/57676/3719631/Danny_Curran_Invitational/-Hammer"
+        "athlete_id": 8681475,
+        "mark": "40.04",
+        "name": "Anacarolina Ventura",
+        "date": "2026-04-30"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "38.21",
-        "name": "Victoria Taibe",
-        "date": "2014-05-02",
-        "link": "https://www.tfrrs.org/results/35146/2213279/Mathew_Vassar_Twilight/Womens-Hammer"
+        "mark": "38.64",
+        "name": "Jordan Detlet",
+        "date": "2021-03-27"
       },
       {
         "rank": 8,
-        "athlete_id": null,
-        "mark": "38.16",
-        "name": "Yanique Spigner",
-        "date": "2015-03-27",
-        "link": "https://www.tfrrs.org/results/39065/2427951/20th_Annual_Monmouth_Season_Opener/Womens-Hammer"
+        "athlete_id": 8681470,
+        "mark": "38.22",
+        "name": "Claire Deatrick",
+        "date": "2026-04-11"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "37.16",
-        "name": "Liana Grandinetti",
-        "date": "2011-04-21",
-        "link": "https://www.tfrrs.org/results/20087/1342544/Stockton_Quad/-Hammer"
+        "mark": "38.21",
+        "name": "Victoria Taibe",
+        "date": "2014-05-02"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "34.26",
-        "name": "Brianna Marchal",
-        "date": "2014-04-04",
-        "link": "https://www.tfrrs.org/results/31845/2137312/Ramapo_College_Roadrunner_Invitational/-Hammer"
+        "mark": "38.16",
+        "name": "Yanique Spigner",
+        "date": "2015-03-27"
       }
     ]
   },
@@ -5212,80 +5470,70 @@
         "athlete_id": null,
         "mark": "42.52",
         "name": "Magdalena Kowalska",
-        "date": "2011-05-06",
-        "link": "https://tfrrs.org/results/21932/1376757/Matthew_Vassar_Open/Womens-Javelin"
+        "date": "2011-05-06"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "36.04",
         "name": "Katie Weeks",
-        "date": "2018-04-21",
-        "link": "https://tfrrs.org/results/56112/3454605/Vassar_Brewers_Invitational_/Womens-Javelin"
+        "date": "2018-04-21"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "35.96",
         "name": "Monica Johnson",
-        "date": "2000-05-12",
-        "link": "https://web.archive.org/web/20061118002940/http://www.stevensducks.com/sports/track/record.pdf"
+        "date": "2000-05-12"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "34.83",
         "name": "Janet Vill",
-        "date": "2017-04-07",
-        "link": "https://tfrrs.org/results/46872/3096666/2017_Coach_P_Invitational/Womens-Javelin"
+        "date": "2017-04-07"
       },
       {
         "rank": 5,
         "athlete_id": null,
         "mark": "34.82",
         "name": "Samantha Reilly",
-        "date": "2019-04-26",
-        "link": "https://tfrrs.org/results/59680/3813052/2019_Lions_Invitational_/Womens-Javelin"
+        "date": "2019-04-26"
       },
       {
         "rank": 6,
         "athlete_id": null,
         "mark": "33.99",
         "name": "Allie Doyle",
-        "date": "2013-05-11",
-        "link": "https://tfrrs.org/results/29097/1938003/Oneonta_State_May_Meet/-Javelin"
+        "date": "2013-05-11"
       },
       {
         "rank": 7,
         "athlete_id": null,
         "mark": "33.95",
         "name": "Ashna Manhas",
-        "date": "2018-04-08",
-        "link": "https://tfrrs.org/results/53011/3406702/2018_TCNJ_Invite/-Javelin"
+        "date": "2018-04-08"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "32.62",
+        "mark": "33.75",
         "name": "Amanda Antico",
-        "date": "2023-05-04",
-        "link": "https://tfrrs.org/results/78195/4908818/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/-Javelin"
+        "date": "2024-05-04"
       },
       {
         "rank": 9,
         "athlete_id": null,
         "mark": "31.28",
         "name": "Amira Dardir",
-        "date": "2014-04-10",
-        "link": "https://tfrrs.org/results/32103/2220047/Kutztown_Mondschein_Multi/Womens-Javelin"
+        "date": "2014-04-10"
       },
       {
         "rank": 10,
         "athlete_id": null,
         "mark": "30.83",
         "name": "Victoria Taibe",
-        "date": "2014-04-25",
-        "link": "https://tfrrs.org/results/34081/2200948/Lions_Invitational/-Javelin"
+        "date": "2014-04-25"
       }
     ]
   },
@@ -5299,74 +5547,72 @@
       {
         "rank": 1,
         "athlete_id": null,
-        "mark": "4263",
-        "name": "Amira Dardir",
-        "date": "2015-05-15",
-        "link": "https://www.tfrrs.org/results/36235/2559356/ECAC_Division_III_Outdoor_Track__Field_Championships/-Heptathlon"
+        "mark": "4906 pts",
+        "name": "Laura Mathews",
+        "date": "2024-05-24"
       },
       {
         "rank": 2,
         "athlete_id": null,
-        "mark": "4198",
-        "name": "Liana Meyer",
-        "date": "2023-05-05",
-        "link": "https://www.tfrrs.org/results/78195/4908826/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/-Heptathlon"
+        "mark": "4263 pts",
+        "name": "Amira Dardir",
+        "date": "2015-05-15"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "3399",
-        "name": "Ashley Princiotta",
-        "date": "2012-03-30",
-        "link": "https://www.tfrrs.org/results/22450/1560876/Army_Dick_Shea_Open/-Heptathlon"
+        "mark": "4198 pts",
+        "name": "Liana Meyer",
+        "date": "2023-05-05"
       },
       {
         "rank": 4,
-        "athlete_id": null,
-        "mark": "3242",
-        "name": "Susan George",
-        "date": "2022-04-13",
-        "link": "https://www.tfrrs.org/results/73705/4498152/Mondschein_Multi_2022/-Heptathlon"
+        "athlete_id": 8681474,
+        "mark": "3807 pts",
+        "name": "Isabella Shanley",
+        "date": "2025-04-11"
       },
       {
         "rank": 5,
-        "athlete_id": null,
-        "mark": "2916",
-        "name": "Katie Weeks",
-        "date": "2015-04-09",
-        "link": "https://www.tfrrs.org/results/38925/2462789/Kutztown_University_Mondshein_Multi/-Heptathlon"
+        "athlete_id": 8327883,
+        "mark": "3300 pts",
+        "name": "Stephanie Ryazanova",
+        "date": "2025-05-02"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "2890",
-        "name": "Efa Kragha",
-        "date": "1998-05-02",
-        "link": "https://web.archive.org/web/20061118002940/http://www.stevensducks.com/sports/track/record.pdf"
+        "mark": "3242 pts",
+        "name": "Susan George",
+        "date": "2022-04-13"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "2087",
-        "name": "Lizzie Bakarich",
-        "date": "2003-04-18",
-        "link": "https://web.archive.org/web/20030612085057/http://plattsys.com/results/res2003/ctcotack.htm"
+        "mark": "3092 pts",
+        "name": "Nicole Waletzki",
+        "date": "2024-05-03"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "1870",
-        "name": "Naomi Chin",
-        "date": "2000-04-16",
-        "link": "https://www.plattsys.com/results/res2000/ctco00.htm"
+        "mark": "2916 pts",
+        "name": "Katie Weeks",
+        "date": "2015-04-09"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "1288",
-        "name": "Zhanna Lasun",
-        "date": "2002-04-21",
-        "link": "https://www.plattsys.com/results/res2002/ctco02.htm"
+        "mark": "2890 pts",
+        "name": "Efa Kragha",
+        "date": "1998-05-02"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "2087 pts",
+        "name": "Lizzy Bakarich",
+        "date": "2003-04-18"
       }
     ]
   },
@@ -5400,9 +5646,9 @@
         ]
       },
       {
-        "rank": 3,
+        "rank": 2,
         "athlete_id": null,
-        "mark": "49.63",
+        "mark": "49.36",
         "names": [
           "Lauren Ingraham",
           "Stephanie Ryazanova",
@@ -5413,6 +5659,28 @@
       {
         "rank": 4,
         "athlete_id": null,
+        "mark": "49.63",
+        "names": [
+          "Lauren Ingraham",
+          "Stephanie Ryazanova",
+          "Allie Canciani",
+          "Laura Mathews"
+        ]
+      },
+      {
+        "rank": 5,
+        "athlete_id": null,
+        "mark": "51.20",
+        "names": [
+          "Lauren Alley",
+          "Allie Canciani",
+          "Anya Sadowski",
+          "Caroline Tighe"
+        ]
+      },
+      {
+        "rank": 6,
+        "athlete_id": null,
         "mark": "51.28",
         "names": [
           "Tiffany Evangelou",
@@ -5422,7 +5690,18 @@
         ]
       },
       {
-        "rank": 5,
+        "rank": 7,
+        "athlete_id": null,
+        "mark": "51.92",
+        "names": [
+          "Munachimso Nwadukwe",
+          "Lauren Alley",
+          "Stephanie Ryazanova",
+          "Anya Sadowski"
+        ]
+      },
+      {
+        "rank": 8,
         "athlete_id": null,
         "mark": "52.78",
         "names": [
@@ -5433,7 +5712,7 @@
         ]
       },
       {
-        "rank": 6,
+        "rank": 9,
         "athlete_id": null,
         "mark": "53.68",
         "names": [
@@ -5444,7 +5723,7 @@
         ]
       },
       {
-        "rank": 7,
+        "rank": 10,
         "athlete_id": null,
         "mark": "53.87",
         "names": [
@@ -5452,39 +5731,6 @@
           "Salme Cook",
           "Caroline Pawaloski",
           "Jenny Wehof"
-        ]
-      },
-      {
-        "rank": 8,
-        "athlete_id": null,
-        "mark": "54.37",
-        "names": [
-          "Christine Muchoe",
-          "Laura Barito",
-          "Tiffany Evangelou",
-          "Kelly Freed"
-        ]
-      },
-      {
-        "rank": 9,
-        "athlete_id": null,
-        "mark": "54.44",
-        "names": [
-          "Jenny Wehof",
-          "Caroline Pawalowski",
-          "Laura Barito",
-          "Salme Cook"
-        ]
-      },
-      {
-        "rank": 10,
-        "athlete_id": null,
-        "mark": "55.14",
-        "names": [
-          "Tiffany Evangelou",
-          "Amira Dardir",
-          "Rebecca Tylock",
-          "Caroline Pawalowski"
         ]
       }
     ]
@@ -5499,6 +5745,17 @@
       {
         "rank": 1,
         "athlete_id": null,
+        "mark": "3:57.16",
+        "names": [
+          "Anya Sadowski",
+          "Lauren Alley",
+          "Isabel Vogel",
+          "Isabella Shanley"
+        ]
+      },
+      {
+        "rank": 2,
+        "athlete_id": null,
         "mark": "3:59.61",
         "names": [
           "Laura Mathews",
@@ -5508,7 +5765,18 @@
         ]
       },
       {
-        "rank": 2,
+        "rank": 3,
+        "athlete_id": null,
+        "mark": "4:00.96",
+        "names": [
+          "Isabella Shanley",
+          "Isabel Vogel",
+          "Allie Canciani",
+          "Laura Mathews"
+        ]
+      },
+      {
+        "rank": 4,
         "athlete_id": null,
         "mark": "4:03.75",
         "names": [
@@ -5519,7 +5787,7 @@
         ]
       },
       {
-        "rank": 3,
+        "rank": 5,
         "athlete_id": null,
         "mark": "4:04.82",
         "names": [
@@ -5530,7 +5798,7 @@
         ]
       },
       {
-        "rank": 4,
+        "rank": 6,
         "athlete_id": null,
         "mark": "4:04.91",
         "names": [
@@ -5541,7 +5809,7 @@
         ]
       },
       {
-        "rank": 5,
+        "rank": 7,
         "athlete_id": null,
         "mark": "4:06.60",
         "names": [
@@ -5552,7 +5820,18 @@
         ]
       },
       {
-        "rank": 6,
+        "rank": 8,
+        "athlete_id": null,
+        "mark": "4:07.68",
+        "names": [
+          "Lauren Alley",
+          "Allie Canciani",
+          "Anya Sadowski",
+          "Isabel Vogel"
+        ]
+      },
+      {
+        "rank": 9,
         "athlete_id": null,
         "mark": "4:08.20",
         "names": [
@@ -5563,18 +5842,7 @@
         ]
       },
       {
-        "rank": 7,
-        "athlete_id": null,
-        "mark": "4:15.53",
-        "names": [
-          "Kasey Suszko",
-          "Paige Metzheiser",
-          "Jackie Endres",
-          "Samantha Rokicsak"
-        ]
-      },
-      {
-        "rank": 8,
+        "rank": 10,
         "athlete_id": null,
         "mark": "4:14.26",
         "names": [
@@ -5582,28 +5850,6 @@
           "Caroline Pawaloski",
           "Laura Barito",
           "Shanna Bearisto"
-        ]
-      },
-      {
-        "rank": 9,
-        "athlete_id": null,
-        "mark": "4:17.78",
-        "names": [
-          "Michelle Moriera",
-          "Kelly Freed",
-          "Sarah Zahran",
-          "Melissa Gibbons"
-        ]
-      },
-      {
-        "rank": 10,
-        "athlete_id": null,
-        "mark": "4:22.04",
-        "names": [
-          "Katie Brodecki",
-          "Kaela Earrusso",
-          "Amira Dardir",
-          "Jackie Endres"
         ]
       }
     ]
@@ -5651,6 +5897,39 @@
       {
         "rank": 4,
         "athlete_id": null,
+        "mark": "9:37.05",
+        "names": [
+          "Isabella Gabay",
+          "Taylor Enes",
+          "Nina Burden",
+          "Isabel Vogel"
+        ]
+      },
+      {
+        "rank": 5,
+        "athlete_id": null,
+        "mark": "9:41.26",
+        "names": [
+          "Isabel Vogel",
+          "Taylor Enes",
+          "Rachel Rouse",
+          "Nina Burden"
+        ]
+      },
+      {
+        "rank": 6,
+        "athlete_id": null,
+        "mark": "9:42.93",
+        "names": [
+          "Isabella Gabay",
+          "Taylor Enes",
+          "Anya Sadowski",
+          "Isabel Vogel"
+        ]
+      },
+      {
+        "rank": 7,
+        "athlete_id": null,
         "mark": "9:43.56",
         "names": [
           "Jackie Enders",
@@ -5660,7 +5939,7 @@
         ]
       },
       {
-        "rank": 5,
+        "rank": 8,
         "athlete_id": null,
         "mark": "9:44.94",
         "names": [
@@ -5671,7 +5950,7 @@
         ]
       },
       {
-        "rank": 6,
+        "rank": 9,
         "athlete_id": null,
         "mark": "9:52.32",
         "names": [
@@ -5682,7 +5961,7 @@
         ]
       },
       {
-        "rank": 7,
+        "rank": 10,
         "athlete_id": null,
         "mark": "9:58.64",
         "names": [
@@ -5690,39 +5969,6 @@
           "Kaela Earrusso",
           "Sarah Zahran",
           "Kelly Freed"
-        ]
-      },
-      {
-        "rank": 8,
-        "athlete_id": null,
-        "mark": "9:59.12",
-        "names": [
-          "Isabella Wiley",
-          "Erin Miceli",
-          "Samantha Rokicsak",
-          "Paige Metzheiser"
-        ]
-      },
-      {
-        "rank": 9,
-        "athlete_id": null,
-        "mark": "10:50.77",
-        "names": [
-          "Shanna Bearisto",
-          "Jamie Brabston",
-          "Katie Castroagudin",
-          "Kelly Freed"
-        ]
-      },
-      {
-        "rank": 10,
-        "athlete_id": null,
-        "mark": "10:56.81",
-        "names": [
-          "Karen O'Shea",
-          "Emily Schlipf",
-          "Louise Firner",
-          "Anne Krone"
         ]
       }
     ]
@@ -5739,80 +5985,70 @@
         "athlete_id": null,
         "mark": "10.70",
         "name": "Alex Kainer",
-        "date": "2018-05-04",
-        "link": "https://www.tfrrs.org/results/56318/3490120/Empire_8_Outdoor_Track__Field_Championships/Mens-100-Meters"
+        "date": "2018-05-04"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "10.77",
         "name": "Evan Kainer",
-        "date": "2019-05-15",
-        "link": "https://www.tfrrs.org/results/62360/3844954/AARTFC_Outdoor_Track__Field_Championships/Mens-100-Meters"
+        "date": "2019-05-15"
       },
       {
         "rank": 3,
-        "athlete_id": null,
-        "mark": "10.99",
-        "name": "Nick DiMaria",
-        "date": "2021-04-24",
-        "link": "https://www.tfrrs.org/results/69390/4223983/DeSales_University_Invitational/100-Meters"
+        "athlete_id": 8681455,
+        "mark": "10.88",
+        "name": "Tyler Hackett",
+        "date": "2025-05-02"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "11.04",
-        "name": "Mike Acquah",
-        "date": "1989-04-05",
-        "link": "https://web.archive.org/web/20061118002940/http://www.stevensducks.com/sports/track/record.pdf"
+        "mark": "10.99",
+        "name": "Nick DiMaria",
+        "date": "2021-04-24"
       },
       {
         "rank": 5,
-        "athlete_id": null,
-        "mark": "11.09",
-        "name": "Trevor Currie",
-        "date": "2009-04-11",
-        "link": "https://www.tfrrs.org/results/11980/m/New_Jersey_Invitational?team_hnd=5647"
+        "athlete_id": 9251000,
+        "mark": "11.01",
+        "name": "Chad Francis",
+        "date": "2026-04-11"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "11.11",
-        "name": "Brian Fratto",
-        "date": "2015-05-01",
-        "link": "https://www.tfrrs.org/results/40453/2533724/Mathew_Vassar_Twilight_2015/Mens-100-Meters"
+        "mark": "11.04",
+        "name": "Mike Acquah",
+        "date": "1989-04-05"
       },
       {
-        "rank": 7,
-        "athlete_id": null,
-        "mark": "11.14",
-        "name": "Gregg Davis",
-        "date": "1981-04-08",
-        "link": "https://web.stevens.edu/track/"
+        "rank": 6,
+        "athlete_id": 8681460,
+        "mark": "11.04",
+        "name": "Douglas Winant",
+        "date": "2026-05-01"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "11.15",
-        "name": "Andrew Loth",
-        "date": "2019-04-12",
-        "link": "https://www.tfrrs.org/results/57251/3768404/Coach_Pollard_Invite_/100-Meters"
+        "mark": "11.09",
+        "name": "Trevor Currie",
+        "date": "2009-04-11"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "11.24",
-        "name": "Isaac Moore",
-        "date": "2006-04-24",
-        "link": "https://web.archive.org/web/20061004131511/http://athletics.desales.edu/Sports/mtrack/2006/CTCM06.asp"
+        "mark": "11.11",
+        "name": "Brian Fratto",
+        "date": "2015-05-01"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "11.25",
-        "name": "Matt Savary",
-        "date": "2007-05-05",
-        "link": "https://stevensducks.com/news/2007/5/7/WOTRACK_2729.aspx"
+        "mark": "11.14",
+        "name": "Gregg Davis",
+        "date": "1981-04-08"
       }
     ]
   },
@@ -5828,80 +6064,70 @@
         "athlete_id": null,
         "mark": "21.52",
         "name": "Alex Kainer",
-        "date": "2019-05-15",
-        "link": "https://www.tfrrs.org/results/62360/3844961/AARTFC_Outdoor_Track__Field_Championships/Mens-200-Meters"
+        "date": "2019-05-15"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "21.55",
         "name": "Nick DiMaria",
-        "date": "2021-04-17",
-        "link": "https://www.tfrrs.org/results/67910/4210303/Bill_Fritz_Invitational/Mens-200-Meters"
+        "date": "2021-04-17"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "22.13",
         "name": "Evan Kainer",
-        "date": "2019-05-04",
-        "link": "https://www.tfrrs.org/results/62267/3827214/Empire_8_Outdoor_Track__Field_Championships/Mens-200-Meters"
+        "date": "2019-05-04"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "22.25",
         "name": "Matt Savary",
-        "date": "2007-05-05",
-        "link": "https://web.archive.org/web/20111230042310/http://www.stevensducks.com/assets/sports/motrack/Men's%20Outdoor%20Track%20Record%20Book.pdf"
+        "date": "2007-05-05"
       },
       {
         "rank": 5,
         "athlete_id": null,
         "mark": "22.31",
         "name": "Pat Bastien",
-        "date": "1999-04-25",
-        "link": "https://web.archive.org/web/20061118002940/http://www.stevensducks.com/sports/track/record.pdf"
+        "date": "1999-04-25"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "22.67",
-        "name": "Andrew Loth",
-        "date": "2017-04-08",
-        "link": "https://www.tfrrs.org/results/46872/3096664/2017_Coach_P_Invitational/Mens-200-Meters"
+        "mark": "22.35",
+        "name": "Kyle Savino",
+        "date": "2024-04-20"
       },
       {
-        "rank": 7,
-        "athlete_id": null,
-        "mark": "22.77",
-        "name": "Kyle Savino",
-        "date": "2023-04-29",
-        "link": "https://www.tfrrs.org/results/80008/4880932/Kings_College_Monarch_Open/Mens-200-Meters"
+        "rank": 6,
+        "athlete_id": 9251000,
+        "mark": "22.35",
+        "name": "Chad Francis",
+        "date": "2026-04-18"
       },
       {
         "rank": 8,
-        "athlete_id": null,
-        "mark": "22.78",
-        "name": "Trevor Currie",
-        "date": "2009-03-21",
-        "link": "https://www.tfrrs.org/results/10182/m/Richard_Stockton_Invitational?team_hnd=5647"
+        "athlete_id": 8327857,
+        "mark": "22.46",
+        "name": "Connor Robinson",
+        "date": "2026-04-18"
       },
       {
         "rank": 9,
-        "athlete_id": null,
-        "mark": "22.83",
-        "name": "Shane Chiaravalle",
-        "date": "2013-04-20",
-        "link": "https://www.tfrrs.org/results/27087/1890786/Empire_8_Outdoor_Track__Field_Championships/200-Meters"
+        "athlete_id": 8864648,
+        "mark": "22.49",
+        "name": "Chase Kosiba",
+        "date": "2026-04-18"
       },
       {
         "rank": 10,
-        "athlete_id": null,
-        "mark": "22.95",
-        "name": "Kris Alvarez",
-        "date": "2015-05-08",
-        "link": "https://www.tfrrs.org/results/39704/2553208/UAlbany_Purple__Gold_Last_Chance_Meet/200-Meters"
+        "athlete_id": 9251009,
+        "mark": "22.66",
+        "name": "Ian Rodriguez",
+        "date": "2026-05-01"
       }
     ]
   },
@@ -5915,82 +6141,72 @@
       {
         "rank": 1,
         "athlete_id": null,
-        "mark": "48.08",
-        "name": "Nick DiMaria",
-        "date": "2021-05-28",
-        "link": "https://www.tfrrs.org/results/70179/4273548/NCAA_Division_III_Outdoor_Track__Field_Championships/400-Meters"
+        "mark": "47.89",
+        "name": "Kyle Savino",
+        "date": "2025-05-03"
       },
       {
         "rank": 2,
         "athlete_id": null,
-        "mark": "48.84",
-        "name": "Matt Savary",
-        "date": "2007-04-24",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/moutdoorTop_Performances.pdf"
+        "mark": "48.08",
+        "name": "Nick DiMaria",
+        "date": "2021-05-28"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "49.40",
-        "name": "Shane Chiaravalle",
-        "date": "2016-04-23",
-        "link": "https://www.tfrrs.org/results/46109/2828078/Empire_8_Track__Field_Championships/Mens-400-Meters"
+        "mark": "48.84",
+        "name": "Matt Savary",
+        "date": "2007-04-24"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "49.95",
-        "name": "Zach Andrews",
-        "date": "2017-04-22",
-        "link": "https://www.tfrrs.org/results/50683/3141484/Empire_8_Outdoor_Track__Field_Championships/400-Meters"
+        "mark": "49.40",
+        "name": "Shane Chiaravalle",
+        "date": "2016-04-23"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "50.14",
-        "name": "Trevor Currie",
-        "date": "2009-05-08",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/moutdoorTop_Performances.pdf"
+        "mark": "49.95",
+        "name": "Zach Andrews",
+        "date": "2017-04-22"
       },
       {
         "rank": 6,
-        "athlete_id": null,
-        "mark": "50.30",
-        "name": "Alex Kainer",
-        "date": "2018-03-31",
-        "link": "https://www.tfrrs.org/results/52009/3381526/Stockton_University_Invitational/400-Meters"
+        "athlete_id": 9251003,
+        "mark": "50.05",
+        "name": "Steven Longo",
+        "date": "2026-05-01"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "50.34",
-        "name": "Danny LaMastra",
-        "date": "2019-05-03",
-        "link": "https://www.tfrrs.org/results/62267/3827225/Empire_8_Outdoor_Track__Field_Championships/400-Meters"
+        "mark": "50.14",
+        "name": "Trevor Currie",
+        "date": "2009-05-08"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "51.09",
-        "name": "Raouf Laadem",
-        "date": "2017-04-22",
-        "link": "https://www.tfrrs.org/results/50683/3141484/Empire_8_Outdoor_Track__Field_Championships/400-Meters"
+        "mark": "50.30",
+        "name": "Alex Kainer",
+        "date": "2018-03-31"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "51.36",
-        "name": "Pat Bastien",
-        "date": "1999-03-27",
-        "link": "https://web.archive.org/web/20061118002940/http://www.stevensducks.com/sports/track/record.pdf"
+        "mark": "50.34",
+        "name": "Danny LaMastra",
+        "date": "2019-05-03"
       },
       {
         "rank": 10,
-        "athlete_id": null,
-        "mark": "51.50",
-        "name": "Tom Halloran",
-        "date": "2015-05-08",
-        "link": "https://www.tfrrs.org/results/39704/2553237/UAlbany_Purple__Gold_Last_Chance_Meet/Mens-400-Meters"
+        "athlete_id": 9251009,
+        "mark": "50.97",
+        "name": "Ian Rodriguez",
+        "date": "2026-04-18"
       }
     ]
   },
@@ -6003,82 +6219,73 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
-        "mark": "1:54.56",
-        "name": "Louis Stengel",
-        "date": "2015-04-25",
-        "link": "https://www.tfrrs.org/results/39252/2516130/Lions_Invitational_/800-Meters"
+        "athlete_id": 8327853,
+        "mark": "1:52.15",
+        "name": "Danny Jutras",
+        "date": "2025-04-18"
       },
       {
         "rank": 2,
         "athlete_id": null,
-        "mark": "1:54.61",
-        "name": "Tom Selvaggi",
-        "date": "2017-04-14",
-        "link": "https://www.tfrrs.org/results/49229/3122056/Bison_Outdoor_Classic/800-Meters"
+        "mark": "1:54.56",
+        "name": "Louis Stengel",
+        "date": "2015-04-25"
       },
       {
         "rank": 3,
+        "athlete_id": null,
+        "mark": "1:54.61",
+        "name": "Tom Selvaggi",
+        "date": "2017-04-14"
+      },
+      {
+        "rank": 4,
         "athlete_id": null,
         "mark": "1:54.68",
         "name": "Michael Hoffman",
         "date": "2008-05-10"
       },
       {
-        "rank": 4,
-        "athlete_id": null,
-        "mark": "1:55.38",
-        "name": "Nick Zickgraf",
-        "date": "2015-05-08",
-        "link": "https://www.tfrrs.org/results/39704/2553244/UAlbany_Purple__Gold_Last_Chance_Meet/800-Meters"
-      },
-      {
         "rank": 5,
         "athlete_id": null,
-        "mark": "1:55.92",
-        "name": "Trevor LaDue",
-        "date": "2019-05-03",
-        "link": "https://www.tfrrs.org/results/62267/3827213/Empire_8_Outdoor_Track__Field_Championships/800-Meters"
+        "mark": "1:55.08",
+        "name": "Jake Aylmer",
+        "date": "2024-05-13"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "1:56.31",
-        "name": "Kajetan Leitner",
-        "date": "2023-05-06",
-        "link": "https://www.tfrrs.org/results/78195/4908819/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/Mens-800-Meters"
+        "mark": "1:55.38",
+        "name": "Nick Zickgraf",
+        "date": "2015-05-08"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "1:56.42",
-        "name": "Andrew Ballinger",
-        "date": "2010-05-01",
-        "link": "https://www.tfrrs.org/results/17311/1111192/Princeton_Elite_Meet/800-Meters"
+        "mark": "1:55.92",
+        "name": "Trevor LaDue",
+        "date": "2019-05-03"
       },
       {
         "rank": 8,
-        "athlete_id": null,
-        "mark": "1:56.47",
-        "name": "Greg Arabagian",
-        "date": "2015-05-08",
-        "link": "https://www.tfrrs.org/results/39704/2553244/UAlbany_Purple__Gold_Last_Chance_Meet/800-Meters"
+        "athlete_id": 9205120,
+        "mark": "1:56.19",
+        "name": "Markus Soennichsen",
+        "date": "2026-04-18"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "1:57.08",
-        "name": "Sean Vazquez",
-        "date": "2009-04-19",
-        "link": "https://athletics.ithaca.edu/sports/2009/4/18/WTRACK_0418090144.aspx?id=2396"
+        "mark": "1:56.31",
+        "name": "Kajetan Leitner",
+        "date": "2023-05-06"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "1:57.70",
-        "name": "Michael John",
-        "date": "2015-04-11",
-        "link": "https://www.tfrrs.org/results/39302/2471049/Bison_Outdoor_Classic/800-Meters"
+        "mark": "1:56.42",
+        "name": "Andrew Ballinger",
+        "date": "2010-05-01"
       }
     ]
   },
@@ -6092,82 +6299,72 @@
       {
         "rank": 1,
         "athlete_id": null,
-        "mark": "3:56.62",
-        "name": "Nick Zickgraf",
-        "date": "2017-05-15",
-        "link": "https://www.tfrrs.org/results/51113/3192799/Swarthmore_Final_Qualifier/1500-Meters"
+        "mark": "3:55.49",
+        "name": "Jake Aylmer",
+        "date": "2024-05-04"
       },
       {
         "rank": 2,
-        "athlete_id": null,
-        "mark": "3:57.54",
-        "name": "Ronnie Melao",
-        "date": "2023-04-15",
-        "link": "https://www.tfrrs.org/results/77592/4824184/Larry_Ellis_Invitational_2023/1500-Meters"
+        "athlete_id": 8327853,
+        "mark": "3:56.16",
+        "name": "Danny Jutras",
+        "date": "2024-05-16"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "3:58.30",
-        "name": "Jake Aylmer",
-        "date": "2023-05-06",
-        "link": "https://www.tfrrs.org/results/78195/4908847/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/Mens-1500-Meters"
+        "mark": "3:56.62",
+        "name": "Nick Zickgraf",
+        "date": "2017-05-15"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "4:00.82",
-        "name": "Philip Mainwaring",
-        "date": "2008-05-10",
-        "link": "https://web.archive.org/web/20111230042310/http://www.stevensducks.com/assets/sports/motrack/Men%27s%20Outdoor%20Track%20Record%20Book.pdf"
+        "mark": "3:56.84",
+        "name": "Ronnie Melao",
+        "date": "2024-05-16"
       },
       {
         "rank": 5,
-        "athlete_id": null,
-        "mark": "4:00.99",
-        "name": "Louis Stengel",
-        "date": "2015-04-19",
-        "link": "https://www.tfrrs.org/results/40209/2495977/Empire_8_Outdoor_Track__Field_Championships/1500-Meters"
+        "athlete_id": 8615539,
+        "mark": "3:59.46",
+        "name": "Ryan Paradine",
+        "date": "2025-03-29"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "4:02.29",
-        "name": "Robby Russo",
-        "date": "2019-05-13",
-        "link": "https://www.tfrrs.org/results/61219/3843449/Swarthmore_Final_Qualifier_Meet/1500-Meters"
+        "mark": "4:00.82",
+        "name": "Philip Mainwaring",
+        "date": "2008-05-10"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "4:02.68",
-        "name": "Tom Selvaggi",
-        "date": "2019-04-19",
-        "link": "https://www.tfrrs.org/results/57677/3791275/Widener_Invitational/1500-Meters"
+        "mark": "4:00.99",
+        "name": "Louis Stengel",
+        "date": "2015-04-19"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "4:03.7",
-        "name": "Steve Kropac",
-        "date": "1996-04-21",
-        "link": "https://web.archive.org/web/20061118002940/http://www.stevensducks.com/sports/track/record.pdf"
+        "mark": "4:02.29",
+        "name": "Robby Russo",
+        "date": "2019-05-13"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "4:03.71",
-        "name": "Greg Arabagian",
-        "date": "2018-05-04",
-        "link": "https://www.tfrrs.org/results/56318/3492593/Empire_8_Outdoor_Track__Field_Championships/Mens-1500-Meters"
+        "mark": "4:02.68",
+        "name": "Tom Selvaggi",
+        "date": "2019-04-19"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "4:06.66",
-        "name": "Michael John",
-        "date": "2015-05-01",
-        "link": "https://tfrrs.org/results/40453/2533707/Mathew_Vassar_Twilight_2015/1500-Meters"
+        "mark": "4:02.96",
+        "name": "Bryan Onody",
+        "date": "2025-04-19"
       }
     ]
   },
@@ -6183,80 +6380,70 @@
         "athlete_id": null,
         "mark": "8:47.48",
         "name": "Nick Zickgraf",
-        "date": "2016-03-25",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/moutdoorTop_Performances.pdf"
+        "date": "2016-03-25"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "8:48.18",
         "name": "Chris Banko",
-        "date": "2017-03-24",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/moutdoorTop_Performances.pdf"
+        "date": "2017-03-24"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "8:50.36",
         "name": "Will Sanders",
-        "date": "2006-05-06",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/moutdoorTop_Performances.pdf"
+        "date": "2006-05-06"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "8:54.55",
         "name": "Ronnie Melao",
-        "date": "2023-03-25",
-        "link": "https://www.tfrrs.org/results/76374/4746657/Stockton_Invite/3000-Meters"
+        "date": "2023-03-25"
       },
       {
         "rank": 5,
         "athlete_id": null,
         "mark": "8:58.63",
         "name": "Liam Concannon",
-        "date": "2023-03-25",
-        "link": "https://www.tfrrs.org/results/76374/4746657/Stockton_Invite/3000-Meters"
+        "date": "2023-03-25"
       },
       {
         "rank": 6,
         "athlete_id": null,
         "mark": "9:01.56",
         "name": "Philip Mainwaring",
-        "date": "2008-04-12",
-        "link": "https://stjohns_ftp.sidearmsports.com/custompages/sports/w-track/stats/041308aaa.html"
+        "date": "2008-04-12"
       },
       {
         "rank": 7,
         "athlete_id": null,
         "mark": "9:02.58",
         "name": "Michael John",
-        "date": "2016-03-25",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/moutdoorTop_Performances.pdf"
+        "date": "2016-03-25"
       },
       {
         "rank": 8,
-        "athlete_id": null,
-        "mark": "9:06.77",
-        "name": "Dylan Peters",
-        "date": "2021-04-24",
-        "link": "https://www.tfrrs.org/results/69390/4227279/DeSales_University_Invitational/3000-Meters"
+        "athlete_id": 8327859,
+        "mark": "9:04.40",
+        "name": "Mick Barbi",
+        "date": "2026-03-21"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "9:09.02",
-        "name": "Jake Porco",
-        "date": "2023-03-25",
-        "link": "https://www.tfrrs.org/results/76374/4746657/Stockton_Invite/3000-Meters"
+        "mark": "9:06.77",
+        "name": "Dylan Peters",
+        "date": "2021-04-24"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "9:13.66",
-        "name": "Adam Sisson",
-        "date": "2018-04-15",
-        "link": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/stevens.sidearmsports.com/documents/2018/7/3/moutdoorTop_Performances.pdf"
+        "mark": "9:09.02",
+        "name": "Jake Porco",
+        "date": "2023-03-25"
       }
     ]
   },
@@ -6272,80 +6459,70 @@
         "athlete_id": null,
         "mark": "14:30.97",
         "name": "Greg Arabagian",
-        "date": "2018-05-14",
-        "link": "https://www.tfrrs.org/results/56833/3509461/Swarthmore_Final_Qualifier_Meet/5000-Meters"
+        "date": "2018-05-14"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "14:45.15",
         "name": "Michael Cahill",
-        "date": "2013-04-25",
-        "link": "https://www.tfrrs.org/results/30870/1930028/Penn_Relays/5000-Meters"
+        "date": "2013-04-25"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "14:55.13",
-        "name": "Tom Cunningham",
-        "date": "2016-05-06",
-        "link": "https://www.tfrrs.org/results/46132/2863811/Matthew_Vassar_Twilight_2016/5000-Meters"
+        "mark": "14:47.42",
+        "name": "Liam Concannon",
+        "date": "2024-04-19"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "15:17.13",
-        "name": "Liam Concannon",
-        "date": "2023-04-22",
-        "link": "https://www.tfrrs.org/results/77252/4855219/2023_Rider_Invitational/5000-Meters"
+        "mark": "14:55.13",
+        "name": "Tom Cunningham",
+        "date": "2016-05-06"
       },
       {
         "rank": 5,
         "athlete_id": null,
         "mark": "15:18.45",
         "name": "Dylan Peters",
-        "date": "2021-04-17",
-        "link": "https://www.tfrrs.org/results/67910/4210301/Bill_Fritz_Invitational/Mens-5000-Meters"
+        "date": "2021-04-17"
       },
       {
         "rank": 6,
         "athlete_id": null,
         "mark": "15:22.65",
         "name": "Jake Catalano",
-        "date": "2019-05-13",
-        "link": "https://www.tfrrs.org/results/61219/3843444/Swarthmore_Final_Qualifier_Meet/5000-Meters"
+        "date": "2019-05-13"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "15:29.05",
-        "name": "Jake Aylmer",
-        "date": "2023-03-31",
-        "link": "https://www.tfrrs.org/results/75370/4767456/2023_Danny_Curran_Invitational/5000-Meters"
+        "mark": "15:24.20",
+        "name": "Frank Orlando",
+        "date": "2024-04-19"
       },
       {
         "rank": 8,
-        "athlete_id": null,
-        "mark": "15:31.13",
-        "name": "Will Sanders",
-        "date": "2006-04-23",
-        "link": "https://web.archive.org/web/20111230042310/http://www.stevensducks.com/assets/sports/motrack/Men's%20Outdoor%20Track%20Record%20Book.pdf"
+        "athlete_id": 8327859,
+        "mark": "15:28.75",
+        "name": "Mick Barbi",
+        "date": "2026-04-17"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "15:32.38",
-        "name": "Chris Banko",
-        "date": "2016-05-06",
-        "link": "https://www.tfrrs.org/results/46132/2863811/Matthew_Vassar_Twilight_2016/Mens-5000-Meters"
+        "mark": "15:29.05",
+        "name": "Jake Aylmer",
+        "date": "2023-03-31"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "15:40.51",
-        "name": "Tom Flannery",
-        "date": "2015-04-19",
-        "link": "https://www.tfrrs.org/results/40209/2495975/Empire_8_Outdoor_Track__Field_Championships/Mens-5000-Meters"
+        "mark": "15:31.13",
+        "name": "Will Sanders",
+        "date": "2006-04-23"
       }
     ]
   },
@@ -6359,82 +6536,72 @@
       {
         "rank": 1,
         "athlete_id": null,
-        "mark": "31:21.07",
-        "name": "Michael Cahill",
-        "date": "2013-05-16",
-        "link": "https://www.tfrrs.org/results/30698/1942548/ECAC_DIII_Outdoor_Track_and_Field_Championships/10000-Meters"
+        "mark": "30:44.91",
+        "name": "Liam Concannon",
+        "date": "2025-03-28"
       },
       {
         "rank": 2,
         "athlete_id": null,
-        "mark": "31:39.47",
-        "name": "Tom Cunningham",
-        "date": "2016-05-18",
-        "link": "https://www.tfrrs.org/results/46655/2879758/ECAC_Division_III_Track__Field_Championships/10000-Meters"
+        "mark": "31:21.07",
+        "name": "Michael Cahill",
+        "date": "2013-05-16"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "31:53.24",
-        "name": "Liam Concannon",
-        "date": "2023-03-31",
-        "link": "https://www.tfrrs.org/results/75370/4767466/2023_Danny_Curran_Invitational/10000-Meters"
+        "mark": "31:39.47",
+        "name": "Tom Cunningham",
+        "date": "2016-05-18"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "31:56.36",
         "name": "Dylan Peters",
-        "date": "2021-05-06",
-        "link": "https://www.tfrrs.org/results/69136/4256884/2021_MAC_Outdoor_Track__Field_Championships/10000-Meters"
+        "date": "2021-05-06"
       },
       {
         "rank": 5,
-        "athlete_id": null,
-        "mark": "32:57.46",
-        "name": "Chris Banko",
-        "date": "2016-04-08",
-        "link": "https://www.tfrrs.org/results/41757/2780341/OSPREY_OPEN/10000-Meters"
+        "athlete_id": 8327859,
+        "mark": "32:21.13",
+        "name": "Mick Barbi",
+        "date": "2026-03-27"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "32:57.81",
-        "name": "Matthew Halvorsen",
-        "date": "2022-03-25",
-        "link": "https://www.tfrrs.org/results/72903/4444957/26th_Annual_Monmouth_University_Track__Field_Season_Opener/10000-Meters"
+        "mark": "32:38.39",
+        "name": "Jake Porco",
+        "date": "2025-03-28"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "33:14.10",
-        "name": "Frank Orlando",
-        "date": "2023-03-31",
-        "link": "https://www.tfrrs.org/results/75370/4767466/2023_Danny_Curran_Invitational/10000-Meters"
+        "mark": "32:57.46",
+        "name": "Chris Banko",
+        "date": "2016-04-08"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "33:20.78",
-        "name": "Brad Antes",
-        "date": "2010-05-07",
-        "link": "https://web.archive.org/web/20111230042310/http://www.stevensducks.com/assets/sports/motrack/Men's%20Outdoor%20Track%20Record%20Book.pdf"
+        "mark": "32:57.81",
+        "name": "Matthew Halvorsen",
+        "date": "2022-03-25"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "33:43.20",
-        "name": "Nick Dunford",
-        "date": "2004-04-17",
-        "link": "https://web.archive.org/web/20061118002940/http://www.stevensducks.com/sports/track/record.pdf"
+        "mark": "33:04.81",
+        "name": "Frank Orlando",
+        "date": "2025-03-28"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "33:48.70",
-        "name": "Phil Chapel",
-        "date": "2017-03-24",
-        "link": "https://www.tfrrs.org/results/49539/3056242/22nd_Annual_Monmouth_Season_Opener/Mens-10000-Meters"
+        "mark": "33:20.78",
+        "name": "Brad Antes",
+        "date": "2010-05-07"
       }
     ]
   },
@@ -6448,82 +6615,72 @@
       {
         "rank": 1,
         "athlete_id": null,
-        "mark": "14.81",
-        "name": "Mohammed Abuouf",
-        "date": "2010-05-08",
-        "link": "https://www.tfrrs.org/results/13562/1124281/NYC_Qualifying_Challenge-College/Mens-110-Hurdles"
+        "mark": "14.47",
+        "name": "Ethan Stallone",
+        "date": "2025-05-14"
       },
       {
         "rank": 2,
         "athlete_id": null,
-        "mark": "15.06",
-        "name": "Dan Kaba",
-        "date": "2019-05-15",
-        "link": "https://www.tfrrs.org/results/62360/3844690/AARTFC_Outdoor_Track__Field_Championships/Mens-110-Hurdles"
+        "mark": "14.81",
+        "name": "Mohammed Abuouf",
+        "date": "2010-05-08"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "15.14",
-        "name": "Victor Servito",
-        "date": "2013-05-16",
-        "link": "https://www.tfrrs.org/results/30698/1942550/ECAC_DIII_Outdoor_Track_and_Field_Championships/110-Hurdles"
+        "mark": "15.06",
+        "name": "Dan Kaba",
+        "date": "2019-05-15"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "15.25",
-        "name": "Andy DeLiso",
-        "date": "1999-04-25",
-        "link": "https://web.archive.org/web/20040608201941/http://www.stevensducks.com/sports/track/record.pdf"
+        "mark": "15.14",
+        "name": "Victor Servito",
+        "date": "2013-05-16"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "15.30",
-        "name": "Kristopher Alvarez",
-        "date": "2015-05-14",
-        "link": "https://www.tfrrs.org/results/36235/2559404/ECAC_Division_III_Outdoor_Track__Field_Championships/110-Hurdles"
+        "mark": "15.25",
+        "name": "Andy DeLiso",
+        "date": "1999-04-25"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "15.33",
-        "name": "Steve McNally",
-        "date": "2016-04-16",
-        "link": "https://www.tfrrs.org/results/44206/2803377/2016_Silfen_Invitational/Mens-110-Hurdles"
+        "mark": "15.30",
+        "name": "Kristopher Alvarez",
+        "date": "2015-05-14"
       },
       {
-        "rank": 7,
-        "athlete_id": null,
-        "mark": "15.50",
-        "name": "Alex Kainer",
-        "date": "2017-04-08",
-        "link": "https://www.tfrrs.org/results/46872/3096639/2017_Coach_P_Invitational/Mens-110-Hurdles"
+        "rank": 6,
+        "athlete_id": 8979738,
+        "mark": "15.30",
+        "name": "Joseph Perriello",
+        "date": "2026-04-11"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "15.95",
-        "name": "Federico Yacoubian",
-        "date": "2023-03-25",
-        "link": "https://www.tfrrs.org/results/76374/4746674/Stockton_Invite/Mens-110-Hurdles"
+        "mark": "15.33",
+        "name": "Steve McNally",
+        "date": "2016-04-16"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "16.24",
-        "name": "Frank Mustac",
-        "date": "1981-04-08",
-        "link": "https://web.stevens.edu/track/"
+        "mark": "15.50",
+        "name": "Alex Kainer",
+        "date": "2017-04-08"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "16.30",
-        "name": "Evan Kainer",
-        "date": "2019-05-15",
-        "link": "https://www.tfrrs.org/results/62360/3844948/AARTFC_Outdoor_Track__Field_Championships/Mens-110-Hurdles"
+        "mark": "15.95",
+        "name": "Federico Yacoubian",
+        "date": "2023-03-25"
       }
     ]
   },
@@ -6539,80 +6696,70 @@
         "athlete_id": null,
         "mark": "52.99",
         "name": "Shane Chiaravalle",
-        "date": "2016-04-23",
-        "link": "https://www.tfrrs.org/results/46109/2828059/Empire_8_Track__Field_Championships/400-Hurdles"
+        "date": "2016-04-23"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "53.80",
         "name": "Kevin Morgera",
-        "date": "2010-04-23",
-        "link": "https://www.tfrrs.org/results/16073/1093376/TCNJ_Lions_Invitational_2010/400-Hurdles"
+        "date": "2010-04-23"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "55.20",
         "name": "Amar Bindra",
-        "date": "2021-05-06",
-        "link": "https://www.tfrrs.org/results/69136/4256887/2021_MAC_Outdoor_Track__Field_Championships/400-Hurdles"
+        "date": "2021-05-06"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "55.47",
-        "name": "Dan Kaba",
-        "date": "2019-05-15",
-        "link": "https://www.tfrrs.org/results/62360/3844945/AARTFC_Outdoor_Track__Field_Championships/Mens-400-Hurdles"
+        "mark": "55.39",
+        "name": "Ethan Stallone",
+        "date": "2025-05-02"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "57.29",
-        "name": "Andy DeLiso",
-        "date": "1999-04-25",
-        "link": "https://web.archive.org/web/20061118002940/http://www.stevensducks.com/sports/track/record.pdf"
+        "mark": "55.47",
+        "name": "Dan Kaba",
+        "date": "2019-05-15"
       },
       {
         "rank": 6,
-        "athlete_id": null,
-        "mark": "57.62",
-        "name": "Austin McDonnell",
-        "date": "2016-04-23",
-        "link": "https://www.tfrrs.org/results/46109/2828059/Empire_8_Track__Field_Championships/400-Hurdles"
+        "athlete_id": 8327857,
+        "mark": "56.69",
+        "name": "Connor Robinson",
+        "date": "2025-04-18"
       },
       {
         "rank": 7,
-        "athlete_id": null,
-        "mark": "58.11",
-        "name": "Kristopher Alvarez",
-        "date": "2012-04-06",
-        "link": "https://www.tfrrs.org/results/23073/1573164/Ramapo_College_Roadrunner_Invitational/400-Hurdles"
+        "athlete_id": 8979736,
+        "mark": "57.01",
+        "name": "William Ladd",
+        "date": "2025-04-18"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "58.63",
-        "name": "Xavier McWilliams",
-        "date": "2022-04-01",
-        "link": "https://www.tfrrs.org/results/72624/4461203/2022_Ramapo_Track__Field_Invitational_/400-Hurdles"
+        "mark": "57.29",
+        "name": "Andy DeLiso",
+        "date": "1999-04-25"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "59.02",
-        "name": "Vincent Russo",
-        "date": "2017-04-22",
-        "link": "https://www.tfrrs.org/results/50683/3141465/Empire_8_Outdoor_Track__Field_Championships/400-Hurdles"
+        "mark": "57.62",
+        "name": "Austin McDonnell",
+        "date": "2016-04-23"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "59.03",
-        "name": "Logan Bagarozy",
-        "date": "2016-05-06",
-        "link": "https://www.tfrrs.org/results/46132/2863822/Matthew_Vassar_Twilight_2016/400-Hurdles"
+        "mark": "58.11",
+        "name": "Kristopher Alvarez",
+        "date": "2012-04-06"
       }
     ]
   },
@@ -6626,82 +6773,72 @@
       {
         "rank": 1,
         "athlete_id": null,
-        "mark": "9:28.75",
-        "name": "Will Sanders",
-        "date": "2006-05-13",
-        "link": "https://web.archive.org/web/20111230042310/http://www.stevensducks.com/assets/sports/motrack/Men's%20Outdoor%20Track%20Record%20Book.pdf"
+        "mark": "9:24.78",
+        "name": "Ronnie Melao",
+        "date": "2024-05-13"
       },
       {
         "rank": 2,
         "athlete_id": null,
-        "mark": "9:37.64",
-        "name": "Ronnie Melao",
-        "date": "2023-05-05",
-        "link": "https://www.tfrrs.org/results/78195/4908820/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/Mens-3000-Steeplechase"
+        "mark": "9:28.75",
+        "name": "Will Sanders",
+        "date": "2006-05-13"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "9:39.61",
         "name": "Jake Catalano",
-        "date": "2019-04-19",
-        "link": "https://www.tfrrs.org/results/57677/3791284/Widener_Invitational/3000-Steeplechase"
+        "date": "2019-04-19"
       },
       {
         "rank": 4,
-        "athlete_id": null,
-        "mark": "9:50.15",
-        "name": "David DeWan",
-        "date": "2010-04-10",
-        "link": "https://www.tfrrs.org/results/15568/1057703/Delaware_Open_I/3000-Steeplechase"
+        "athlete_id": 8615539,
+        "mark": "9:40.61",
+        "name": "Ryan Paradine",
+        "date": "2025-04-19"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "9:50.35",
-        "name": "Brad Antes",
-        "date": "2010-04-10",
-        "link": "https://www.tfrrs.org/results/15568/1057703/Delaware_Open_I/3000-Steeplechase"
+        "mark": "9:50.15",
+        "name": "David DeWan",
+        "date": "2010-04-10"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "10:06.53",
-        "name": "Matt Bombard",
-        "date": "2014-04-19",
-        "link": "https://www.tfrrs.org/results/34237/2177889/2014_Empire_8_Conference_Outdoor_Track_and_Field_Championshi/3000-Steeplechase"
+        "mark": "9:50.35",
+        "name": "Brad Antes",
+        "date": "2010-04-10"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "10:13.65",
-        "name": "Matt DiMarco",
-        "date": "2016-05-06",
-        "link": "https://www.tfrrs.org/results/46132/2863826/Matthew_Vassar_Twilight_2016/3000-Steeplechase"
+        "mark": "10:06.53",
+        "name": "Matt Bombard",
+        "date": "2014-04-19"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "10:18.44",
-        "name": "Zach McKeehan",
-        "date": "2015-04-19",
-        "link": "https://www.tfrrs.org/results/40209/2495985/Empire_8_Outdoor_Track__Field_Championships/3000-Steeplechase"
+        "mark": "10:13.65",
+        "name": "Matt DiMarco",
+        "date": "2016-05-06"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "10:18.77",
-        "name": "Adam Sisson",
-        "date": "2018-04-21",
-        "link": "https://www.tfrrs.org/results/56112/3454611/Vassar_Brewers_Invitational_/3000-Steeplechase"
+        "mark": "10:18.44",
+        "name": "Zach McKeehan",
+        "date": "2015-04-19"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "10:20.77",
-        "name": "Steve Kropac",
-        "date": "1996-03-30",
-        "link": "https://web.archive.org/web/20040608201941/http://www.stevensducks.com/sports/track/record.pdf"
+        "mark": "10:18.77",
+        "name": "Adam Sisson",
+        "date": "2018-04-21"
       }
     ]
   },
@@ -6717,48 +6854,84 @@
         "athlete_id": null,
         "mark": "2.07",
         "name": "Robert Pinto",
-        "date": "2015-05-01",
-        "link": "https://www.tfrrs.org/results/40453/2533711/Mathew_Vassar_Twilight_2015/Mens-High-Jump"
+        "date": "2015-05-01"
       },
       {
         "rank": 2,
-        "athlete_id": null,
-        "mark": "1.93",
-        "name": "Harold Dean",
-        "date": "1995-04-29",
-        "link": "https://web.archive.org/web/20061118002940/http://www.stevensducks.com/sports/track/record.pdf"
+        "athlete_id": 8979736,
+        "mark": "1.96",
+        "name": "William Ladd",
+        "date": "2026-05-01"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "1.91",
-        "name": "Victor Servito",
-        "date": "2012-03-30",
-        "link": "https://www.tfrrs.org/results/25089/1592307/Coach_P_Invitational/-High-Jump"
+        "mark": "1.93",
+        "name": "Harold Dean",
+        "date": "1995-04-29"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "1.88",
-        "name": "Jeff Houser",
-        "date": "1999-04-03",
-        "link": "https://web.stevens.edu/track/"
+        "mark": "1.91",
+        "name": "Victor Servito",
+        "date": "2012-03-30"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "1.86",
-        "name": "Jonathan Scamardella",
-        "date": "2022-04-13",
-        "link": "https://www.tfrrs.org/results/73705/4547499/Mondschein_Multi_2022/-High-Jump"
+        "mark": "1.88",
+        "name": "Jeff Houser",
+        "date": "1999-04-03"
       },
       {
         "rank": 6,
         "athlete_id": null,
+        "mark": "1.86",
+        "name": "Jonathan Scamardella",
+        "date": "2022-04-13"
+      },
+      {
+        "rank": 6,
+        "athlete_id": 8979731,
+        "mark": "1.86",
+        "name": "Connor Efinger",
+        "date": "2025-05-01"
+      },
+      {
+        "rank": 8,
+        "athlete_id": null,
         "mark": "1.85",
         "name": "Jonathan Landis",
-        "date": "2007-04-27",
-        "link": "https://stevensducks.com/news/2007/4/28/WOTRACK_2725.aspx"
+        "date": "2007-04-27"
+      },
+      {
+        "rank": 8,
+        "athlete_id": null,
+        "mark": "1.85",
+        "name": "Matt Ruzich",
+        "date": "2021-03-20"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "1.83",
+        "name": "Olutossin Olugbenga",
+        "date": "2010-04-17"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "1.83",
+        "name": "Harry Patterson",
+        "date": "2016-04-23"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "1.83",
+        "name": "Kevin Finck",
+        "date": "2023-05-04"
       }
     ]
   },
@@ -6774,40 +6947,77 @@
         "athlete_id": null,
         "mark": "4.70",
         "name": "Trevor Currie",
-        "date": "2009-03-29",
-        "link": "https://web.archive.org/web/20111230042310/http://www.stevensducks.com/assets/sports/motrack/Men%27s%20Outdoor%20Track%20Record%20Book.pdf"
+        "date": "2009-03-29"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "4.55",
         "name": "Enis Rama",
-        "date": "2023-05-06",
-        "link": "https://www.tfrrs.org/results/78195/4908848/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/Mens-Pole-Vault"
+        "date": "2023-05-06"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "4.45",
         "name": "Andy Accardi",
-        "date": "2018-05-05",
-        "link": "https://www.tfrrs.org/results/56318/3490108/Empire_8_Outdoor_Track__Field_Championships/Mens-Pole-Vault"
+        "date": "2018-05-05"
       },
       {
-        "rank": 4,
-        "athlete_id": null,
-        "mark": "4.40",
-        "name": "Nicolas Re",
-        "date": "2021-05-01",
-        "link": "https://www.tfrrs.org/results/69322/4241077/Kings_College_Monarch_Open/Mens-Pole-Vault"
+        "rank": 3,
+        "athlete_id": 8979730,
+        "mark": "4.45",
+        "name": "Michael Dao",
+        "date": "2026-04-18"
       },
       {
         "rank": 5,
         "athlete_id": null,
+        "mark": "4.40",
+        "name": "Nicolas Re",
+        "date": "2021-05-01"
+      },
+      {
+        "rank": 6,
+        "athlete_id": 8327852,
+        "mark": "4.28",
+        "name": "Brandon Kiefer",
+        "date": "2026-05-02"
+      },
+      {
+        "rank": 7,
+        "athlete_id": 8681459,
+        "mark": "4.15",
+        "name": "Christopher Persico",
+        "date": "2026-04-18"
+      },
+      {
+        "rank": 8,
+        "athlete_id": null,
         "mark": "4.11",
         "name": "Sven Nguyen Northcott",
-        "date": "1999-03-27",
-        "link": "https://web.stevens.edu/track/"
+        "date": "1999-03-27"
+      },
+      {
+        "rank": 8,
+        "athlete_id": null,
+        "mark": "4.11",
+        "name": "Victor Servito",
+        "date": "2012-05-18"
+      },
+      {
+        "rank": 10,
+        "athlete_id": 8327851,
+        "mark": "4.02",
+        "name": "Kyle Miller",
+        "date": "2024-05-04"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "4.02",
+        "name": "Braedan Joyce",
+        "date": "2025-05-01"
       }
     ]
   },
@@ -6823,80 +7033,84 @@
         "athlete_id": null,
         "mark": "6.96",
         "name": "Nicholas Lowe",
-        "date": "2011-05-06",
-        "link": "https://static.vassarathletics.com/custompages/MTRACK/2011/MVO%20Track%20Results.htm"
+        "date": "2011-05-06"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "6.92",
         "name": "Evan Kainer",
-        "date": "2019-05-03",
-        "link": "https://www.tfrrs.org/results/62267/3825660/Empire_8_Outdoor_Track__Field_Championships/Mens-Long-Jump"
+        "date": "2019-05-03"
       },
       {
         "rank": 3,
-        "athlete_id": null,
-        "mark": "6.85",
-        "name": "Leonard Bloss",
-        "date": "1918-05-04",
-        "link": "https://web.archive.org/web/20061118002940/http://www.stevensducks.com/sports/track/record.pdf"
+        "athlete_id": 9251004,
+        "mark": "6.91",
+        "name": "Jonathan Mordi",
+        "date": "2026-05-13"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "6.78",
-        "name": "Michael Von Gonten",
-        "date": "2011-04-02",
-        "link": "https://www.tfrrs.org/results/20841/1292786/Ramapo_College_Roadrunner_Invitational/-Long-Jump"
+        "mark": "6.86",
+        "name": "Leonard Bloss",
+        "date": "1918-05-04"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "6.73",
-        "name": "Robert Pinto",
-        "date": "2014-05-02",
-        "link": "https://www.tfrrs.org/results/35146/2213300/Mathew_Vassar_Twilight/-Long-Jump"
+        "mark": "6.78",
+        "name": "Michael Von Gonten",
+        "date": "2011-04-02"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "6.69",
-        "name": "Danny LaMastra",
-        "date": "2019-05-03",
-        "link": "https://www.tfrrs.org/results/62267/3825660/Empire_8_Outdoor_Track__Field_Championships/-Long-Jump"
+        "mark": "6.73",
+        "name": "Robert Pinto",
+        "date": "2014-05-02"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "6.46",
-        "name": "Brian Jefferson",
-        "date": "2018-05-05",
-        "link": "https://www.tfrrs.org/results/56318/3490115/Empire_8_Outdoor_Track__Field_Championships/-Long-Jump"
+        "mark": "6.69",
+        "name": "Danny LaMastra",
+        "date": "2019-05-03"
       },
       {
         "rank": 8,
-        "athlete_id": null,
-        "mark": "6.42",
-        "name": "Adam Moninghoff",
-        "date": "2018-05-05",
-        "link": "https://www.tfrrs.org/results/56318/3490115/Empire_8_Outdoor_Track__Field_Championships/-Long-Jump"
+        "athlete_id": 8979738,
+        "mark": "6.63",
+        "name": "Joseph Perriello",
+        "date": "2026-03-21"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "6.40",
-        "name": "Kenny Howell",
-        "date": "2022-04-01",
-        "link": "https://www.tfrrs.org/results/72624/4461209/2022_Ramapo_Track__Field_Invitational_/-Long-Jump"
+        "mark": "6.46",
+        "name": "Brian Jefferson",
+        "date": "2018-05-05"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "6.39",
-        "name": "Victor Servito",
-        "date": "2012-05-04",
-        "link": "https://www.tfrrs.org/results/26432/1653151/Matthew_Vassar_Open/Mens-Long-Jump"
+        "mark": "6.42",
+        "name": "Adam Moninghoff",
+        "date": "2018-05-05"
+      },
+      {
+        "rank": 10,
+        "athlete_id": 8327852,
+        "mark": "6.42",
+        "name": "Brandon Kiefer",
+        "date": "2024-05-02"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "6.42",
+        "name": "Rai Bindra",
+        "date": "2025-04-25"
       }
     ]
   },
@@ -6909,83 +7123,73 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
-        "mark": "14.13",
-        "name": "Roger Williams",
-        "date": "1981-04-05",
-        "link": "https://web.stevens.edu/track/"
+        "athlete_id": 9251004,
+        "mark": "14.19",
+        "name": "Jonathan Mordi",
+        "date": "2026-04-18"
       },
       {
         "rank": 2,
         "athlete_id": null,
-        "mark": "13.40",
-        "name": "Nicholas Lowe",
-        "date": "2012-05-04",
-        "link": "https://www.tfrrs.org/results/26432/1653143/Matthew_Vassar_Open/-Triple-Jump"
+        "mark": "14.13",
+        "name": "Roger Williams",
+        "date": "1981-04-05"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "13.28",
-        "name": "Michael Pawalowski",
-        "date": "2011-04-17",
-        "link": "https://www.tfrrs.org/results/21472/1336886/Empire_8_Outdoor_Track_Championship/Mens-Triple-Jump"
+        "mark": "13.40",
+        "name": "Nicholas Lowe",
+        "date": "2012-05-04"
       },
       {
         "rank": 4,
-        "athlete_id": null,
-        "mark": "13.25",
-        "name": "Andreas Diaz-Borda",
-        "date": "2011-04-17",
-        "link": "https://www.tfrrs.org/results/21472/1336886/Empire_8_Outdoor_Track_Championship/Mens-Triple-Jump"
+        "athlete_id": 9251001,
+        "mark": "13.31",
+        "name": "Konstantinos Georgiadis",
+        "date": "2026-04-03"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "13.02",
-        "name": "Brian Jefferson",
-        "date": "2019-04-04",
-        "link": "https://www.tfrrs.org/results/58897/3744602/TCNJ_Invitational/-Triple-Jump"
+        "mark": "13.28",
+        "name": "Michael Pawalowski",
+        "date": "2011-04-17"
       },
       {
         "rank": 6,
         "athlete_id": null,
-        "mark": "12.94",
-        "name": "Naitik Vaghasia",
-        "date": "2010-04-17",
-        "link": "https://www.tfrrs.org/results/17085/1079673/2010_Empire_8_Outdoor_Track__Field_Championship/Mens-Triple-Jump"
+        "mark": "13.25",
+        "name": "Andreas Diaz-Borda",
+        "date": "2011-04-17"
       },
       {
         "rank": 7,
-        "athlete_id": null,
-        "mark": "12.87",
-        "name": "Kenny Howell",
-        "date": "2022-04-08",
-        "link": "https://www.tfrrs.org/results/73948/4481263/Vassar_College_April_Invitational/-Triple-Jump"
+        "athlete_id": 8681453,
+        "mark": "13.07",
+        "name": "Justin Gajewski",
+        "date": "2026-04-18"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "12.71",
-        "name": "Danny LaMastra",
-        "date": "2019-05-03",
-        "link": "https://www.tfrrs.org/results/62267/3827212/Empire_8_Outdoor_Track__Field_Championships/-Triple-Jump"
+        "mark": "13.02",
+        "name": "Brian Jefferson",
+        "date": "2019-04-04"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "12.56",
-        "name": "Evan Kainer",
-        "date": "2016-05-06",
-        "link": "https://www.tfrrs.org/results/46132/2863799/Matthew_Vassar_Twilight_2016/Mens-Triple-Jump"
+        "mark": "12.94",
+        "name": "Naitik Vaghasia",
+        "date": "2010-04-17"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "12.27",
-        "name": "Javian Batista",
-        "date": "2022-04-30",
-        "link": "https://www.tfrrs.org/results/73056/4536376/Kings_College_Monarch_Open/-Triple-Jump"
+        "mark": "12.87",
+        "name": "Kenny Howell",
+        "date": "2022-04-08"
       }
     ]
   },
@@ -7001,80 +7205,70 @@
         "athlete_id": null,
         "mark": "15.81",
         "name": "Neil Forrester",
-        "date": "2017-04-22",
-        "link": "https://www.tfrrs.org/results/50683/3141456/Empire_8_Outdoor_Track__Field_Championships/-Shot-Put"
+        "date": "2017-04-22"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "14.48",
         "name": "Parker Dimock",
-        "date": "2015-03-27",
-        "link": "https://www.tfrrs.org/results/39065/2427984/20th_Annual_Monmouth_Season_Opener/Mens-Shot-Put"
+        "date": "2015-03-27"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "14.24",
         "name": "Daniel Jacome",
-        "date": "2015-04-24",
-        "link": "https://www.tfrrs.org/results/39252/2516119/Lions_Invitational_/-Shot-Put"
+        "date": "2015-04-24"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "14.10",
         "name": "Joel Oquendo",
-        "date": "2010-04-23",
-        "link": "https://www.tfrrs.org/results/16073/1093379/TCNJ_Lions_Invitational_2010/-Shot-Put"
+        "date": "2010-04-23"
       },
       {
         "rank": 5,
         "athlete_id": null,
         "mark": "13.60",
         "name": "Nicholas Krute",
-        "date": "2018-03-31",
-        "link": "https://www.tfrrs.org/results/52009/3381510/Stockton_University_Invitational/-Shot-Put"
+        "date": "2018-03-31"
       },
       {
         "rank": 6,
-        "athlete_id": null,
-        "mark": "13.08",
-        "name": "Jason Stradley",
-        "date": "1982-03-27",
-        "link": "https://web.stevens.edu/track/"
+        "athlete_id": 9251007,
+        "mark": "13.51",
+        "name": "Kane Perry",
+        "date": "2026-03-27"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "13.07",
-        "name": "Stan Valvis",
-        "date": "2006-04-15",
-        "link": "https://web.archive.org/web/20061118002740/http://www.stevensducks.com/sports/track/release.asp?RELEASE_ID=10440"
+        "mark": "13.08",
+        "name": "Jason Stradley",
+        "date": "1982-03-27"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "12.94",
-        "name": "Brandon Truong",
-        "date": "2019-04-26",
-        "link": "https://www.tfrrs.org/results/59680/3813031/2019_Lions_Invitational_/-Shot-Put"
+        "mark": "13.07",
+        "name": "Stan Valvis",
+        "date": "2006-04-15"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "12.62",
-        "name": "M. Ryan",
-        "date": "1982-03-27",
-        "link": "https://web.stevens.edu/track/"
+        "mark": "12.94",
+        "name": "Brandon Truong",
+        "date": "2019-04-26"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "12.60",
-        "name": "Guido Porcelli",
-        "date": "2014-04-19",
-        "link": "https://www.tfrrs.org/results/34237/2177885/2014_Empire_8_Conference_Outdoor_Track_and_Field_Championshi/-Shot-Put"
+        "mark": "12.62",
+        "name": "Mike Ryan",
+        "date": "1982-04-14"
       }
     ]
   },
@@ -7090,80 +7284,70 @@
         "athlete_id": null,
         "mark": "45.68",
         "name": "Nicholas Krute",
-        "date": "2018-05-04",
-        "link": "https://www.tfrrs.org/results/56318/3492585/Empire_8_Outdoor_Track__Field_Championships/Mens-Discus"
+        "date": "2018-05-04"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "45.31",
         "name": "Neil Forrester",
-        "date": "2017-04-01",
-        "link": "https://www.tfrrs.org/results/49390/3075422/Ramapo_College_Track__Field_Invitational/Mens-Discus"
+        "date": "2017-04-01"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "43.98",
         "name": "Max McCauley",
-        "date": "2019-04-27",
-        "link": "https://www.tfrrs.org/results/59680/3813051/2019_Lions_Invitational_/Mens-Discus"
+        "date": "2019-04-27"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "41.13",
         "name": "Andrew Kraemer",
-        "date": "2012-04-21",
-        "link": "https://www.tfrrs.org/results/25422/1616493/2012_Empire_8_Outdoor_Championships/Mens-Discus"
+        "date": "2012-04-21"
       },
       {
         "rank": 5,
         "athlete_id": null,
         "mark": "40.76",
         "name": "Joel Oquendo",
-        "date": "2012-04-07",
-        "link": "https://www.tfrrs.org/results/23073/1573168/Ramapo_College_Roadrunner_Invitational/Mens-Discus"
+        "date": "2012-04-07"
       },
       {
         "rank": 6,
         "athlete_id": null,
         "mark": "39.47",
         "name": "Cody Yersin",
-        "date": "2018-05-05",
-        "link": "https://www.tfrrs.org/results/56318/3492585/Empire_8_Outdoor_Track__Field_Championships/Mens-Discus"
+        "date": "2018-05-05"
       },
       {
         "rank": 7,
-        "athlete_id": null,
-        "mark": "38.94",
-        "name": "Brandon Truong",
-        "date": "2019-04-13",
-        "link": "https://www.tfrrs.org/results/57251/3768385/Coach_Pollard_Invite_/Mens-Discus"
+        "athlete_id": 9251007,
+        "mark": "39.37",
+        "name": "Kane Perry",
+        "date": "2026-04-03"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "38.73",
-        "name": "Guido Porcelli",
-        "date": "2014-05-02",
-        "link": "https://www.tfrrs.org/results/35146/2213306/Mathew_Vassar_Twilight/Mens-Discus"
+        "mark": "38.94",
+        "name": "Brandon Truong",
+        "date": "2019-04-13"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "38.69",
-        "name": "Parker Dimock",
-        "date": "2015-05-01",
-        "link": "https://www.tfrrs.org/results/40453/2533700/Mathew_Vassar_Twilight_2015/Mens-Discus"
+        "mark": "38.73",
+        "name": "Guido Porcelli",
+        "date": "2014-05-02"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "38.53",
-        "name": "Brandon Fox",
-        "date": "2023-04-21",
-        "link": "https://www.tfrrs.org/results/75322/4853065/2023_Coach_Pollard_Invitational/-Discus"
+        "mark": "38.69",
+        "name": "Parker Dimock",
+        "date": "2015-05-01"
       }
     ]
   },
@@ -7179,32 +7363,70 @@
         "athlete_id": null,
         "mark": "52.48",
         "name": "Parker DiMock",
-        "date": "2019-05-15",
-        "link": "https://www.tfrrs.org/results/62360/3844683/AARTFC_Outdoor_Track__Field_Championships/Mens-Hammer"
+        "date": "2019-05-15"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "48.60",
         "name": "Cory Zegel",
-        "date": "2015-04-19",
-        "link": "https://www.tfrrs.org/results/40209/2495987/Empire_8_Outdoor_Track__Field_Championships/-Hammer"
+        "date": "2015-04-19"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "48.17",
         "name": "Cody Yersin",
-        "date": "2018-04-08",
-        "link": "https://www.tfrrs.org/results/53011/3406717/2018_TCNJ_Invite/-Hammer"
+        "date": "2018-04-08"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "46.07",
         "name": "Fred Hardenbrook",
-        "date": "2008-04-19",
-        "link": "https://web.archive.org/web/20111230042310/http://www.stevensducks.com/assets/sports/motrack/Men%27s%20Outdoor%20Track%20Record%20Book.pdf"
+        "date": "2008-04-19"
+      },
+      {
+        "rank": 4,
+        "athlete_id": null,
+        "mark": "46.07",
+        "name": "Andrew Kraemer",
+        "date": "2012-04-27"
+      },
+      {
+        "rank": 6,
+        "athlete_id": null,
+        "mark": "45.96",
+        "name": "Colin Keady",
+        "date": "2024-05-02"
+      },
+      {
+        "rank": 7,
+        "athlete_id": 9251007,
+        "mark": "45.67",
+        "name": "Kane Perry",
+        "date": "2026-04-17"
+      },
+      {
+        "rank": 8,
+        "athlete_id": null,
+        "mark": "45.26",
+        "name": "Brandon Truong",
+        "date": "2019-04-05"
+      },
+      {
+        "rank": 9,
+        "athlete_id": 8327854,
+        "mark": "44.29",
+        "name": "Cooper Kinsley",
+        "date": "2026-04-30"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "44.00",
+        "name": "John Raziano",
+        "date": "2018-03-31"
       }
     ]
   },
@@ -7220,80 +7442,70 @@
         "athlete_id": null,
         "mark": "61.12",
         "name": "Sebastian Luna",
-        "date": "2012-04-27",
-        "link": "https://tfrrs.org/results/24242/1634776/2012_TCNJ_Lions_Invitational/Mens-Javelin"
+        "date": "2012-04-27"
       },
       {
         "rank": 2,
         "athlete_id": null,
         "mark": "56.20",
         "name": "Tanner Lyons",
-        "date": "2018-03-31",
-        "link": "https://tfrrs.org/results/52009/3381518/Stockton_University_Invitational/Mens-Javelin"
+        "date": "2018-03-31"
       },
       {
         "rank": 3,
         "athlete_id": null,
         "mark": "55.34",
         "name": "Dalton Newman",
-        "date": "2018-04-15",
-        "link": "https://tfrrs.org/results/54590/3428547/Bison_Outdoor_Classic/Mens-Javelin"
+        "date": "2018-04-15"
       },
       {
         "rank": 4,
         "athlete_id": null,
         "mark": "55.24",
         "name": "Jeff Collier",
-        "date": "1992-03-25",
-        "link": "https://web.stevens.edu/track/"
+        "date": "1992-03-25"
       },
       {
         "rank": 5,
         "athlete_id": null,
         "mark": "54.69",
         "name": "Sean Humphreys",
-        "date": "2012-04-13",
-        "link": "https://tfrrs.org/results/25089/1592313/Coach_P_Invitational/-Javelin"
+        "date": "2012-04-13"
       },
       {
         "rank": 6,
         "athlete_id": null,
         "mark": "54.26",
         "name": "Ryan Locke",
-        "date": "2017-05-05",
-        "link": "https://tfrrs.org/results/51079/3175376/Matthew_Vassar_Twilight_2017/Mens-Javelin"
+        "date": "2017-05-05"
       },
       {
         "rank": 7,
         "athlete_id": null,
         "mark": "54.25",
         "name": "Paul Caplan",
-        "date": "2015-05-08",
-        "link": "https://tfrrs.org/results/39704/2553249/UAlbany_Purple__Gold_Last_Chance_Meet/Mens-Javelin"
+        "date": "2015-05-08"
       },
       {
         "rank": 8,
         "athlete_id": null,
-        "mark": "53.29",
-        "name": "David Krier",
-        "date": "2015-05-24",
-        "link": "https://tfrrs.org/results/39252/2516118/Lions_Invitational_/Mens-Javelin"
+        "mark": "53.52",
+        "name": "Yusufu Gibson",
+        "date": "1994-04-23"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "52.03",
-        "name": "Parker Dimock",
-        "date": "2019-04-26",
-        "link": "https://tfrrs.org/results/59680/3813048/2019_Lions_Invitational_/-Javelin"
+        "mark": "53.29",
+        "name": "David Krier",
+        "date": "2015-05-24"
       },
       {
         "rank": 10,
         "athlete_id": null,
-        "mark": "51.87",
-        "name": "Owen Burke",
-        "date": "2014-03-22",
-        "link": "https://tfrrs.org/results/32033/2096230/Richard_Stockton_Invite_2014/-Javelin"
+        "mark": "52.03",
+        "name": "Parker Dimock",
+        "date": "2019-04-26"
       }
     ]
   },
@@ -7306,75 +7518,63 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
-        "mark": "6199",
-        "name": "Evan Kainer",
-        "date": "2019-05-16",
-        "link": "https://www.tfrrs.org/results/62360/3844947/AARTFC_Outdoor_Track__Field_Championships/-Decathlon"
+        "athlete_id": 8327852,
+        "mark": "6212 pts",
+        "name": "Brandon Kiefer"
       },
       {
         "rank": 2,
-        "athlete_id": 8327852,
-        "mark": "5782",
-        "name": "Brandon Kiefer",
-        "date": "2023-05-05",
-        "link": "https://www.tfrrs.org/results/78195/4908862/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/-Decathlon"
+        "athlete_id": null,
+        "mark": "6199 pts",
+        "name": "Evan Kainer"
       },
       {
         "rank": 3,
         "athlete_id": null,
-        "mark": "5746",
-        "name": "Victor Servito",
-        "date": "2012-05-17",
-        "link": "https://www.tfrrs.org/results/26096/1665392/ECAC_DIII_Outdoor_Track__Field_Championships/-Decathlon"
+        "mark": "5746 pts",
+        "name": "Victor Servito"
       },
       {
         "rank": 4,
         "athlete_id": null,
-        "mark": "5155",
-        "name": "Bill Hazen",
-        "date": "2011-05-19",
-        "link": "https://www.tfrrs.org/results/21526/1390022/ECAC_Division_III_Outdoor_Track__Field_Championships/-Decathlon"
+        "mark": "5155 pts",
+        "name": "Bill Hazen"
       },
       {
         "rank": 5,
         "athlete_id": null,
-        "mark": "5060",
-        "name": "Jonathan Scamardella",
-        "date": "2023-05-05",
-        "link": "https://www.tfrrs.org/results/78195/4908862/2023_Middle_Atlantic_Conference_Outdoor_TF_Championships/-Decathlon"
+        "mark": "5060 pts",
+        "name": "Jonathan Scamardella"
       },
       {
         "rank": 6,
-        "athlete_id": null,
-        "mark": "4544",
-        "name": "John Waka",
-        "date": "1998-05-02",
-        "link": "https://web.archive.org/web/20061118002940/http://www.stevensducks.com/sports/track/record.pdf"
+        "athlete_id": 8979732,
+        "mark": "5049 pts",
+        "name": "Calvin Gibson"
       },
       {
         "rank": 7,
         "athlete_id": null,
-        "mark": "4179",
-        "name": "Aaron Dickerson",
-        "date": "2003-04-18",
-        "link": "https://web.archive.org/web/20030612085057/http://plattsys.com/results/res2003/ctcotack.htm"
+        "mark": "5011 pts",
+        "name": "Xavier McWilliams"
       },
       {
         "rank": 8,
-        "athlete_id": null,
-        "mark": "3509",
-        "name": "Aeden Angelone",
-        "date": "2019-04-11",
-        "link": "https://www.tfrrs.org/results/60179/3765808/Mondschein_Multi/-Decathlon"
+        "athlete_id": 8979731,
+        "mark": "4944 pts",
+        "name": "Connor Efinger"
       },
       {
         "rank": 9,
         "athlete_id": null,
-        "mark": "2902",
-        "name": "Lance Nanek",
-        "date": "2000-04-16",
-        "link": "https://www.plattsys.com/results/res2000/ctco00.htm"
+        "mark": "4544 pts",
+        "name": "John Waka"
+      },
+      {
+        "rank": 10,
+        "athlete_id": null,
+        "mark": "4378 pts",
+        "name": "Jimmy Johnson"
       }
     ]
   },
@@ -7421,6 +7621,39 @@
       {
         "rank": 4,
         "athlete_id": null,
+        "mark": "42.61",
+        "names": [
+          "Joseph Perriello",
+          "Kyle Savino",
+          "Connor Robinson",
+          "Douglas Winant"
+        ]
+      },
+      {
+        "rank": 4,
+        "athlete_id": null,
+        "mark": "42.61",
+        "names": [
+          "Chad Francis",
+          "Doug Winant",
+          "Asher Morgan",
+          "Chase Kosiba"
+        ]
+      },
+      {
+        "rank": 6,
+        "athlete_id": null,
+        "mark": "42.78",
+        "names": [
+          "Tyler Hackett",
+          "George Maroun",
+          "Connor Robinson",
+          "Kyle Savino"
+        ]
+      },
+      {
+        "rank": 7,
+        "athlete_id": null,
         "mark": "42.90",
         "names": [
           "TJ Magno",
@@ -7430,7 +7663,7 @@
         ]
       },
       {
-        "rank": 5,
+        "rank": 8,
         "athlete_id": null,
         "mark": "43.27",
         "names": [
@@ -7441,7 +7674,7 @@
         ]
       },
       {
-        "rank": 6,
+        "rank": 9,
         "athlete_id": null,
         "mark": "43.31",
         "names": [
@@ -7452,7 +7685,7 @@
         ]
       },
       {
-        "rank": 7,
+        "rank": 10,
         "athlete_id": null,
         "mark": "43.34",
         "names": [
@@ -7460,39 +7693,6 @@
           "Denzel Drye",
           "Nicholas Lowe",
           "Greg McLeod"
-        ]
-      },
-      {
-        "rank": 8,
-        "athlete_id": null,
-        "mark": "43.64",
-        "names": [
-          "Kris Alvarez",
-          "Robert Pinto",
-          "Brian Fratto",
-          "Tom Halloran"
-        ]
-      },
-      {
-        "rank": 9,
-        "athlete_id": null,
-        "mark": "43.75",
-        "names": [
-          "Nicholas Lowe",
-          "Trevor Currie",
-          "John Sangiovanni",
-          "Greg McLeod"
-        ]
-      },
-      {
-        "rank": 10,
-        "athlete_id": null,
-        "mark": "43.86",
-        "names": [
-          "Robert Pinto",
-          "Walter Goodwin",
-          "Shane Chiaravalle",
-          "Victor Servito"
         ]
       }
     ]
@@ -7540,6 +7740,17 @@
       {
         "rank": 4,
         "athlete_id": null,
+        "mark": "3:23.04",
+        "names": [
+          "Connor Robinson",
+          "Rai Bindra",
+          "Danny Jutras",
+          "Kyle Savino"
+        ]
+      },
+      {
+        "rank": 5,
+        "athlete_id": null,
         "mark": "3:23.06",
         "names": [
           "Shane Chiaravalle",
@@ -7549,7 +7760,7 @@
         ]
       },
       {
-        "rank": 5,
+        "rank": 6,
         "athlete_id": null,
         "mark": "3:24.02",
         "names": [
@@ -7560,7 +7771,29 @@
         ]
       },
       {
-        "rank": 6,
+        "rank": 7,
+        "athlete_id": null,
+        "mark": "3:24.46",
+        "names": [
+          "Daniel Jutras",
+          "Ian Rodriguez",
+          "Christopher Reyes",
+          "Steven Longo"
+        ]
+      },
+      {
+        "rank": 8,
+        "athlete_id": null,
+        "mark": "3:25.13",
+        "names": [
+          "Kyle Savino",
+          "Xavier McWilliams",
+          "Kajetan Leitner",
+          "Mick Barbi"
+        ]
+      },
+      {
+        "rank": 9,
         "athlete_id": null,
         "mark": "3:25.18",
         "names": [
@@ -7571,18 +7804,7 @@
         ]
       },
       {
-        "rank": 7,
-        "athlete_id": null,
-        "mark": "3:25.87",
-        "names": [
-          "Kevin Morgera",
-          "Drew Ballinger",
-          "Kyle Buzby",
-          "David Echevarria"
-        ]
-      },
-      {
-        "rank": 8,
+        "rank": 10,
         "athlete_id": null,
         "mark": "3:25.42",
         "names": [
@@ -7590,28 +7812,6 @@
           "Kyle Savino",
           "Kajetan Leitner",
           "Danny LaMastra"
-        ]
-      },
-      {
-        "rank": 9,
-        "athlete_id": null,
-        "mark": "3:26.81",
-        "names": [
-          "Kevin Morgera",
-          "Mohammed Abrouf",
-          "John Hoffman",
-          "Mike Hoffman"
-        ]
-      },
-      {
-        "rank": 10,
-        "athlete_id": null,
-        "mark": "3:29.55",
-        "names": [
-          "Tom Halloran",
-          "Greg Arabagian",
-          "Michael John",
-          "Zach Andrews"
         ]
       }
     ]
@@ -7637,6 +7837,28 @@
       {
         "rank": 2,
         "athlete_id": null,
+        "mark": "7:48.67",
+        "names": [
+          "Ryan Paradine",
+          "Kajetan Leitner",
+          "Jake Aylmer",
+          "Danny Jutras"
+        ]
+      },
+      {
+        "rank": 3,
+        "athlete_id": null,
+        "mark": "7:50.80",
+        "names": [
+          "Mick Barbi",
+          "Caleb Stephen",
+          "Jake Aylmer",
+          "Danny Jutras"
+        ]
+      },
+      {
+        "rank": 4,
+        "athlete_id": null,
         "mark": "7:52.18",
         "names": [
           "Ronnie Melao",
@@ -7646,7 +7868,7 @@
         ]
       },
       {
-        "rank": 3,
+        "rank": 5,
         "athlete_id": null,
         "mark": "7:55.00",
         "names": [
@@ -7657,7 +7879,7 @@
         ]
       },
       {
-        "rank": 4,
+        "rank": 6,
         "athlete_id": null,
         "mark": "7:59.47",
         "names": [
@@ -7668,7 +7890,18 @@
         ]
       },
       {
-        "rank": 5,
+        "rank": 7,
+        "athlete_id": null,
+        "mark": "8:00.01",
+        "names": [
+          "Enrico Parrella",
+          "Matt Hodorowski",
+          "Markus Soennichsen",
+          "Danny Jutras"
+        ]
+      },
+      {
+        "rank": 8,
         "athlete_id": null,
         "mark": "8:00.76",
         "names": [
@@ -7679,7 +7912,7 @@
         ]
       },
       {
-        "rank": 6,
+        "rank": 9,
         "athlete_id": null,
         "mark": "8:01.34",
         "names": [
@@ -7690,7 +7923,7 @@
         ]
       },
       {
-        "rank": 7,
+        "rank": 10,
         "athlete_id": null,
         "mark": "8:06.38",
         "names": [
@@ -7698,39 +7931,6 @@
           "Nathan Schaefer",
           "Raouf Laadem",
           "Greg Arabagian"
-        ]
-      },
-      {
-        "rank": 8,
-        "athlete_id": null,
-        "mark": "8:09.43",
-        "names": [
-          "Luke Skorka",
-          "Jeremy Savlov",
-          "Jake Catalano",
-          "Ryan Little"
-        ]
-      },
-      {
-        "rank": 9,
-        "athlete_id": null,
-        "mark": "8:13.25",
-        "names": [
-          "Michael Hoffman",
-          "John Hoffman",
-          "Paul Kazalski",
-          "Nick Dunford"
-        ]
-      },
-      {
-        "rank": 10,
-        "athlete_id": null,
-        "mark": "8:17.90",
-        "names": [
-          "Michael Hoffman",
-          "Greg St. Louis",
-          "Joe Fullam",
-          "Philip Mainwaring"
         ]
       }
     ]

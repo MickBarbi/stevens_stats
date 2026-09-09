@@ -256,6 +256,22 @@ Adjust freely — this is a guide, not a contract.
 
 ## Progress log
 
+### 2026-09-09 — top 10 fixes (ties + wrong outdoor sheet)
+- **Ties:** the converter treated a blank Rank cell (a tie continuation) as the
+  end of a list, truncating it — e.g. men's indoor 60H had 1 entry, PV had 2.
+  Fixed: blank Rank now carries the previous rank forward. 17 short lists → 1
+  (genuine).
+- **Outdoor was reading the wrong sheet:** `Outdoor Men` / `Outdoor Women` are
+  stale (no 2024–26 marks). The current sheets are `Mens/Womens Outdoor Top Ten
+  List` ("Last Updated May 15th, 2026"), same 4-col layout as the indoor ones.
+  Outdoor profile links 8 → 76; total links 69 → 154; distinct current athletes
+  38 → 44. Outdoor Team Rank columns now populate (Tyler Hackett = #3 outdoor
+  100m, etc.).
+- The "current mark fast enough but not on the list" report now comes back
+  **empty** — that whole class of gap was the stale-sheet bug.
+- Converter saved to the repo: `scraper/top10_from_xlsx.py` (re-run it whenever
+  the workbook is updated).
+
 ### 2026-09-09 — top 10 data loaded
 - Converted the official Excel workbook (Stevens_TF_AllTime_Top_Ten_Lists.xlsx)
   into `data/top10.json`: 93 lists (men/women × indoor/outdoor, individual +
