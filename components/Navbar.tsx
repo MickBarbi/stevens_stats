@@ -73,7 +73,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-brand text-brand-fg shadow-card">
+      <header className="sticky top-0 z-50 bg-brand pt-[env(safe-area-inset-top)] text-brand-fg shadow-card">
         <nav className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2">
           <Link href="/home" className="shrink-0">
             <Image

@@ -238,7 +238,7 @@ const EventsClient = ({
       {/* jump-to-event bar — sticks just under the app header */}
       <nav
         aria-label="Jump to event"
-        className="sticky top-[87px] z-30 -mx-4 mb-6 flex gap-1.5 overflow-x-auto border-y border-border bg-bg px-4 py-2 sm:mx-0 sm:rounded-lg sm:border"
+        className="sticky top-[calc(87px+env(safe-area-inset-top))] z-30 -mx-4 mb-6 flex gap-1.5 overflow-x-auto border-y border-border bg-bg px-4 py-2 sm:mx-0 sm:rounded-lg sm:border"
       >
         {visibleEvents.map((e) => (
           <button
@@ -307,7 +307,7 @@ const EventsClient = ({
             <section
               key={event.event_id}
               id={`ev-${event.event_id}`}
-              className="scroll-mt-[144px]"
+              className="scroll-mt-[calc(144px+env(safe-area-inset-top))]"
             >
               <div className="card p-4 sm:p-5">
                 <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">

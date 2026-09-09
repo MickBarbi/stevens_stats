@@ -48,6 +48,10 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: "#992211",
+  // let the page fill the display so env(safe-area-inset-*) resolves in the
+  // installed (standalone) app — needed to keep the bottom tabs off the iOS
+  // home indicator and the header out from under the status bar.
+  viewportFit: "cover",
 };
 
 // Runs before first paint so the saved theme is applied with no flash.
@@ -73,7 +77,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Navbar />
         <main
           id="main"
-          className="mx-auto max-w-6xl px-4 pt-6 pb-24 sm:pt-8 sm:pb-8"
+          className="mx-auto max-w-6xl px-4 pt-6 pb-[calc(5rem+env(safe-area-inset-bottom))] sm:pt-8 sm:pb-8"
         >
           {children}
         </main>
