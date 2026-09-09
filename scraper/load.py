@@ -149,10 +149,10 @@ def load_performances(perf_csv: pathlib.Path, known_athletes: set[int]) -> list[
 # Flag the career-best rows in place.  Pure function of the performance list.
 # ---------------------------------------------------------------------------
 def default_season_start(today: date | None = None) -> str:
-    """Sept 1 of the current academic year, as ISO."""
+    """Dec 1 of the current academic year, as ISO."""
     today = today or date.today()
-    year = today.year if today.month >= 9 else today.year - 1
-    return f"{year}-09-01"
+    year = today.year if today.month >= 12 else today.year - 1
+    return f"{year}-12-01"
 
 
 def flag_bests(performances: list[dict], season_start: str) -> int:

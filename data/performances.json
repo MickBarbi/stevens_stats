@@ -501,7 +501,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 37,
@@ -571,7 +571,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 42,
@@ -725,7 +725,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 53,
@@ -907,7 +907,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 66,
@@ -1005,7 +1005,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 73,
@@ -1187,7 +1187,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 86,
@@ -1271,7 +1271,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 92,
@@ -1467,7 +1467,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 106,
@@ -1621,7 +1621,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 117,
@@ -1929,7 +1929,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 139,
@@ -1957,7 +1957,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 141,
@@ -2293,7 +2293,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 165,
@@ -2363,7 +2363,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 170,
@@ -2713,7 +2713,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 195,
@@ -2755,7 +2755,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 198,
@@ -3035,7 +3035,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 218,
@@ -3091,7 +3091,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 222,
@@ -3273,7 +3273,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 235,
@@ -3469,7 +3469,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 249,
@@ -3679,7 +3679,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 264,
@@ -3777,7 +3777,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 271,
@@ -4169,7 +4169,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 299,
@@ -4239,7 +4239,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 304,
@@ -4491,7 +4491,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 322,
@@ -4631,7 +4631,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 332,
@@ -4715,7 +4715,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 338,
@@ -5247,7 +5247,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 376,
@@ -5359,7 +5359,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 384,
@@ -5597,7 +5597,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 401,
@@ -5863,7 +5863,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 420,
@@ -6157,7 +6157,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 441,
@@ -6199,7 +6199,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 444,
@@ -6661,7 +6661,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 477,
@@ -6773,7 +6773,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 485,
@@ -6815,7 +6815,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 488,
@@ -6857,7 +6857,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 491,
@@ -6871,7 +6871,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 492,
@@ -7137,7 +7137,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 511,
@@ -7179,7 +7179,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 514,
@@ -7305,7 +7305,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 523,
@@ -7347,7 +7347,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 526,
@@ -7585,7 +7585,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 543,
@@ -7669,7 +7669,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 549,
@@ -7683,7 +7683,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 550,
@@ -8131,7 +8131,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 582,
@@ -8201,7 +8201,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 587,
@@ -8215,7 +8215,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 588,
@@ -8257,7 +8257,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 591,
@@ -8299,7 +8299,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 594,
@@ -8327,7 +8327,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 596,
@@ -8635,7 +8635,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 618,
@@ -8677,7 +8677,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 621,
@@ -8775,7 +8775,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 628,
@@ -8915,7 +8915,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 638,
@@ -9209,7 +9209,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 659,
@@ -9629,7 +9629,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 689,
@@ -9811,7 +9811,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 702,
@@ -10245,7 +10245,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 733,
@@ -10259,7 +10259,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 734,
@@ -10315,7 +10315,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 738,
@@ -10889,7 +10889,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 779,
@@ -11001,7 +11001,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 787,
@@ -11029,7 +11029,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 789,
@@ -11057,7 +11057,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 791,
@@ -11225,7 +11225,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 803,
@@ -11239,7 +11239,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 804,
@@ -11421,7 +11421,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 817,
@@ -11673,7 +11673,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 835,
@@ -11785,7 +11785,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 843,
@@ -11883,7 +11883,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 850,
@@ -12261,7 +12261,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 877,
@@ -12317,7 +12317,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 881,
@@ -12429,7 +12429,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 889,
@@ -12555,7 +12555,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 898,
@@ -12639,7 +12639,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 904,
@@ -12863,7 +12863,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 920,
@@ -12877,7 +12877,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 921,
@@ -12919,7 +12919,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 924,
@@ -13325,7 +13325,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 953,
@@ -13395,7 +13395,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 958,
@@ -13605,7 +13605,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 973,
@@ -13619,7 +13619,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 974,
@@ -13661,7 +13661,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 977,
@@ -13997,7 +13997,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1001,
@@ -14039,7 +14039,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1004,
@@ -14417,7 +14417,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1031,
@@ -14711,7 +14711,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1052,
@@ -14851,7 +14851,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1062,
@@ -14865,7 +14865,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1063,
@@ -15047,7 +15047,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1076,
@@ -15201,7 +15201,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1087,
@@ -15313,7 +15313,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1095,
@@ -15341,7 +15341,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1097,
@@ -15453,7 +15453,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1105,
@@ -15663,7 +15663,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1120,
@@ -15789,7 +15789,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1129,
@@ -15929,7 +15929,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1139,
@@ -15943,7 +15943,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1140,
@@ -15999,7 +15999,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1144,
@@ -16027,7 +16027,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1146,
@@ -16209,7 +16209,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1159,
@@ -16601,7 +16601,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1187,
@@ -16713,7 +16713,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1195,
@@ -17077,7 +17077,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1221,
@@ -17147,7 +17147,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1226,
@@ -17343,7 +17343,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1240,
@@ -17595,7 +17595,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1258,
@@ -17763,7 +17763,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1270,
@@ -17945,7 +17945,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1283,
@@ -18183,7 +18183,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1300,
@@ -18197,7 +18197,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1301,
@@ -18267,7 +18267,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1306,
@@ -18393,7 +18393,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1315,
@@ -18463,7 +18463,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1320,
@@ -18547,7 +18547,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1326,
@@ -18589,7 +18589,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1329,
@@ -18757,7 +18757,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1341,
@@ -18869,7 +18869,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1349,
@@ -18939,7 +18939,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1354,
@@ -18967,7 +18967,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1356,
@@ -18995,7 +18995,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1358,
@@ -19331,7 +19331,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1382,
@@ -19429,7 +19429,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1389,
@@ -19653,7 +19653,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1405,
@@ -19891,7 +19891,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1422,
@@ -20045,7 +20045,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1433,
@@ -20059,7 +20059,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1434,
@@ -20087,7 +20087,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1436,
@@ -20339,7 +20339,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1454,
@@ -20591,7 +20591,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1472,
@@ -20647,7 +20647,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1476,
@@ -20661,7 +20661,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1477,
@@ -20689,7 +20689,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1479,
@@ -20703,7 +20703,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1480,
@@ -20717,7 +20717,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1481,
@@ -20927,7 +20927,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1496,
@@ -21025,7 +21025,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1503,
@@ -21235,7 +21235,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1518,
@@ -21417,7 +21417,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1531,
@@ -21655,7 +21655,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1548,
@@ -21753,7 +21753,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1555,
@@ -22089,7 +22089,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1579,
@@ -22103,7 +22103,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1580,
@@ -22299,7 +22299,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1594,
@@ -22425,7 +22425,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1603,
@@ -22649,7 +22649,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1619,
@@ -22663,7 +22663,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1620,
@@ -22803,7 +22803,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1630,
@@ -22957,7 +22957,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1641,
@@ -23181,7 +23181,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1657,
@@ -23307,7 +23307,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1666,
@@ -23489,7 +23489,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1679,
@@ -23545,7 +23545,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1683,
@@ -23671,7 +23671,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1692,
@@ -23741,7 +23741,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1697,
@@ -23993,7 +23993,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1715,
@@ -24077,7 +24077,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1721,
@@ -24315,7 +24315,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1738,
@@ -24343,7 +24343,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1740,
@@ -24609,7 +24609,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1759,
@@ -24665,7 +24665,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1763,
@@ -24749,7 +24749,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1769,
@@ -24805,7 +24805,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1773,
@@ -24917,7 +24917,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1781,
@@ -25127,7 +25127,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1796,
@@ -25225,7 +25225,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1803,
@@ -25295,7 +25295,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1808,
@@ -25351,7 +25351,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1812,
@@ -25407,7 +25407,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1816,
@@ -25701,7 +25701,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1837,
@@ -25729,7 +25729,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1839,
@@ -25911,7 +25911,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1852,
@@ -26079,7 +26079,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1864,
@@ -26317,7 +26317,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1881,
@@ -26387,7 +26387,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1886,
@@ -26499,7 +26499,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1894,
@@ -26569,7 +26569,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1899,
@@ -26639,7 +26639,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1904,
@@ -26765,7 +26765,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1913,
@@ -26793,7 +26793,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1915,
@@ -26877,7 +26877,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1921,
@@ -26961,7 +26961,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1927,
@@ -27059,7 +27059,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1934,
@@ -27115,7 +27115,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1938,
@@ -27143,7 +27143,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1940,
@@ -27157,7 +27157,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1941,
@@ -27269,7 +27269,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1949,
@@ -27283,7 +27283,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1950,
@@ -27325,7 +27325,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1953,
@@ -27367,7 +27367,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1956,
@@ -27409,7 +27409,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1959,
@@ -27549,7 +27549,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1969,
@@ -27591,7 +27591,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1972,
@@ -27605,7 +27605,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1973,
@@ -27703,7 +27703,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1980,
@@ -27829,7 +27829,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1989,
@@ -27871,7 +27871,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1992,
@@ -27885,7 +27885,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1993,
@@ -27913,7 +27913,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 1995,
@@ -28039,7 +28039,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2004,
@@ -28053,7 +28053,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2005,
@@ -28109,7 +28109,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2009,
@@ -28137,7 +28137,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2011,
@@ -28179,7 +28179,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2014,
@@ -28361,7 +28361,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2027,
@@ -28459,7 +28459,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2034,
@@ -28501,7 +28501,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2037,
@@ -28543,7 +28543,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2040,
@@ -28557,7 +28557,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2041,
@@ -28683,7 +28683,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2050,
@@ -28697,7 +28697,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2051,
@@ -28753,7 +28753,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2055,
@@ -28781,7 +28781,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2057,
@@ -28809,7 +28809,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2059,
@@ -28907,7 +28907,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2066,
@@ -28949,7 +28949,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2069,
@@ -29285,7 +29285,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2093,
@@ -29369,7 +29369,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2099,
@@ -29453,7 +29453,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2105,
@@ -29495,7 +29495,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2108,
@@ -29509,7 +29509,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2109,
@@ -29607,7 +29607,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2116,
@@ -29621,7 +29621,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2117,
@@ -29733,7 +29733,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2125,
@@ -29859,7 +29859,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2134,
@@ -29901,7 +29901,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2137,
@@ -29915,7 +29915,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2138,
@@ -29943,7 +29943,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2140,
@@ -30041,7 +30041,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2147,
@@ -30083,7 +30083,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2150,
@@ -30125,7 +30125,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2153,
@@ -30153,7 +30153,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2155,
@@ -30251,7 +30251,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2162,
@@ -30279,7 +30279,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2164,
@@ -30321,7 +30321,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2167,
@@ -30615,7 +30615,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2188,
@@ -30685,7 +30685,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2193,
@@ -30727,7 +30727,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2196,
@@ -31063,7 +31063,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2220,
@@ -31259,7 +31259,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2234,
@@ -31273,7 +31273,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2235,
@@ -31441,7 +31441,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2247,
@@ -31511,7 +31511,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2252,
@@ -31665,7 +31665,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2263,
@@ -31791,7 +31791,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2272,
@@ -31875,7 +31875,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2278,
@@ -31931,7 +31931,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2282,
@@ -32001,7 +32001,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2287,
@@ -32057,7 +32057,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2291,
@@ -32141,7 +32141,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2297,
@@ -32211,7 +32211,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2302,
@@ -32295,7 +32295,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2308,
@@ -32351,7 +32351,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2312,
@@ -32421,7 +32421,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2317,
@@ -32449,7 +32449,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2319,
@@ -32603,7 +32603,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2330,
@@ -32617,7 +32617,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2331,
@@ -32645,7 +32645,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2333,
@@ -32743,7 +32743,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2340,
@@ -32757,7 +32757,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2341,
@@ -32813,7 +32813,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2345,
@@ -32869,7 +32869,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2349,
@@ -32953,7 +32953,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2355,
@@ -32995,7 +32995,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2358,
@@ -33079,7 +33079,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2364,
@@ -33107,7 +33107,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2366,
@@ -33135,7 +33135,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2368,
@@ -33163,7 +33163,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2370,
@@ -33219,7 +33219,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2374,
@@ -33471,7 +33471,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2392,
@@ -33723,7 +33723,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2410,
@@ -33821,7 +33821,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2417,
@@ -33863,7 +33863,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2420,
@@ -33905,7 +33905,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2423,
@@ -33989,7 +33989,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2429,
@@ -34003,7 +34003,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2430,
@@ -34241,7 +34241,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2447,
@@ -34381,7 +34381,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2457,
@@ -34437,7 +34437,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2461,
@@ -34605,7 +34605,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2473,
@@ -34661,7 +34661,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2477,
@@ -34857,7 +34857,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2491,
@@ -34913,7 +34913,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2495,
@@ -34997,7 +34997,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2501,
@@ -35123,7 +35123,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2510,
@@ -35165,7 +35165,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2513,
@@ -35263,7 +35263,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2520,
@@ -35305,7 +35305,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2523,
@@ -35445,7 +35445,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2533,
@@ -35599,7 +35599,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": false,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2544,
@@ -35655,7 +35655,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2548,
@@ -35683,7 +35683,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2550,
@@ -35809,7 +35809,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2559,
@@ -35837,7 +35837,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2561,
@@ -35949,7 +35949,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2569,
@@ -35991,7 +35991,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2572,
@@ -36061,7 +36061,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2577,
@@ -36075,7 +36075,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2578,
@@ -36089,7 +36089,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2579,
@@ -36131,7 +36131,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2582,
@@ -36187,7 +36187,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2586,
@@ -36215,7 +36215,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2588,
@@ -36229,7 +36229,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2589,
@@ -36257,7 +36257,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2591,
@@ -36285,7 +36285,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2593,
@@ -36313,7 +36313,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2595,
@@ -36341,7 +36341,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2597,
@@ -36369,7 +36369,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2599,
@@ -36383,7 +36383,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2600,
@@ -36397,7 +36397,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2601,
@@ -36425,7 +36425,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2603,
@@ -36453,7 +36453,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2605,
@@ -36481,7 +36481,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2607,
@@ -36537,7 +36537,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2611,
@@ -36579,7 +36579,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2614,
@@ -36593,7 +36593,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2615,
@@ -36635,7 +36635,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2618,
@@ -36663,7 +36663,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2620,
@@ -36691,7 +36691,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2622,
@@ -36705,7 +36705,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2623,
@@ -36733,7 +36733,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2625,
@@ -36747,7 +36747,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2626,
@@ -36761,7 +36761,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2627,
@@ -36803,7 +36803,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2630,
@@ -36831,7 +36831,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2632,
@@ -36873,7 +36873,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2635,
@@ -36943,7 +36943,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2640,
@@ -36957,7 +36957,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2641,
@@ -36971,7 +36971,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2642,
@@ -36999,7 +36999,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2644,
@@ -37013,7 +37013,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2645,
@@ -37041,7 +37041,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2647,
@@ -37125,7 +37125,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2653,
@@ -37153,7 +37153,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2655,
@@ -37167,7 +37167,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2656,
@@ -37195,7 +37195,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2658,
@@ -37223,7 +37223,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2660,
@@ -37237,7 +37237,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2661,
@@ -37279,7 +37279,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2664,
@@ -37349,7 +37349,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2669,
@@ -37363,7 +37363,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2670,
@@ -37377,7 +37377,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2671,
@@ -37419,7 +37419,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2674,
@@ -37461,7 +37461,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2677,
@@ -37503,7 +37503,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2680,
@@ -37517,7 +37517,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2681,
@@ -37545,7 +37545,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2683,
@@ -37587,7 +37587,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2686,
@@ -37629,7 +37629,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2689,
@@ -37685,7 +37685,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2693,
@@ -37727,7 +37727,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2696,
@@ -37741,7 +37741,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2697,
@@ -37769,7 +37769,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2699,
@@ -37797,7 +37797,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2701,
@@ -37811,7 +37811,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2702,
@@ -37825,7 +37825,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2703,
@@ -37867,7 +37867,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2706,
@@ -37881,7 +37881,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2707,
@@ -37951,7 +37951,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2712,
@@ -37965,7 +37965,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2713,
@@ -38021,7 +38021,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2717,
@@ -38049,7 +38049,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2719,
@@ -38063,7 +38063,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2720,
@@ -38105,7 +38105,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2723,
@@ -38133,7 +38133,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2725,
@@ -38161,7 +38161,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2727,
@@ -38175,7 +38175,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2728,
@@ -38189,7 +38189,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2729,
@@ -38245,7 +38245,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2733,
@@ -38259,7 +38259,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2734,
@@ -38301,7 +38301,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2737,
@@ -38329,7 +38329,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2739,
@@ -38371,7 +38371,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2742,
@@ -38399,7 +38399,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2744,
@@ -38427,7 +38427,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2746,
@@ -38441,7 +38441,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2747,
@@ -38469,7 +38469,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2749,
@@ -38553,7 +38553,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2755,
@@ -38567,7 +38567,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2756,
@@ -38581,7 +38581,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2757,
@@ -38679,7 +38679,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2764,
@@ -38721,7 +38721,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2767,
@@ -38749,7 +38749,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2769,
@@ -38777,7 +38777,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2771,
@@ -38805,7 +38805,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2773,
@@ -38889,7 +38889,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2779,
@@ -38945,7 +38945,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2783,
@@ -38987,7 +38987,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2786,
@@ -39043,7 +39043,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2790,
@@ -39085,7 +39085,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2793,
@@ -39113,7 +39113,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2795,
@@ -39197,7 +39197,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2801,
@@ -39239,7 +39239,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2804,
@@ -39267,7 +39267,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2806,
@@ -39281,7 +39281,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2807,
@@ -39323,7 +39323,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2810,
@@ -39407,7 +39407,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2816,
@@ -39477,7 +39477,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2821,
@@ -39547,7 +39547,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2826,
@@ -39589,7 +39589,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2829,
@@ -39603,7 +39603,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2830,
@@ -39631,7 +39631,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2832,
@@ -39715,7 +39715,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2838,
@@ -39729,7 +39729,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2839,
@@ -39743,7 +39743,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2840,
@@ -39785,7 +39785,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2843,
@@ -39827,7 +39827,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2846,
@@ -39869,7 +39869,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2849,
@@ -39925,7 +39925,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2853,
@@ -40009,7 +40009,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2859,
@@ -40023,7 +40023,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2860,
@@ -40107,7 +40107,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2866,
@@ -40163,7 +40163,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2870,
@@ -40219,7 +40219,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2874,
@@ -40289,7 +40289,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2879,
@@ -40317,7 +40317,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2881,
@@ -40331,7 +40331,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2882,
@@ -40345,7 +40345,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2883,
@@ -40387,7 +40387,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2886,
@@ -40457,7 +40457,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2891,
@@ -40471,7 +40471,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2892,
@@ -40485,7 +40485,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2893,
@@ -40513,7 +40513,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2895,
@@ -40611,7 +40611,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2902,
@@ -40653,7 +40653,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2905,
@@ -40695,7 +40695,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2908,
@@ -40765,7 +40765,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2913,
@@ -40877,7 +40877,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2921,
@@ -40947,7 +40947,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2926,
@@ -40989,7 +40989,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2929,
@@ -41045,7 +41045,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2933,
@@ -41073,7 +41073,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2935,
@@ -41101,7 +41101,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2937,
@@ -41129,7 +41129,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2939,
@@ -41143,7 +41143,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2940,
@@ -41157,7 +41157,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2941,
@@ -41171,7 +41171,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2942,
@@ -41185,7 +41185,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2943,
@@ -41297,7 +41297,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2951,
@@ -41325,7 +41325,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2953,
@@ -41381,7 +41381,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2957,
@@ -41395,7 +41395,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2958,
@@ -41423,7 +41423,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2960,
@@ -41521,7 +41521,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2967,
@@ -41549,7 +41549,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2969,
@@ -41563,7 +41563,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2970,
@@ -41577,7 +41577,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2971,
@@ -41591,7 +41591,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2972,
@@ -41633,7 +41633,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2975,
@@ -41661,7 +41661,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2977,
@@ -41675,7 +41675,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2978,
@@ -41703,7 +41703,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2980,
@@ -41731,7 +41731,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2982,
@@ -41787,7 +41787,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2986,
@@ -41815,7 +41815,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2988,
@@ -41871,7 +41871,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2992,
@@ -41913,7 +41913,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 2995,
@@ -41983,7 +41983,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3000,
@@ -42053,7 +42053,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3005,
@@ -42067,7 +42067,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3006,
@@ -42179,7 +42179,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3014,
@@ -42193,7 +42193,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3015,
@@ -42221,7 +42221,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3017,
@@ -42263,7 +42263,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3020,
@@ -42403,7 +42403,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3030,
@@ -42459,7 +42459,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3034,
@@ -42501,7 +42501,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3037,
@@ -42627,7 +42627,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3046,
@@ -42655,7 +42655,7 @@
     "is_personal_best": false,
     "is_collegiate_best": false,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3048,
@@ -42697,7 +42697,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3051,
@@ -42753,7 +42753,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3055,
@@ -42767,7 +42767,7 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   },
   {
     "performance_id": 3056,
@@ -42781,6 +42781,6 @@
     "is_personal_best": true,
     "is_collegiate_best": true,
     "is_overall_best": true,
-    "is_season_best": false
+    "is_season_best": true
   }
 ]
