@@ -63,7 +63,12 @@ export type BlogPost = {
   created_on: string;
 };
 
-export const athletes = athletesJson as unknown as Athlete[];
+// `sex` is stored "M"/"F" but every comparison (filters, top10.json,
+// qualifying_standards.json, the dropdowns) uses "m"/"f" — normalise on load.
+export const athletes = (athletesJson as unknown as Athlete[]).map((a) => ({
+  ...a,
+  sex: a.sex ? a.sex.toLowerCase() : null,
+}));
 export const events = eventsJson as unknown as EventInfo[];
 export const performances = performancesJson as unknown as Performance[];
 export const qualifyingStandards = standardsJson as unknown as QualifyingStandard[];
@@ -233,6 +238,7 @@ export type TopTenEntry = {
   names?: string[]; // relay legs
   mark: string; // as written on the official list
   date?: string;
+  link?: string; // results page for the mark
   meet?: string;
 };
 

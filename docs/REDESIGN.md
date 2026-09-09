@@ -256,6 +256,23 @@ Adjust freely — this is a guide, not a contract.
 
 ## Progress log
 
+### 2026-09-09 — top 10 data loaded
+- Converted the official Excel workbook (Stevens_TF_AllTime_Top_Ten_Lists.xlsx)
+  into `data/top10.json`: 93 lists (men/women × indoor/outdoor, individual +
+  relays), 854 entries. Marks/dates/links carried through; 69 entries linked to
+  32 current athlete profiles by name (with a small nickname-alias matcher).
+- `TopTenEntry` gained an optional `link`; `/records` renders the mark as a
+  link and dropped the (unavailable) "Meet" column.
+- **Fix:** `athletes.json` stores `sex` as "M"/"F" but every comparison
+  (filters, top10.json, qualifying_standards.json, the dropdowns) uses "m"/"f".
+  `lib/data.ts` now lowercases `sex` on load — this also un-breaks the roster /
+  events sex filters, which had silently matched nothing.
+- Team Rank columns + SR badges now populate for linked athletes. Ranks mirror
+  the official lists exactly; a current athlete won't show a rank if the source
+  list predates their mark (or it was wind-aided, etc.).
+- Athlete-owed items now down to: qualifying standards, roster photos, blog
+  posts.
+
 ### 2026-09-08 — T1.1–T1.4 (the hook)
 - **Home is now a "Latest Results" dashboard** (`components/LatestResults.tsx`)
   — the 60 newest performances, grouped by date, each row: athlete · event ·

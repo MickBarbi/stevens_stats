@@ -76,7 +76,6 @@ export default function RecordsClient({ lists }: { lists: TopTenList[] }) {
                       <th className="text-left">Athlete</th>
                       <th>Mark</th>
                       <th>Date</th>
-                      <th className="text-left">Meet</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -85,11 +84,25 @@ export default function RecordsClient({ lists }: { lists: TopTenList[] }) {
                       .sort((a, b) => a.rank - b.rank)
                       .map((e, i) => (
                         <tr key={i}>
-                          <td>{e.rank}</td>
+                          <td className={e.rank === 1 ? "font-semibold text-brand" : undefined}>
+                            {e.rank}
+                          </td>
                           <td className="text-left">{nameCol(l, e)}</td>
-                          <td className="font-mono tabular-nums">{e.mark}</td>
+                          <td className="font-mono tabular-nums">
+                            {e.link ? (
+                              <a
+                                href={e.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-link no-underline hover:underline"
+                              >
+                                {e.mark}
+                              </a>
+                            ) : (
+                              e.mark
+                            )}
+                          </td>
                           <td className="text-fg-muted">{e.date ?? ""}</td>
-                          <td className="text-left text-fg-muted">{e.meet ?? ""}</td>
                         </tr>
                       ))}
                   </tbody>

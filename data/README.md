@@ -80,9 +80,10 @@ can't rank against alumni or handle relays). Array of:
   "relay": false,
   "entries": [
     { "rank": 1, "athlete_id": 7892451, "name": "Jake Porco",
-      "mark": "1:52.34", "date": "2023-02-18", "meet": "MAC Championships" },
+      "mark": "1:52.34", "date": "2023-02-18",
+      "link": "https://www.tfrrs.org/results/..." },
     { "rank": 2, "athlete_id": null, "name": "Older Alum",
-      "mark": "1:53.10", "date": "2015-03-01", "meet": "" }
+      "mark": "1:53.10", "date": "2015-03-01" }
   ]
 }
 ```
@@ -90,9 +91,14 @@ can't rank against alumni or handle relays). Array of:
 - `event_id` — the numeric id from `events.json` for individual events; `null`
   for relays. `event_name` is always shown as-is.
 - `gender` is `"m"` / `"f"`, `season` is `"indoor"` / `"outdoor"`.
-- Relay lists: set `"relay": true` and give each entry `"names": ["A","B","C","D"]`
-  instead of `"name"` (and `athlete_id` can stay `null`).
+- Relay lists: `"relay": true` and each entry has `"names": ["A","B","C","D"]`
+  instead of `"name"`; `athlete_id` stays `null`.
 - `athlete_id` links the entry to `/athlete/<id>` when that person is on the
-  current site; leave it `null` for anyone not in the system.
+  current site; `null` for anyone not in the system.
+- `link` (optional) makes the mark a link to the result. `mark` is the string
+  as written on the official list. `date` is `YYYY-MM-DD`.
+- This file is generated from the official Excel lists (see
+  `scraper/`-adjacent one-off scripts / the conversion in the redesign log) but
+  is committed as data and can be hand-edited.
 - Powers the `/records` page, the "Team Rank" columns on the events and athlete
   pages, and the "SR" badge (rank 1) on the home feed / athlete page.
