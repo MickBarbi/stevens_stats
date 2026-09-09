@@ -206,8 +206,11 @@ personal investment).
   (best-progression, improvement always reads upward), and Indoor / Outdoor
   overall best + team rank. No horizontal scroll. Full progression charts stay
   below (T2.3).
-- [ ] **T2.3 Restyle progression charts** to the token palette (drop default
-  `#8884d8`), axis labels with units, PB marker, legible at 360px wide.
+- [x] **T2.3 Restyle progression charts.** ✅ 2-column grid on desktop (halves
+  the scroll for multi-eventers). Per chart: brand `--chart-line` line, muted
+  gridless-vertical axes, a rotated Y-axis unit label (Time / Meters / Points),
+  a dashed **PB reference line**, tighter height (210px), fewer X ticks. Token
+  tooltip. Dropped the unused `react-responsive` import.
 - [ ] **T2.4 Prev/next athlete nav + a share button.**
 
 ### Tier 3 — Events & roster
@@ -264,6 +267,15 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-09 — T2.3 charts + T2.2 tweaks (feedback)
+- Feedback on T2.2: don't lose data / every mark should be clickable. Tile
+  detail rows are now Indoor / Outdoor / Indoor SB / Outdoor SB / Collegiate
+  (shown when present; Collegiate only when it differs from the PB), and every
+  mark is a link to its result.
+- T2.3: progression charts → 2-col grid on desktop; brand line, muted axes,
+  rotated Y unit label (Time/Meters/Points), dashed PB reference line, ~210px
+  tall, fewer X ticks.
 
 ### 2026-09-09 — T2.2 bests as a stat-tile grid
 The athlete "Bests" section is no longer a 9-column horizontal-scroll table —

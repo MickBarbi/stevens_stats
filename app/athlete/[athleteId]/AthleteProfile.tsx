@@ -1,13 +1,21 @@
 "use client";
 
 import React from "react";
-import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+  ReferenceLine,
+  ResponsiveContainer,
+} from "recharts";
 import moment from "moment";
-import useMediaQuery from "react-responsive";
 import { Medal } from "lucide-react";
 import AthletePicker from "../AthletePicker";
 import { teamRank, type Athlete, type PickerAthlete, type ProgressionPerformance } from "@/lib/data";
-import { formatMark, markKind } from "@/lib/format";
+import { formatMark, markKind, type MarkKind } from "@/lib/format";
 import Badge from "@/components/ui/Badge";
 import Card from "@/components/ui/Card";
 import AthletePhoto from "@/components/ui/AthletePhoto";
@@ -142,60 +150,89 @@ const Sparkline = ({
   );
 };
 
+const AXIS = "rgb(140 140 140)";
+const UNIT_LABEL: Record<MarkKind, string> = {
+  time: "Time",
+  distance: "Meters",
+  points: "Points",
+};
+
 const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
-  const isSmallScreen = useMediaQuery({ maxWidth: 640 });
   const grouped = sortDataByDate(groupDataByEventAndSeason(data));
 
   return (
-    <div className="space-y-8">
+    <div className="grid gap-x-8 gap-y-7 lg:grid-cols-2">
       {Object.entries(grouped).map(([key, group]) => {
         const chartData = bestProgression(group, group[0].higher_is_better);
         if (chartData.length <= 1) return null;
         const season = key.split("-")[1];
         const kind = markKind(group[0].event_id);
         const [minMark, maxMark] = getMinMaxWithPadding(chartData);
+        const pbVal = chartData[chartData.length - 1].mark as number;
         return (
-          <div key={key}>
-            <h3 className="mb-2 text-sm font-medium text-fg-muted">
-              {chartData[0].event_name} · {season === "i" ? "Indoor" : "Outdoor"}
-            </h3>
-            <div className="text-[color:var(--chart-line)]">
-              <ResponsiveContainer width={isSmallScreen ? "100%" : "80%"} height={280}>
-                <LineChart data={chartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgb(128 128 128 / 0.22)" />
-                  <XAxis
-                    dataKey="date"
-                    tickFormatter={(d) => moment(d).format("MM/DD/YY")}
-                    tick={{ fontSize: 12 }}
-                  />
-                  <YAxis
-                    domain={[minMark, maxMark]}
-                    tickFormatter={(value) => formatMark(value, kind)}
-                    tick={{ fontSize: 12 }}
-                    width={64}
-                  />
-                  <Tooltip
-                    labelFormatter={(d) => moment(d).format("MMM D, YYYY")}
-                    formatter={(value: number) => [formatMark(value, kind), "Mark"]}
-                    contentStyle={{
-                      background: "var(--surface-raised)",
-                      border: "1px solid var(--border)",
-                      borderRadius: "8px",
-                      color: "var(--fg)",
-                    }}
-                    labelStyle={{ color: "var(--fg-muted)" }}
-                  />
-                  <Line
-                    dataKey="mark"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    dot={{ r: 3 }}
-                    activeDot={{ r: 6 }}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
-            </div>
-          </div>
+          <figure key={key} className="text-[color:var(--chart-line)]">
+            <figcaption className="mb-1 text-sm font-medium text-fg">
+              {chartData[0].event_name}{" "}
+              <span className="text-fg-muted">· {season === "i" ? "Indoor" : "Outdoor"}</span>
+            </figcaption>
+            <ResponsiveContainer width="100%" height={210}>
+              <LineChart data={chartData} margin={{ top: 10, right: 14, left: 0, bottom: 2 }}>
+                <CartesianGrid stroke="rgb(140 140 140 / 0.16)" vertical={false} />
+                <XAxis
+                  dataKey="date"
+                  tickFormatter={(d) => moment(d).format("M/D/YY")}
+                  tick={{ fontSize: 11, fill: AXIS }}
+                  tickLine={false}
+                  axisLine={{ stroke: "rgb(140 140 140 / 0.4)" }}
+                  minTickGap={36}
+                />
+                <YAxis
+                  domain={[minMark, maxMark]}
+                  tickFormatter={(value) => formatMark(value, kind)}
+                  tick={{ fontSize: 11, fill: AXIS }}
+                  tickLine={false}
+                  axisLine={false}
+                  width={58}
+                  label={{
+                    value: UNIT_LABEL[kind],
+                    angle: -90,
+                    position: "insideLeft",
+                    style: { fontSize: 10, fill: AXIS, textAnchor: "middle" },
+                  }}
+                />
+                <Tooltip
+                  labelFormatter={(d) => moment(d).format("MMM D, YYYY")}
+                  formatter={(value: number) => [formatMark(value, kind), "Mark"]}
+                  contentStyle={{
+                    background: "var(--surface-raised)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "8px",
+                    color: "var(--fg)",
+                  }}
+                  labelStyle={{ color: "var(--fg-muted)" }}
+                />
+                <ReferenceLine
+                  y={pbVal}
+                  stroke="currentColor"
+                  strokeDasharray="4 4"
+                  strokeOpacity={0.5}
+                  label={{
+                    value: "PB",
+                    position: "insideTopRight",
+                    fontSize: 9,
+                    fill: "currentColor",
+                  }}
+                />
+                <Line
+                  dataKey="mark"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  dot={{ r: 2.5 }}
+                  activeDot={{ r: 5 }}
+                />
+              </LineChart>
+            </ResponsiveContainer>
+          </figure>
         );
       })}
     </div>
@@ -346,29 +383,36 @@ const AthleteProfile = ({
                   .sort((a, b) => a.date.localeCompare(b.date));
                 const hib = evPerfs[0]?.higher_is_better ?? false;
                 const spark = bestProgression(evPerfs, hib).map((p) => Number(p.mark));
+                const pbText = formatMark(pb.mark, kind);
 
-                const seasonRow = (
-                  label: string,
-                  best: Perf | null,
-                  rank: number | null
-                ) =>
-                  best && (
-                    <div className="flex items-baseline justify-between gap-3">
-                      <dt className="text-fg-muted">{label}</dt>
-                      <dd className="flex items-baseline gap-2 font-mono tabular-nums text-fg">
-                        {formatMark(best.mark, kind)}
-                        {rank != null && (
-                          <span
-                            className={
-                              rank === 1 ? "font-semibold text-brand" : "text-fg-subtle"
-                            }
-                          >
-                            #{rank}
-                          </span>
-                        )}
-                      </dd>
-                    </div>
-                  );
+                const markLink = (p: Perf) => (
+                  <a
+                    href={p.result_link ?? undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-fg hover:text-link"
+                  >
+                    {formatMark(p.mark, kind)}
+                  </a>
+                );
+
+                const detailRows: { label: string; best: Perf; rank: number | null }[] = [
+                  { label: "Indoor", best: row.indoor_overall_best, rank: ri },
+                  { label: "Outdoor", best: row.outdoor_overall_best, rank: ro },
+                  { label: "Indoor SB", best: row.indoor_season_best, rank: null },
+                  { label: "Outdoor SB", best: row.outdoor_season_best, rank: null },
+                  {
+                    label: "Collegiate",
+                    best:
+                      row.collegiate_best &&
+                      formatMark(row.collegiate_best.mark, kind) !== pbText
+                        ? row.collegiate_best
+                        : null,
+                    rank: null,
+                  },
+                ].filter(
+                  (r): r is { label: string; best: Perf; rank: number | null } => r.best != null
+                );
 
                 return (
                   <Card key={row.event_id} className="p-4">
@@ -384,7 +428,7 @@ const AthleteProfile = ({
                         rel="noopener noreferrer"
                         className="font-mono text-2xl font-semibold tabular-nums text-fg hover:text-link"
                       >
-                        {formatMark(pb.mark, kind)}
+                        {pbText}
                       </a>
                       <Sparkline points={spark} higherIsBetter={hib} />
                     </div>
@@ -392,10 +436,30 @@ const AthleteProfile = ({
                       Personal Best
                     </p>
 
-                    {(row.indoor_overall_best || row.outdoor_overall_best) && (
+                    {detailRows.length > 0 && (
                       <dl className="mt-3 space-y-1 border-t border-border pt-3 text-sm">
-                        {seasonRow("Indoor", row.indoor_overall_best, ri)}
-                        {seasonRow("Outdoor", row.outdoor_overall_best, ro)}
+                        {detailRows.map((r) => (
+                          <div
+                            key={r.label}
+                            className="flex items-baseline justify-between gap-3"
+                          >
+                            <dt className="text-fg-muted">{r.label}</dt>
+                            <dd className="flex items-baseline gap-2 font-mono tabular-nums">
+                              {markLink(r.best)}
+                              {r.rank != null && (
+                                <span
+                                  className={
+                                    r.rank === 1
+                                      ? "font-semibold text-brand"
+                                      : "text-fg-subtle"
+                                  }
+                                >
+                                  #{r.rank}
+                                </span>
+                              )}
+                            </dd>
+                          </div>
+                        ))}
                       </dl>
                     )}
                   </Card>
