@@ -284,6 +284,17 @@ Adjust freely — this is a guide, not a contract.
 
 ## Progress log
 
+### 2026-09-09 — qualifying standards (MAC + AARTFC) + events column order
+- `data/qualifying_standards.json` filled: MAC + AARTFC, indoor and outdoor —
+  68 standard rows + 14 "not contested" rows for the indoor events MAC/AARTFC
+  don't run (600/1000/1500, 300/500, 55/55H). AARTFC uses the A standard (the
+  outer number; the "(… B)" marks aren't stored). Lights up both cut-lines
+  (blue AARTFC, red MAC), the qualifying line, and coloured qualified names.
+- `EventsClient`: the wide-screen two-up layout switched from CSS `columns`
+  (down-one-then-the-next) to two interleaved columns via a `useMinWidth(1080)`
+  hook — reading order is now across-then-down (60 · 200 / 400 · 800 …) and
+  there are no row-height gaps.
+
 ### 2026-09-09 — T3.3 navigation (Tier 3 complete)
 - `Navbar.tsx`: the abrupt drop-down block is now a right-side slide-in drawer
   (fixed backdrop + panel, animates both ways, closes on backdrop / Escape /

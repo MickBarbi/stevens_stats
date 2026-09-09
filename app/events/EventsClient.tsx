@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   teamRank,
   type BestCell,
@@ -20,6 +20,19 @@ const num = (c: BestCell) => (c ? Number(c.mark) : null);
 
 const clears = (mark: number, standard: number, higherIsBetter: boolean) =>
   higherIsBetter ? mark >= standard : mark <= standard;
+
+// true once the viewport is at least `px` wide (SSR-safe: starts false)
+function useMinWidth(px: number) {
+  const [matches, setMatches] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia(`(min-width:${px}px)`);
+    const update = () => setMatches(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, [px]);
+  return matches;
+}
 
 // --- small building blocks --------------------------------------------------
 
@@ -149,6 +162,16 @@ const EventsClient = ({
   const scrollTo = (id: number) =>
     document.getElementById(`ev-${id}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
 
+  // Deal events alternately into two columns on wide screens so reading order is
+  // across-then-down (60 · 200 / 400 · 800 …), not down-one-column-then-the-next.
+  const twoCol = useMinWidth(1080);
+  const columns = twoCol
+    ? [
+        visibleEvents.filter((_, i) => i % 2 === 0),
+        visibleEvents.filter((_, i) => i % 2 === 1),
+      ]
+    : [visibleEvents];
+
   return (
     <div>
       <PageHeader title="Events">
@@ -208,10 +231,15 @@ const EventsClient = ({
         ))}
       </nav>
 
-      {/* one column on narrow screens; flow into two on wide ones so the list
-          uses the width instead of stranding it on the right */}
-      <div className="mx-auto max-w-lg min-[1080px]:max-w-5xl min-[1080px]:columns-2 min-[1080px]:gap-6">
-        {visibleEvents.map((event) => {
+      {/* one column on narrow screens; two interleaved columns on wide ones */}
+      <div
+        className={
+          twoCol ? "mx-auto flex max-w-[1120px] items-start gap-6" : "mx-auto max-w-lg"
+        }
+      >
+        {columns.map((col, ci) => (
+          <div key={ci} className="min-w-0 flex-1 space-y-5">
+            {col.map((event) => {
           const kind = markKind(event.event_id);
           const hib = event.higher_is_better;
 
@@ -258,7 +286,7 @@ const EventsClient = ({
             <section
               key={event.event_id}
               id={`ev-${event.event_id}`}
-              className="mb-5 break-inside-avoid scroll-mt-[144px]"
+              className="scroll-mt-[144px]"
             >
               <div className="card p-4 sm:p-5">
                 <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
@@ -362,7 +390,9 @@ const EventsClient = ({
               </div>
             </section>
           );
-        })}
+            })}
+          </div>
+        ))}
       </div>
     </div>
   );
