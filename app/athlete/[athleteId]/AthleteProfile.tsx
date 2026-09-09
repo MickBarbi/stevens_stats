@@ -100,6 +100,48 @@ const bestProgression = (sortedAsc: Perf[], higherIsBetter: boolean): Perf[] => 
   return out;
 };
 
+/** Tiny inline trend line — improvement always reads upward. */
+const Sparkline = ({
+  points,
+  higherIsBetter,
+}: {
+  points: number[];
+  higherIsBetter: boolean;
+}) => {
+  if (points.length < 2) return null;
+  const w = 76;
+  const h = 24;
+  const pad = 3;
+  const min = Math.min(...points);
+  const max = Math.max(...points);
+  const span = max - min || 1;
+  const x = (i: number) => pad + (i / (points.length - 1)) * (w - 2 * pad);
+  const y = (v: number) => {
+    const up = higherIsBetter ? (v - min) / span : 1 - (v - min) / span;
+    return pad + (1 - up) * (h - 2 * pad);
+  };
+  const last = points.length - 1;
+  return (
+    <svg
+      width={w}
+      height={h}
+      viewBox={`0 0 ${w} ${h}`}
+      className="shrink-0 text-[color:var(--chart-line)]"
+      aria-hidden
+    >
+      <polyline
+        points={points.map((v, i) => `${x(i)},${y(v)}`).join(" ")}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx={x(last)} cy={y(points[last])} r="2" fill="currentColor" />
+    </svg>
+  );
+};
+
 const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
   const isSmallScreen = useMediaQuery({ maxWidth: 640 });
   const grouped = sortDataByDate(groupDataByEventAndSeason(data));
@@ -221,19 +263,6 @@ const AthleteProfile = ({
   const rankOf = (season: "indoor" | "outdoor", eventId: number) =>
     teamRank(athlete.athlete_id, eventId, season, athlete.sex);
 
-  const markLink = (p: Perf | null, sr = false) =>
-    p ? (
-      <span className="inline-flex items-center gap-1.5">
-        <a href={p.result_link ?? undefined} target="_blank" rel="noopener noreferrer">
-          {formatMark(p.mark, markKind(p.event_id))}
-        </a>
-        {sr && <Badge kind="sr" />}
-      </span>
-    ) : null;
-
-  const rankText = (n: number | null) =>
-    n == null ? "" : <span className={n === 1 ? "font-semibold text-brand" : undefined}>#{n}</span>;
-
   return (
     <div className="space-y-8">
       <AthletePicker athletes={others} />
@@ -306,40 +335,74 @@ const AthleteProfile = ({
         <h2 className="section-title mb-4">Bests</h2>
         {bestsRows.length > 0 ? (
           <div className="space-y-8">
-            <div className="overflow-x-auto">
-              <table className="data-table">
-                <thead>
-                  <tr>
-                    <th className="sticky left-0 z-20">Event</th>
-                    <th>Indoor Season Best</th>
-                    <th>Outdoor Season Best</th>
-                    <th>Indoor Overall Best</th>
-                    <th>Outdoor Overall Best</th>
-                    <th>Collegiate Best</th>
-                    <th>Personal Best</th>
-                    <th>Indoor Rank</th>
-                    <th>Outdoor Rank</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {bestsRows.map((row) => (
-                    <tr key={row.event_id}>
-                      <td className="sticky left-0 z-10 bg-surface-raised text-left font-medium">
-                        {row.event_name}
-                      </td>
-                      <td>{markLink(row.indoor_season_best)}</td>
-                      <td>{markLink(row.outdoor_season_best)}</td>
-                      <td>{markLink(row.indoor_overall_best, rankOf("indoor", row.event_id) === 1)}</td>
-                      <td>{markLink(row.outdoor_overall_best, rankOf("outdoor", row.event_id) === 1)}</td>
-                      <td>{markLink(row.collegiate_best)}</td>
-                      <td>{markLink(row.personal_best)}</td>
-                      <td>{rankText(rankOf("indoor", row.event_id))}</td>
-                      <td>{rankText(rankOf("outdoor", row.event_id))}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {bestsRows.map((row) => {
+                const kind = markKind(row.event_id);
+                const ri = rankOf("indoor", row.event_id);
+                const ro = rankOf("outdoor", row.event_id);
+                const pb = row.personal_best!;
+                const evPerfs = progression
+                  .filter((p) => p.event_id === row.event_id)
+                  .sort((a, b) => a.date.localeCompare(b.date));
+                const hib = evPerfs[0]?.higher_is_better ?? false;
+                const spark = bestProgression(evPerfs, hib).map((p) => Number(p.mark));
+
+                const seasonRow = (
+                  label: string,
+                  best: Perf | null,
+                  rank: number | null
+                ) =>
+                  best && (
+                    <div className="flex items-baseline justify-between gap-3">
+                      <dt className="text-fg-muted">{label}</dt>
+                      <dd className="flex items-baseline gap-2 font-mono tabular-nums text-fg">
+                        {formatMark(best.mark, kind)}
+                        {rank != null && (
+                          <span
+                            className={
+                              rank === 1 ? "font-semibold text-brand" : "text-fg-subtle"
+                            }
+                          >
+                            #{rank}
+                          </span>
+                        )}
+                      </dd>
+                    </div>
+                  );
+
+                return (
+                  <Card key={row.event_id} className="p-4">
+                    <div className="flex items-start justify-between gap-2">
+                      <h3 className="font-semibold text-fg">{row.event_name}</h3>
+                      {(ri === 1 || ro === 1) && <Badge kind="sr" />}
+                    </div>
+
+                    <div className="mt-1 flex items-end justify-between gap-3">
+                      <a
+                        href={pb.result_link ?? undefined}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-2xl font-semibold tabular-nums text-fg hover:text-link"
+                      >
+                        {formatMark(pb.mark, kind)}
+                      </a>
+                      <Sparkline points={spark} higherIsBetter={hib} />
+                    </div>
+                    <p className="mt-0.5 text-xs uppercase tracking-wide text-fg-subtle">
+                      Personal Best
+                    </p>
+
+                    {(row.indoor_overall_best || row.outdoor_overall_best) && (
+                      <dl className="mt-3 space-y-1 border-t border-border pt-3 text-sm">
+                        {seasonRow("Indoor", row.indoor_overall_best, ri)}
+                        {seasonRow("Outdoor", row.outdoor_overall_best, ro)}
+                      </dl>
+                    )}
+                  </Card>
+                );
+              })}
             </div>
+
             <div>
               <h3 className="mb-3 text-lg font-semibold text-fg">College Best Progression</h3>
               <EventCharts data={progression} />

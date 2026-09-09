@@ -200,9 +200,12 @@ personal investment).
   Also added `components/ui/AthletePhoto.tsx` — an **initials fallback** for
   athletes with no Cloudinary upload — used here and on the roster (that's the
   T3.2 "fallback avatar" bullet, done early).
-- [ ] **T2.2 Bests as a stat-tile grid**, not the 9-column scroll table. One tile
-  per event: PB big, SB / indoor / outdoor secondary, inline sparkline, link to
-  results. Stacks on mobile. *(progressive disclosure; fixes P6)*
+- [x] **T2.2 Bests as a stat-tile grid.** ✅ The 9-column scroll table is now a
+  responsive grid of `Card` tiles (1 / 2 / 3 cols). Each: event name + SR
+  badge, PB big & mono (links to the result), a hand-rolled `<Sparkline>` SVG
+  (best-progression, improvement always reads upward), and Indoor / Outdoor
+  overall best + team rank. No horizontal scroll. Full progression charts stay
+  below (T2.3).
 - [ ] **T2.3 Restyle progression charts** to the token palette (drop default
   `#8884d8`), axis labels with units, PB marker, legible at 360px wide.
 - [ ] **T2.4 Prev/next athlete nav + a share button.**
@@ -261,6 +264,14 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-09 — T2.2 bests as a stat-tile grid
+The athlete "Bests" section is no longer a 9-column horizontal-scroll table —
+it's a responsive grid of `Card` tiles (1/2/3 columns). Each tile: event name +
+SR badge, the PB big in mono (links to the result), a hand-rolled `<Sparkline>`
+SVG of the best-progression (improvement always trends up), then Indoor /
+Outdoor overall best + team rank. Full progression charts unchanged below
+(T2.3 next). Removed the now-dead `markLink` / `rankText` helpers.
 
 ### 2026-09-09 — T2.1 player card
 - Athlete profile header is now a `Card` panel: photo, name (nickname wins),
