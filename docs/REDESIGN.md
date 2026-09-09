@@ -255,7 +255,12 @@ personal investment).
   events with nothing for the chosen split (nudges toward All-time / other
   season), Top 10 (empty book / no lists for the filter), and an athlete with
   no marks on file.
-- [ ] **T4.3 Per-athlete OG images** so a texted link previews nicely.
+- [x] **T4.3 Per-athlete OG images.** ✅ `app/athlete/[athleteId]/
+  opengraph-image.tsx` — a 1200×630 `next/og` card (face-cropped Cloudinary
+  photo or initials, name, class year, headline event + PB), prerendered per
+  athlete (`generateStaticParams`, `● SSG`). `generateMetadata` adds
+  `openGraph` + `twitter: summary_large_image`; `metadataBase` set in
+  `layout.tsx` from `NEXT_PUBLIC_SITE_URL` / Vercel's production URL.
 - [x] **T4.4 Accessibility pass.** ✅ One global `:focus-visible` outline
   (`!important`, beats the `outline-none` utilities); skip-to-content link +
   `id="main"`; `prefers-reduced-motion` kills transitions / animations / smooth
@@ -297,6 +302,13 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-09 — T4.3 per-athlete OG images
+- `app/athlete/[athleteId]/opengraph-image.tsx`: 1200×630 `next/og` card
+  (Cloudinary face crop or initials + name + year + headline event/PB),
+  prerendered per athlete. `metadataBase` added in `layout.tsx`
+  (`NEXT_PUBLIC_SITE_URL` → Vercel production URL → localhost); athlete route
+  `generateMetadata` now emits `openGraph` + `twitter: summary_large_image`.
 
 ### 2026-09-09 — T4.2 empty states
 - `components/ui/EmptyState.tsx` — dashed card + icon + friendly copy. Wired

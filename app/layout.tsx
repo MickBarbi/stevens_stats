@@ -19,7 +19,16 @@ const geistMono = localFont({
   display: "swap",
 });
 
+// Absolute base for OG / Twitter image URLs. Set NEXT_PUBLIC_SITE_URL in the
+// deploy env for a custom domain; otherwise Vercel's production URL is used.
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Stevens Stats",
   description:
     "Track & field results for the Stevens team — rosters, event bests and season progressions.",

@@ -22,9 +22,15 @@ export async function generateMetadata({
   const a = getAthlete(Number((await params).athleteId));
   if (!a) return {};
   const name = `${a.nickname ?? a.first_name} ${a.last_name}`;
+  const title = `${name} — Stevens Stats`;
+  const description =
+    a.bio ?? `Track & field results and progression for ${name}.`;
+  // og:image / twitter:image come from opengraph-image.tsx in this folder.
   return {
-    title: `${name} — Stevens Stats`,
-    description: a.bio ?? `Track & field results and progression for ${name}.`,
+    title,
+    description,
+    openGraph: { title, description, type: "profile" },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
