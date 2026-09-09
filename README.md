@@ -128,10 +128,11 @@ this automatically. Portable to any static host by adding `output: 'export'` +
 
 ## Status & roadmap
 
-Actively maintained personal project. Possible future work: repopulate
-`data/qualifying_standards.json` and `data/blog_posts.json`, a scheduled scraper
-Action, and an authenticated admin flow (which is where a live DB — see
-`archive/` — would come back).
+Actively maintained personal project. The current focus is a visual/UX redesign —
+plan and progress in [`docs/REDESIGN.md`](docs/REDESIGN.md). Other future work:
+repopulate `data/qualifying_standards.json` and `data/blog_posts.json`, a
+scheduled scraper Action, and an authenticated admin flow (which is where a live
+DB — see `archive/` — would come back).
 
 ## Author
 
