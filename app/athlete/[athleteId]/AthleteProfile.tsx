@@ -57,7 +57,7 @@ const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
   const grouped = sortDataByDate(groupDataByEventAndSeason(data));
 
   return (
-    <div>
+    <div className="space-y-8">
       {Object.entries(grouped).map(([key, group]) => {
         const chartData = bestProgression(group, group[0].higher_is_better);
         if (chartData.length <= 1) return null;
@@ -65,25 +65,46 @@ const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
         const kind = markKind(group[0].event_id);
         const [minMark, maxMark] = getMinMaxWithPadding(chartData);
         return (
-          <div key={key} style={{ marginBottom: "40px", marginLeft: "30px" }}>
-            <h3>
-              Event: {chartData[0].event_name}, Season: {season === "i" ? "Indoor" : "Outdoor"}
+          <div key={key}>
+            <h3 className="mb-2 text-sm font-medium text-fg-muted">
+              {chartData[0].event_name} · {season === "i" ? "Indoor" : "Outdoor"}
             </h3>
-            <ResponsiveContainer width={isSmallScreen ? "100%" : "75%"} height={300}>
-              <LineChart data={chartData} margin={{ top: 5, right: 30, left: 50, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="date" tickFormatter={(d) => moment(d).format("MM/DD/YYYY")} />
-                <YAxis
-                  domain={[minMark, maxMark]}
-                  tickFormatter={(value) => formatMark(value, kind)}
-                />
-                <Tooltip
-                  labelFormatter={(d) => moment(d).format("MM/DD/YYYY")}
-                  formatter={(value: number) => formatMark(value, kind)}
-                />
-                <Line dataKey="mark" stroke="#8884d8" activeDot={{ r: 8 }} />
-              </LineChart>
-            </ResponsiveContainer>
+            <div className="text-[color:var(--chart-line)]">
+              <ResponsiveContainer width={isSmallScreen ? "100%" : "80%"} height={280}>
+                <LineChart data={chartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="rgb(128 128 128 / 0.22)" />
+                  <XAxis
+                    dataKey="date"
+                    tickFormatter={(d) => moment(d).format("MM/DD/YY")}
+                    tick={{ fontSize: 12 }}
+                  />
+                  <YAxis
+                    domain={[minMark, maxMark]}
+                    tickFormatter={(value) => formatMark(value, kind)}
+                    tick={{ fontSize: 12 }}
+                    width={64}
+                  />
+                  <Tooltip
+                    labelFormatter={(d) => moment(d).format("MMM D, YYYY")}
+                    formatter={(value: number) => [formatMark(value, kind), "Mark"]}
+                    contentStyle={{
+                      background: "var(--surface-raised)",
+                      border: "1px solid var(--border)",
+                      borderRadius: "8px",
+                      color: "var(--fg)",
+                    }}
+                    labelStyle={{ color: "var(--fg-muted)" }}
+                  />
+                  <Line
+                    dataKey="mark"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    dot={{ r: 3 }}
+                    activeDot={{ r: 6 }}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
           </div>
         );
       })}
@@ -130,26 +151,6 @@ const buildBests = (progression: Perf[]): BestsRow[] => {
     .sort((a, b) => a.event_id - b.event_id);
 };
 
-const thStyle: React.CSSProperties = {
-  backgroundColor: "#921",
-  color: "white",
-  padding: "12px",
-  textAlign: "left",
-  border: "1px solid #ddd",
-};
-const tdStyle: React.CSSProperties = {
-  padding: "12px",
-  textAlign: "center",
-  border: "1px solid #ddd",
-};
-const stickyFirstColumnStyle: React.CSSProperties = {
-  position: "sticky",
-  left: 0,
-  backgroundColor: "#f9f9f9",
-  zIndex: 1,
-  borderRight: "5px solid #f9f9f9",
-};
-
 const AthleteProfile = ({
   athlete,
   progression,
@@ -160,6 +161,7 @@ const AthleteProfile = ({
   others: PickerAthlete[];
 }) => {
   const bestsRows = buildBests(progression);
+  const displayName = athlete.nickname ? athlete.nickname : athlete.first_name;
 
   const markLink = (p: Perf | null) =>
     p ? (
@@ -169,82 +171,85 @@ const AthleteProfile = ({
     ) : null;
 
   return (
-    <div>
-      <div className="p-6 mt-28">
-        <AthletePicker athletes={others} />
+    <div className="space-y-8">
+      <AthletePicker athletes={others} />
 
-        <h1 className="text-3xl font-bold mt-6">
-          {athlete.nickname ? athlete.nickname : athlete.first_name} {athlete.last_name} - Year:{" "}
-          {athlete.year}
-        </h1>
-
-        <div className="flex flex-row items-start gap-5 mt-5 flex-wrap">
-          <Image
-            src={athletePhotoUrl(athlete)}
-            alt={`Roster photo for ${athlete.nickname ? athlete.nickname : athlete.first_name}`}
-            width={300}
-            height={400}
-          />
-          <div style={{ flex: 1, fontSize: "1.1rem" }}>
-            {athlete.bio && <p>{athlete.bio}</p>}
-            {athlete.awards.length > 0 && (
-              <h3>
-                <br />
+      <div className="flex flex-wrap items-start gap-6">
+        <Image
+          src={athletePhotoUrl(athlete)}
+          alt={`Roster photo for ${displayName}`}
+          width={260}
+          height={347}
+          className="rounded-card border border-border object-cover"
+        />
+        <div className="min-w-[16rem] flex-1">
+          <h1 className="text-3xl font-bold text-fg">
+            {displayName} {athlete.last_name}
+          </h1>
+          <p className="mt-1 text-fg-muted">Year {athlete.year}</p>
+          {athlete.bio && <p className="mt-4 leading-relaxed text-fg">{athlete.bio}</p>}
+          {athlete.awards.length > 0 && (
+            <div className="mt-4">
+              <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-fg-muted">
                 Awards
-              </h3>
-            )}
-            {athlete.awards.length > 0 && (
-              <ul className="list-disc pl-5">
+              </h2>
+              <ul className="flex flex-wrap gap-2">
                 {athlete.awards.map((award, i) => (
-                  <li key={i}>{award}</li>
+                  <li key={i} className="chip">
+                    {award}
+                  </li>
                 ))}
               </ul>
-            )}
-          </div>
+            </div>
+          )}
         </div>
+      </div>
 
-        <h3 className="text-3xl font-semibold mt-5 mb-5">Bests</h3>
+      <div>
+        <h2 className="mb-4 text-2xl font-bold text-fg">Bests</h2>
         {bestsRows.length > 0 ? (
-          <div>
-            <div className="max-w-full overflow-x-auto mb-5">
-              <table className="w-full border-collapse mb-7">
+          <div className="space-y-8">
+            <div className="overflow-x-auto">
+              <table className="data-table">
                 <thead>
                   <tr>
-                    <th style={{ ...thStyle, ...stickyFirstColumnStyle }}>Event</th>
-                    <th style={thStyle}>Indoor Season Best</th>
-                    <th style={thStyle}>Outdoor Season Best</th>
-                    <th style={thStyle}>Indoor Overall Best</th>
-                    <th style={thStyle}>Outdoor Overall Best</th>
-                    <th style={thStyle}>Collegiate Best</th>
-                    <th style={thStyle}>Personal Best</th>
-                    <th style={thStyle}>Indoor Ranking</th>
-                    <th style={thStyle}>Outdoor Ranking</th>
+                    <th className="sticky left-0 z-20">Event</th>
+                    <th>Indoor Season Best</th>
+                    <th>Outdoor Season Best</th>
+                    <th>Indoor Overall Best</th>
+                    <th>Outdoor Overall Best</th>
+                    <th>Collegiate Best</th>
+                    <th>Personal Best</th>
+                    <th>Indoor Ranking</th>
+                    <th>Outdoor Ranking</th>
                   </tr>
                 </thead>
                 <tbody>
                   {bestsRows.map((row) => (
                     <tr key={row.event_id}>
-                      <td style={{ ...tdStyle, ...stickyFirstColumnStyle }}>{row.event_name}</td>
-                      <td style={tdStyle}>{markLink(row.indoor_season_best)}</td>
-                      <td style={tdStyle}>{markLink(row.outdoor_season_best)}</td>
-                      <td style={tdStyle}>{markLink(row.indoor_overall_best)}</td>
-                      <td style={tdStyle}>{markLink(row.outdoor_overall_best)}</td>
-                      <td style={tdStyle}>{markLink(row.collegiate_best)}</td>
-                      <td style={tdStyle}>{markLink(row.personal_best)}</td>
-                      <td style={tdStyle}>{row.indoor_overall_best?.ranking ?? ""}</td>
-                      <td style={tdStyle}>{row.outdoor_overall_best?.ranking ?? ""}</td>
+                      <td className="sticky left-0 z-10 bg-surface-raised text-left font-medium">
+                        {row.event_name}
+                      </td>
+                      <td>{markLink(row.indoor_season_best)}</td>
+                      <td>{markLink(row.outdoor_season_best)}</td>
+                      <td>{markLink(row.indoor_overall_best)}</td>
+                      <td>{markLink(row.outdoor_overall_best)}</td>
+                      <td>{markLink(row.collegiate_best)}</td>
+                      <td>{markLink(row.personal_best)}</td>
+                      <td>{row.indoor_overall_best?.ranking ?? ""}</td>
+                      <td>{row.outdoor_overall_best?.ranking ?? ""}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mt-4">College Best Progression</h3>
+              <h3 className="mb-3 text-lg font-semibold text-fg">College Best Progression</h3>
               <EventCharts data={progression} />
             </div>
           </div>
         ) : (
-          <p>No best performances found.</p>
+          <p className="text-fg-muted">No best performances found.</p>
         )}
       </div>
     </div>

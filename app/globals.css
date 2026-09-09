@@ -35,7 +35,7 @@
 
   --fg: #18181b;
   --fg-muted: #52525b;
-  --fg-subtle: #8a8a92;
+  --fg-subtle: #6b6b73;
 
   --brand: #992211; /* Stevens maroon (formerly the bare #921) */
   --brand-hover: #7d1c0e;
@@ -117,10 +117,59 @@
   --shadow-card-hover: 0 4px 10px rgb(0 0 0 / 0.45), 0 14px 32px rgb(0 0 0 / 0.6);
 }
 
-body {
-  background: var(--bg);
-  color: var(--fg);
-  font-family: Arial, Helvetica, sans-serif; /* Geist wiring is T0.3 */
+@layer base {
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Arial, Helvetica, sans-serif; /* Geist wiring is T0.3 */
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a {
+    color: inherit;
+  }
+  ::selection {
+    background: var(--brand);
+    color: var(--brand-fg);
+  }
+}
+
+/* Shared component classes — the "few @layer components" from T0.5. Pages use
+   these plus Tailwind utilities; no per-page .css files, no inline style={{}}. */
+@layer components {
+  .card {
+    @apply rounded-card border border-border bg-surface-raised shadow-card;
+  }
+
+  .field-select {
+    @apply rounded-md border border-border bg-surface px-3 py-1.5 text-sm text-fg
+      outline-none transition-colors focus:border-link;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full border border-border
+      bg-surface px-2.5 py-0.5 text-xs font-medium text-fg-muted;
+  }
+
+  /* Data tables (events leaderboards, athlete bests) */
+  .data-table {
+    @apply w-full border-collapse text-sm tabular-nums;
+  }
+  .data-table th {
+    @apply border border-border bg-brand px-3 py-2 text-left font-medium text-brand-fg;
+  }
+  .data-table td {
+    @apply border border-border px-3 py-2 text-center;
+  }
+  .data-table tbody tr:hover {
+    @apply bg-surface;
+  }
+  .data-table a {
+    @apply text-link no-underline hover:underline;
+  }
+  .data-table th.sortable {
+    @apply cursor-pointer select-none transition-colors hover:bg-brand-hover;
+  }
 }
 
 @layer utilities {

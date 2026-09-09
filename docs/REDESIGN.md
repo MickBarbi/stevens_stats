@@ -150,19 +150,24 @@ personal investment).
   `tailwind.config.ts`. One source of truth for colour / radius / shadow. See
   the **Design tokens** section below for the vocabulary. Components are *not*
   migrated onto them yet — that's T0.5.
-- [ ] **T0.2 Real dark mode.** Every surface/border/text reads a token; define
-  both themes; add a persisted light/dark/system toggle in the header; delete
-  the leaking `body` rule in `app/home/[post_id]/styles.css`; verify AA
-  contrast both ways. *(WCAG 2.2; fixes P1)*
+- [x] **T0.2 Real dark mode.** ✅ Every migrated surface/border/text reads a token;
+  `<ThemeToggle>` (system/light/dark, persisted, no-flash `<head>` script) in
+  the header; leaking global `body` rule deleted with its file; palette checked
+  for AA both ways. Verified with screenshots (roster / events / athlete / home
+  × light / dark × mobile / desktop). *(fixes P1)*
 - [ ] **T0.3 Typography.** Wire Geist (already in `app/fonts/`), set a modular
   type scale, `font-variant-numeric: tabular-nums` on all marks/times, fix
-  line-heights. *(fixes P4)*
-- [ ] **T0.4 App shell.** One sticky header + a `<main>` max-width container with
-  consistent page padding; reusable `PageHeader` (title + filters slot);
-  remove every `margin-top: 100px/120px` hack. *(fixes P5)*
-- [ ] **T0.5 Consolidate styling** on Tailwind + a few `@layer components`
-  classes. Migrate inline `style={{}}` and the one-off CSS files into shared
-  `Card`, `DataTable`, `Badge`, `StatTile` components. *(fixes P3; Jakob's Law)*
+  line-heights. *(fixes P4)* — `.data-table` already sets `tabular-nums`.
+- [~] **T0.4 App shell.** Mostly done alongside T0.2/T0.5: sticky `<header>` (no
+  more fixed + `margin-top` hacks), one `<main>` max-width container in
+  `app/layout.tsx`. **Still to do:** a reusable `PageHeader` component (pages
+  currently inline their own `<h1>` + filter row). *(fixes P5)*
+- [x] **T0.5 Consolidate styling.** ✅ One system: Tailwind + design tokens + a
+  few `@layer components` classes (`.card`, `.data-table`, `.field-select`,
+  `.chip`) in `globals.css`. All 6 per-page `.css` / `.module.css` files
+  deleted; all inline `style={{}}` objects removed; `Navbar.js` →
+  `Navbar.tsx`. Shared `components/ui/Card.tsx` created. `Badge` / `StatTile`
+  deferred to T1.2 / T2.2 where they get real consumers. *(fixes P3)*
 
 ### Tier 1 — The hook: make checking in worth it
 
@@ -246,6 +251,30 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-08 — T0.2 dark mode + T0.5 style consolidation
+Moved the whole site onto the token system in one pass.
+
+- **New:** `components/ThemeToggle.tsx` (system/light/dark, `localStorage`,
+  no-flash `<head>` script in `app/layout.tsx`), `components/Navbar.tsx`
+  (Tailwind, sticky, active-link state, houses the toggle),
+  `components/ui/Card.tsx`, and `.card` / `.data-table` / `.field-select` /
+  `.chip` component classes + a `@layer base` reset in `globals.css`.
+- **Migrated to tokens/Tailwind:** `layout.tsx` (sticky header + `<main>`
+  container, killed every `margin-top` hack), roster, events, athlete profile
+  + picker, home + post pages.
+- **Deleted:** `components/Navbar.js`, `components/styles.module.css`,
+  `app/roster/RosterPage.module.css`, `app/events/styles.css`,
+  `app/home/styles.css`, `app/home/[post_id]/styles.css` (this one held a
+  leaking global `body` rule — P1), `app/athlete/[athleteId]/styles.css`
+  (was already dead). All inline `style={{}}` objects gone.
+- **Verified** with light/dark × mobile/desktop screenshots of every page.
+  Dark mode is now genuinely usable.
+- **Deferred (tracked elsewhere):** blank photo tiles for athletes without a
+  Cloudinary upload → fallback avatar in T3.2; events tables still
+  horizontal-scroll on mobile → T3.1; chart axis/tick colours still Recharts
+  defaults → T2.3. `--brand` is still `#992211`; retune toward official
+  Stevens red anytime by editing that one line (three theme blocks).
 
 ### 2026-09-08 — T0.1 design tokens
 Added the semantic token layer: `app/globals.css` now defines colour / radius /

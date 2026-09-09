@@ -130,8 +130,8 @@ const EventsClient = ({
     const mark = Number(best.mark);
     const { aartfc_qualifying_standard: aartfc, mac_qualifying_standard: mac } = std;
     if (aartfc != null && clears(mark, Number(aartfc), event.higher_is_better))
-      return "qualified-aartfc";
-    if (mac != null && clears(mark, Number(mac), event.higher_is_better)) return "qualified-mac";
+      return "text-aartfc";
+    if (mac != null && clears(mark, Number(mac), event.higher_is_better)) return "text-mac";
     return "";
   };
 
@@ -142,7 +142,7 @@ const EventsClient = ({
     if (genders.length === 0) return null;
 
     return (
-      <div className="qualifying-standards">
+      <div className="mb-3 mt-1 space-y-0.5 text-sm text-fg-muted">
         {genders.map((g) => {
           const std = bySex[g];
           const label = g === "m" ? "Men" : "Women";
@@ -150,24 +150,22 @@ const EventsClient = ({
             std.mac_qualifying_standard == null && std.aartfc_qualifying_standard == null;
           if (notContested) {
             return (
-              <p key={g}>
-                <em>
-                  {label}: not contested at MAC / AARTFC ({selectedSeason})
-                </em>
+              <p key={g} className="text-fg-subtle">
+                <em>{label}: not contested at MAC / AARTFC ({selectedSeason})</em>
               </p>
             );
           }
           return (
             <p key={g}>
               {label} —{" "}
-              <span className="mac-standard">
+              <span className="font-medium text-mac">
                 MAC{" "}
                 {std.mac_qualifying_standard != null
                   ? formatMark(std.mac_qualifying_standard, kind)
                   : "—"}
               </span>
-              {"   "}
-              <span className="aartfc-standard">
+              {"    "}
+              <span className="font-medium text-aartfc">
                 AARTFC{" "}
                 {std.aartfc_qualifying_standard != null
                   ? formatMark(std.aartfc_qualifying_standard, kind)
@@ -185,34 +183,46 @@ const EventsClient = ({
   const rankKey: SortKey = selectedSeason === "outdoor" ? "rank_outdoor" : "rank_indoor";
 
   return (
-    <div className="px-6">
-      <h1 className="beginning">Events Page</h1>
+    <div>
+      <h1 className="mb-4 text-3xl font-bold text-fg">Events</h1>
 
-      <select onChange={(e) => setSelectedEvent(e.target.value)} value={selectedEvent}>
-        <option value="">All Events</option>
-        {events.map((e) => (
-          <option key={e.event_id} value={e.event_name}>
-            {e.event_name}
-          </option>
-        ))}
-      </select>
+      <div className="mb-6 flex flex-wrap gap-3">
+        <select
+          className="field-select"
+          onChange={(e) => setSelectedEvent(e.target.value)}
+          value={selectedEvent}
+        >
+          <option value="">All Events</option>
+          {events.map((e) => (
+            <option key={e.event_id} value={e.event_name}>
+              {e.event_name}
+            </option>
+          ))}
+        </select>
 
-      <select onChange={(e) => setSelectedSex(e.target.value)} value={selectedSex}>
-        <option value="">All Genders</option>
-        <option value="m">Men</option>
-        <option value="f">Women</option>
-      </select>
+        <select
+          className="field-select"
+          onChange={(e) => setSelectedSex(e.target.value)}
+          value={selectedSex}
+        >
+          <option value="">All Genders</option>
+          <option value="m">Men</option>
+          <option value="f">Women</option>
+        </select>
 
-      <select
-        onChange={(e) => setSelectedSeason(e.target.value as SeasonFilter)}
-        value={selectedSeason}
-      >
-        <option value="indoor">Indoor</option>
-        <option value="outdoor">Outdoor</option>
-        <option value="all">All Seasons</option>
-      </select>
+        <select
+          className="field-select"
+          onChange={(e) => setSelectedSeason(e.target.value as SeasonFilter)}
+          value={selectedSeason}
+        >
+          <option value="indoor">Indoor</option>
+          <option value="outdoor">Outdoor</option>
+          <option value="all">All Seasons</option>
+        </select>
+      </div>
 
-      {visibleEvents.map((event) => {
+      <div className="space-y-8">
+        {visibleEvents.map((event) => {
         const kind = markKind(event.event_id);
         const rows = sortRows(
           event.rows.filter((r) => selectedSex === "" || r.sex === selectedSex)
@@ -221,83 +231,88 @@ const EventsClient = ({
           selectedSeason === "outdoor" ? r.outdoor_best : r.indoor_best;
 
         return (
-          <div key={event.event_id}>
-            <h1>{event.event_name}</h1>
+          <section key={event.event_id}>
+            <h2 className="mb-1 text-2xl font-bold text-brand">{event.event_name}</h2>
             <StandardLines event={event} kind={kind} />
-            <table>
-              <thead>
-                <tr>
-                  <th onClick={() => requestSort("name")}>Athlete Name{sortIndicator("name")}</th>
-                  {oneSeason ? (
-                    <th onClick={() => requestSort(bestKey)}>
-                      {selectedSeason === "outdoor" ? "Outdoor" : "Indoor"} Best
-                      {sortIndicator(bestKey)}
+            <div className="overflow-x-auto">
+              <table className="data-table">
+                <thead>
+                  <tr>
+                    <th className="sortable" onClick={() => requestSort("name")}>
+                      Athlete Name{sortIndicator("name")}
                     </th>
-                  ) : (
-                    <>
-                      <th onClick={() => requestSort("indoor")}>
-                        Indoor Best{sortIndicator("indoor")}
-                      </th>
-                      <th onClick={() => requestSort("outdoor")}>
-                        Outdoor Best{sortIndicator("outdoor")}
-                      </th>
-                    </>
-                  )}
-                  <th onClick={() => requestSort("collegiate")}>
-                    Collegiate Best{sortIndicator("collegiate")}
-                  </th>
-                  <th onClick={() => requestSort("personal")}>
-                    Personal Best{sortIndicator("personal")}
-                  </th>
-                  {oneSeason ? (
-                    <th onClick={() => requestSort(rankKey)}>
-                      Ranking{sortIndicator(rankKey)}
-                    </th>
-                  ) : (
-                    <>
-                      <th onClick={() => requestSort("rank_indoor")}>
-                        Indoor Ranking{sortIndicator("rank_indoor")}
-                      </th>
-                      <th onClick={() => requestSort("rank_outdoor")}>
-                        Outdoor Ranking{sortIndicator("rank_outdoor")}
-                      </th>
-                    </>
-                  )}
-                </tr>
-              </thead>
-              <tbody>
-                {rows.map((row) => (
-                  <tr key={row.athlete_id}>
-                    <td>
-                      <b className={nameClass(event, row)}>
-                        {row.nickname ? row.nickname : row.first_name} {row.last_name}
-                      </b>
-                    </td>
                     {oneSeason ? (
-                      <td>{markCell(seasonCell(row), kind)}</td>
+                      <th className="sortable" onClick={() => requestSort(bestKey)}>
+                        {selectedSeason === "outdoor" ? "Outdoor" : "Indoor"} Best
+                        {sortIndicator(bestKey)}
+                      </th>
                     ) : (
                       <>
-                        <td>{markCell(row.indoor_best, kind)}</td>
-                        <td>{markCell(row.outdoor_best, kind)}</td>
+                        <th className="sortable" onClick={() => requestSort("indoor")}>
+                          Indoor Best{sortIndicator("indoor")}
+                        </th>
+                        <th className="sortable" onClick={() => requestSort("outdoor")}>
+                          Outdoor Best{sortIndicator("outdoor")}
+                        </th>
                       </>
                     )}
-                    <td>{markCell(row.collegiate_best, kind)}</td>
-                    <td>{markCell(row.personal_best, kind)}</td>
+                    <th className="sortable" onClick={() => requestSort("collegiate")}>
+                      Collegiate Best{sortIndicator("collegiate")}
+                    </th>
+                    <th className="sortable" onClick={() => requestSort("personal")}>
+                      Personal Best{sortIndicator("personal")}
+                    </th>
                     {oneSeason ? (
-                      <td>{seasonCell(row)?.ranking ?? "-"}</td>
+                      <th className="sortable" onClick={() => requestSort(rankKey)}>
+                        Ranking{sortIndicator(rankKey)}
+                      </th>
                     ) : (
                       <>
-                        <td>{row.indoor_best?.ranking ?? "-"}</td>
-                        <td>{row.outdoor_best?.ranking ?? "-"}</td>
+                        <th className="sortable" onClick={() => requestSort("rank_indoor")}>
+                          Indoor Ranking{sortIndicator("rank_indoor")}
+                        </th>
+                        <th className="sortable" onClick={() => requestSort("rank_outdoor")}>
+                          Outdoor Ranking{sortIndicator("rank_outdoor")}
+                        </th>
                       </>
                     )}
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody>
+                  {rows.map((row) => (
+                    <tr key={row.athlete_id}>
+                      <td className="text-left">
+                        <b className={nameClass(event, row)}>
+                          {row.nickname ? row.nickname : row.first_name} {row.last_name}
+                        </b>
+                      </td>
+                      {oneSeason ? (
+                        <td>{markCell(seasonCell(row), kind)}</td>
+                      ) : (
+                        <>
+                          <td>{markCell(row.indoor_best, kind)}</td>
+                          <td>{markCell(row.outdoor_best, kind)}</td>
+                        </>
+                      )}
+                      <td>{markCell(row.collegiate_best, kind)}</td>
+                      <td>{markCell(row.personal_best, kind)}</td>
+                      {oneSeason ? (
+                        <td>{seasonCell(row)?.ranking ?? "-"}</td>
+                      ) : (
+                        <>
+                          <td>{row.indoor_best?.ranking ?? "-"}</td>
+                          <td>{row.outdoor_best?.ranking ?? "-"}</td>
+                        </>
+                      )}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
         );
-      })}
+        })}
+      </div>
     </div>
   );
 };

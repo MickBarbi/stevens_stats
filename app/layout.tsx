@@ -1,28 +1,32 @@
-import './globals.css';
-import Navbar from '../components/Navbar';
-import { ReactNode } from 'react';
-import type { Metadata } from 'next';
+import "./globals.css";
+import type { Metadata } from "next";
+import { ReactNode } from "react";
+import Navbar from "../components/Navbar";
 
 export const metadata: Metadata = {
-  title: 'Stevens Stats',
-  description: 'Welcome to my Next.js app',
+  title: "Stevens Stats",
+  description:
+    "Track & field results for the Stevens team — rosters, event bests and season progressions.",
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
-    other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/favicon.ico',
-    },
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+    other: { rel: "apple-touch-icon-precomposed", url: "/favicon.ico" },
   },
 };
 
+// Runs before first paint so the saved theme is applied with no flash.
+const themeScript = `(function(){try{var s=localStorage.getItem('theme');var m=window.matchMedia('(prefers-color-scheme: dark)').matches;var d=s==='dark'||((!s||s==='system')&&m);document.documentElement.setAttribute('data-theme',d?'dark':'light');}catch(e){}})();`;
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
         <Navbar />
-        {children}
+        <main className="mx-auto max-w-6xl px-4 py-6 sm:py-8">{children}</main>
       </body>
     </html>
   );
