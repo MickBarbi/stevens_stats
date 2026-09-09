@@ -71,6 +71,7 @@ const RosterClient = ({
     <div>
       <PageHeader title="Roster">
         <select
+          aria-label="Filter by event"
           className="field-select"
           value={eventId}
           onChange={(e) => setEventId(e.target.value)}
@@ -83,6 +84,7 @@ const RosterClient = ({
           ))}
         </select>
         <select
+          aria-label="Filter by class year"
           className="field-select"
           value={year}
           onChange={(e) => setYear(e.target.value)}
@@ -95,6 +97,7 @@ const RosterClient = ({
           <option value="5">Grad Students</option>
         </select>
         <select
+          aria-label="Filter by gender"
           className="field-select"
           value={sex}
           onChange={(e) => setSex(e.target.value)}

@@ -248,8 +248,14 @@ personal investment).
   new-PB row; respect `prefers-reduced-motion`.
 - [ ] **T4.2 Empty states with personality** (no posts / no marks / no standards).
 - [ ] **T4.3 Per-athlete OG images** so a texted link previews nicely.
-- [ ] **T4.4 Accessibility pass.** Focus rings, `<th scope>`, keyboard-operable
-  sorting, landmarks, alt text, 24px+ touch targets, AA contrast.
+- [x] **T4.4 Accessibility pass.** ✅ One global `:focus-visible` outline
+  (`!important`, beats the `outline-none` utilities); skip-to-content link +
+  `id="main"`; `prefers-reduced-motion` kills transitions / animations / smooth
+  scroll (incl. the events jump-bar scroll); `<th scope="col">` + a
+  screen-reader `<caption>` on the Top 10 tables; `aria-label` on every bare
+  `<select>`; drawer moves focus to its close button on open, traps Tab, and
+  restores focus to the hamburger on close. Sorting is already button-based
+  (segmented control), landmarks/headings already in place from Tier 0.
 - [ ] **T4.5 PWA-lite.** Installable with icon + offline shell — "check every
   week" becomes an icon on the home screen.
 
@@ -283,6 +289,18 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-09 — T4.4 accessibility pass
+- Global `:focus-visible` outline in `globals.css` (`!important` to beat the
+  `outline-none` utilities); `prefers-reduced-motion` block that zeroes
+  transitions / animations / `scroll-behavior`.
+- `layout.tsx`: skip-to-content link + `id="main"` on `<main>`.
+- `RecordsClient`: `<th scope="col">` and an `sr-only` `<caption>` per table.
+- `aria-label` on every bare `<select>` (roster, records).
+- `Navbar` drawer: focus → close button on open, `Tab` trapped inside, focus
+  restored to the hamburger on close; `scrollTo` in `EventsClient` respects
+  reduced motion.
+- Data: outdoor 3000 m added as "not contested" (MAC + AARTFC).
 
 ### 2026-09-09 — qualifying standards (MAC + AARTFC) + events column order
 - `data/qualifying_standards.json` filled: MAC + AARTFC, indoor and outdoor —

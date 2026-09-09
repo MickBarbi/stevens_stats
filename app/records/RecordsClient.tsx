@@ -57,6 +57,7 @@ export default function RecordsClient({ lists }: { lists: TopTenList[] }) {
     <div>
       <PageHeader title="Top 10">
         <select
+          aria-label="Gender"
           className="field-select"
           value={gender}
           onChange={(e) => setGender(e.target.value as "m" | "f")}
@@ -65,6 +66,7 @@ export default function RecordsClient({ lists }: { lists: TopTenList[] }) {
           <option value="f">Women</option>
         </select>
         <select
+          aria-label="Season"
           className="field-select"
           value={season}
           onChange={(e) => setSeason(e.target.value as "indoor" | "outdoor")}
@@ -83,12 +85,18 @@ export default function RecordsClient({ lists }: { lists: TopTenList[] }) {
               <h2 className="mb-1 text-2xl font-bold text-brand">{l.event_name}</h2>
               <div className="overflow-x-auto">
                 <table className="data-table">
+                  <caption className="sr-only">
+                    {l.event_name} all-time top ten —{" "}
+                    {l.gender === "m" ? "men" : "women"}, {l.season}
+                  </caption>
                   <thead>
                     <tr>
-                      <th>#</th>
-                      <th className="text-left">Athlete</th>
-                      <th>Mark</th>
-                      <th>{l.relay ? "Year" : "Date"}</th>
+                      <th scope="col">#</th>
+                      <th scope="col" className="text-left">
+                        Athlete
+                      </th>
+                      <th scope="col">Mark</th>
+                      <th scope="col">{l.relay ? "Year" : "Date"}</th>
                     </tr>
                   </thead>
                   <tbody>

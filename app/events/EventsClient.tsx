@@ -159,8 +159,12 @@ const EventsClient = ({
     return e.rows.some(hasRow);
   });
 
-  const scrollTo = (id: number) =>
-    document.getElementById(`ev-${id}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const scrollTo = (id: number) => {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document
+      .getElementById(`ev-${id}`)
+      ?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+  };
 
   // Deal events alternately into two columns on wide screens so reading order is
   // across-then-down (60 · 200 / 400 · 800 …), not down-one-column-then-the-next.

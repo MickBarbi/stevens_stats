@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import DesignerLogo from "../public/Designer.jpeg";
 import ThemeToggle from "./ThemeToggle";
@@ -22,6 +22,11 @@ export default function Navbar() {
   const isActive = (href: string) =>
     pathname === href || pathname?.startsWith(href + "/");
 
+  const openBtnRef = useRef<HTMLButtonElement>(null);
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
+  const drawerRef = useRef<HTMLElement>(null);
+  const everOpened = useRef(false);
+
   // close the drawer on navigation
   useEffect(() => setOpen(false), [pathname]);
 
@@ -37,6 +42,34 @@ export default function Navbar() {
       window.removeEventListener("keydown", onKey);
     };
   }, [open]);
+
+  // move focus into the drawer on open, back to the trigger on close
+  useEffect(() => {
+    if (open) {
+      everOpened.current = true;
+      closeBtnRef.current?.focus();
+    } else if (everOpened.current) {
+      openBtnRef.current?.focus();
+    }
+  }, [open]);
+
+  // keep Tab focus inside the open drawer
+  const trapTab = (e: React.KeyboardEvent) => {
+    if (e.key !== "Tab" || !drawerRef.current) return;
+    const items = drawerRef.current.querySelectorAll<HTMLElement>(
+      'a[href],button:not([disabled])'
+    );
+    if (items.length === 0) return;
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  };
 
   return (
     <>
@@ -75,6 +108,7 @@ export default function Navbar() {
           <div className="ml-auto flex items-center gap-1 sm:hidden">
             <ThemeToggle />
             <button
+              ref={openBtnRef}
               type="button"
               onClick={() => setOpen(true)}
               aria-label="Open menu"
@@ -98,10 +132,12 @@ export default function Navbar() {
         }`}
       />
       <aside
+        ref={drawerRef}
         role="dialog"
         aria-modal="true"
         aria-label="Site menu"
         aria-hidden={!open}
+        onKeyDown={trapTab}
         className={`fixed right-0 top-0 z-[60] flex h-full w-72 max-w-[82vw] flex-col bg-surface-raised text-fg shadow-card-hover transition-transform duration-200 sm:hidden ${
           open ? "translate-x-0" : "pointer-events-none translate-x-full"
         }`}
@@ -111,9 +147,11 @@ export default function Navbar() {
             Menu
           </span>
           <button
+            ref={closeBtnRef}
             type="button"
             onClick={() => setOpen(false)}
             aria-label="Close menu"
+            tabIndex={open ? 0 : -1}
             className="inline-flex h-9 w-9 items-center justify-center rounded-md text-fg-muted hover:bg-surface"
           >
             <X className="h-5 w-5" />
