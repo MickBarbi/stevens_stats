@@ -8,6 +8,7 @@ import eventsJson from "@/data/events.json";
 import performancesJson from "@/data/performances.json";
 import standardsJson from "@/data/qualifying_standards.json";
 import postsJson from "@/data/blog_posts.json";
+import topTenJson from "@/data/top10.json";
 
 export type Athlete = {
   athlete_id: number;
@@ -212,7 +213,97 @@ export const getPost = (id: number): BlogPost | null =>
 // ---- Season -----------------------------------------------------------------
 export type Season = "indoor" | "outdoor";
 
+export const seasonName = (flag: string): Season =>
+  flag === "i" ? "indoor" : "outdoor";
+
 // Which season the events page defaults to. Indoor runs its core Dec-Feb;
 // everything else (including the March outdoor openers) defaults to outdoor.
 export const currentSeason = (date: Date = new Date()): Season =>
   [11, 0, 1].includes(date.getMonth()) ? "indoor" : "outdoor";
+
+// ---- Official all-time top-10 lists ---------------------------------------
+// Hand-maintained (data/top10.json). Includes events and athletes not in the
+// scraped data (alumni, relays), so this — not the scraped performances — is
+// the source of truth for "team rank". See data/README.md.
+
+export type TopTenEntry = {
+  rank: number;
+  athlete_id: number | null; // links to /athlete/<id> when the person is in the system
+  name?: string; // individual
+  names?: string[]; // relay legs
+  mark: string; // as written on the official list
+  date?: string;
+  meet?: string;
+};
+
+export type TopTenList = {
+  event_id: number | null; // null for relays
+  event_name: string;
+  gender: string; // "m" | "f"
+  season: Season;
+  relay: boolean;
+  entries: TopTenEntry[];
+};
+
+export const topTen = topTenJson as unknown as TopTenList[];
+
+const topTenIndex = new Map<string, TopTenList>();
+for (const list of topTen) {
+  if (list.event_id != null && !list.relay) {
+    topTenIndex.set(`${list.event_id}|${list.gender}|${list.season}`, list);
+  }
+}
+
+/** The athlete's place on the official all-time list for this event, or null. */
+export const teamRank = (
+  athleteId: number,
+  eventId: number,
+  season: Season,
+  gender: string | null
+): number | null => {
+  if (!gender) return null;
+  const list = topTenIndex.get(`${eventId}|${gender}|${season}`);
+  const entry = list?.entries.find((e) => e.athlete_id === athleteId);
+  return entry ? entry.rank : null;
+};
+
+// ---- Latest results feed (home dashboard) --------------------------------
+
+export type FeedResult = Performance & {
+  athlete: PickerAthlete;
+  event_name: string;
+  higher_is_better: boolean;
+  pb_mark: number | null; // athlete's all-time best for this event, for context
+  team_rank: number | null;
+};
+
+export const latestResults = (limit = 60): FeedResult[] => {
+  const activeById = new Map(activeAthletes().map((a) => [a.athlete_id, a]));
+
+  const pbByKey = new Map<string, number>();
+  for (const p of performances) {
+    if (p.is_personal_best) pbByKey.set(`${p.athlete_id}|${p.event_id}`, p.mark);
+  }
+
+  return performances
+    .filter((p) => activeById.has(p.athlete_id))
+    .slice()
+    .sort((a, b) => b.date.localeCompare(a.date) || b.performance_id - a.performance_id)
+    .slice(0, limit)
+    .map((p) => {
+      const a = activeById.get(p.athlete_id)!;
+      return {
+        ...p,
+        athlete: {
+          athlete_id: a.athlete_id,
+          first_name: a.first_name,
+          last_name: a.last_name,
+          nickname: a.nickname,
+        },
+        event_name: eventNameById.get(p.event_id) ?? String(p.event_id),
+        higher_is_better: higherIsBetterById.get(p.event_id) ?? false,
+        pb_mark: pbByKey.get(`${p.athlete_id}|${p.event_id}`) ?? null,
+        team_rank: teamRank(p.athlete_id, p.event_id, seasonName(p.season), a.sex),
+      };
+    });
+};

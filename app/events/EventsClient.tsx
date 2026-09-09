@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
-import type {
-  BestCell,
-  LeaderboardEvent,
-  LeaderboardRow,
-  QualifyingStandard,
-  Season,
+import {
+  teamRank,
+  type BestCell,
+  type LeaderboardEvent,
+  type LeaderboardRow,
+  type QualifyingStandard,
+  type Season,
 } from "@/lib/data";
 import { formatMark, markKind, type MarkKind } from "@/lib/format";
 import PageHeader from "@/components/ui/PageHeader";
@@ -23,7 +24,6 @@ type SortKey =
   | "rank_outdoor";
 
 const cellMark = (c: BestCell) => (c ? Number(c.mark) : null);
-const cellRank = (c: BestCell) => (c ? c.ranking : null);
 
 const clears = (mark: number, standard: number, higherIsBetter: boolean) =>
   higherIsBetter ? mark >= standard : mark <= standard;
@@ -60,7 +60,11 @@ const EventsClient = ({
   const standardsFor = (eventId: number, season: string): Record<string, QualifyingStandard> =>
     stdMap.get(eventId)?.get(season) ?? {};
 
-  const sortValue = (row: LeaderboardRow, key: SortKey): string | number | null => {
+  const sortValue = (
+    row: LeaderboardRow,
+    key: SortKey,
+    eventId: number
+  ): string | number | null => {
     switch (key) {
       case "name":
         return row.last_name.toLowerCase();
@@ -73,19 +77,19 @@ const EventsClient = ({
       case "personal":
         return cellMark(row.personal_best);
       case "rank_indoor":
-        return cellRank(row.indoor_best);
+        return teamRank(row.athlete_id, eventId, "indoor", row.sex);
       case "rank_outdoor":
-        return cellRank(row.outdoor_best);
+        return teamRank(row.athlete_id, eventId, "outdoor", row.sex);
     }
   };
 
-  const sortRows = (rows: LeaderboardRow[]) => {
+  const sortRows = (rows: LeaderboardRow[], eventId: number) => {
     if (!sortConfig) return rows;
     const { key, direction } = sortConfig;
     const dir = direction === "ascending" ? 1 : -1;
     return [...rows].sort((a, b) => {
-      const av = sortValue(a, key);
-      const bv = sortValue(b, key);
+      const av = sortValue(a, key, eventId);
+      const bv = sortValue(b, key, eventId);
       if (av === bv) return 0;
       if (av === null || av === "") return 1; // nulls always last
       if (bv === null || bv === "") return -1;
@@ -224,10 +228,17 @@ const EventsClient = ({
         {visibleEvents.map((event) => {
         const kind = markKind(event.event_id);
         const rows = sortRows(
-          event.rows.filter((r) => selectedSex === "" || r.sex === selectedSex)
+          event.rows.filter((r) => selectedSex === "" || r.sex === selectedSex),
+          event.event_id
         );
         const seasonCell = (r: LeaderboardRow) =>
           selectedSeason === "outdoor" ? r.outdoor_best : r.indoor_best;
+        const rankCell = (n: number | null) =>
+          n == null ? (
+            "—"
+          ) : (
+            <span className={n === 1 ? "font-semibold text-brand" : undefined}>#{n}</span>
+          );
 
         return (
           <section key={event.event_id}>
@@ -263,15 +274,15 @@ const EventsClient = ({
                     </th>
                     {oneSeason ? (
                       <th className="sortable" onClick={() => requestSort(rankKey)}>
-                        Ranking{sortIndicator(rankKey)}
+                        Team Rank{sortIndicator(rankKey)}
                       </th>
                     ) : (
                       <>
                         <th className="sortable" onClick={() => requestSort("rank_indoor")}>
-                          Indoor Ranking{sortIndicator("rank_indoor")}
+                          Indoor Rank{sortIndicator("rank_indoor")}
                         </th>
                         <th className="sortable" onClick={() => requestSort("rank_outdoor")}>
-                          Outdoor Ranking{sortIndicator("rank_outdoor")}
+                          Outdoor Rank{sortIndicator("rank_outdoor")}
                         </th>
                       </>
                     )}
@@ -296,11 +307,28 @@ const EventsClient = ({
                       <td>{markCell(row.collegiate_best, kind)}</td>
                       <td>{markCell(row.personal_best, kind)}</td>
                       {oneSeason ? (
-                        <td>{seasonCell(row)?.ranking ?? "-"}</td>
+                        <td>
+                          {rankCell(
+                            teamRank(
+                              row.athlete_id,
+                              event.event_id,
+                              selectedSeason as Season,
+                              row.sex
+                            )
+                          )}
+                        </td>
                       ) : (
                         <>
-                          <td>{row.indoor_best?.ranking ?? "-"}</td>
-                          <td>{row.outdoor_best?.ranking ?? "-"}</td>
+                          <td>
+                            {rankCell(
+                              teamRank(row.athlete_id, event.event_id, "indoor", row.sex)
+                            )}
+                          </td>
+                          <td>
+                            {rankCell(
+                              teamRank(row.athlete_id, event.event_id, "outdoor", row.sex)
+                            )}
+                          </td>
                         </>
                       )}
                     </tr>

@@ -6,9 +6,10 @@ import moment from "moment";
 import Image from "next/image";
 import useMediaQuery from "react-responsive";
 import AthletePicker from "../AthletePicker";
-import type { Athlete, PickerAthlete, ProgressionPerformance } from "@/lib/data";
+import { teamRank, type Athlete, type PickerAthlete, type ProgressionPerformance } from "@/lib/data";
 import { athletePhotoUrl } from "@/lib/photo";
 import { formatMark, markKind } from "@/lib/format";
+import Badge from "@/components/ui/Badge";
 
 type Perf = ProgressionPerformance;
 
@@ -163,12 +164,21 @@ const AthleteProfile = ({
   const bestsRows = buildBests(progression);
   const displayName = athlete.nickname ? athlete.nickname : athlete.first_name;
 
-  const markLink = (p: Perf | null) =>
+  const rankOf = (season: "indoor" | "outdoor", eventId: number) =>
+    teamRank(athlete.athlete_id, eventId, season, athlete.sex);
+
+  const markLink = (p: Perf | null, sr = false) =>
     p ? (
-      <a href={p.result_link ?? undefined} target="_blank" rel="noopener noreferrer">
-        {formatMark(p.mark, markKind(p.event_id))}
-      </a>
+      <span className="inline-flex items-center gap-1.5">
+        <a href={p.result_link ?? undefined} target="_blank" rel="noopener noreferrer">
+          {formatMark(p.mark, markKind(p.event_id))}
+        </a>
+        {sr && <Badge kind="sr" />}
+      </span>
     ) : null;
+
+  const rankText = (n: number | null) =>
+    n == null ? "" : <span className={n === 1 ? "font-semibold text-brand" : undefined}>#{n}</span>;
 
   return (
     <div className="space-y-8">
@@ -220,8 +230,8 @@ const AthleteProfile = ({
                     <th>Outdoor Overall Best</th>
                     <th>Collegiate Best</th>
                     <th>Personal Best</th>
-                    <th>Indoor Ranking</th>
-                    <th>Outdoor Ranking</th>
+                    <th>Indoor Rank</th>
+                    <th>Outdoor Rank</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -232,12 +242,12 @@ const AthleteProfile = ({
                       </td>
                       <td>{markLink(row.indoor_season_best)}</td>
                       <td>{markLink(row.outdoor_season_best)}</td>
-                      <td>{markLink(row.indoor_overall_best)}</td>
-                      <td>{markLink(row.outdoor_overall_best)}</td>
+                      <td>{markLink(row.indoor_overall_best, rankOf("indoor", row.event_id) === 1)}</td>
+                      <td>{markLink(row.outdoor_overall_best, rankOf("outdoor", row.event_id) === 1)}</td>
                       <td>{markLink(row.collegiate_best)}</td>
                       <td>{markLink(row.personal_best)}</td>
-                      <td>{row.indoor_overall_best?.ranking ?? ""}</td>
-                      <td>{row.outdoor_overall_best?.ranking ?? ""}</td>
+                      <td>{rankText(rankOf("indoor", row.event_id))}</td>
+                      <td>{rankText(rankOf("outdoor", row.event_id))}</td>
                     </tr>
                   ))}
                 </tbody>

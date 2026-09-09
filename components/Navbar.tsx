@@ -12,7 +12,8 @@ const LINKS = [
   { href: "/home", label: "Home" },
   { href: "/roster", label: "Roster" },
   { href: "/events", label: "Events" },
-  { href: "/athlete", label: "Athlete" },
+  { href: "/records", label: "Top 10" },
+  { href: "/athlete", label: "Athletes" },
 ];
 
 export default function Navbar() {
@@ -43,7 +44,7 @@ export default function Navbar() {
         <ul className="ml-auto hidden items-center gap-1 sm:flex">
           {LINKS.map((l) => (
             <li key={l.href}>
-              <Link href={l.href} className={linkClass(l.href, "px-3 py-2 text-lg")}>
+              <Link href={l.href} className={linkClass(l.href, "px-3 py-2 text-base")}>
                 {l.label}
               </Link>
             </li>

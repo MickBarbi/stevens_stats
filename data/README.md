@@ -66,3 +66,33 @@ The events page opens on the current season (indoor Dec–Feb, outdoor otherwise
 ```
 
 `post_id` must be unique; `created_on` is `YYYY-MM-DD` (newest sorts first).
+
+**`top10.json`** — the official all-time top-10 lists. This is the source of
+truth for "team rank" (the scraped data only covers the current roster, so it
+can't rank against alumni or handle relays). Array of:
+
+```json
+{
+  "event_id": 6,
+  "event_name": "800 Meters",
+  "gender": "m",
+  "season": "indoor",
+  "relay": false,
+  "entries": [
+    { "rank": 1, "athlete_id": 7892451, "name": "Jake Porco",
+      "mark": "1:52.34", "date": "2023-02-18", "meet": "MAC Championships" },
+    { "rank": 2, "athlete_id": null, "name": "Older Alum",
+      "mark": "1:53.10", "date": "2015-03-01", "meet": "" }
+  ]
+}
+```
+
+- `event_id` — the numeric id from `events.json` for individual events; `null`
+  for relays. `event_name` is always shown as-is.
+- `gender` is `"m"` / `"f"`, `season` is `"indoor"` / `"outdoor"`.
+- Relay lists: set `"relay": true` and give each entry `"names": ["A","B","C","D"]`
+  instead of `"name"` (and `athlete_id` can stay `null`).
+- `athlete_id` links the entry to `/athlete/<id>` when that person is on the
+  current site; leave it `null` for anyone not in the system.
+- Powers the `/records` page, the "Team Rank" columns on the events and athlete
+  pages, and the "SR" badge (rank 1) on the home feed / athlete page.

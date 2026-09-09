@@ -172,20 +172,23 @@ personal investment).
 
 ### Tier 1 — The hook: make checking in worth it
 
-- [ ] **T1.1 Home = "This Week" dashboard.** Reverse-chronological feed of recent
-  team results (performances already carry date + PB/SB flags): athlete ·
-  event · mark · badge. Serves the core spectator scenario directly.
-  *(visibility of system status; variable reward; fixes P7)*
-- [ ] **T1.2 Result badges.** `<Badge>` for **PB / SB / School Record / MAC-Q /
-  AARTFC-Q**, reused on the feed, athlete page, events tables. Non-experts see
-  "something good happened" without event knowledge. *(recognition over recall;
-  fixes P8)*
-- [ ] **T1.3 "Team Bests" board.** Per event, top ~10 marks with an
-  all-time / this-season toggle, framed as leaderboards. Gives every mark a
-  rank; browsable.
-- [ ] **T1.4 Context chips on marks.** Team rank for the event (`#2`) and/or
-  delta vs the athlete's PB (`−0.31`). "9.20m" → "9.20m — 2nd on the team,
-  +0.4 on her PB". *(reduce cognitive load; fixes P8)*
+- [x] **T1.1 Home = "This Week" dashboard.** ✅ `components/LatestResults.tsx` —
+  the 60 most recent results, grouped by date: athlete · event · mark · badges.
+  Home is now Latest Results first, then a "Team News" section (blog posts).
+- [x] **T1.2 Result badges.** ✅ `components/ui/Badge.tsx` (outline pills, PB / SB
+  / SR / MAC Q / AARTFC Q). Used on the feed (PB/SB/SR) and the athlete bests
+  table (SR on rank-1 overall bests). MAC/AARTFC-Q wired in the type but not yet
+  placed — they show once `qualifying_standards.json` is filled.
+- [x] **T1.3 "Team Bests" board.** ✅ pulled forward: new `/records` page ("Top
+  10", in the nav) renders the official all-time lists from `data/top10.json`
+  with Men/Women × Indoor/Outdoor filters, relays included. Empty-state until
+  the file is populated.
+- [x] **T1.4 Context on marks.** ✅ Team rank now comes from `top10.json`
+  (`teamRank()` in `lib/data.ts`) — the "Team Rank" columns on the events and
+  athlete pages replace the old finishing-place field, and `#1` renders in the
+  brand colour. Feed rows show the athlete's PB for the event as a muted
+  reference when the result isn't itself a PB. (Numeric Δ deferred — the PB
+  reference reads better for non-experts.)
 
 ### Tier 2 — Athlete page: personable
 
@@ -252,6 +255,26 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-08 — T1.1–T1.4 (the hook)
+- **Home is now a "Latest Results" dashboard** (`components/LatestResults.tsx`)
+  — the 60 newest performances, grouped by date, each row: athlete · event ·
+  mark (mono) · badges · muted PB reference. Blog posts move to a "Team News"
+  section below.
+- **`components/ui/Badge.tsx`** — outline pills (PB / SB / SR / MAC Q / AARTFC Q).
+  On the feed (PB/SB/SR) and the athlete bests table (SR on rank-1 overall
+  bests).
+- **`/records` page** ("Top 10" in the nav) — official all-time lists from the
+  new hand-maintained `data/top10.json`, filtered by Men/Women × Indoor/Outdoor,
+  relays included. Graceful empty state.
+- **Team rank** now sourced from `top10.json` via `teamRank()` in `lib/data.ts`:
+  the events + athlete pages' rank columns (renamed "Team Rank" / "Indoor Rank"
+  / "Outdoor Rank") show `#N` from the official list instead of the
+  near-empty finishing-place field. `#1` in brand colour.
+- Nav: "Athlete" → "Athletes"; added "Top 10".
+- **Data owed:** populate `data/top10.json` (all events × gender × season,
+  relays) to light up ranks, SR badges and the /records board. Shape in
+  `data/README.md`. Verified feed / records / events in both themes.
 
 ### 2026-09-08 — T0.3 typography + T0.4 shell finish
 - Geist Sans + Geist Mono wired with `next/font/local` (`app/layout.tsx`),
