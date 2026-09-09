@@ -272,6 +272,21 @@ Adjust freely — this is a guide, not a contract.
 
 ## Progress log
 
+### 2026-09-09 — progression charts, take 2 (feedback: "too bland")
+- `EventCharts` rewritten in `app/athlete/[athleteId]/AthleteProfile.tsx`.
+- **Time-scaled x-axis**: `type="number"` over epoch-ms, so horizontal spacing
+  is real elapsed time — plateaus and fast early gains now read at a glance.
+  Explicit `monthTicks()`; day-level labels ("Mar 25") when the span is < ~75d,
+  "MMM ’YY" otherwise.
+- **Nice y-ticks**: `niceDomain()` snaps the range to clean steps
+  (0.05 / 0.1 / 0.25 / 1 / 2 / 5 / 15 / 60 …) and passes an explicit tick list.
+  `formatAxisMark()` drops the trailing `.00` off m:ss axis labels (tooltip and
+  PB label keep full precision).
+- Line → gradient-filled `<Area>` (`type="linear"` — every vertex is a real
+  mark). Improvement caption per chart (`▼ 42.32s · 12 mo`), `PB x` label on the
+  dashed reference line auto-placed in the empty corner, solid endpoint dot.
+- Removed `getMinMaxWithPadding` and the rotated Y-axis unit label.
+
 ### 2026-09-09 — T2.4 prev/next + share (Tier 2 complete)
 - `adjacentActiveAthletes(id)` in `lib/data.ts` → prev/next athlete in roster
   order (wraps); rendered as links in the row beside the picker.

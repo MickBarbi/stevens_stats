@@ -2,13 +2,14 @@
 
 import React from "react";
 import {
-  LineChart,
-  Line,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
   Tooltip,
   CartesianGrid,
   ReferenceLine,
+  ReferenceDot,
   ResponsiveContainer,
 } from "recharts";
 import moment from "moment";
@@ -89,13 +90,79 @@ const sortDataByDate = (grouped: { [key: string]: Perf[] }) => {
   return grouped;
 };
 
-const getMinMaxWithPadding = (data: Perf[]) => {
-  const marks = data.map((d) => Number(d.mark));
-  const min = Math.min(...marks);
-  const max = Math.max(...marks);
-  const range = max - min;
-  const padding = range * 0.05;
-  return range === 0 ? [min - 1, max + 1] : [min - padding, max + padding];
+// Step sizes that read cleanly on a track & field axis (seconds, metres,
+// points). niceDomain() rounds a raw [min,max] out to the nearest of these so
+// the y-axis shows 7.4 / 7.6 / 7.8 instead of 7.43 / 7.61 / 7.79.
+const NICE_STEPS = [
+  0.01, 0.02, 0.025, 0.05, 0.1, 0.2, 0.25, 0.5, 1, 2, 2.5, 5, 10, 15, 20, 30,
+  60, 120, 300, 600,
+];
+
+const niceDomain = (
+  min: number,
+  max: number,
+  target = 4
+): { domain: [number, number]; ticks: number[] } => {
+  if (!(max > min)) {
+    const pad = Math.abs(min) > 1 ? 0.5 : 0.05;
+    return { domain: [min - pad, max + pad], ticks: [min] };
+  }
+  const rawStep = (max - min) / target;
+  let step = NICE_STEPS.find((s) => s >= rawStep) ?? rawStep;
+  let lo = Math.floor(min / step) * step;
+  let hi = Math.ceil(max / step) * step;
+  if ((hi - lo) / step > 6) {
+    const i = NICE_STEPS.indexOf(step);
+    if (i >= 0 && i + 1 < NICE_STEPS.length) {
+      step = NICE_STEPS[i + 1];
+      lo = Math.floor(min / step) * step;
+      hi = Math.ceil(max / step) * step;
+    }
+  }
+  const ticks: number[] = [];
+  for (let v = lo; v <= hi + step / 2; v += step) ticks.push(Number(v.toFixed(6)));
+  return { domain: [Number(lo.toFixed(6)), Number(hi.toFixed(6))], ticks };
+};
+
+// Month-boundary ticks across an elapsed-time span, spaced so ~4-6 labels land
+// on the axis. Returns raw epoch ms.
+const monthTicks = (tsMin: number, tsMax: number): number[] => {
+  const months = (tsMax - tsMin) / (1000 * 60 * 60 * 24 * 30.44);
+  const stepMonths = months <= 6 ? 1 : months <= 14 ? 3 : months <= 30 ? 6 : 12;
+  const out: number[] = [];
+  const cur = moment(tsMin).startOf("month");
+  const end = moment(tsMax).endOf("month");
+  while (cur.isSameOrBefore(end)) {
+    const t = cur.valueOf();
+    if (t >= tsMin && t <= tsMax) out.push(t);
+    cur.add(stepMonths, "month");
+  }
+  return out.length >= 2 ? out : [tsMin, tsMax];
+};
+
+// "3 wk" / "8 mo" / "1.5 yr" — how long the improvement took.
+const humanSpan = (ms: number): string => {
+  const days = ms / 86_400_000;
+  if (days < 31) return `${Math.max(1, Math.round(days / 7))} wk`;
+  const months = days / 30.44;
+  if (months < 12) return `${Math.round(months)} mo`;
+  const years = days / 365.25;
+  return years < 2 ? `${years.toFixed(1)} yr` : `${Math.round(years)} yr`;
+};
+
+// The size of the gain, in the event's own unit.
+const formatDelta = (delta: number, kind: MarkKind): string => {
+  if (kind === "points") return `${Math.round(delta)} pts`;
+  if (kind === "distance") return `${delta.toFixed(2)} m`;
+  return `${delta.toFixed(2)}s`;
+};
+
+// Axis gridline labels want less precision than a result line — trim the
+// trailing hundredths off m:ss times so ticks read "11:45" not "11:45.00".
+const formatAxisMark = (value: number, kind: MarkKind): string => {
+  const s = formatMark(value, kind);
+  if (kind !== "time" || !s.includes(":")) return s;
+  return s.replace(/\.00$/, "").replace(/(\.\d)0$/, "$1");
 };
 
 // Keep only the results that were a best-to-date, so the line only ever moves
@@ -156,57 +223,96 @@ const Sparkline = ({
 };
 
 const AXIS = "rgb(140 140 140)";
-const UNIT_LABEL: Record<MarkKind, string> = {
-  time: "Time",
-  distance: "Meters",
-  points: "Points",
-};
 
 const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
   const grouped = sortDataByDate(groupDataByEventAndSeason(data));
 
   return (
-    <div className="grid gap-x-8 gap-y-7 lg:grid-cols-2">
+    <div className="grid gap-x-8 gap-y-8 lg:grid-cols-2">
       {Object.entries(grouped).map(([key, group]) => {
         const chartData = bestProgression(group, group[0].higher_is_better);
         if (chartData.length <= 1) return null;
+
         const season = key.split("-")[1];
         const kind = markKind(group[0].event_id);
-        const [minMark, maxMark] = getMinMaxWithPadding(chartData);
-        const pbVal = chartData[chartData.length - 1].mark as number;
+        const higher = group[0].higher_is_better;
+
+        // Space points by when they actually happened, not evenly — a long flat
+        // stretch to the last dot means it took that long to take the next
+        // slice off.
+        const points = chartData.map((p) => ({
+          ts: new Date(`${p.date}T00:00:00`).getTime(),
+          mark: p.mark as number,
+        }));
+        const tsMin = points[0].ts;
+        const tsMax = points[points.length - 1].ts;
+
+        const marks = points.map((p) => p.mark);
+        const yd = niceDomain(Math.min(...marks), Math.max(...marks));
+        const pbVal = higher ? Math.max(...marks) : Math.min(...marks);
+
+        const delta = Math.abs(points[points.length - 1].mark - points[0].mark);
+        const gradId = `prog-grad-${key}`;
+
+        // Short spans get day-level x labels; longer ones just month + year.
+        const spanDays = (tsMax - tsMin) / 86_400_000;
+        const xTickFormat = (ms: number) =>
+          moment(ms).format(spanDays < 75 ? "MMM D" : "MMM [’]YY");
+
+        // A little breathing room past the last mark so its value label has
+        // somewhere to sit without clipping the right edge.
+        const xPad = Math.max((tsMax - tsMin) * 0.06, 5 * 86_400_000);
+
         return (
           <figure key={key} className="text-[color:var(--chart-line)]">
-            <figcaption className="mb-1 text-sm font-medium text-fg">
-              {chartData[0].event_name}{" "}
-              <span className="text-fg-muted">· {season === "i" ? "Indoor" : "Outdoor"}</span>
+            <figcaption className="mb-1.5 flex items-baseline justify-between gap-2">
+              <span className="text-sm font-medium text-fg">
+                {chartData[0].event_name}
+                <span className="text-fg-muted">
+                  {" · "}
+                  {season === "i" ? "Indoor" : "Outdoor"}
+                </span>
+              </span>
+              <span className="shrink-0 font-mono text-xs font-semibold tabular-nums text-pb">
+                {higher ? "▲" : "▼"} {formatDelta(delta, kind)}
+                <span className="text-fg-muted">
+                  {" · "}
+                  {humanSpan(tsMax - tsMin)}
+                </span>
+              </span>
             </figcaption>
             <ResponsiveContainer width="100%" height={210}>
-              <LineChart data={chartData} margin={{ top: 10, right: 14, left: 0, bottom: 2 }}>
-                <CartesianGrid stroke="rgb(140 140 140 / 0.16)" vertical={false} />
+              <AreaChart data={points} margin={{ top: 18, right: 14, left: 0, bottom: 2 }}>
+                <defs>
+                  <linearGradient id={gradId} x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="currentColor" stopOpacity={0.22} />
+                    <stop offset="100%" stopColor="currentColor" stopOpacity={0.02} />
+                  </linearGradient>
+                </defs>
+                <CartesianGrid stroke="rgb(140 140 140 / 0.14)" vertical={false} />
                 <XAxis
-                  dataKey="date"
-                  tickFormatter={(d) => moment(d).format("M/D/YY")}
+                  type="number"
+                  dataKey="ts"
+                  domain={[tsMin, tsMax + xPad]}
+                  ticks={monthTicks(tsMin, tsMax)}
+                  tickFormatter={xTickFormat}
                   tick={{ fontSize: 11, fill: AXIS }}
                   tickLine={false}
                   axisLine={{ stroke: "rgb(140 140 140 / 0.4)" }}
-                  minTickGap={36}
+                  minTickGap={20}
                 />
                 <YAxis
-                  domain={[minMark, maxMark]}
-                  tickFormatter={(value) => formatMark(value, kind)}
+                  type="number"
+                  domain={yd.domain}
+                  ticks={yd.ticks}
+                  tickFormatter={(value) => formatAxisMark(value, kind)}
                   tick={{ fontSize: 11, fill: AXIS }}
                   tickLine={false}
                   axisLine={false}
-                  width={58}
-                  label={{
-                    value: UNIT_LABEL[kind],
-                    angle: -90,
-                    position: "insideLeft",
-                    style: { fontSize: 10, fill: AXIS, textAnchor: "middle" },
-                  }}
+                  width={52}
                 />
                 <Tooltip
-                  labelFormatter={(d) => moment(d).format("MMM D, YYYY")}
+                  labelFormatter={(ms) => moment(ms).format("MMM D, YYYY")}
                   formatter={(value: number) => [formatMark(value, kind), "Mark"]}
                   contentStyle={{
                     background: "var(--surface-raised)",
@@ -219,23 +325,31 @@ const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
                 <ReferenceLine
                   y={pbVal}
                   stroke="currentColor"
-                  strokeDasharray="4 4"
-                  strokeOpacity={0.5}
+                  strokeDasharray="3 3"
+                  strokeOpacity={0.32}
                   label={{
-                    value: "PB",
-                    position: "insideTopRight",
-                    fontSize: 9,
+                    // The curve leaves the left corner open — below the line
+                    // for races (line sits low), above it for jumps (line sits
+                    // high) — so the PB label lands in clear space either way.
+                    value: `PB ${formatMark(pbVal, kind)}`,
+                    position: higher ? "insideBottomLeft" : "insideTopLeft",
+                    fontSize: 11,
+                    fontWeight: 600,
                     fill: "currentColor",
                   }}
                 />
-                <Line
+                <Area
+                  type="linear"
                   dataKey="mark"
                   stroke="currentColor"
                   strokeWidth={2}
-                  dot={{ r: 2.5 }}
+                  fill={`url(#${gradId})`}
+                  dot={{ r: 3, fill: "currentColor", strokeWidth: 0 }}
                   activeDot={{ r: 5 }}
+                  isAnimationActive={false}
                 />
-              </LineChart>
+                <ReferenceDot x={tsMax} y={pbVal} r={4} fill="currentColor" stroke="none" />
+              </AreaChart>
             </ResponsiveContainer>
           </figure>
         );
