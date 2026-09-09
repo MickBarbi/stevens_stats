@@ -65,6 +65,39 @@ progressions, conference qualifying standards, team news.
 
 ---
 
+## Design tokens (T0.1 — shipped)
+
+Defined in `app/globals.css` (light `:root`, dark via `@media` + `[data-theme]`),
+exposed as Tailwind utilities in `tailwind.config.ts`. **Use these, never raw
+hex.** Adding a token = edit `globals.css` (all three theme blocks) then
+`tailwind.config.ts`.
+
+| Token (CSS var) | Tailwind class | Purpose |
+|---|---|---|
+| `--bg` | `bg-bg` | page background |
+| `--surface` | `bg-surface` | cards, table wrappers |
+| `--surface-raised` | `bg-surface-raised` | raised/hover surface, sticky cells |
+| `--border` | `border-border` | dividers, table lines |
+| `--fg` | `text-fg` | primary text |
+| `--fg-muted` | `text-fg-muted` | secondary text |
+| `--fg-subtle` | `text-fg-subtle` | captions / tertiary |
+| `--brand` | `bg-brand` `text-brand` | Stevens maroon — nav, headings, chart line |
+| `--brand-hover` | `hover:bg-brand-hover` | brand hover state |
+| `--brand-fg` | `text-brand-fg` | text on a brand fill |
+| `--link` | `text-link` | hyperlinks |
+| `--pb` | `text-pb` `bg-pb` | personal-best accent (green) |
+| `--sb` | `text-sb` | season-best accent (amber) |
+| `--mac` | `text-mac` | MAC qualifying (red) |
+| `--aartfc` | `text-aartfc` | AARTFC qualifying (blue) |
+| `--chart-line` / `--chart-grid` | (read in JS) | Recharts colours |
+| `--radius` | `rounded-card` | standard card radius (12px) |
+| `--shadow-card` / `--shadow-card-hover` | `shadow-card` / `shadow-card-hover` | card elevation |
+
+Spacing / sizing: use Tailwind's built-in scale (no custom spacing tokens).
+Type scale + font: T0.3.
+
+---
+
 ## Where things stand (history so far)
 
 Already shipped before the redesign work (newest first, commit refs):
@@ -112,11 +145,11 @@ personal investment).
 
 ### Tier 0 — Foundation (do first; everything builds on it)
 
-- [ ] **T0.1 Design tokens.** Semantic vars in `globals.css` + `tailwind.config.ts`:
-  `bg`, `surface`, `surface-raised`, `border`, `text`, `text-muted`,
-  `brand` (Stevens maroon, used deliberately), `accent-pb`, `accent-sb`,
-  `qual-mac`, `qual-aartfc`, `chart-line`, `chart-grid`. Light + dark values,
-  one source of truth. *(design tokens; consistency)*
+- [x] **T0.1 Design tokens.** ✅ Semantic CSS vars in `app/globals.css` (light +
+  dark + forced-theme states) exposed as Tailwind classes in
+  `tailwind.config.ts`. One source of truth for colour / radius / shadow. See
+  the **Design tokens** section below for the vocabulary. Components are *not*
+  migrated onto them yet — that's T0.5.
 - [ ] **T0.2 Real dark mode.** Every surface/border/text reads a token; define
   both themes; add a persisted light/dark/system toggle in the header; delete
   the leaking `body` rule in `app/home/[post_id]/styles.css`; verify AA
@@ -213,6 +246,17 @@ Adjust freely — this is a guide, not a contract.
 ---
 
 ## Progress log
+
+### 2026-09-08 — T0.1 design tokens
+Added the semantic token layer: `app/globals.css` now defines colour / radius /
+shadow tokens for light, `@media` dark, and forced `[data-theme]` dark;
+`tailwind.config.ts` exposes them (`bg-surface`, `text-fg-muted`,
+`border-border`, `rounded-card`, `shadow-card`, …) and sets
+`darkMode: ["selector", '[data-theme="dark"]']`. Old `--background` /
+`--foreground` removed (nothing consumed the classes). No component styling
+changed yet, so the site looks identical — the tokens are the vocabulary for
+T0.2 (real dark mode) and T0.5 (consolidation). Vocabulary is in the **Design
+tokens** section above.
 
 ### 2026-09-08 — plan written
 Redesign not started. This doc created to track it. Site is static, on Vercel,

@@ -1,24 +1,126 @@
-/* styles.mjs or styles.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ==========================================================================
+   Design tokens — the single source of truth for colour, radius and shadow.
+
+   Components must reference these, never raw hex, via the Tailwind classes
+   wired in tailwind.config.ts:
+
+     surfaces  bg-bg  bg-surface  bg-surface-raised
+     text      text-fg  text-fg-muted  text-fg-subtle
+     lines     border-border
+     brand     bg-brand  text-brand  hover:bg-brand-hover  text-brand-fg
+     accents   text-link  text-pb  text-sb  text-mac  text-aartfc
+     shape     rounded-card  shadow-card  shadow-card-hover
+
+   Three theme states:
+     :root                          -> light (default)
+     @media dark, not forced light  -> dark  (follows the OS)
+     [data-theme="dark"|"light"]    -> forced by the theme toggle (added in T0.2)
+
+   NOTE: many per-page .css / .module.css files and inline style={{}} objects
+   still hold hard-coded colours. Migrating them onto these tokens is task T0.5
+   in docs/REDESIGN.md.
+   ========================================================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+
+  --bg: #ffffff;
+  --surface: #f5f5f6;
+  --surface-raised: #ffffff;
+  --border: #e4e4e7;
+
+  --fg: #18181b;
+  --fg-muted: #52525b;
+  --fg-subtle: #8a8a92;
+
+  --brand: #992211; /* Stevens maroon (formerly the bare #921) */
+  --brand-hover: #7d1c0e;
+  --brand-fg: #ffffff;
+
+  --link: #1d4ed8;
+  --pb: #15803d; /* personal best   */
+  --sb: #b45309; /* season best     */
+  --mac: #c81e1e; /* MAC qualifying   */
+  --aartfc: #1d4ed8; /* AARTFC qualifying */
+
+  --chart-line: #992211;
+  --chart-grid: #e4e4e7;
+
+  --radius: 0.75rem;
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.04), 0 4px 12px rgb(0 0 0 / 0.08);
+  --shadow-card-hover: 0 4px 8px rgb(0 0 0 / 0.06), 0 12px 28px rgb(0 0 0 / 0.14);
 }
 
+/* Dark values — kept identical between the media query and the forced-dark
+   attribute selector. Update both together. */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --bg: #0b0d10;
+    --surface: #14171c;
+    --surface-raised: #1b1f26;
+    --border: #2b303a;
+
+    --fg: #e8e9ec;
+    --fg-muted: #a2a5ad;
+    --fg-subtle: #71747d;
+
+    --brand: #c8402f;
+    --brand-hover: #d85a49;
+    --brand-fg: #ffffff;
+
+    --link: #7aa2f7;
+    --pb: #4ade80;
+    --sb: #fbbf24;
+    --mac: #f26d6d;
+    --aartfc: #7aa2f7;
+
+    --chart-line: #e07a6a;
+    --chart-grid: #2b303a;
+
+    --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 4px 14px rgb(0 0 0 / 0.5);
+    --shadow-card-hover: 0 4px 10px rgb(0 0 0 / 0.45), 0 14px 32px rgb(0 0 0 / 0.6);
   }
 }
 
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #0b0d10;
+  --surface: #14171c;
+  --surface-raised: #1b1f26;
+  --border: #2b303a;
+
+  --fg: #e8e9ec;
+  --fg-muted: #a2a5ad;
+  --fg-subtle: #71747d;
+
+  --brand: #c8402f;
+  --brand-hover: #d85a49;
+  --brand-fg: #ffffff;
+
+  --link: #7aa2f7;
+  --pb: #4ade80;
+  --sb: #fbbf24;
+  --mac: #f26d6d;
+  --aartfc: #7aa2f7;
+
+  --chart-line: #e07a6a;
+  --chart-grid: #2b303a;
+
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 4px 14px rgb(0 0 0 / 0.5);
+  --shadow-card-hover: 0 4px 10px rgb(0 0 0 / 0.45), 0 14px 32px rgb(0 0 0 / 0.6);
+}
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Arial, Helvetica, sans-serif; /* Geist wiring is T0.3 */
 }
 
 @layer utilities {
