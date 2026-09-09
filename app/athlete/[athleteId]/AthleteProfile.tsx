@@ -16,7 +16,13 @@ import moment from "moment";
 import Link from "next/link";
 import { Medal, ChevronLeft, ChevronRight, LineChart } from "lucide-react";
 import AthletePicker from "../AthletePicker";
-import { teamRank, type Athlete, type PickerAthlete, type ProgressionPerformance } from "@/lib/data";
+import {
+  alumniLabel,
+  teamRank,
+  type Athlete,
+  type PickerAthlete,
+  type ProgressionPerformance,
+} from "@/lib/data";
 import { formatMark, markKind, type MarkKind } from "@/lib/format";
 import Badge from "@/components/ui/Badge";
 import Card from "@/components/ui/Card";
@@ -463,7 +469,11 @@ const AthleteProfile = ({
           </div>
 
           <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-fg-muted">
-            <span className="chip">{YEAR_LABEL[athlete.year] ?? `Year ${athlete.year}`}</span>
+            <span className="chip">
+              {athlete.active
+                ? YEAR_LABEL[athlete.year] ?? `Year ${athlete.year}`
+                : alumniLabel(athlete)}
+            </span>
             {athlete.sex && (
               <span>{athlete.sex === "m" ? "Men's" : "Women's"} Track &amp; Field</span>
             )}

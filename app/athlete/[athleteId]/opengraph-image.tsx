@@ -1,5 +1,11 @@
 import { ImageResponse } from "next/og";
-import { athletes, getAthlete, progressionForAthlete, teamRank } from "@/lib/data";
+import {
+  alumniLabel,
+  athletes,
+  getAthlete,
+  progressionForAthlete,
+  teamRank,
+} from "@/lib/data";
 import { formatMark, markKind } from "@/lib/format";
 
 export const size = { width: 1200, height: 630 };
@@ -73,7 +79,11 @@ export default async function Image({
   const a = getAthlete(id);
 
   const name = a ? `${a.nickname ?? a.first_name} ${a.last_name}` : "Athlete";
-  const year = a ? YEAR_LABEL[a.year] ?? `Year ${a.year}` : "";
+  const year = !a
+    ? ""
+    : a.active
+      ? YEAR_LABEL[a.year] ?? `Year ${a.year}`
+      : alumniLabel(a);
   const headline = a ? headlineFor(id, a.sex) : "";
   const photo = a ? await photoUrl(a.image_path, a.athlete_id) : null;
   const initials = a

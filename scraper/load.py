@@ -51,6 +51,9 @@ _MANUAL_ATHLETE_DEFAULTS = {
     "image_path": None,
     "graduation_year": None,
     "awards": [],
+    # for former athletes only: "graduated" | "left" | "transferred" (or null).
+    # `active` is set by the scrape; `status` is hand-maintained here.
+    "status": None,
 }
 
 _CENTS = Decimal("0.01")

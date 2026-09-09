@@ -22,6 +22,16 @@ export type Athlete = {
   image_path: string | null;
   graduation_year: number | null;
   awards: string[];
+  // former athletes only, hand-set in athletes.json:
+  // "graduated" | "left" | "transferred" | null
+  status: string | null;
+};
+
+/** Short label for a former athlete's card / profile. */
+export const alumniLabel = (a: Pick<Athlete, "graduation_year" | "status">): string => {
+  if (a.status === "transferred") return "Transferred";
+  if (a.graduation_year) return `Class of '${String(a.graduation_year).slice(-2)}`;
+  return "Alum";
 };
 
 export type EventInfo = {
@@ -88,17 +98,22 @@ export const getAthlete = (id: number): Athlete | null =>
 
 export type PickerAthlete = Pick<
   Athlete,
-  "athlete_id" | "first_name" | "last_name" | "nickname"
+  "athlete_id" | "first_name" | "last_name" | "nickname" | "active"
 >;
 
-const toPicker = ({ athlete_id, first_name, last_name, nickname }: Athlete): PickerAthlete => ({
+const toPicker = ({
   athlete_id,
   first_name,
   last_name,
   nickname,
-});
+  active,
+}: Athlete): PickerAthlete => ({ athlete_id, first_name, last_name, nickname, active });
 
-export const athletePickerList = (): PickerAthlete[] => activeAthletes().map(toPicker);
+// Everyone, current team first then alumni — each block alphabetical.
+export const athletePickerList = (): PickerAthlete[] =>
+  [...athletes]
+    .sort((a, b) => Number(b.active) - Number(a.active) || byName(a, b))
+    .map(toPicker);
 
 /** Previous / next athlete in the roster order (wraps around). */
 export const adjacentActiveAthletes = (
@@ -150,7 +165,8 @@ export const rosterEntries = (): RosterEntry[] => {
     else byAthlete.set(p.athlete_id, [p]);
   }
 
-  return activeAthletes().map((athlete) => {
+  // everyone — the roster page filters current / alumni / all
+  return [...athletes].sort(byName).map((athlete) => {
     const ps = byAthlete.get(athlete.athlete_id) ?? [];
 
     const count = new Map<number, number>();
@@ -167,9 +183,10 @@ export const rosterEntries = (): RosterEntry[] => {
       .filter((p) => p.is_personal_best)
       .map((p) => ({ event_id: p.event_id, mark: p.mark }));
 
-    // "on a high note" — their most recent result was a lifetime PB
+    // "on a high note" — a current athlete whose most recent result was a
+    // lifetime PB. Not meaningful for alumni (their career already ended).
     let recentBest = false;
-    if (ps.length) {
+    if (athlete.active && ps.length) {
       const latest = ps.reduce((a, b) => (b.date > a.date ? b : a));
       recentBest = latest.is_personal_best;
     }
@@ -370,12 +387,7 @@ export const latestResults = (limit = 60): FeedResult[] => {
       const a = activeById.get(p.athlete_id)!;
       return {
         ...p,
-        athlete: {
-          athlete_id: a.athlete_id,
-          first_name: a.first_name,
-          last_name: a.last_name,
-          nickname: a.nickname,
-        },
+        athlete: toPicker(a),
         event_name: eventNameById.get(p.event_id) ?? String(p.event_id),
         higher_is_better: higherIsBetterById.get(p.event_id) ?? false,
         pb_mark: pbByKey.get(`${p.athlete_id}|${p.event_id}`) ?? null,

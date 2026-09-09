@@ -38,11 +38,16 @@ const AthletePicker = ({ athletes }: { athletes: PickerAthlete[] }) => {
                 {({ active }) => (
                   <a
                     href={`/athlete/${a.athlete_id}`}
-                    className={`block px-4 py-2 text-sm ${
+                    className={`flex items-center justify-between gap-2 px-4 py-2 text-sm ${
                       active ? "bg-surface text-fg" : "text-fg-muted"
                     }`}
                   >
                     {label(a)}
+                    {!a.active && (
+                      <span className="shrink-0 rounded-full border border-current px-1.5 text-[0.6rem] font-semibold uppercase text-fg-subtle">
+                        alum
+                      </span>
+                    )}
                   </a>
                 )}
               </Menu.Item>

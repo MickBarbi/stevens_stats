@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { SearchX } from "lucide-react";
-import type { RosterEntry } from "@/lib/data";
+import { alumniLabel, type RosterEntry } from "@/lib/data";
 import { formatMark, markKind } from "@/lib/format";
 import Card from "@/components/ui/Card";
 import PageHeader from "@/components/ui/PageHeader";
@@ -11,6 +11,7 @@ import AthletePhoto from "@/components/ui/AthletePhoto";
 import EmptyState from "@/components/ui/EmptyState";
 
 type EventOpt = { event_id: number; event_name: string; higher_is_better: boolean };
+type Scope = "current" | "alumni" | "all";
 
 const YEAR_LABEL: Record<number, string> = {
   1: "First-Year",
@@ -28,16 +29,21 @@ const RosterClient = ({
   entries: RosterEntry[];
   events: EventOpt[];
 }) => {
+  const [scope, setScope] = useState<Scope>("current");
   const [eventId, setEventId] = useState("");
   const [year, setYear] = useState("");
   const [sex, setSex] = useState("");
 
-  // only events a rostered athlete has actually competed in
+  const inScope = (e: RosterEntry) =>
+    scope === "all" ? true : scope === "alumni" ? !e.athlete.active : e.athlete.active;
+
+  // events someone in the current scope has actually competed in
   const eventOpts = useMemo(() => {
     const ids = new Set<number>();
-    for (const e of entries) for (const m of e.marks) ids.add(m.event_id);
+    for (const e of entries) if (inScope(e)) for (const m of e.marks) ids.add(m.event_id);
     return events.filter((e) => ids.has(e.event_id));
-  }, [entries, events]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [entries, events, scope]);
 
   const selectedEvent = eventId
     ? events.find((e) => e.event_id === Number(eventId)) ?? null
@@ -45,9 +51,10 @@ const RosterClient = ({
 
   const visible = useMemo(() => {
     const list = entries.filter((e) => {
+      if (!inScope(e)) return false;
       const a = e.athlete;
       if (sex !== "" && a.sex !== sex) return false;
-      if (year !== "") {
+      if (scope === "current" && year !== "") {
         const y = String(a.year);
         if (y !== year && !(y === "6" && year === "5")) return false;
       }
@@ -67,11 +74,27 @@ const RosterClient = ({
       );
     }
     return list;
-  }, [entries, sex, year, selectedEvent]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [entries, scope, sex, year, selectedEvent]);
+
+  const countLabel = (n: number) =>
+    scope === "alumni"
+      ? `${n} alumni`
+      : `${n} ${scope === "current" ? "current " : ""}athlete${n === 1 ? "" : "s"}`;
 
   return (
     <div>
       <PageHeader title="Roster">
+        <select
+          aria-label="Which athletes"
+          className="field-select"
+          value={scope}
+          onChange={(e) => setScope(e.target.value as Scope)}
+        >
+          <option value="current">Current team</option>
+          <option value="alumni">Alumni</option>
+          <option value="all">Everyone</option>
+        </select>
         <select
           aria-label="Filter by event"
           className="field-select"
@@ -85,19 +108,21 @@ const RosterClient = ({
             </option>
           ))}
         </select>
-        <select
-          aria-label="Filter by class year"
-          className="field-select"
-          value={year}
-          onChange={(e) => setYear(e.target.value)}
-        >
-          <option value="">All Grades</option>
-          <option value="1">First-Years</option>
-          <option value="2">Sophomores</option>
-          <option value="3">Juniors</option>
-          <option value="4">Seniors</option>
-          <option value="5">Grad Students</option>
-        </select>
+        {scope === "current" && (
+          <select
+            aria-label="Filter by class year"
+            className="field-select"
+            value={year}
+            onChange={(e) => setYear(e.target.value)}
+          >
+            <option value="">All Grades</option>
+            <option value="1">First-Years</option>
+            <option value="2">Sophomores</option>
+            <option value="3">Juniors</option>
+            <option value="4">Seniors</option>
+            <option value="5">Grad Students</option>
+          </select>
+        )}
         <select
           aria-label="Filter by gender"
           className="field-select"
@@ -111,7 +136,7 @@ const RosterClient = ({
       </PageHeader>
 
       <p className="mb-4 text-sm text-fg-muted">
-        {visible.length} {visible.length === 1 ? "athlete" : "athletes"}
+        {countLabel(visible.length)}
         {selectedEvent ? ` · ranked by ${selectedEvent.event_name} PB` : ""}
       </p>
 
@@ -156,7 +181,9 @@ const RosterClient = ({
                     <h2 className="font-semibold leading-tight text-fg">{name}</h2>
                     <p className="mt-1.5">
                       <span className="chip">
-                        {YEAR_LABEL[a.year] ?? `Year ${a.year}`}
+                        {a.active
+                          ? YEAR_LABEL[a.year] ?? `Year ${a.year}`
+                          : alumniLabel(a)}
                       </span>
                     </p>
 
