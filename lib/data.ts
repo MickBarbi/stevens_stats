@@ -87,6 +87,18 @@ export const blogPosts = postsJson as unknown as BlogPost[];
 const eventNameById = new Map(events.map((e) => [e.event_id, e.event_name]));
 const higherIsBetterById = new Map(events.map((e) => [e.event_id, e.higher_is_better]));
 
+// Canonical meet running order: track short->long, then hurdles, then the
+// steeple, then the field events (jumps, throws) and finally the multis.
+// events.json's ids are almost this order already; this list also slots the
+// few out-of-sequence add-ons (55 / 300 / 500 m, 55 H) into their real place.
+const EVENT_ORDER = new Map<number, number>(
+  [
+    1, 32, 2, 3, 30, 4, 31, 5, 6, 7, 8, 9, 10, 11, 12, 13, 33, 14, 15, 16, 17,
+    18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+  ].map((id, i) => [id, i])
+);
+const eventOrder = (id: number): number => EVENT_ORDER.get(id) ?? 99;
+
 const byName = (a: { last_name: string; first_name: string }, b: typeof a) =>
   a.last_name.localeCompare(b.last_name) || a.first_name.localeCompare(b.first_name);
 
@@ -616,8 +628,18 @@ export const latestResults = (limit = 60): FeedResult[] => {
   return performances
     .filter((p) => activeById.has(p.athlete_id))
     .slice()
+    // take the most recent `limit` marks by date...
     .sort((a, b) => b.date.localeCompare(a.date) || b.performance_id - a.performance_id)
     .slice(0, limit)
+    // ...then, within each day, list them in the usual meet event order,
+    // best mark first inside an event.
+    .sort(
+      (a, b) =>
+        b.date.localeCompare(a.date) ||
+        eventOrder(a.event_id) - eventOrder(b.event_id) ||
+        (higherIsBetterById.get(a.event_id) ? b.mark - a.mark : a.mark - b.mark) ||
+        a.performance_id - b.performance_id
+    )
     .map((p) => {
       const a = activeById.get(p.athlete_id)!;
       const meet = parseMeetLink(p.result_link);
