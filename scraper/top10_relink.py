@@ -21,12 +21,11 @@ from namematch import Matcher
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 TOP10 = ROOT / "data" / "top10.json"
 
-# preferred-name / spelling fixes the generic matcher can't reach. Mostly needed
-# where TFRRS has one person under two athlete ids (a proper dedup pass in
-# load.py would retire this map).
+# preferred-name / spelling fixes the generic matcher can't reach. Duplicate
+# TFRRS profiles are handled upstream now (scraper/athlete_aliases.csv), so this
+# is just for genuine name mismatches.
 OVERRIDES = {
-    "sarahlovelsmith": 8979795,
-    "carolinecorr": 6877583,   # dup profile 8383277 (3 marks) vs 6877583 (14)
+    "sarahlovelsmith": 8979795,  # rosters as "Sarah", athletes.json as "Lillian"
 }
 
 

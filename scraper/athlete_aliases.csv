@@ -1,0 +1,115 @@
+# alias_id,canonical_id,note
+# Same person, two+ TFRRS ids. load.py folds each alias into its canonical.
+# Regenerate with: python scraper/dedupe_scan.py --write
+# Rows under a `# REVIEW` heading are commented out -- check them, then
+# uncomment the ones that really are one person.
+
+# Caroline Corr  -- REVIEW: 3yr gap between 2020 and 2023
+8383277,6877583,Caroline Corr
+
+# Benny Scotto  -- REVIEW: 2yr gap between 2012 and 2014
+3487183,4173498,Benny Scotto
+
+# Jake Wills  -- REVIEW: 3yr gap between 2020 and 2023
+7497811,8384317,Jake Wills
+
+# Kris Alvarez
+3728915,5108598,Kris Alvarez
+4173453,5108598,Kris Alvarez
+
+# Nicholas DiPrimo
+4173472,3920832,Nicholas DiPrimo
+4350279,3920832,Nicholas DiPrimo
+
+# Nicholas Chapel
+4173460,4175375,Nicholas Chapel
+
+# Joseph Cirasa
+4173464,3754122,Joseph Cirasa
+
+# Sammi Devlin
+3778241,4173536,Sammi Devlin
+
+# Andreas Diaz-Borda
+4173471,3265600,Andreas Diaz-Borda
+
+# Denzel Drye
+4173474,3265599,Denzel Drye
+
+# Alina Duran
+4173539,2249881,Alina Duran
+
+# Tiffany Evangelou
+3265427,4173540,Tiffany Evangelou
+
+# Walter Goodwin
+4173477,3265601,Walter Goodwin
+
+# Liana Grandinetti
+4173544,3306829,Liana Grandinetti
+
+# Haley Hanrahan
+7892457,7566161,Haley Hanrahan
+
+# Bill Hazen
+4173478,2249777,Bill Hazen
+
+# Sean Humphreys
+4173481,2249778,Sean Humphreys
+
+# Maggie Kowalska
+4173550,2672235,Maggie Kowalska
+
+# Andrew Kraemer
+4173488,2672101,Andrew Kraemer
+
+# David Krier
+3920831,4173489,David Krier
+
+# Eric Martinelli
+3266306,2672103,Eric Martinelli
+
+# Michael McAree
+3920688,4173493,Michael McAree
+
+# Ryan Miskanich
+4350278,2672123,Ryan Miskanich
+
+# Julieann Murphy
+8333689,7974788,Julieann Murphy
+
+# Joel Oquendo
+2672125,4173496,Joel Oquendo
+
+# Caroline Pawalowski
+3901162,1705438,Caroline Pawalowski
+
+# Robert Pinto
+3728916,4173497,Robert Pinto
+
+# Grace Python
+4173559,2242935,Grace Python
+
+# Amy Regan
+4171854,4173561,Amy Regan
+
+# Angelo Saez
+7974764,8329683,Angelo Saez
+
+# Kirsten Salmins
+4173571,3778242,Kirsten Salmins
+
+# Victor Servito
+4173501,2249781,Victor Servito
+
+# Rebecca Tylock
+4173575,2672238,Rebecca Tylock
+
+# Michael Von Gonten
+4173509,2672112,Michael Von Gonten
+
+# Jenny Wehof
+4173585,2250311,Jenny Wehof
+
+# Cory Zegel
+3487195,4173511,Cory Zegel

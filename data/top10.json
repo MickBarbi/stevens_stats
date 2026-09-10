@@ -733,7 +733,7 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4173540,
         "mark": "9.26",
         "name": "Tiffany Evangelou",
         "date": "2014-03-07"
@@ -891,7 +891,7 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 2672238,
         "mark": "3.36",
         "name": "Rebecca Tylock",
         "date": "2013-03-01"
@@ -1012,7 +1012,7 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 4173540,
         "mark": "5.08",
         "name": "Tiffany Evangelou",
         "date": "2014-02-01"
@@ -1056,14 +1056,14 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4173540,
         "mark": "10.98",
         "name": "Tiffany Evangelou",
         "date": "2010-12-05"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 1705438,
         "mark": "10.63",
         "name": "Caroline Pawalowski",
         "date": "2010-02-28"
@@ -1135,7 +1135,7 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 2249881,
         "mark": "12.04",
         "name": "Alina Duran",
         "date": "2013-01-26"
@@ -1177,7 +1177,7 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 2242935,
         "mark": "10.20",
         "name": "Grace Python",
         "date": "2010-12-05"
@@ -1207,14 +1207,14 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 2249881,
         "mark": "17.58",
         "name": "Alina Duran",
         "date": "2013-02-15"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 2242935,
         "mark": "15.19",
         "name": "Grace Python",
         "date": "2011-01-30"
@@ -1342,7 +1342,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 2250311,
         "mark": "1712 pts",
         "name": "Jenny Wehof",
         "date": "2009-02-13"
@@ -1735,7 +1735,7 @@
           },
           {
             "name": "Caroline Pawalowski",
-            "athlete_id": null
+            "athlete_id": 1705438
           },
           {
             "name": "Lauren Griggs",
@@ -3183,7 +3183,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5108598,
         "mark": "8.33",
         "name": "Kris Alvarez",
         "date": "2016-03-04"
@@ -3204,7 +3204,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 2249781,
         "mark": "8.43",
         "name": "Victor Servito",
         "date": "2013-01-26"
@@ -3262,7 +3262,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4173497,
         "mark": "2.08",
         "name": "Robert Pinto",
         "date": "2014-02-23"
@@ -3297,7 +3297,7 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 2249781,
         "mark": "1.90",
         "name": "Victor Servito",
         "date": "2013-03-01"
@@ -3469,7 +3469,7 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 4173497,
         "mark": "6.49",
         "name": "Robert Pinto",
         "date": "2014-02-23"
@@ -3627,7 +3627,7 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4173496,
         "mark": "13.22",
         "name": "Joel Oquendo",
         "date": "2013-01-26"
@@ -3671,7 +3671,7 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 2672101,
         "mark": "16.09",
         "name": "Andrew Kraemer",
         "date": "2012-12-01"
@@ -3699,14 +3699,14 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4173496,
         "mark": "14.23",
         "name": "Joel Oquendo",
         "date": "2014-02-23"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4173511,
         "mark": "14.22",
         "name": "Cory Zegel",
         "date": "2015-02-20"
@@ -3743,7 +3743,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 2249781,
         "mark": "3152 pts",
         "name": "Victor Servito",
         "date": "2010-02-28"
@@ -3771,7 +3771,7 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 2249777,
         "mark": "2536 pts",
         "name": "Bill Hazen",
         "date": "2012-02-11"
@@ -3822,7 +3822,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 2249781,
         "mark": "4719 pts",
         "name": "Victor Servito"
       },
@@ -4214,7 +4214,7 @@
         "members": [
           {
             "name": "Kris Alvarez",
-            "athlete_id": null
+            "athlete_id": 5108598
           },
           {
             "name": "Brian Fratto",
@@ -4237,7 +4237,7 @@
         "members": [
           {
             "name": "Kris Alvarez",
-            "athlete_id": null
+            "athlete_id": 5108598
           },
           {
             "name": "Shane Chiaravalle",
@@ -4419,7 +4419,7 @@
           },
           {
             "name": "Victor Servito",
-            "athlete_id": null
+            "athlete_id": 2249781
           }
         ],
         "year": 2013
@@ -5651,7 +5651,7 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4173540,
         "mark": "15.02",
         "name": "Tiffany Evangelou",
         "date": "2014-05-16"
@@ -5937,7 +5937,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 2672235,
         "mark": "1.53",
         "name": "Maggie Kowalska",
         "date": "2012-04-27"
@@ -5967,7 +5967,7 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 2672238,
         "mark": "3.25",
         "name": "Rebecca Tylock",
         "date": "2011-04-21"
@@ -6067,7 +6067,7 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4173540,
         "mark": "5.24",
         "name": "Tiffany Evangelou",
         "date": "2014-05-02"
@@ -6125,7 +6125,7 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4173540,
         "mark": "10.79",
         "name": "Tiffany Evangelou",
         "date": "2014-04-26"
@@ -6146,7 +6146,7 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 1705438,
         "mark": "10.57",
         "name": "Caroline Pawalowski",
         "date": "2009-04-19"
@@ -6204,7 +6204,7 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 2249881,
         "mark": "11.60",
         "name": "Alina Duran",
         "date": "2012-04-06"
@@ -6355,7 +6355,7 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 2249881,
         "mark": "51.13",
         "name": "Alina Duran",
         "date": "2012-04-06"
@@ -6369,7 +6369,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 2242935,
         "mark": "47.70",
         "name": "Grace Python",
         "date": "2012-03-30"
@@ -6427,7 +6427,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 2672235,
         "mark": "42.52",
         "name": "Magdalena Kowalska",
         "date": "2011-05-06"
@@ -6704,7 +6704,7 @@
         "members": [
           {
             "name": "Tiffany Evangelou",
-            "athlete_id": null
+            "athlete_id": 4173540
           },
           {
             "name": "Gladys Njoku",
@@ -6754,7 +6754,7 @@
           },
           {
             "name": "Caroline Pawalowski",
-            "athlete_id": null
+            "athlete_id": 1705438
           },
           {
             "name": "Laura Barito",
@@ -6773,19 +6773,19 @@
         "members": [
           {
             "name": "Tiffany Evangelou",
-            "athlete_id": null
+            "athlete_id": 4173540
           },
           {
             "name": "Sammi Devlin",
-            "athlete_id": null
+            "athlete_id": 4173536
           },
           {
             "name": "Rebecca Tylock",
-            "athlete_id": null
+            "athlete_id": 2672238
           },
           {
             "name": "Magdalena Kowalska",
-            "athlete_id": null
+            "athlete_id": 2672235
           }
         ],
         "year": 2013
@@ -6808,7 +6808,7 @@
           },
           {
             "name": "Jenny Wehof",
-            "athlete_id": null
+            "athlete_id": 2250311
           }
         ],
         "year": 2010
@@ -7955,7 +7955,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 2249781,
         "mark": "15.14",
         "name": "Victor Servito",
         "date": "2013-05-16"
@@ -7969,7 +7969,7 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 5108598,
         "mark": "15.30",
         "name": "Kristopher Alvarez",
         "date": "2015-05-14"
@@ -8076,7 +8076,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 5108598,
         "mark": "58.11",
         "name": "Kristopher Alvarez",
         "date": "2012-04-06"
@@ -8171,7 +8171,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4173497,
         "mark": "2.07",
         "name": "Robert Pinto",
         "date": "2015-05-01"
@@ -8192,7 +8192,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 2249781,
         "mark": "1.91",
         "name": "Victor Servito",
         "date": "2012-03-30"
@@ -8320,7 +8320,7 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 2249781,
         "mark": "4.11",
         "name": "Victor Servito",
         "date": "2012-05-18"
@@ -8378,14 +8378,14 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 2672112,
         "mark": "6.78",
         "name": "Michael Von Gonten",
         "date": "2011-04-02"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4173497,
         "mark": "6.73",
         "name": "Robert Pinto",
         "date": "2014-05-02"
@@ -8543,7 +8543,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4173496,
         "mark": "14.10",
         "name": "Joel Oquendo",
         "date": "2010-04-23"
@@ -8622,14 +8622,14 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 2672101,
         "mark": "41.13",
         "name": "Andrew Kraemer",
         "date": "2012-04-21"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 4173496,
         "mark": "40.76",
         "name": "Joel Oquendo",
         "date": "2012-04-07"
@@ -8687,7 +8687,7 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4173511,
         "mark": "48.60",
         "name": "Cory Zegel",
         "date": "2015-04-19"
@@ -8708,7 +8708,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 2672101,
         "mark": "46.07",
         "name": "Andrew Kraemer",
         "date": "2012-04-27"
@@ -8815,7 +8815,7 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 4173489,
         "mark": "53.29",
         "name": "David Krier",
         "date": "2015-05-24"
@@ -8850,13 +8850,13 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 2249781,
         "mark": "5746 pts",
         "name": "Victor Servito"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 2249777,
         "mark": "5155 pts",
         "name": "Bill Hazen"
       },
@@ -9103,7 +9103,7 @@
           },
           {
             "name": "Kristopher Alvarez",
-            "athlete_id": null
+            "athlete_id": 5108598
           },
           {
             "name": "Nicholas Lowe",
@@ -9122,7 +9122,7 @@
           },
           {
             "name": "Denzel Drye",
-            "athlete_id": null
+            "athlete_id": 3265599
           },
           {
             "name": "Nicholas Lowe",

@@ -42,6 +42,7 @@ import tfrrs
 
 DATA_DIR = pathlib.Path(__file__).resolve().parent / "data"
 SITE_DATA_DIR = pathlib.Path(__file__).resolve().parent.parent / "data"
+ALIASES_CSV = pathlib.Path(__file__).resolve().parent / "athlete_aliases.csv"
 
 # Athlete fields the scraper owns vs. fields a human edits through/for the site.
 _SCRAPED_ATHLETE_FIELDS = ("first_name", "last_name", "year", "sex", "active")
@@ -87,10 +88,41 @@ def class_year_to_int(token: str | None) -> int:
     return _YEAR_PREFIX.get(token[:2], 1)
 
 
-def load_athletes(roster_csv: pathlib.Path) -> list[dict]:
+def load_aliases(path: pathlib.Path) -> dict[int, int]:
+    """alias athlete_id -> canonical athlete_id, with chains resolved.
+
+    File is `alias_id,canonical_id,note` per line; '#' and blank lines ignored.
+    """
+    raw: dict[int, int] = {}
+    if path.exists():
+        with path.open(encoding="utf-8") as fh:
+            for ln in fh:
+                ln = ln.split("#", 1)[0].strip()
+                if not ln:
+                    continue
+                parts = [p.strip() for p in ln.split(",")]
+                if len(parts) < 2 or not parts[0].isdigit() or not parts[1].isdigit():
+                    print(f"  note: ignoring malformed alias line: {ln!r}")
+                    continue
+                raw[int(parts[0])] = int(parts[1])
+
+    resolved: dict[int, int] = {}
+    for alias in raw:
+        seen = {alias}
+        cur = raw[alias]
+        while cur in raw and cur not in seen:
+            seen.add(cur)
+            cur = raw[cur]
+        if cur in raw:
+            sys.exit(f"alias cycle through {alias} in {path.name}")
+        resolved[alias] = cur
+    return resolved
+
+
+def load_athletes(roster_csv: pathlib.Path, aliases: dict[int, int]) -> list[dict]:
     if not roster_csv.exists():
         sys.exit(f"missing {roster_csv} (run roster.py)")
-    out = []
+    merged: dict[int, dict] = {}
     with roster_csv.open(encoding="utf-8") as fh:
         for row in csv.DictReader(fh):
             active = str(row.get("active", "1")).strip().lower() not in (
@@ -99,21 +131,34 @@ def load_athletes(roster_csv: pathlib.Path) -> list[dict]:
                 "no",
                 "",
             )
-            out.append({
-                "athlete_id": int(row["athlete_id"]),
+            aid = int(row["athlete_id"])
+            cid = aliases.get(aid, aid)
+            rec = {
+                "athlete_id": cid,
                 "first_name": row["first_name"].strip()[:50],
                 "last_name": row["last_name"].strip()[:50],
                 "year": class_year_to_int(row.get("class_year")),
                 "sex": (row.get("sex") or "").strip()[:1] or None,
                 "active": active,
-            })
-    return out
+            }
+            cur = merged.get(cid)
+            if cur is None:
+                merged[cid] = rec
+            else:
+                # fold a duplicate profile in: keep the senior-most row, OR active
+                cur["active"] = cur["active"] or rec["active"]
+                if rec["year"] > cur["year"]:
+                    rec["active"] = cur["active"]
+                    merged[cid] = rec
+    return list(merged.values())
 
 
 # ---------------------------------------------------------------------------
 # performances_raw -> performances (deduped, with a stable performance_id)
 # ---------------------------------------------------------------------------
-def load_performances(perf_csv: pathlib.Path, known_athletes: set[int]) -> list[dict]:
+def load_performances(
+    perf_csv: pathlib.Path, known_athletes: set[int], aliases: dict[int, int]
+) -> list[dict]:
     if not perf_csv.exists():
         sys.exit(f"missing {perf_csv} (run history.py)")
 
@@ -123,7 +168,7 @@ def load_performances(perf_csv: pathlib.Path, known_athletes: set[int]) -> list[
     dropped_ids: set[int] = set()
     with perf_csv.open(encoding="utf-8") as fh:
         for r in csv.DictReader(fh):
-            athlete_id = int(r["athlete_id"])
+            athlete_id = aliases.get(int(r["athlete_id"]), int(r["athlete_id"]))
             if known_athletes and athlete_id not in known_athletes:
                 dropped_unknown += 1
                 dropped_ids.add(athlete_id)
@@ -248,9 +293,17 @@ def _dump_json(path: pathlib.Path, data) -> None:
     print(f"  wrote {n:>5}  {path}")
 
 
-def _merge_athletes(scraped: list[dict], existing_path: pathlib.Path) -> list[dict]:
+def _merge_athletes(
+    scraped: list[dict], existing_path: pathlib.Path, aliases: dict[int, int]
+) -> list[dict]:
     """Combine the scraped roster with what's already in athletes.json, keeping
-    the human-edited fields and demoting anyone no longer on the roster."""
+    the human-edited fields and demoting anyone no longer on the roster.
+
+    `aliases` (alias id -> canonical id) has already been applied to `scraped`;
+    here it only steers the manual-field carry-over: a canonical inherits any
+    nickname/bio/status/... set on one of its alias entries, and alias ids get
+    no output row of their own.
+    """
     prior: dict[int, dict] = {}
     if existing_path.exists():
         try:
@@ -258,12 +311,24 @@ def _merge_athletes(scraped: list[dict], existing_path: pathlib.Path) -> list[di
         except (json.JSONDecodeError, KeyError, TypeError):
             print(f"  note: could not parse existing {existing_path.name}; starting fresh")
 
+    canon_sources: dict[int, list[int]] = defaultdict(list)
+    for alias, canon in aliases.items():
+        canon_sources[canon].append(alias)
+
+    def manual_for(canon_id: int) -> dict:
+        """Merge manual fields from the canonical's prior row + its aliases'."""
+        base = dict(_MANUAL_ATHLETE_DEFAULTS)
+        for src in (canon_id, *canon_sources.get(canon_id, [])):
+            for k, v in prior.get(src, {}).items():
+                if k in base and base[k] in (None, [], "") and v not in (None, [], ""):
+                    base[k] = v
+        return base
+
     scraped_by_id = {a["athlete_id"]: a for a in scraped}
     out: list[dict] = []
 
     for athlete_id, a in scraped_by_id.items():
-        base = dict(_MANUAL_ATHLETE_DEFAULTS)
-        base.update({k: v for k, v in prior.get(athlete_id, {}).items() if k in base})
+        base = manual_for(athlete_id)
         base["athlete_id"] = athlete_id
         for field in _SCRAPED_ATHLETE_FIELDS:
             base[field] = a[field]
@@ -271,9 +336,10 @@ def _merge_athletes(scraped: list[dict], existing_path: pathlib.Path) -> list[di
             base["year"] = base["year_override"]
         out.append(base)
 
-    # Keep athletes who have dropped off the roster, flagged inactive.
+    # Keep athletes who have dropped off the roster, flagged inactive — but not
+    # alias ids (they've been folded into their canonical above).
     for athlete_id, a in prior.items():
-        if athlete_id in scraped_by_id:
+        if athlete_id in scraped_by_id or athlete_id in aliases:
             continue
         a = dict(a)
         a["active"] = False
@@ -286,10 +352,10 @@ def _merge_athletes(scraped: list[dict], existing_path: pathlib.Path) -> list[di
     return out
 
 
-def write_site_json(site_dir: pathlib.Path, athletes, events, performances) -> None:
+def write_site_json(site_dir: pathlib.Path, athletes, events, performances, aliases) -> None:
     site_dir.mkdir(parents=True, exist_ok=True)
 
-    merged = _merge_athletes(athletes, site_dir / "athletes.json")
+    merged = _merge_athletes(athletes, site_dir / "athletes.json", aliases)
     _dump_json(site_dir / "athletes.json", merged)
 
     _dump_json(site_dir / "events.json", [
@@ -451,15 +517,21 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--since", default=None,
                     help="season-best cutoff date YYYY-MM-DD (default: Sep 1 of the current academic year)")
     ap.add_argument("--no-site-json", action="store_true", help="skip writing the site JSON")
+    ap.add_argument("--aliases", type=pathlib.Path, default=ALIASES_CSV,
+                    help="duplicate-athlete map (default: scraper/athlete_aliases.csv)")
     ap.add_argument("--push", action="store_true", help="also write to the SQL Server database")
     args = ap.parse_args(argv)
 
     season_start = args.since or default_season_start()
     print(f"season-best cutoff: {season_start}")
 
-    athletes = load_athletes(args.data_dir / "roster_raw.csv")
+    aliases = load_aliases(args.aliases)
+    if aliases:
+        print(f"athlete aliases: {len(aliases)} id(s) folded into {len(set(aliases.values()))} canonical")
+
+    athletes = load_athletes(args.data_dir / "roster_raw.csv", aliases)
     known = {a["athlete_id"] for a in athletes}
-    performances = load_performances(args.data_dir / "performances_raw.csv", known)
+    performances = load_performances(args.data_dir / "performances_raw.csv", known, aliases)
     n_groups = flag_bests(performances, season_start)
     events = tfrrs.EVENT_ROWS
 
@@ -469,7 +541,7 @@ def main(argv: list[str] | None = None) -> int:
     write_csvs(args.data_dir, athletes, events, performances)
 
     if not args.no_site_json:
-        write_site_json(args.site_dir, athletes, events, performances)
+        write_site_json(args.site_dir, athletes, events, performances, aliases)
 
     if args.push:
         print("pushing to SQL Server ...")

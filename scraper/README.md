@@ -97,6 +97,25 @@ page and Top 10 links but stay out of the roster, events leaderboards and home
 feed (those filter on `active`). Fill in `graduation_year` / `status` / `bio` by
 hand in `data/athletes.json` — the merge preserves them.
 
+### Duplicate athletes (one person, two+ TFRRS ids)
+
+TFRRS re-issues an athlete id on re-registration and did a mass split around
+2012, so a backfill pulls in the same person twice: id-A (2009-2012) + id-B
+(2012-2013), same events, back-to-back years.
+
+```bash
+python dedupe_scan.py            # cluster by name, show the candidates
+python dedupe_scan.py --write    # (re)generate athlete_aliases.csv
+```
+
+`athlete_aliases.csv` is `alias_id,canonical_id,note`. `--write` pre-fills it
+(canonical = the id with the most marks) and comments out clusters whose
+segments have a multi-year gap or heavy overlap — those might be two different
+people, so check and uncomment. `load.py` then, every run: remaps each alias's
+performances to the canonical before flags/ids, gives the alias no
+`athletes.json` row, and lets the canonical inherit any `status` / `bio` / …
+that was set on an alias. Re-run `top10_relink.py` afterwards.
+
 ### Roster photos → Cloudinary
 
 Separate from the TFRRS pipeline. Pulls headshots off the official Stevens site
