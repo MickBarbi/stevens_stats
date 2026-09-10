@@ -73,7 +73,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-brand pt-[env(safe-area-inset-top)] text-brand-fg shadow-card">
+      <header className="sticky top-0 z-50 bg-gradient-to-b from-brand to-brand-hover pt-[env(safe-area-inset-top)] text-brand-fg shadow-card">
         <nav className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2">
           <Link href="/home" className="shrink-0">
             <Image
@@ -138,7 +138,7 @@ export default function Navbar() {
         aria-label="Site menu"
         aria-hidden={!open}
         onKeyDown={trapTab}
-        className={`fixed right-0 top-0 z-[60] flex h-full w-72 max-w-[82vw] flex-col bg-surface-raised text-fg shadow-card-hover transition-transform duration-200 sm:hidden ${
+        className={`fixed right-0 top-0 z-[60] flex h-full w-72 max-w-[82vw] flex-col bg-surface-raised pt-[env(safe-area-inset-top)] text-fg shadow-card-hover transition-transform duration-200 sm:hidden ${
           open ? "translate-x-0" : "pointer-events-none translate-x-full"
         }`}
       >
@@ -157,7 +157,7 @@ export default function Navbar() {
             <X className="h-5 w-5" />
           </button>
         </div>
-        <ul className="flex flex-col gap-1 p-3">
+        <ul className="flex flex-1 flex-col gap-1 overflow-y-auto p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
           {LINKS.map((l) => (
             <li key={l.href}>
               <Link

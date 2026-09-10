@@ -49,6 +49,7 @@ const config: Config = {
           DEFAULT: "var(--brand)",
           hover: "var(--brand-hover)",
           fg: "var(--brand-fg)",
+          wash: "var(--brand-wash)",
         },
         link: "var(--link)",
         pb: "var(--pb)",

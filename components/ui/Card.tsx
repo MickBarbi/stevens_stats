@@ -16,7 +16,7 @@ export default function Card({
     <Tag
       className={`card ${
         interactive
-          ? "transition-[transform,box-shadow] hover:-translate-y-1 hover:shadow-card-hover active:translate-y-0 active:scale-[0.99] active:shadow-card active:duration-75"
+          ? "hover:-translate-y-1 hover:border-[color:var(--border-hover)] hover:shadow-card-hover active:translate-y-0 active:scale-[0.99] active:shadow-card active:duration-75"
           : ""
       } ${className}`}
     >

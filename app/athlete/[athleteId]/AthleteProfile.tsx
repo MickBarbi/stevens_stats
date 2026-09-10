@@ -188,14 +188,10 @@ const bestProgression = (sortedAsc: Perf[], higherIsBetter: boolean): Perf[] => 
   return out;
 };
 
-/** Tiny inline trend line — improvement always reads upward. */
-const Sparkline = ({
-  points,
-  higherIsBetter,
-}: {
-  points: number[];
-  higherIsBetter: boolean;
-}) => {
+/** Tiny inline trend line — a mini of the full progression chart below, so it
+ *  reads the same way: the raw mark on the y-axis. Running times trend down as
+ *  they improve, jumps/throws trend up. */
+const Sparkline = ({ points }: { points: number[] }) => {
   if (points.length < 2) return null;
   const w = 76;
   const h = 24;
@@ -204,10 +200,8 @@ const Sparkline = ({
   const max = Math.max(...points);
   const span = max - min || 1;
   const x = (i: number) => pad + (i / (points.length - 1)) * (w - 2 * pad);
-  const y = (v: number) => {
-    const up = higherIsBetter ? (v - min) / span : 1 - (v - min) / span;
-    return pad + (1 - up) * (h - 2 * pad);
-  };
+  // larger value sits higher, matching a standard numeric y-axis
+  const y = (v: number) => pad + (1 - (v - min) / span) * (h - 2 * pad);
   const last = points.length - 1;
   return (
     <svg
@@ -230,7 +224,7 @@ const Sparkline = ({
   );
 };
 
-const AXIS = "rgb(140 140 140)";
+const AXIS = "rgb(150 138 132)";
 
 const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
   const grouped = sortDataByDate(groupDataByEventAndSeason(data));
@@ -592,7 +586,7 @@ const AthleteProfile = ({
                       >
                         {pbText}
                       </a>
-                      <Sparkline points={spark} higherIsBetter={hib} />
+                      <Sparkline points={spark} />
                     </div>
                     <p className="mt-0.5 text-xs uppercase tracking-wide text-fg-subtle">
                       Personal Best

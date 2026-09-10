@@ -28,31 +28,37 @@
 :root {
   color-scheme: light;
 
-  --bg: #ffffff;
-  --surface: #f5f5f6;
+  /* Warm neutrals — a cream ground with a whisper of the maroon hue, so the
+     page reads as designed rather than default-white. Cards stay pure white to
+     lift off it. */
+  --bg: #fbfaf8;
+  --surface: #f2eee9;
   --surface-raised: #ffffff;
-  --border: #e4e4e7;
+  --border: #e7ddd6;
+  --border-hover: #cdb4ab; /* card hover — a warm, brand-leaning hairline */
 
-  --fg: #18181b;
-  --fg-muted: #52525b;
-  --fg-subtle: #6b6b73;
+  --fg: #1e1a18;
+  --fg-muted: #5b524d;
+  --fg-subtle: #877c75;
 
-  --brand: #992211; /* Stevens maroon (formerly the bare #921) */
+  --brand: #992211; /* Stevens maroon */
   --brand-hover: #7d1c0e;
   --brand-fg: #ffffff;
+  --brand-wash: #f7ebe8; /* pale maroon tint for accent fills */
 
-  --link: #1d4ed8;
+  --link: #1749c4;
   --pb: #15803d; /* personal best   */
   --sb: #b45309; /* season best     */
   --mac: #c81e1e; /* MAC qualifying   */
-  --aartfc: #1d4ed8; /* AARTFC qualifying */
+  --aartfc: #1749c4; /* AARTFC qualifying */
 
   --chart-line: #992211;
-  --chart-grid: #e4e4e7;
+  --chart-grid: #e7ddd6;
 
   --radius: 0.75rem;
-  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.04), 0 4px 12px rgb(0 0 0 / 0.08);
-  --shadow-card-hover: 0 4px 8px rgb(0 0 0 / 0.06), 0 12px 28px rgb(0 0 0 / 0.14);
+  /* shadows carry a warm (maroon-black) tint, not neutral black */
+  --shadow-card: 0 1px 2px rgb(48 20 12 / 0.06), 0 6px 16px rgb(48 20 12 / 0.10);
+  --shadow-card-hover: 0 4px 10px rgb(48 20 12 / 0.08), 0 14px 32px rgb(48 20 12 / 0.16);
 }
 
 /* Dark values — kept identical between the media query and the forced-dark
@@ -61,18 +67,21 @@
   :root:not([data-theme="light"]) {
     color-scheme: dark;
 
-    --bg: #0b0d10;
-    --surface: #14171c;
-    --surface-raised: #1b1f26;
-    --border: #2b303a;
+    /* Warm charcoal — a brown-red undertone reads richer than cold near-black. */
+    --bg: #100d0b;
+    --surface: #1a1512;
+    --surface-raised: #221b17;
+    --border: #362c27;
+    --border-hover: #6b3f36;
 
-    --fg: #e8e9ec;
-    --fg-muted: #a2a5ad;
-    --fg-subtle: #71747d;
+    --fg: #ece7e2;
+    --fg-muted: #a79e97;
+    --fg-subtle: #7e746d;
 
     --brand: #c8402f;
     --brand-hover: #d85a49;
     --brand-fg: #ffffff;
+    --brand-wash: #2a1a16;
 
     --link: #7aa2f7;
     --pb: #4ade80;
@@ -81,7 +90,7 @@
     --aartfc: #7aa2f7;
 
     --chart-line: #e07a6a;
-    --chart-grid: #2b303a;
+    --chart-grid: #362c27;
 
     --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 4px 14px rgb(0 0 0 / 0.5);
     --shadow-card-hover: 0 4px 10px rgb(0 0 0 / 0.45), 0 14px 32px rgb(0 0 0 / 0.6);
@@ -91,18 +100,20 @@
 [data-theme="dark"] {
   color-scheme: dark;
 
-  --bg: #0b0d10;
-  --surface: #14171c;
-  --surface-raised: #1b1f26;
-  --border: #2b303a;
+  --bg: #100d0b;
+  --surface: #1a1512;
+  --surface-raised: #221b17;
+  --border: #362c27;
+  --border-hover: #6b3f36;
 
-  --fg: #e8e9ec;
-  --fg-muted: #a2a5ad;
-  --fg-subtle: #71747d;
+  --fg: #ece7e2;
+  --fg-muted: #a79e97;
+  --fg-subtle: #7e746d;
 
   --brand: #c8402f;
   --brand-hover: #d85a49;
   --brand-fg: #ffffff;
+  --brand-wash: #2a1a16;
 
   --link: #7aa2f7;
   --pb: #4ade80;
@@ -111,7 +122,7 @@
   --aartfc: #7aa2f7;
 
   --chart-line: #e07a6a;
-  --chart-grid: #2b303a;
+  --chart-grid: #362c27;
 
   --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 4px 14px rgb(0 0 0 / 0.5);
   --shadow-card-hover: 0 4px 10px rgb(0 0 0 / 0.45), 0 14px 32px rgb(0 0 0 / 0.6);
@@ -138,6 +149,7 @@
   }
   a {
     color: inherit;
+    text-underline-offset: 0.15em;
   }
   ::selection {
     background: var(--brand);
@@ -173,12 +185,18 @@
   .page-title {
     @apply text-2xl font-bold tracking-tight text-fg sm:text-3xl;
   }
+  /* short maroon rule under every page title — a small, consistent identity mark */
+  .page-title::after {
+    content: "";
+    @apply mt-2 block h-[3px] w-9 rounded-full bg-brand;
+  }
   .section-title {
     @apply text-xl font-semibold text-fg sm:text-2xl;
   }
 
   .card {
     @apply rounded-card border border-border bg-surface-raised shadow-card;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
   }
 
   .field-select {
@@ -187,8 +205,10 @@
   }
 
   .chip {
-    @apply inline-flex items-center gap-1 rounded-full border border-border
-      bg-surface px-2.5 py-0.5 text-xs font-medium text-fg-muted;
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs
+      font-medium text-fg-muted;
+    border: 1px solid color-mix(in srgb, var(--brand) 22%, var(--border));
+    background: var(--brand-wash);
   }
 
   /* Segmented control — a compact row of mutually-exclusive options.
@@ -220,6 +240,10 @@
   }
   .data-table tbody tr:hover {
     @apply bg-surface;
+  }
+  /* faint warm zebra — skips the recency-accented rows below */
+  .data-table tbody tr:nth-child(2n):not(.row-current):not(.row-prior) > td {
+    background: color-mix(in srgb, var(--brand) 4%, transparent);
   }
   .data-table a {
     @apply font-mono tabular-nums text-link no-underline hover:underline;
