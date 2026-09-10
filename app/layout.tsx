@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import localFont from "next/font/local";
 import Navbar from "../components/Navbar";
 import BottomTabs from "../components/BottomTabs";
+import CommandPalette from "../components/CommandPalette";
 import ServiceWorkerRegister from "../components/ServiceWorkerRegister";
 import JsonLd from "../components/JsonLd";
 import {
@@ -153,6 +154,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           Skip to content
         </a>
         <Navbar />
+        <CommandPalette />
         <main
           id="main"
           className="mx-auto max-w-6xl px-4 pt-6 pb-[calc(5rem+env(safe-area-inset-bottom))] sm:pt-8 sm:pb-8"

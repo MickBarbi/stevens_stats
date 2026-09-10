@@ -38,6 +38,9 @@ qualifying standards. Built with Next.js (App Router) and TypeScript.
 
 ## Features
 
+- **Command palette** — `⌘K` / `Ctrl-K` (or the nav search button) opens a
+  fuzzy search over every athlete and the main pages; the index is a small
+  static file fetched on first open, not shipped in the JS bundle.
 - **Home** — every current athlete's latest result, grouped by date, with
   personal-best / season-best / school-record badges and PB context.
 - **Roster** — filterable grid (event, class year, gender, current vs. alumni),

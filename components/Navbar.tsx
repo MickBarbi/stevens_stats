@@ -4,9 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 import DesignerLogo from "../public/Designer.jpeg";
 import ThemeToggle from "./ThemeToggle";
+import { openSearch } from "@/lib/search";
 
 const LINKS = [
   { href: "/home", label: "Home" },
@@ -100,12 +101,33 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+            <li>
+              <button
+                type="button"
+                onClick={openSearch}
+                className="ml-1 flex items-center gap-2 rounded-md py-2 pl-3 pr-2 text-base transition-colors hover:bg-white/10"
+                aria-label="Search athletes and pages"
+              >
+                <Search className="h-4 w-4" aria-hidden />
+                <kbd className="hidden rounded border border-white/30 px-1.5 py-0.5 text-xs font-medium text-brand-fg/80 md:block">
+                  ⌘K
+                </kbd>
+              </button>
+            </li>
             <li className="ml-1">
               <ThemeToggle />
             </li>
           </ul>
 
           <div className="ml-auto flex items-center gap-1 sm:hidden">
+            <button
+              type="button"
+              onClick={openSearch}
+              aria-label="Search athletes and pages"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-white/10"
+            >
+              <Search className="h-5 w-5" aria-hidden />
+            </button>
             <ThemeToggle />
             <button
               ref={openBtnRef}

@@ -7,10 +7,11 @@
   },
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/gen-search-index.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "data": "python scraper/roster.py && python scraper/history.py && python scraper/load.py"
+    "data": "python scraper/roster.py && python scraper/history.py && python scraper/load.py && node scripts/gen-search-index.mjs"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
