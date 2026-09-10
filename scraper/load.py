@@ -58,6 +58,12 @@ _MANUAL_ATHLETE_DEFAULTS = {
     # set to an int to override the class year TFRRS reports (e.g. a 5th-year
     # TFRRS still lists as SO-2). null = use the scraped value.
     "year_override": None,
+    # transferred athletes only: clip results to the window they actually
+    # competed for Stevens. ISO dates; either/both may be null. Marks dated
+    # before `results_from` or after `results_through` are their time at
+    # another school and get dropped by load_performances().
+    "results_from": None,
+    "results_through": None,
 }
 
 _CENTS = Decimal("0.01")
@@ -156,16 +162,48 @@ def load_athletes(roster_csv: pathlib.Path, aliases: dict[int, int]) -> list[dic
 # ---------------------------------------------------------------------------
 # performances_raw -> performances (deduped, with a stable performance_id)
 # ---------------------------------------------------------------------------
+def load_result_windows(
+    existing_path: pathlib.Path, aliases: dict[int, int]
+) -> dict[int, tuple[str | None, str | None]]:
+    """canonical athlete_id -> (results_from, results_through) for the transfers
+    who have one set in athletes.json. Used to clip a transfer's results to the
+    span they actually competed for Stevens."""
+    windows: dict[int, tuple[str | None, str | None]] = {}
+    if not existing_path.exists():
+        return windows
+    try:
+        rows = json.loads(existing_path.read_text("utf-8"))
+    except (json.JSONDecodeError, TypeError):
+        return windows
+    for a in rows:
+        aid = a.get("athlete_id")
+        if aid is None:
+            continue
+        lo, hi = a.get("results_from"), a.get("results_through")
+        if not lo and not hi:
+            continue
+        canon = aliases.get(aid, aid)
+        ex_lo, ex_hi = windows.get(canon, (None, None))
+        windows[canon] = (ex_lo or lo, ex_hi or hi)
+    return windows
+
+
 def load_performances(
-    perf_csv: pathlib.Path, known_athletes: set[int], aliases: dict[int, int]
+    perf_csv: pathlib.Path,
+    known_athletes: set[int],
+    aliases: dict[int, int],
+    windows: dict[int, tuple[str | None, str | None]] | None = None,
 ) -> list[dict]:
     if not perf_csv.exists():
         sys.exit(f"missing {perf_csv} (run history.py)")
+    windows = windows or {}
 
     seen: set[tuple] = set()
     rows: list[dict] = []
     dropped_unknown = 0
     dropped_ids: set[int] = set()
+    dropped_window = 0
+    dropped_window_ids: set[int] = set()
     with perf_csv.open(encoding="utf-8") as fh:
         for r in csv.DictReader(fh):
             athlete_id = aliases.get(int(r["athlete_id"]), int(r["athlete_id"]))
@@ -177,6 +215,11 @@ def load_performances(
             mark = Decimal(r["mark"]).quantize(_CENTS)
             season = r["season"].strip()[:1]
             d = r["date"].strip()
+            win = windows.get(athlete_id)
+            if win and ((win[0] and d < win[0]) or (win[1] and d > win[1])):
+                dropped_window += 1
+                dropped_window_ids.add(athlete_id)
+                continue
             key = (athlete_id, event_id, mark_key(mark), season, d)
             if key in seen:
                 continue
@@ -204,6 +247,11 @@ def load_performances(
             f"  note: {dropped_unknown} cached performance rows from {len(dropped_ids)} "
             f"athlete(s) skipped — not in roster_raw.csv. Re-run roster.py (it keeps known "
             f"ids), or add their roster page to rosters.txt, to include them."
+        )
+    if dropped_window:
+        print(
+            f"  note: {dropped_window} mark(s) from {len(dropped_window_ids)} transferred "
+            f"athlete(s) dropped — outside their Stevens window (results_from/through)."
         )
     return rows
 
@@ -529,9 +577,15 @@ def main(argv: list[str] | None = None) -> int:
     if aliases:
         print(f"athlete aliases: {len(aliases)} id(s) folded into {len(set(aliases.values()))} canonical")
 
+    windows = load_result_windows(args.site_dir / "athletes.json", aliases)
+    if windows:
+        print(f"result windows: {len(windows)} transferred athlete(s) clipped to their Stevens span")
+
     athletes = load_athletes(args.data_dir / "roster_raw.csv", aliases)
     known = {a["athlete_id"] for a in athletes}
-    performances = load_performances(args.data_dir / "performances_raw.csv", known, aliases)
+    performances = load_performances(
+        args.data_dir / "performances_raw.csv", known, aliases, windows
+    )
     n_groups = flag_bests(performances, season_start)
     events = tfrrs.EVENT_ROWS
 
