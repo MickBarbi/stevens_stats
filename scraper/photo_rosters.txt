@@ -11,7 +11,7 @@
 # Re-run after editing:   python photos.py           # scrape + download
 #                         python photos_upload.py    # push to Cloudinary
 #
-# Only going back to 2022-23 for now, to line up with the performance data.
+# Sidearm keeps rosters back to 2012-13 (2011-12 and earlier 302-redirect away).
 
 # --- current (2025-26) ---
 track  https://stevensducks.com/sports/mens-track-and-field/roster
@@ -29,6 +29,47 @@ track  https://stevensducks.com/sports/womens-track-and-field/roster/2023-24
 track  https://stevensducks.com/sports/mens-track-and-field/roster/2022-23
 track  https://stevensducks.com/sports/womens-track-and-field/roster/2022-23
 
-# --- cross-country (fallback headshot source only) ---
+# --- 2021-22 ---
+track  https://stevensducks.com/sports/mens-track-and-field/roster/2021-22
+track  https://stevensducks.com/sports/womens-track-and-field/roster/2021-22
+
+# --- 2020-21 ---
+track  https://stevensducks.com/sports/mens-track-and-field/roster/2020-21
+track  https://stevensducks.com/sports/womens-track-and-field/roster/2020-21
+
+# --- 2019-20 ---
+track  https://stevensducks.com/sports/mens-track-and-field/roster/2019-20
+track  https://stevensducks.com/sports/womens-track-and-field/roster/2019-20
+
+# --- 2018-19 ---
+track  https://stevensducks.com/sports/mens-track-and-field/roster/2018-19
+track  https://stevensducks.com/sports/womens-track-and-field/roster/2018-19
+
+# --- 2017-18 ---
+track  https://stevensducks.com/sports/mens-track-and-field/roster/2017-18
+track  https://stevensducks.com/sports/womens-track-and-field/roster/2017-18
+
+# --- 2016-17 ---
+track  https://stevensducks.com/sports/mens-track-and-field/roster/2016-17
+track  https://stevensducks.com/sports/womens-track-and-field/roster/2016-17
+
+# --- 2015-16 ---
+track  https://stevensducks.com/sports/mens-track-and-field/roster/2015-16
+track  https://stevensducks.com/sports/womens-track-and-field/roster/2015-16
+
+# --- 2014-15 ---
+track  https://stevensducks.com/sports/mens-track-and-field/roster/2014-15
+track  https://stevensducks.com/sports/womens-track-and-field/roster/2014-15
+
+# --- 2013-14 ---
+track  https://stevensducks.com/sports/mens-track-and-field/roster/2013-14
+track  https://stevensducks.com/sports/womens-track-and-field/roster/2013-14
+
+# --- 2012-13 ---
+track  https://stevensducks.com/sports/mens-track-and-field/roster/2012-13
+track  https://stevensducks.com/sports/womens-track-and-field/roster/2012-13
+
+# --- cross-country (fallback headshot source only; Sidearm keeps only the
+#     current XC roster — historical XC URLs 302 back to this one) ---
 xc  https://stevensducks.com/sports/mens-cross-country/roster
 xc  https://stevensducks.com/sports/womens-cross-country/roster

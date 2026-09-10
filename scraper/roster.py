@@ -17,10 +17,11 @@ each run. So once you've scraped a past season's roster URL once, you can delete
 it from rosters.txt -- those athletes persist. Pass --no-merge for the old
 from-scratch behaviour.
 
-The extra-URLs file (default: scraper/rosters.txt) is one roster page per line:
+The extra-URLs file (default: scraper/rosters.txt) is one roster page per line.
+Just paste the URL -- men/women is read from the `_m_` / `_f_` in it:
 
-    m  https://www.tfrrs.org/.../roster/...     # men's indoor 2023
-    f  https://www.tfrrs.org/.../roster/...     # women's outdoor 2022
+    https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=255
+    f  https://www.tfrrs.org/.../roster/...     # or force it with an m|f prefix
 
 Blank lines and lines starting with # are ignored. TFRRS's URL pattern for a
 given season isn't predictable, so paste each page URL by hand.
@@ -31,13 +32,40 @@ from __future__ import annotations
 import argparse
 import csv
 import pathlib
+import re
 import sys
 
 import tfrrs
 
+_SEX_IN_URL = re.compile(r"_college_([mf])_|_([mf])_Stevens", re.I)
+_YEAR_PREFIX = {"FR": 1, "SO": 2, "JR": 3, "SR": 4, "GR": 5, "5T": 5}
+
 HERE = pathlib.Path(__file__).resolve().parent
 DATA_DIR = HERE / "data"
 DEFAULT_EXTRA = HERE / "rosters.txt"
+
+
+def _yr(token: str | None) -> int:
+    """'SR-4' -> 4, 'FR-1' -> 1, '' / unknown -> 0."""
+    if not token:
+        return 0
+    t = token.strip().upper()
+    if "-" in t:
+        tail = t.split("-", 1)[1].strip()
+        if tail.isdigit():
+            return int(tail)
+    return _YEAR_PREFIX.get(t[:2], 0)
+
+
+def _keep_better(pool: dict[int, tfrrs.RosterEntry], e: tfrrs.RosterEntry) -> None:
+    """Insert `e`, or replace an existing entry when `e` has a higher class year.
+
+    Across 15+ seasons an athlete appears on many roster pages; we want the
+    label from their *senior-most* one, whatever order the URLs are listed in.
+    """
+    cur = pool.get(e.athlete_id)
+    if cur is None or _yr(e.class_year) > _yr(cur.class_year):
+        pool[e.athlete_id] = e
 
 
 def _scrape(url: str, sex: str) -> list[tfrrs.RosterEntry]:
@@ -70,18 +98,33 @@ def _read_existing(path: pathlib.Path) -> dict[int, tfrrs.RosterEntry]:
     return out
 
 
+def _sex_from_url(url: str) -> str | None:
+    m = _SEX_IN_URL.search(url)
+    return (m.group(1) or m.group(2)).upper() if m else None
+
+
 def _read_extra(path: pathlib.Path) -> list[tuple[str, str]]:
-    """[(sex, url), ...] from the hand-maintained roster-URL file."""
+    """[(sex, url), ...] from the hand-maintained roster-URL file.
+
+    A line is either `<url>` (men/women inferred from `_m_`/`_f_` in it) or
+    `m|f <url>` to force it.
+    """
     out: list[tuple[str, str]] = []
     for raw in path.read_text(encoding="utf-8").splitlines():
         line = raw.split("#", 1)[0].strip()
         if not line:
             continue
         parts = line.split(None, 1)
-        if len(parts) != 2 or parts[0].strip().upper() not in ("M", "F"):
-            print(f"    skipping malformed line (need 'm|f <url>'): {raw!r}", file=sys.stderr)
+        if len(parts) == 2 and parts[0].strip().upper() in ("M", "F"):
+            out.append((parts[0].strip().upper(), parts[1].strip()))
             continue
-        out.append((parts[0].strip().upper(), parts[1].strip()))
+        if len(parts) == 1 and parts[0].lower().startswith("http"):
+            sex = _sex_from_url(parts[0])
+            if sex:
+                out.append((sex, parts[0]))
+                continue
+        print(f"    skipping line (need 'm|f <url>' or a URL with _m_/_f_): {raw!r}",
+              file=sys.stderr)
     return out
 
 
@@ -115,14 +158,14 @@ def main(argv: list[str] | None = None) -> int:
         for sex, url in tfrrs.TEAM_PAGES.items():
             print(f"[current {sex}] {url}")
             for e in _scrape(url, sex):
-                pool[e.athlete_id] = e
+                _keep_better(pool, e)
                 current_ids.add(e.athlete_id)
 
     if args.extra_urls.exists():
         for sex, url in _read_extra(args.extra_urls):
             print(f"[archive {sex}] {url}")
             for e in _scrape(url, sex):
-                pool.setdefault(e.athlete_id, e)  # a current entry wins (fresher class year)
+                _keep_better(pool, e)  # senior-most class year across all rosters wins
     elif args.extra_urls != DEFAULT_EXTRA:
         sys.exit(f"--extra-urls file not found: {args.extra_urls}")
 
@@ -137,10 +180,10 @@ def main(argv: list[str] | None = None) -> int:
     n_scraped = len(pool)
     if not args.no_merge:
         kept = 0
-        for aid, e in _read_existing(args.out).items():
-            if aid not in pool:
-                pool[aid] = e
+        for _aid, e in _read_existing(args.out).items():
+            if e.athlete_id not in pool:
                 kept += 1
+            _keep_better(pool, e)  # also lifts a stale low year back to a known higher one
         if kept:
             print(f"[merge] kept {kept} athlete(s) from the existing {args.out.name}")
 

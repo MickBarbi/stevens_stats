@@ -37,6 +37,7 @@ HERE = pathlib.Path(__file__).resolve().parent
 DATA_DIR = HERE / "data"
 ROOT = HERE.parent
 ATHLETES_JSON = ROOT / "data" / "athletes.json"
+PERFORMANCES_JSON = ROOT / "data" / "performances.json"
 DEFAULT_PAGES = HERE / "photo_rosters.txt"
 ORIGIN = "https://stevensducks.com"
 
@@ -77,6 +78,12 @@ BY_LAST: dict[str, list[dict]] = {}
 for _a in ATHLETES:
     BY_LAST.setdefault(fold(_a["last_name"]), []).append(_a)
 
+# TFRRS sometimes has the same person under two athlete ids; when a roster name
+# matches both, prefer the profile that actually has results.
+HAS_MARKS: set[int] = set()
+if PERFORMANCES_JSON.exists():
+    HAS_MARKS = {p["athlete_id"] for p in json.loads(PERFORMANCES_JSON.read_text("utf-8"))}
+
 
 def first_ok(fl: str, af: str, nick: str | None) -> bool:
     if not fl or not af:
@@ -108,7 +115,11 @@ def match_id(name: str) -> int | None:
                 fl, fold(a["first_name"]), a.get("nickname")
             ):
                 hits.add(a["athlete_id"])
-    return next(iter(hits)) if len(hits) == 1 else None
+    if len(hits) == 1:
+        return next(iter(hits))
+    # duplicate TFRRS profiles for one person: keep the one with results
+    with_marks = hits & HAS_MARKS
+    return next(iter(with_marks)) if len(with_marks) == 1 else None
 
 
 # --- roster scraping -------------------------------------------------------

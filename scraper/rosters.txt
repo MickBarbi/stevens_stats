@@ -21,19 +21,95 @@
 # f  https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?season=2023-indoor
 
 # 24-25
-m https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=382
-m https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=369
-f https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=382
-f https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=369
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=382
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=369
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=382
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=369
 
 # 23-24
-m https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=335
-m https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=322
-f https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=335
-f https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=322
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=335
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=322
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=335
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=322
 
 # 22-23
-m https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=292
-m https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=279
-f https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=292
-f https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=279
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=292
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=279
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=292
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=279
+
+# 21-22
+m https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=255
+m https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=240
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=255
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=240
+
+# 20-21
+m https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=216
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=216
+
+# 19-20
+m https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=189
+m https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=178
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=189
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=178
+
+# 18-19
+m https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=160
+m https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=148
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=160
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=148
+
+# 17-18
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=131
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=125
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=131
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=125
+
+# 16-17
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=110
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=104
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=110
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=104
+
+# 15-16
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=93
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=85
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=93
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=85
+
+# 14-15
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=74
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=67
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=74
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=67
+
+# 13-14
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=56
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=49
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=56
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=49
+
+# 12-13
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=42
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=31
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=42
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=31
+
+# 11-12
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=23
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=19
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=23
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=19
+
+# 10-11
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=15
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=11
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=15
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=11
+
+# 09-10
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=7
+https://www.tfrrs.org/teams/tf/NJ_college_m_Stevens.html?config_hnd=3
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=7
+https://www.tfrrs.org/teams/tf/NJ_college_f_Stevens.html?config_hnd=3
