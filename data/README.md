@@ -14,6 +14,7 @@ no database. Files are small enough to keep in git — the history *is* the back
 Roster photos are served from Cloudinary with the athlete's **TFRRS id** as the
 `public_id` (e.g. `8327859.webp`). Set `image_path` on an athlete only to point
 at a differently-named upload; leave it `null` otherwise.
+| `photo_rev.json` | `{ "rev": <int> }` — a cache-buster `lib/photo.ts` appends as `?v=`. `scraper/photos_upload.py` bumps it after every Cloudinary batch so replaced photos beat the `next/image` (~30-day) and browser cache. Commit it with the upload. |
 | `events.json` | The 33 events (`event_id`, `event_name`, `event_season`). |
 | `performances.json` | Every result, with `is_personal_best` / `is_collegiate_best` / `is_overall_best` / `is_season_best` flags. `mark` is unit-less (track = seconds, field = metres, multis = points). |
 

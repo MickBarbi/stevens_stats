@@ -8,6 +8,9 @@ import {
   teamRank,
 } from "@/lib/data";
 import { formatMark, markKind } from "@/lib/format";
+import photoRev from "@/data/photo_rev.json";
+
+const PHOTO_REV = (photoRev as { rev: number }).rev;
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -59,7 +62,7 @@ function headlineFor(id: number, sex: string | null): string {
 async function photoUrl(imagePath: string | null, athleteId: number): Promise<string | null> {
   if (!CLOUD) return null;
   const publicId = imagePath ?? String(athleteId);
-  const url = `https://res.cloudinary.com/${CLOUD}/image/upload/c_fill,g_face,w_480,h_630,f_jpg/${publicId}`;
+  const url = `https://res.cloudinary.com/${CLOUD}/image/upload/c_fill,g_face,w_480,h_630,f_jpg/${publicId}?v=${PHOTO_REV}`;
   try {
     const ctrl = new AbortController();
     const t = setTimeout(() => ctrl.abort(), 5000);

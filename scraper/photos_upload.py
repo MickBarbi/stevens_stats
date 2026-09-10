@@ -33,6 +33,7 @@ PHOTOS_DIR = DATA_DIR / "photos"
 MANIFEST = DATA_DIR / "photos_manifest.csv"
 ROOT = HERE.parent
 ENV_FILE = ROOT / ".env"
+PHOTO_REV = ROOT / "data" / "photo_rev.json"  # committed; lib/photo.ts reads it
 
 
 def load_env(path: pathlib.Path) -> None:
@@ -134,6 +135,24 @@ def main(argv: list[str] | None = None) -> int:
         n_ok += 1
 
     print(f"\nUploaded {n_ok}/{len(files)}" + (f", {n_fail} failed" if n_fail else ""))
+
+    if n_ok:
+        import time
+
+        rev = int(time.time())
+        PHOTO_REV.write_text(
+            json.dumps(
+                {
+                    "rev": rev,
+                    "note": "bumped by scraper/photos_upload.py; lib/photo.ts appends "
+                    "?v=<rev> so replaced photos beat the next/image + browser cache",
+                },
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        print(f"bumped {PHOTO_REV.name} -> {rev}  (commit it so the new photos show)")
     return 0 if not n_fail else 1
 
 

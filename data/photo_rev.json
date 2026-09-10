@@ -1,0 +1,4 @@
+{
+  "rev": 1789007336,
+  "note": "bumped by scraper/photos_upload.py after each Cloudinary batch; busts the next/image + browser cache when photos are replaced"
+}
