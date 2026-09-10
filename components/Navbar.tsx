@@ -108,7 +108,7 @@ export default function Navbar() {
                 type="button"
                 onClick={openSearch}
                 className="ml-1 flex items-center gap-2 rounded-md py-2 pl-3 pr-2 text-base transition-colors hover:bg-white/10"
-                aria-label="Search athletes and pages"
+                aria-label="Search"
               >
                 <Search className="h-4 w-4" aria-hidden />
                 <kbd className="hidden rounded border border-white/30 px-1.5 py-0.5 text-xs font-medium text-brand-fg/80 md:block">
@@ -125,7 +125,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={openSearch}
-              aria-label="Search athletes and pages"
+              aria-label="Search"
               className="inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-white/10"
             >
               <Search className="h-5 w-5" aria-hidden />
