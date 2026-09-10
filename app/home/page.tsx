@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Newspaper } from "lucide-react";
-import { sortedPosts } from "@/lib/data";
+import { allMeets, sortedPosts } from "@/lib/data";
 import { SITE_DESCRIPTION, pageMetadata } from "@/lib/site";
 import Card from "@/components/ui/Card";
 import PageHeader from "@/components/ui/PageHeader";
@@ -16,6 +16,7 @@ export const metadata = pageMetadata({
 
 export default function HomePage() {
   const posts = sortedPosts();
+  const meetCount = allMeets().length;
 
   return (
     <div className="space-y-10">
@@ -24,6 +25,11 @@ export default function HomePage() {
       <section>
         <PageHeader title="Latest Results" />
         <LatestResults />
+        <p className="mt-4 text-sm">
+          <Link href="/meet" className="text-link hover:underline">
+            Browse all {meetCount} meets →
+          </Link>
+        </p>
       </section>
 
       <section>

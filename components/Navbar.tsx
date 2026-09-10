@@ -13,6 +13,7 @@ const LINKS = [
   { href: "/home", label: "Home" },
   { href: "/roster", label: "Roster" },
   { href: "/events", label: "Events" },
+  { href: "/meet", label: "Meets" },
   { href: "/records", label: "Top 10" },
   { href: "/athlete", label: "Athletes" },
   { href: "/compare", label: "Compare" },
@@ -88,7 +89,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <ul className="ml-auto hidden items-center gap-1 sm:flex">
+          <ul className="ml-auto hidden items-center gap-0.5 md:flex">
             {LINKS.map((l) => (
               <li key={l.href}>
                 <Link
@@ -120,7 +121,7 @@ export default function Navbar() {
             </li>
           </ul>
 
-          <div className="ml-auto flex items-center gap-1 sm:hidden">
+          <div className="ml-auto flex items-center gap-1 md:hidden">
             <button
               type="button"
               onClick={openSearch}
@@ -150,7 +151,7 @@ export default function Navbar() {
         aria-label="Close menu"
         tabIndex={open ? 0 : -1}
         onClick={() => setOpen(false)}
-        className={`fixed inset-0 z-50 bg-black/40 transition-opacity duration-200 sm:hidden ${
+        className={`fixed inset-0 z-50 bg-black/40 transition-opacity duration-200 md:hidden ${
           open ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       />
@@ -161,7 +162,7 @@ export default function Navbar() {
         aria-label="Site menu"
         aria-hidden={!open}
         onKeyDown={trapTab}
-        className={`fixed right-0 top-0 z-[60] flex h-full w-72 max-w-[82vw] flex-col bg-surface-raised pt-[env(safe-area-inset-top)] text-fg shadow-card-hover transition-transform duration-200 sm:hidden ${
+        className={`fixed right-0 top-0 z-[60] flex h-full w-72 max-w-[82vw] flex-col bg-surface-raised pt-[env(safe-area-inset-top)] text-fg shadow-card-hover transition-transform duration-200 md:hidden ${
           open ? "translate-x-0" : "pointer-events-none translate-x-full"
         }`}
       >

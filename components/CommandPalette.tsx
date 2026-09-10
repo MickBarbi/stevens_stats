@@ -30,6 +30,7 @@ const PAGES: { name: string; sub: string; href: string }[] = [
   { name: "Home", sub: "Latest results feed", href: "/home" },
   { name: "Roster", sub: "The full team, filterable", href: "/roster" },
   { name: "Events", sub: "Leaderboards & qualifying standards", href: "/events" },
+  { name: "Meets", sub: "Every meet, newest first", href: "/meet" },
   { name: "Top 10", sub: "All-time top-ten board", href: "/records" },
   { name: "Athletes", sub: "Browse every athlete", href: "/athlete" },
   { name: "Compare", sub: "Two athletes head to head", href: "/compare" },
