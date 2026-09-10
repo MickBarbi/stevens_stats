@@ -287,3 +287,16 @@
     text-wrap: balance;
   }
 }
+
+/* iOS Safari zooms the page in when you focus an input whose text is smaller
+   than 16px, and frequently won't zoom back out (worst with the command
+   palette, which unmounts on close). Pin form controls to 16px on touch
+   devices so the zoom never fires. `!important` to beat the `text-sm`
+   utility the search fields carry; the size on non-touch is unchanged. */
+@media (pointer: coarse) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
