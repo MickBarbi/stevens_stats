@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
-import { athletes, blogPosts, performances } from "@/lib/data";
+import { allMeets, athletes, blogPosts, performances } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -21,6 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/athlete`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
   ];
 
+  const meetRoutes: MetadataRoute.Sitemap = allMeets().map((m) => ({
+    url: `${SITE_URL}/meet/${m.slug}`,
+    lastModified: new Date(`${m.date}T00:00:00Z`),
+    changeFrequency: "yearly",
+    priority: 0.5,
+  }));
+
   const athleteRoutes: MetadataRoute.Sitemap = athletes.map((a) => {
     const d = lastMark.get(a.athlete_id);
     return {
@@ -38,5 +45,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticRoutes, ...athleteRoutes, ...postRoutes];
+  return [...staticRoutes, ...meetRoutes, ...athleteRoutes, ...postRoutes];
 }

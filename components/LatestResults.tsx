@@ -86,6 +86,15 @@ export default function LatestResults() {
                       PB {formatMark(r.pb_mark, kind)}
                     </span>
                   )}
+
+                  {r.meet && (
+                    <Link
+                      href={`/meet/${r.meet.slug}`}
+                      className="text-xs text-fg-subtle hover:text-brand hover:underline"
+                    >
+                      {r.meet.name}
+                    </Link>
+                  )}
                 </li>
               );
             })}

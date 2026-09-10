@@ -427,6 +427,173 @@ export const teamRank = (
   return entry ? entry.rank : null;
 };
 
+// ---- Meets ---------------------------------------------------------------
+// Every meet Stevens has results from, recovered from the TFRRS results-page
+// link carried on each performance:
+//   tfrrs.org/results/<meetId>/<resultId>/<Meet_Name_Slug>/<Event-Slug>
+// The <meetId> groups all of a meet's events; the name slug gives a readable
+// title. In the scraped data each meet id maps to a single date.
+
+const MEET_LINK_RE = /tfrrs\.org\/results\/(\d+)\/\d+\/([^/]+)\//;
+
+const cleanMeetName = (rawSlug: string): string =>
+  decodeURIComponent(rawSlug)
+    .replace(/_/g, " ")
+    .replace(/\s+/g, " ")
+    .replace(/\bTF\b/g, "Track & Field") // TFRRS abbreviates "Track & Field"
+    .replace(/\bTrack Field\b/g, "Track & Field") // the "&" is dropped in some
+    .trim();
+
+const meetSlug = (meetId: string, name: string): string =>
+  `${meetId}-${name
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")}`;
+
+/** Meet identity for one performance's results link, or null if it doesn't
+ *  point at a TFRRS meet result. */
+export const parseMeetLink = (
+  link: string | null | undefined
+): { meetId: string; name: string; slug: string } | null => {
+  const m = link?.match(MEET_LINK_RE);
+  if (!m) return null;
+  const name = cleanMeetName(m[2]);
+  return { meetId: m[1], name, slug: meetSlug(m[1], name) };
+};
+
+export type MeetResult = {
+  performance_id: number;
+  athlete_id: number;
+  athlete_name: string;
+  sex: string | null;
+  event_id: number;
+  event_name: string;
+  higher_is_better: boolean;
+  mark: number;
+  season: string; // "i" | "o"
+  pb_mark: number | null;
+  is_personal_best: boolean;
+  is_season_best: boolean;
+  is_overall_best: boolean;
+  team_rank: number | null; // all-time team-list place for the event/season
+  result_link: string | null;
+};
+
+export type Meet = {
+  slug: string;
+  meet_id: string;
+  name: string;
+  date: string; // YYYY-MM-DD
+  tfrrs_url: string;
+  result_count: number;
+  athlete_count: number;
+  event_count: number;
+  results: MeetResult[];
+};
+
+let _meets: Meet[] | null = null;
+
+export const allMeets = (): Meet[] => {
+  if (_meets) return _meets;
+
+  const athleteById = new Map(athletes.map((a) => [a.athlete_id, a]));
+  const pbByKey = new Map<string, number>();
+  for (const p of performances) {
+    if (p.is_personal_best) pbByKey.set(`${p.athlete_id}|${p.event_id}`, p.mark);
+  }
+
+  const groups = new Map<
+    string,
+    { meet_id: string; rawSlug: string; date: string; results: MeetResult[] }
+  >();
+
+  for (const p of performances) {
+    const m = p.result_link?.match(MEET_LINK_RE);
+    if (!m) continue;
+    const [, meetId, rawSlug] = m;
+
+    let g = groups.get(meetId);
+    if (!g) {
+      g = { meet_id: meetId, rawSlug, date: p.date, results: [] };
+      groups.set(meetId, g);
+    }
+    if (p.date < g.date) g.date = p.date; // defensive; data has one date per meet
+
+    const a = athleteById.get(p.athlete_id);
+    g.results.push({
+      performance_id: p.performance_id,
+      athlete_id: p.athlete_id,
+      athlete_name: a
+        ? `${a.nickname ?? a.first_name} ${a.last_name}`
+        : String(p.athlete_id),
+      sex: a?.sex ?? null,
+      event_id: p.event_id,
+      event_name: eventNameById.get(p.event_id) ?? String(p.event_id),
+      higher_is_better: higherIsBetterById.get(p.event_id) ?? false,
+      mark: p.mark,
+      season: p.season,
+      pb_mark: pbByKey.get(`${p.athlete_id}|${p.event_id}`) ?? null,
+      is_personal_best: p.is_personal_best,
+      is_season_best: p.is_season_best,
+      is_overall_best: p.is_overall_best,
+      team_rank: teamRank(
+        p.athlete_id,
+        p.event_id,
+        seasonName(p.season),
+        a?.sex ?? null
+      ),
+      result_link: p.result_link,
+    });
+  }
+
+  _meets = Array.from(groups.values())
+    .map((g) => {
+      const name = cleanMeetName(g.rawSlug);
+      // One row per athlete per event: at championship meets TFRRS records a
+      // separate mark for prelims and finals, and a "how did we do" recap wants
+      // the athlete's best mark from the meet, not every round. Keep the best
+      // mark's row but carry any best-flag that landed on another round.
+      const best = new Map<string, MeetResult>();
+      for (const r of g.results) {
+        const k = `${r.athlete_id}|${r.event_id}`;
+        const cur = best.get(k);
+        const better =
+          !cur || (r.higher_is_better ? r.mark > cur.mark : r.mark < cur.mark);
+        const keep = better ? r : cur!;
+        const drop = better ? cur : r;
+        best.set(k, {
+          ...keep,
+          is_personal_best: keep.is_personal_best || !!drop?.is_personal_best,
+          is_season_best: keep.is_season_best || !!drop?.is_season_best,
+          is_overall_best: keep.is_overall_best || !!drop?.is_overall_best,
+        });
+      }
+      const results = Array.from(best.values());
+      return {
+        slug: meetSlug(g.meet_id, name),
+        meet_id: g.meet_id,
+        name,
+        date: g.date,
+        tfrrs_url: `https://www.tfrrs.org/results/${g.meet_id}`,
+        result_count: results.length,
+        athlete_count: new Set(results.map((r) => r.athlete_id)).size,
+        event_count: new Set(results.map((r) => r.event_id)).size,
+        results,
+      };
+    })
+    .sort((a, b) => b.date.localeCompare(a.date) || a.name.localeCompare(b.name));
+
+  return _meets;
+};
+
+let _meetIdx: Map<string, Meet> | null = null;
+
+export const meetBySlug = (slug: string): Meet | null => {
+  if (!_meetIdx) _meetIdx = new Map(allMeets().map((m) => [m.slug, m]));
+  return _meetIdx.get(slug) ?? null;
+};
+
 // ---- Latest results feed (home dashboard) --------------------------------
 
 export type FeedResult = Performance & {
@@ -435,6 +602,7 @@ export type FeedResult = Performance & {
   higher_is_better: boolean;
   pb_mark: number | null; // athlete's all-time best for this event, for context
   team_rank: number | null;
+  meet: { name: string; slug: string } | null;
 };
 
 export const latestResults = (limit = 60): FeedResult[] => {
@@ -452,6 +620,7 @@ export const latestResults = (limit = 60): FeedResult[] => {
     .slice(0, limit)
     .map((p) => {
       const a = activeById.get(p.athlete_id)!;
+      const meet = parseMeetLink(p.result_link);
       return {
         ...p,
         athlete: toPicker(a),
@@ -459,6 +628,7 @@ export const latestResults = (limit = 60): FeedResult[] => {
         higher_is_better: higherIsBetterById.get(p.event_id) ?? false,
         pb_mark: pbByKey.get(`${p.athlete_id}|${p.event_id}`) ?? null,
         team_rank: teamRank(p.athlete_id, p.event_id, seasonName(p.season), a.sex),
+        meet: meet ? { name: meet.name, slug: meet.slug } : null,
       };
     });
 };
