@@ -1,15 +1,9 @@
-// Canonical origin for absolute URLs (metadata, OG, sitemap, robots, JSON-LD).
-//
-// On Vercel production, VERCEL_PROJECT_PRODUCTION_URL is set automatically
-// (e.g. "stevens-stats.vercel.app"). If you point a custom domain at the site
-// you MUST set NEXT_PUBLIC_SITE_URL to it in the Vercel project env — otherwise
-// every canonical / og:url / sitemap entry keeps pointing at the vercel.app
-// host, which splits your ranking signal.
+// Canonical origin for every absolute URL the site emits — metadata, og:url,
+// canonical tags, sitemap, robots, JSON-LD. Hard-coded to the production domain
+// so it's right no matter where the build runs (Vercel, CI, local). Override
+// with NEXT_PUBLIC_SITE_URL only if the domain ever changes.
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "http://localhost:3000")
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://stevens-stats.com"
 ).replace(/\/$/, "");
 
 export const SITE_NAME = "Stevens Stats";
