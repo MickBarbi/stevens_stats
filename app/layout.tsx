@@ -84,11 +84,9 @@ export const metadata: Metadata = {
     title: "Stevens Stats",
     statusBarStyle: "black-translucent",
   },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
+  // <link rel="icon"> (app/icon.svg) and <link rel="apple-touch-icon">
+  // (app/apple-icon.png) are emitted by Next's file convention; browsers also
+  // fetch /favicon.ico on their own.
 };
 
 // Site-wide structured data: identifies the site and the team as entities so
