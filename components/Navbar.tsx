@@ -15,6 +15,7 @@ const LINKS = [
   { href: "/events", label: "Events" },
   { href: "/records", label: "Top 10" },
   { href: "/athlete", label: "Athletes" },
+  { href: "/compare", label: "Compare" },
 ];
 
 export default function Navbar() {

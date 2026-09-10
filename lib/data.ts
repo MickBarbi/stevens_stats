@@ -110,7 +110,13 @@ export const getAthlete = (id: number): Athlete | null =>
 
 export type PickerAthlete = Pick<
   Athlete,
-  "athlete_id" | "first_name" | "last_name" | "nickname" | "active" | "status"
+  | "athlete_id"
+  | "first_name"
+  | "last_name"
+  | "nickname"
+  | "active"
+  | "status"
+  | "image_path"
 >;
 
 const toPicker = ({
@@ -120,6 +126,7 @@ const toPicker = ({
   nickname,
   active,
   status,
+  image_path,
 }: Athlete): PickerAthlete => ({
   athlete_id,
   first_name,
@@ -127,6 +134,7 @@ const toPicker = ({
   nickname,
   active,
   status,
+  image_path,
 });
 
 // Everyone, current team first then former athletes — each block alphabetical.

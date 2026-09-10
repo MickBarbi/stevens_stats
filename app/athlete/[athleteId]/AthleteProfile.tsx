@@ -13,7 +13,13 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import Link from "next/link";
-import { Medal, ChevronLeft, ChevronRight, LineChart } from "lucide-react";
+import {
+  Medal,
+  ChevronLeft,
+  ChevronRight,
+  LineChart,
+  ArrowLeftRight,
+} from "lucide-react";
 import AthletePicker from "../AthletePicker";
 import { alumniLabel, isFormerAthlete, type EventRankMap } from "@/lib/athlete";
 import type {
@@ -471,7 +477,17 @@ const AthleteProfile = ({
         <div className="min-w-[15rem] flex-1">
           <div className="flex items-start justify-between gap-3">
             <h1 className="page-title">{fullName}</h1>
-            <ShareButton title={`${fullName} — Stevens Stats`} />
+            <div className="flex shrink-0 items-center gap-1">
+              <Link
+                href={`/compare?a=${athlete.athlete_id}`}
+                title="Compare with another athlete"
+                className="inline-flex items-center gap-1.5 rounded-md px-2 py-1.5 text-sm text-fg-muted transition-colors hover:bg-surface hover:text-fg"
+              >
+                <ArrowLeftRight className="h-4 w-4" aria-hidden />
+                <span className="hidden sm:inline">Compare</span>
+              </Link>
+              <ShareButton title={`${fullName} — Stevens Stats`} />
+            </div>
           </div>
 
           <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-fg-muted">
