@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
   athletes,
@@ -7,7 +8,9 @@ import {
   adjacentActiveAthletes,
   teamRank,
 } from "@/lib/data";
-import type { EventRankMap } from "@/lib/athlete";
+import { alumniLabel, isFormerAthlete, type EventRankMap } from "@/lib/athlete";
+import { SITE_URL, TEAM_NAME } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
 import AthleteProfile from "./AthleteProfile";
 
 export function generateStaticParams() {
@@ -16,23 +19,56 @@ export function generateStaticParams() {
 
 export const dynamicParams = false;
 
+const YEAR_WORD: Record<number, string> = {
+  1: "first-year",
+  2: "sophomore",
+  3: "junior",
+  4: "senior",
+  5: "graduate",
+  6: "graduate",
+};
+
+const standing = (a: NonNullable<ReturnType<typeof getAthlete>>) =>
+  isFormerAthlete(a)
+    ? alumniLabel(a).toLowerCase()
+    : YEAR_WORD[a.year]
+      ? `${YEAR_WORD[a.year]}`
+      : "";
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ athleteId: string }>;
-}) {
+}): Promise<Metadata> {
   const a = getAthlete(Number((await params).athleteId));
   if (!a) return {};
   const name = `${a.nickname ?? a.first_name} ${a.last_name}`;
-  const title = `${name} — Stevens Stats`;
-  const description =
-    a.bio ?? `Track & field results and progression for ${name}.`;
-  // og:image / twitter:image come from opengraph-image.tsx in this folder.
+  const team =
+    a.sex === "f" ? "women's" : a.sex === "m" ? "men's" : "";
+  const who = [standing(a), team, "track & field at Stevens"]
+    .filter(Boolean)
+    .join(" ");
+  const description = a.bio
+    ? a.bio.length > 200
+      ? `${a.bio.slice(0, 197)}…`
+      : a.bio
+    : `${name} — ${who}. Career bests, all-time team ranks, conference-standard ` +
+      `context and season-by-season progression charts.`;
+
   return {
-    title,
+    title: name,
     description,
-    openGraph: { title, description, type: "profile" },
-    twitter: { card: "summary_large_image", title, description },
+    keywords: [name, `${name} Stevens`, `${name} track and field`, `${name} TFRRS`],
+    alternates: { canonical: `/athlete/${a.athlete_id}` },
+    openGraph: {
+      type: "profile",
+      title: `${name} — Stevens Track & Field`,
+      description,
+      url: `/athlete/${a.athlete_id}`,
+      firstName: a.first_name,
+      lastName: a.last_name,
+    },
+    twitter: { card: "summary_large_image", title: `${name} — Stevens Track & Field` },
   };
 }
 
@@ -60,14 +96,46 @@ export default async function AthletePage({
     };
   }
 
+  const name = `${athlete.nickname ?? athlete.first_name} ${athlete.last_name}`;
+  const lastDate = progression.at(-1)?.date; // progression is sorted ascending
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    dateModified: lastDate
+      ? new Date(`${lastDate}T00:00:00Z`).toISOString()
+      : undefined,
+    mainEntity: {
+      "@type": "Person",
+      "@id": `${SITE_URL}/athlete/${id}#person`,
+      name,
+      givenName: athlete.first_name,
+      familyName: athlete.last_name,
+      url: `${SITE_URL}/athlete/${id}`,
+      image: `${SITE_URL}/athlete/${id}/opengraph-image`,
+      // links this profile to the athlete's TFRRS page — a strong entity signal
+      sameAs: [`https://www.tfrrs.org/athletes/${id}`],
+      jobTitle: "Track & field athlete",
+      ...(athlete.bio ? { description: athlete.bio } : {}),
+      ...(athlete.awards.length ? { award: athlete.awards } : {}),
+      memberOf: {
+        "@type": "SportsTeam",
+        name: TEAM_NAME,
+        sport: "Track and field",
+      },
+    },
+  };
+
   return (
-    <AthleteProfile
-      athlete={athlete}
-      progression={progression}
-      ranks={ranks}
-      others={athletePickerList()}
-      prev={prev}
-      next={next}
-    />
+    <>
+      <JsonLd data={jsonLd} />
+      <AthleteProfile
+        athlete={athlete}
+        progression={progression}
+        ranks={ranks}
+        others={athletePickerList()}
+        prev={prev}
+        next={next}
+      />
+    </>
   );
 }

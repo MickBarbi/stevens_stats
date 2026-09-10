@@ -1,10 +1,23 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Newspaper } from "lucide-react";
 import { sortedPosts } from "@/lib/data";
+import { SITE_DESCRIPTION } from "@/lib/site";
 import Card from "@/components/ui/Card";
 import PageHeader from "@/components/ui/PageHeader";
 import EmptyState from "@/components/ui/EmptyState";
 import LatestResults from "@/components/LatestResults";
+
+export const metadata: Metadata = {
+  // uses the site default title (the strongest one for a "Stevens stats" query)
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: "/home" },
+  openGraph: {
+    title: "Stevens Stats — Stevens Track & Field Results, Rosters & Records",
+    description: SITE_DESCRIPTION,
+    url: "/home",
+  },
+};
 
 export default function HomePage() {
   const posts = sortedPosts();

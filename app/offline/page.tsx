@@ -1,7 +1,10 @@
 import { WifiOff } from "lucide-react";
 import EmptyState from "@/components/ui/EmptyState";
 
-export const metadata = { title: "Offline — Stevens Stats" };
+export const metadata = {
+  title: "Offline",
+  robots: { index: false, follow: false },
+};
 
 export default function OfflinePage() {
   return (

@@ -5,6 +5,14 @@ import localFont from "next/font/local";
 import Navbar from "../components/Navbar";
 import BottomTabs from "../components/BottomTabs";
 import ServiceWorkerRegister from "../components/ServiceWorkerRegister";
+import JsonLd from "../components/JsonLd";
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  TEAM_NAME,
+} from "@/lib/site";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,20 +28,54 @@ const geistMono = localFont({
   display: "swap",
 });
 
-// Absolute base for OG / Twitter image URLs. Set NEXT_PUBLIC_SITE_URL in the
-// deploy env for a custom domain; otherwise Vercel's production URL is used.
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "http://localhost:3000");
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Stevens Stats",
-  description:
-    "Track & field results for the Stevens team — rosters, event bests and season progressions.",
+  title: {
+    default: SITE_TITLE,
+    template: "%s — Stevens Stats",
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  authors: [{ name: "Mick Barbi" }],
+  creator: "Mick Barbi",
+  keywords: [
+    "Stevens Stats",
+    "Stevens track and field",
+    "Stevens Institute of Technology track and field",
+    "Stevens Ducks track",
+    "Stevens cross country stats",
+    "college track and field results",
+    "MAC track and field",
+    "AARTFC",
+    "TFRRS",
+  ],
+  category: "sports",
   manifest: "/manifest.webmanifest",
+  // canonical is set per-page (a root relative value resolves to "/" everywhere)
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   appleWebApp: {
     capable: true,
     title: "Stevens Stats",
@@ -44,6 +86,40 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+};
+
+// Site-wide structured data: identifies the site and the team as entities so
+// Google can connect a "Stevens stats" query to this domain.
+const siteJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: `${SITE_URL}/`,
+      name: SITE_NAME,
+      description: SITE_DESCRIPTION,
+      inLanguage: "en-US",
+      publisher: { "@id": `${SITE_URL}/#team` },
+    },
+    {
+      "@type": "SportsTeam",
+      "@id": `${SITE_URL}/#team`,
+      name: TEAM_NAME,
+      alternateName: ["Stevens Ducks Track & Field", "Stevens Track and Field"],
+      sport: "Track and field",
+      url: `${SITE_URL}/`,
+      memberOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Stevens Institute of Technology",
+        url: "https://www.stevens.edu/",
+      },
+      subOrganization: {
+        "@type": "SportsOrganization",
+        name: "Middle Atlantic Conference",
+      },
+    },
+  ],
 };
 
 export const viewport: Viewport = {
@@ -66,6 +142,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <JsonLd data={siteJsonLd} />
       </head>
       <body>
         <a

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts, getPost } from "@/lib/data";
 import Card from "@/components/ui/Card";
@@ -7,6 +8,29 @@ export function generateStaticParams() {
 }
 
 export const dynamicParams = false;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ post_id: string }>;
+}): Promise<Metadata> {
+  const post = getPost(Number((await params).post_id));
+  if (!post) return {};
+  const description = post.subheading || post.body.slice(0, 155);
+  return {
+    title: post.title,
+    description,
+    alternates: { canonical: `/home/${post.post_id}` },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description,
+      url: `/home/${post.post_id}`,
+      publishedTime: new Date(post.created_on).toISOString(),
+      authors: post.author ? [post.author] : undefined,
+    },
+  };
+}
 
 export default async function PostPage({
   params,
