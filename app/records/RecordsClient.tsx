@@ -3,13 +3,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Trophy } from "lucide-react";
-import type { TopTenList, TopTenEntry } from "@/lib/data";
+import { seasonYearOf, type TopTenList, type TopTenEntry } from "@/lib/data";
 import PageHeader from "@/components/ui/PageHeader";
 import EmptyState from "@/components/ui/EmptyState";
 
-// The season year a mark counts for: indoor marks from Dec roll into the next
-// calendar year (matches scraper/load.py's Dec-1 cutoff).
-const seasonYearOf = (d: Date) => d.getFullYear() + (d.getMonth() >= 11 ? 1 : 0);
 const CURRENT_SEASON_YEAR = seasonYearOf(new Date());
 
 const entrySeasonYear = (e: TopTenEntry): number | null => {

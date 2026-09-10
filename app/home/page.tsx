@@ -6,6 +6,7 @@ import Card from "@/components/ui/Card";
 import PageHeader from "@/components/ui/PageHeader";
 import EmptyState from "@/components/ui/EmptyState";
 import LatestResults from "@/components/LatestResults";
+import RecordsStrip from "@/components/RecordsStrip";
 
 // no `title` — the site default title is the strongest for a "Stevens stats" query
 export const metadata = pageMetadata({
@@ -18,6 +19,8 @@ export default function HomePage() {
 
   return (
     <div className="space-y-10">
+      <RecordsStrip />
+
       <section>
         <PageHeader title="Latest Results" />
         <LatestResults />

@@ -350,6 +350,18 @@ export const seasonName = (flag: string): Season =>
 export const currentSeason = (date: Date = new Date()): Season =>
   [11, 0, 1].includes(date.getMonth()) ? "indoor" : "outdoor";
 
+// The competitive year a mark counts for: indoor marks from December roll into
+// the next calendar year (matches scraper/load.py's Dec-1 cutoff). Used for the
+// Top 10 page's this-season / last-season highlighting and the Home strip.
+export const seasonYearOf = (d: Date): number =>
+  d.getFullYear() + (d.getMonth() >= 11 ? 1 : 0);
+
+/** The season treated as "this season" — the most recent one to have begun.
+ *  Rolls to the next year in December, so a fall visit still points at the
+ *  spring season that just finished. */
+export const currentSeasonYear = (now: Date = new Date()): number =>
+  seasonYearOf(now);
+
 // ---- Official all-time top-10 lists ---------------------------------------
 // Hand-maintained (data/top10.json). Includes events and athletes not in the
 // scraped data (alumni, relays), so this — not the scraped performances — is
@@ -445,6 +457,67 @@ export const teamRank = (
   const list = topTenIndex.get(`${eventId}|${gender}|${season}`);
   const entry = list?.entries.find((e) => e.athlete_id === athleteId);
   return entry ? entry.rank : null;
+};
+
+// ---- This season's highlights (Home strip) ------------------------------
+
+export type SeasonRecord = {
+  event_name: string;
+  gender: string; // "m" | "f"
+  season: Season;
+  relay: boolean;
+  name: string; // individual name, or "A, B, C, D" for a relay
+  members: RelayMember[] | null;
+  athlete_id: number | null;
+  mark: string;
+  date: string | null; // YYYY-MM-DD; null for relays (tracked by year)
+  link: string | null;
+};
+
+const entrySeasonYear = (e: TopTenEntry): number | null => {
+  if (e.date) {
+    const d = new Date(`${e.date}T00:00:00`);
+    return Number.isNaN(d.getTime()) ? null : seasonYearOf(d);
+  }
+  return e.year ?? null;
+};
+
+/** School records (all-time #1) set in the current season year, newest first,
+ *  plus a count of every top-10 mark from the same season. Both are empty
+ *  between seasons — the Home strip hides itself then. */
+export const seasonHighlights = (
+  now: Date = new Date()
+): { seasonYear: number; records: SeasonRecord[]; topTenCount: number } => {
+  const yr = currentSeasonYear(now);
+  const records: SeasonRecord[] = [];
+  let topTenCount = 0;
+
+  for (const list of topTen) {
+    for (const e of list.entries) {
+      if (entrySeasonYear(e) !== yr) continue;
+      topTenCount += 1;
+      if (e.rank !== 1) continue;
+      records.push({
+        event_name: list.event_name,
+        gender: list.gender,
+        season: list.season,
+        relay: list.relay,
+        name: e.name ?? (e.members ?? []).map((m) => m.name).join(", "),
+        members: e.members ?? null,
+        athlete_id: e.athlete_id ?? null,
+        mark: e.mark,
+        date: e.date ?? null,
+        link: e.link ?? null,
+      });
+    }
+  }
+
+  records.sort(
+    (a, b) =>
+      (b.date ?? "").localeCompare(a.date ?? "") ||
+      a.event_name.localeCompare(b.event_name)
+  );
+  return { seasonYear: yr, records, topTenCount };
 };
 
 // ---- Meets ---------------------------------------------------------------
