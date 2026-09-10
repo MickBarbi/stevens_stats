@@ -12,6 +12,7 @@ import {
   SITE_TITLE,
   SITE_DESCRIPTION,
   TEAM_NAME,
+  OG_IMAGE,
 } from "@/lib/site";
 
 const geistSans = localFont({
@@ -59,11 +60,13 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     locale: "en_US",
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
   robots: {
     index: true,

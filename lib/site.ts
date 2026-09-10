@@ -17,3 +17,44 @@ export const SITE_DESCRIPTION =
   "following how their people are doing.";
 
 export const TEAM_NAME = "Stevens Institute of Technology Track & Field";
+
+// The site-wide social card lives at app/opengraph-image.tsx. Next only attaches
+// a file-convention image to its own segment, and a page that sets `openGraph`
+// shallow-overrides the layout's — so every page has to name the image itself.
+export const OG_IMAGE = {
+  url: "/opengraph-image",
+  width: 1200,
+  height: 630,
+  alt: "Stevens Stats — Stevens track & field results, rosters and records",
+};
+
+type PageMetaInput = {
+  title?: string; // omit to use the site default title
+  description: string;
+  path: string; // for canonical + og:url, e.g. "/roster"
+  ogTitle?: string; // social card title (defaults to `title`, then site title)
+};
+
+/** Consistent per-page metadata: title, description, canonical, OG + Twitter. */
+export function pageMetadata({ title, description, path, ogTitle }: PageMetaInput) {
+  const social = ogTitle ?? title ?? SITE_TITLE;
+  return {
+    ...(title ? { title } : {}),
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "website" as const,
+      siteName: SITE_NAME,
+      title: social,
+      description,
+      url: path,
+      images: [OG_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: social,
+      description,
+      images: [OG_IMAGE],
+    },
+  };
+}

@@ -9,7 +9,7 @@ import {
   teamRank,
 } from "@/lib/data";
 import { alumniLabel, isFormerAthlete, type EventRankMap } from "@/lib/athlete";
-import { SITE_URL, TEAM_NAME } from "@/lib/site";
+import { SITE_NAME, SITE_URL, TEAM_NAME } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
 import AthleteProfile from "./AthleteProfile";
 
@@ -62,13 +62,19 @@ export async function generateMetadata({
     alternates: { canonical: `/athlete/${a.athlete_id}` },
     openGraph: {
       type: "profile",
+      siteName: SITE_NAME,
       title: `${name} — Stevens Track & Field`,
       description,
       url: `/athlete/${a.athlete_id}`,
       firstName: a.first_name,
       lastName: a.last_name,
+      // og:image comes from ./opengraph-image.tsx (this segment)
     },
-    twitter: { card: "summary_large_image", title: `${name} — Stevens Track & Field` },
+    twitter: {
+      card: "summary_large_image",
+      title: `${name} — Stevens Track & Field`,
+      description,
+    },
   };
 }
 

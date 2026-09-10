@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts, getPost } from "@/lib/data";
+import { OG_IMAGE, SITE_NAME } from "@/lib/site";
 import Card from "@/components/ui/Card";
 
 export function generateStaticParams() {
@@ -23,11 +24,19 @@ export async function generateMetadata({
     alternates: { canonical: `/home/${post.post_id}` },
     openGraph: {
       type: "article",
+      siteName: SITE_NAME,
       title: post.title,
       description,
       url: `/home/${post.post_id}`,
+      images: [OG_IMAGE],
       publishedTime: new Date(post.created_on).toISOString(),
       authors: post.author ? [post.author] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description,
+      images: [OG_IMAGE],
     },
   };
 }

@@ -1,22 +1,16 @@
-import type { Metadata } from "next";
 import { rosterEntries, events } from "@/lib/data";
+import { pageMetadata } from "@/lib/site";
 import RosterClient from "./RosterClient";
 
-const description =
-  "The full Stevens Institute of Technology track & field roster — every athlete " +
-  "with their event specialties, class year and personal bests. Filter by event, " +
-  "class year or gender, and browse alumni back to 2010.";
-
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Roster",
-  description,
-  alternates: { canonical: "/roster" },
-  openGraph: {
-    title: "Stevens Track & Field Roster",
-    description,
-    url: "/roster",
-  },
-};
+  ogTitle: "Stevens Track & Field Roster",
+  path: "/roster",
+  description:
+    "The full Stevens Institute of Technology track & field roster — every athlete " +
+    "with their event specialties, class year and personal bests. Filter by event, " +
+    "class year or gender, and browse alumni back to 2010.",
+});
 
 export default function RosterPage() {
   return (
