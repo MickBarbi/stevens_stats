@@ -41,7 +41,7 @@ A static web app for tracking and visualizing a college track & field team's sta
 | Ingestion| Python scraper ([`scraper/`](scraper/README.md)) — TFRRS → JSON |
 | Images   | Cloudinary (public URLs) |
 | Charts   | Recharts |
-| Styling  | Tailwind CSS, Bootstrap, CSS modules |
+| Styling  | Tailwind CSS with CSS-variable design tokens (light / dark) |
 
 ## Architecture
 

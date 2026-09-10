@@ -20,7 +20,7 @@ export const formatMark = (
   if (!Number.isFinite(n)) return "-";
 
   if (kind === "points") return String(Math.round(n));
-  if (kind === "time" && n > 60) {
+  if (kind === "time" && n >= 60) {
     const minutes = Math.floor(n / 60);
     return `${minutes}:${(n - minutes * 60).toFixed(2).padStart(5, "0")}`;
   }

@@ -64,7 +64,7 @@ export default function LatestResults() {
                         href={r.result_link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-link no-underline hover:underline"
+                        className="text-fg no-underline hover:text-brand hover:underline"
                       >
                         {formatMark(r.mark, kind)}
                       </a>
