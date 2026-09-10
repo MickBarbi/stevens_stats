@@ -1,13 +1,12 @@
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
-import {
-  teamRank,
-  type BestCell,
-  type LeaderboardEvent,
-  type LeaderboardRow,
-  type QualifyingStandard,
-  type Season,
+import type {
+  BestCell,
+  LeaderboardEvent,
+  LeaderboardRow,
+  QualifyingStandard,
+  Season,
 } from "@/lib/data";
 import { CalendarOff } from "lucide-react";
 import { formatMark, markKind, type MarkKind } from "@/lib/format";
@@ -348,7 +347,7 @@ const EventsClient = ({
                   <ol className="-mx-2">
                     {rows.map((row, idx) => {
                       const best = bestOf(row);
-                      const tr = teamRank(row.athlete_id, event.event_id, season, row.sex);
+                      const tr = season === "indoor" ? row.rank_indoor : row.rank_outdoor;
                       return (
                         <React.Fragment key={row.athlete_id}>
                           <li className="grid grid-cols-[1.5rem_1fr] items-baseline gap-x-2 gap-y-1 rounded-md px-2 py-1.5 odd:bg-surface sm:grid-cols-[1.5rem_13rem_1fr] sm:gap-x-3">

@@ -9,6 +9,12 @@ import performancesJson from "@/data/performances.json";
 import standardsJson from "@/data/qualifying_standards.json";
 import postsJson from "@/data/blog_posts.json";
 import topTenJson from "@/data/top10.json";
+import { alumniLabel, isFormerAthlete } from "./athlete";
+
+// Re-exported so existing server-side imports keep working. Client components
+// import these straight from "@/lib/athlete" instead, so they don't drag this
+// module's JSON into their bundle.
+export { alumniLabel, isFormerAthlete };
 
 export type Athlete = {
   athlete_id: number;
@@ -27,18 +33,6 @@ export type Athlete = {
   status: string | null;
 };
 
-/** True for anyone no longer on the team — off the scraped roster, OR still on
- *  it but hand-flagged with a `status` (they left / transferred before the
- *  roster page caught up). */
-export const isFormerAthlete = (a: Pick<Athlete, "active" | "status">): boolean =>
-  !a.active || a.status != null;
-
-/** Short label for a former athlete's card / profile. */
-export const alumniLabel = (a: Pick<Athlete, "graduation_year" | "status">): string => {
-  if (a.status === "transferred") return "Transferred";
-  if (a.graduation_year) return `Class of '${String(a.graduation_year).slice(-2)}`;
-  return "Alum";
-};
 
 export type EventInfo = {
   event_id: number;
@@ -235,6 +229,10 @@ export type LeaderboardRow = {
   outdoor_season_best: BestCell;
   collegiate_best: BestCell;
   personal_best: BestCell;
+  // all-time team-list place for this event, precomputed so the client page
+  // doesn't need teamRank() (and this module's data) in its bundle
+  rank_indoor: number | null;
+  rank_outdoor: number | null;
 };
 
 export type LeaderboardEvent = EventInfo & { rows: LeaderboardRow[] };
@@ -291,6 +289,8 @@ export const eventLeaderboard = (): LeaderboardEvent[] => {
         outdoor_season_best: null,
         collegiate_best: null,
         personal_best: null,
+        rank_indoor: null,
+        rank_outdoor: null,
       };
       group.rows.push(row);
     }
@@ -302,7 +302,14 @@ export const eventLeaderboard = (): LeaderboardEvent[] => {
     if (p.is_personal_best) row.personal_best = cell(p);
   }
 
-  return Array.from(groups.values()).sort((a, b) => a.event_id - b.event_id);
+  const out = Array.from(groups.values()).sort((a, b) => a.event_id - b.event_id);
+  for (const group of out) {
+    for (const row of group.rows) {
+      row.rank_indoor = teamRank(row.athlete_id, group.event_id, "indoor", row.sex);
+      row.rank_outdoor = teamRank(row.athlete_id, group.event_id, "outdoor", row.sex);
+    }
+  }
+  return out;
 };
 
 // ---- Blog ------------------------------------------------------------------

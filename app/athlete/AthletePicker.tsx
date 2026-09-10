@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { Menu } from "@headlessui/react";
 import { ChevronDown } from "lucide-react";
-import { isFormerAthlete, type PickerAthlete } from "@/lib/data";
+import { isFormerAthlete } from "@/lib/athlete";
+import type { PickerAthlete } from "@/lib/data";
 
 const label = (a: PickerAthlete) =>
   `${a.nickname ? a.nickname : a.first_name} ${a.last_name}`;

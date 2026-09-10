@@ -16,13 +16,11 @@ import moment from "moment";
 import Link from "next/link";
 import { Medal, ChevronLeft, ChevronRight, LineChart } from "lucide-react";
 import AthletePicker from "../AthletePicker";
-import {
-  alumniLabel,
-  isFormerAthlete,
-  teamRank,
-  type Athlete,
-  type PickerAthlete,
-  type ProgressionPerformance,
+import { alumniLabel, isFormerAthlete, type EventRankMap } from "@/lib/athlete";
+import type {
+  Athlete,
+  PickerAthlete,
+  ProgressionPerformance,
 } from "@/lib/data";
 import { formatMark, markKind, type MarkKind } from "@/lib/format";
 import Badge from "@/components/ui/Badge";
@@ -49,11 +47,7 @@ type Specialty = { event_id: number; event_name: string; count: number; rank: nu
 
 // The events an athlete is known for: those they hold a team ranking in first
 // (best rank wins), then their most-competed events.
-const deriveSpecialties = (
-  prog: Perf[],
-  athleteId: number,
-  sex: string | null
-): Specialty[] => {
+const deriveSpecialties = (prog: Perf[], ranks: EventRankMap): Specialty[] => {
   const byEvent = new Map<number, { name: string; count: number }>();
   for (const p of prog) {
     const e = byEvent.get(p.event_id);
@@ -62,15 +56,13 @@ const deriveSpecialties = (
   }
   const specs: Specialty[] = [];
   for (const [event_id, e] of byEvent) {
-    const ranks = [
-      teamRank(athleteId, event_id, "indoor", sex),
-      teamRank(athleteId, event_id, "outdoor", sex),
-    ].filter((r): r is number => r != null);
+    const r = ranks[event_id];
+    const evRanks = [r?.indoor, r?.outdoor].filter((x): x is number => x != null);
     specs.push({
       event_id,
       event_name: e.name,
       count: e.count,
-      rank: ranks.length ? Math.min(...ranks) : null,
+      rank: evRanks.length ? Math.min(...evRanks) : null,
     });
   }
   specs.sort((a, b) => {
@@ -402,12 +394,14 @@ const buildBests = (progression: Perf[]): BestsRow[] => {
 const AthleteProfile = ({
   athlete,
   progression,
+  ranks,
   others,
   prev,
   next,
 }: {
   athlete: Athlete;
   progression: Perf[];
+  ranks: EventRankMap;
   others: PickerAthlete[];
   prev: PickerAthlete | null;
   next: PickerAthlete | null;
@@ -416,14 +410,14 @@ const AthleteProfile = ({
   const displayName = athlete.nickname ? athlete.nickname : athlete.first_name;
   const fullName = `${displayName} ${athlete.last_name}`;
 
-  const specialties = deriveSpecialties(progression, athlete.athlete_id, athlete.sex);
+  const specialties = deriveSpecialties(progression, ranks);
   const headline = specialties[0] ?? null;
   const headlinePB = headline
     ? progression.find((p) => p.event_id === headline.event_id && p.is_personal_best) ?? null
     : null;
 
   const rankOf = (season: "indoor" | "outdoor", eventId: number) =>
-    teamRank(athlete.athlete_id, eventId, season, athlete.sex);
+    ranks[eventId]?.[season] ?? null;
 
   return (
     <div className="space-y-8">

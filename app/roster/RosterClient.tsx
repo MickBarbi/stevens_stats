@@ -3,7 +3,8 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { SearchX } from "lucide-react";
-import { alumniLabel, isFormerAthlete, type RosterEntry } from "@/lib/data";
+import { alumniLabel, isFormerAthlete } from "@/lib/athlete";
+import type { RosterEntry } from "@/lib/data";
 import { formatMark, markKind } from "@/lib/format";
 import Card from "@/components/ui/Card";
 import PageHeader from "@/components/ui/PageHeader";

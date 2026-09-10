@@ -5,7 +5,9 @@ import {
   progressionForAthlete,
   athletePickerList,
   adjacentActiveAthletes,
+  teamRank,
 } from "@/lib/data";
+import type { EventRankMap } from "@/lib/athlete";
 import AthleteProfile from "./AthleteProfile";
 
 export function generateStaticParams() {
@@ -45,11 +47,24 @@ export default async function AthletePage({
   if (!athlete) notFound();
 
   const { prev, next } = adjacentActiveAthletes(id);
+  const progression = progressionForAthlete(id);
+
+  // Precompute team-list ranks here (server) so AthleteProfile never has to
+  // import lib/data — that import pulls the whole dataset into the client bundle.
+  const ranks: EventRankMap = {};
+  for (const p of progression) {
+    if (p.event_id in ranks) continue;
+    ranks[p.event_id] = {
+      indoor: teamRank(id, p.event_id, "indoor", athlete.sex),
+      outdoor: teamRank(id, p.event_id, "outdoor", athlete.sex),
+    };
+  }
 
   return (
     <AthleteProfile
       athlete={athlete}
-      progression={progressionForAthlete(id)}
+      progression={progression}
+      ranks={ranks}
       others={athletePickerList()}
       prev={prev}
       next={next}
