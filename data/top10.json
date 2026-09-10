@@ -15,14 +15,14 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 6090330,
         "mark": "7.91",
         "name": "Gina Dello Russo",
         "date": "2019-02-22"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4173557,
         "mark": "7.97",
         "name": "Gladys Njoku",
         "date": "2016-02-13"
@@ -43,7 +43,7 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4506444,
         "mark": "8.40",
         "name": "Michelle Moreira",
         "date": "2016-02-21"
@@ -94,7 +94,7 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 6090330,
         "mark": "24.83",
         "name": "Gina Dello Russo",
         "date": "2018-03-10"
@@ -122,14 +122,14 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 1705437,
         "mark": "27.34",
         "name": "Salme Cook",
         "date": "2009-02-01"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4173557,
         "mark": "27.41",
         "name": "Gladys Njoku",
         "date": "2015-02-14"
@@ -150,7 +150,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4506444,
         "mark": "28.36",
         "name": "Michelle Moreira",
         "date": "2016-02-06"
@@ -166,7 +166,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 6090330,
         "mark": "55.39",
         "name": "Gina Dello Russo",
         "date": "2018-03-09"
@@ -187,7 +187,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 1705437,
         "mark": "59.69",
         "name": "Salme Cook",
         "date": "2010-01-23"
@@ -252,7 +252,7 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 1705437,
         "mark": "1:42.44",
         "name": "Salme Cook",
         "date": "2009-01-09"
@@ -280,35 +280,35 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4992419,
         "mark": "1:45.16",
         "name": "Samantha Rokicsak",
         "date": "2016-02-06"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 2242934,
         "mark": "1:46.88",
         "name": "Hilary Paul",
         "date": "2010-01-23"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 5486488,
         "mark": "1:46.88",
         "name": "Kasey Suszko",
         "date": "2016-02-06"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 1596043,
         "mark": "1:47.54",
         "name": "Shanna Beairsto",
         "date": "2009-01-24"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 5486486,
         "mark": "1:47.94",
         "name": "Paige Metzheiser",
         "date": "2016-02-06"
@@ -324,14 +324,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 1705437,
         "mark": "2:19.71",
         "name": "Salme Cook",
         "date": "2010-02-26"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5486488,
         "mark": "2:20.46",
         "name": "Kasey Suszko",
         "date": "2016-02-27"
@@ -345,7 +345,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4992419,
         "mark": "2:21.14",
         "name": "Samantha Rokicsak",
         "date": "2016-02-27"
@@ -366,28 +366,28 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 5959199,
         "mark": "2:22.69",
         "name": "Claire Tantillo",
         "date": "2017-02-10"
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 5486486,
         "mark": "2:23.69",
         "name": "Paige Metzheiser",
         "date": "2016-02-27"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 5959198,
         "mark": "2:23.73",
         "name": "Brea Veilleux",
         "date": "2018-01-27"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 5311474,
         "mark": "2:23.78",
         "name": "Jackie Endres",
         "date": "2017-02-25"
@@ -403,42 +403,42 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5486487,
         "mark": "2:59.09",
         "name": "Mary Visca",
         "date": "2016-02-21"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4173561,
         "mark": "3:04.77",
         "name": "Amy Regan",
         "date": "2015-01-10"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4173541,
         "mark": "3:04.87",
         "name": "Kelly Freed",
         "date": "2013-03-01"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4992419,
         "mark": "3:05.07",
         "name": "Samantha Rokicsak",
         "date": "2016-02-21"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 5486486,
         "mark": "3:05.14",
         "name": "Paige Metzheiser",
         "date": "2016-02-21"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 5486488,
         "mark": "3:06.81",
         "name": "Kasey Suszko",
         "date": "2016-02-21"
@@ -459,14 +459,14 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 2242934,
         "mark": "3:15.23",
         "name": "Hilary Paul",
         "date": "2010-02-12"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4992403,
         "mark": "3:15.85",
         "name": "Kiera Sheridan",
         "date": "2015-02-22"
@@ -482,14 +482,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4173561,
         "mark": "4:51.32",
         "name": "Amy Regan",
         "date": "2016-02-27"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5486487,
         "mark": "5:05.01",
         "name": "Mary Visca",
         "date": "2016-02-13"
@@ -503,14 +503,14 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 5311474,
         "mark": "5:15.27",
         "name": "Jackie Endres",
         "date": "2017-02-19"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 5959198,
         "mark": "5:15.95",
         "name": "Brea Veilleux",
         "date": "2018-02-10"
@@ -524,7 +524,7 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 5486488,
         "mark": "5:20.70",
         "name": "Kasey Suszko",
         "date": "2017-02-10"
@@ -538,14 +538,14 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 6877586,
         "mark": "5:21.70",
         "name": "Trinity Lundemo",
         "date": "2020-01-17"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 2672028,
         "mark": "5:24.98",
         "name": "Ashley Princiotta",
         "date": "2014-01-25"
@@ -561,35 +561,35 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4173561,
         "mark": "9:30.80",
         "name": "Amy Regan",
         "date": "2016-03-11"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5486487,
         "mark": "9:53.10",
         "name": "Mary Visca",
         "date": "2018-02-10"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4173556,
         "mark": "10:24.41",
         "name": "Kate Moyer",
         "date": "2015-03-06"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 6877586,
         "mark": "10:28.42",
         "name": "Trinity Lundemo",
         "date": "2020-02-21"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 2672028,
         "mark": "10:39.78",
         "name": "Ashley Princiotta",
         "date": "2014-02-23"
@@ -603,14 +603,14 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4992416,
         "mark": "10:47.75",
         "name": "Kristen Okorn",
         "date": "2018-01-13"
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 1198714,
         "mark": "10:48.76",
         "name": "Melissa Franzese",
         "date": "2009-01-09"
@@ -640,14 +640,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4173561,
         "mark": "16:23.40",
         "name": "Amy Regan",
         "date": "2016-02-05"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4173556,
         "mark": "18:02.40",
         "name": "Kate Moyer",
         "date": "2015-01-30"
@@ -661,14 +661,14 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4992416,
         "mark": "18:33.53",
         "name": "Kristen Okorn",
         "date": "2018-02-10"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 5486487,
         "mark": "18:38.85",
         "name": "Mary Visca",
         "date": "2019-02-22"
@@ -682,28 +682,28 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 1198714,
         "mark": "18:48.42",
         "name": "Melissa Franzese",
         "date": "2009-02-06"
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 4506423,
         "mark": "18:53.25",
         "name": "Kathleen Kalbian",
         "date": "2015-12-05"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 2672028,
         "mark": "19:05.12",
         "name": "Ashley Princiotta",
         "date": "2013-02-15"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 6448320,
         "mark": "19:08.07",
         "name": "Kristin McAtee",
         "date": "2019-02-22"
@@ -754,7 +754,7 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4173535,
         "mark": "9.60",
         "name": "Amira Dardir",
         "date": "2013-03-01"
@@ -768,7 +768,7 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 4506446,
         "mark": "9.72",
         "name": "Gina Salmins",
         "date": "2014-02-01"
@@ -798,14 +798,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4173557,
         "mark": "1.80",
         "name": "Gladys Njoku",
         "date": "2015-02-07"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4173535,
         "mark": "1.69",
         "name": "Amira Dardir",
         "date": "2014-03-07"
@@ -826,7 +826,7 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 6090330,
         "mark": "1.63",
         "name": "Gina Dello Russo",
         "date": "2018-02-24"
@@ -861,14 +861,14 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4992401,
         "mark": "1.48",
         "name": "Katie Brodecki",
         "date": "2015-01-31"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 6094552,
         "mark": "1.48",
         "name": "Sammi Pearson",
         "date": "2018-02-24"
@@ -898,7 +898,7 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 6090330,
         "mark": "3.20",
         "name": "Gina Dello Russo",
         "date": "2019-02-22"
@@ -919,7 +919,7 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 6987525,
         "mark": "2.85",
         "name": "Victoria Agaliotis",
         "date": "2020-02-28"
@@ -933,7 +933,7 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 4506459,
         "mark": "2.55",
         "name": "Megan Safrenek",
         "date": "2014-01-18"
@@ -977,14 +977,14 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 6090330,
         "mark": "5.21",
         "name": "Gina Dello Russo",
         "date": "2019-02-15"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4173557,
         "mark": "5.17",
         "name": "Gladys Njoku",
         "date": "2016-01-30"
@@ -998,7 +998,7 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 6094552,
         "mark": "5.16",
         "name": "Sammi Pearson",
         "date": "2018-01-27"
@@ -1019,7 +1019,7 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 4173535,
         "mark": "5.08",
         "name": "Amira Dardir",
         "date": "2015-02-07"
@@ -1049,7 +1049,7 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 6094552,
         "mark": "10.99",
         "name": "Sammi Pearson",
         "date": "2018-02-24"
@@ -1070,21 +1070,21 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 4506446,
         "mark": "10.59",
         "name": "Gina Salmins",
         "date": "2014-02-01"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 6987528,
         "mark": "10.28",
         "name": "Ellie Savova",
         "date": "2019-12-07"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 5108611,
         "mark": "10.26",
         "name": "Katie Weeks",
         "date": "2015-02-20"
@@ -1121,7 +1121,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5108611,
         "mark": "14.02",
         "name": "Katie Weeks",
         "date": "2019-02-22"
@@ -1142,28 +1142,28 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4506450,
         "mark": "11.57",
         "name": "Victoria Taibe",
         "date": "2015-02-07"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 6987527,
         "mark": "11.53",
         "name": "Samantha Reilly",
         "date": "2020-01-25"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4173553,
         "mark": "11.14",
         "name": "Brianna Marchal",
         "date": "2013-12-07"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4506455,
         "mark": "10.75",
         "name": "Yanique Spigner",
         "date": "2013-12-07"
@@ -1184,7 +1184,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4173529,
         "mark": "10.12",
         "name": "Yona Bauzil",
         "date": "2013-02-02"
@@ -1200,7 +1200,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5108611,
         "mark": "18.25",
         "name": "Katie Weeks",
         "date": "2019-02-15"
@@ -1228,7 +1228,7 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 4506450,
         "mark": "13.59",
         "name": "Victoria Taibe",
         "date": "2015-01-16"
@@ -1242,7 +1242,7 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4506455,
         "mark": "13.24",
         "name": "Yanique Spigner",
         "date": "2014-12-06"
@@ -1286,7 +1286,7 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4173535,
         "mark": "3070 pts",
         "name": "Amira Dardir",
         "date": "2014-02-15"
@@ -1335,7 +1335,7 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 5108611,
         "mark": "2025 pts",
         "name": "Katie Weeks",
         "date": "2015-01-31"
@@ -1358,7 +1358,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 6090330,
         "mark": "39.47",
         "name": "Gina Dello Russo",
         "date": "2018-12-01"
@@ -1414,7 +1414,7 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 6090331,
         "mark": "46.09",
         "name": "Melissa Barnes",
         "date": "2019-12-07"
@@ -1437,28 +1437,28 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 6090330,
         "mark": "1:15.47",
         "name": "Gina Dello Russo",
         "date": "2020-02-21"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 1705437,
         "mark": "1:16.43",
         "name": "Salme Cook",
         "date": "2010-03-05"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 5959199,
         "mark": "1:22.32",
         "name": "Claire Tantillo",
         "date": "2017-02-19"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 2242934,
         "mark": "1:22.46",
         "name": "Hilary Paul",
         "date": "2009-02-15"
@@ -1472,14 +1472,14 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4577260,
         "mark": "1:23.99",
         "name": "Melissa Gibbons",
         "date": "2014-02-23"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 5959198,
         "mark": "1:24.86",
         "name": "Brea Veilleux",
         "date": "2017-01-14"
@@ -1493,7 +1493,7 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 4992419,
         "mark": "1:25.67",
         "name": "Samantha Rokicsak",
         "date": "2015-02-22"
@@ -1555,7 +1555,7 @@
           },
           {
             "name": "Gina Dello Russo",
-            "athlete_id": null
+            "athlete_id": 6090330
           }
         ],
         "year": 2020
@@ -1658,19 +1658,19 @@
         "members": [
           {
             "name": "Melissa Barnes",
-            "athlete_id": null
+            "athlete_id": 6090331
           },
           {
             "name": "Gina Dello Russo",
-            "athlete_id": null
+            "athlete_id": 6090330
           },
           {
             "name": "Sammi Pearson",
-            "athlete_id": null
+            "athlete_id": 6094552
           },
           {
             "name": "Paige Metzheiser",
-            "athlete_id": null
+            "athlete_id": 5486486
           }
         ],
         "year": 2018
@@ -1685,7 +1685,7 @@
           },
           {
             "name": "Gina Salmins",
-            "athlete_id": null
+            "athlete_id": 4506446
           },
           {
             "name": "Michelle Moriera",
@@ -1693,7 +1693,7 @@
           },
           {
             "name": "Glady Njoku",
-            "athlete_id": null
+            "athlete_id": 4173557
           }
         ],
         "year": 2014
@@ -1704,15 +1704,15 @@
         "members": [
           {
             "name": "Melissa Gibbons",
-            "athlete_id": null
+            "athlete_id": 4577260
           },
           {
             "name": "Taylor Tonkinson",
-            "athlete_id": null
+            "athlete_id": 5108607
           },
           {
             "name": "Gladys Njoku",
-            "athlete_id": null
+            "athlete_id": 4173557
           },
           {
             "name": "Michelle Moriera",
@@ -1731,7 +1731,7 @@
           },
           {
             "name": "Amethysth Holder",
-            "athlete_id": null
+            "athlete_id": 2250308
           },
           {
             "name": "Caroline Pawalowski",
@@ -1739,7 +1739,7 @@
           },
           {
             "name": "Lauren Griggs",
-            "athlete_id": null
+            "athlete_id": 2250307
           }
         ],
         "year": 2009
@@ -1790,11 +1790,11 @@
           },
           {
             "name": "Erica O'Kelly",
-            "athlete_id": null
+            "athlete_id": 7566162
           },
           {
             "name": "Gina Dello Russo",
-            "athlete_id": null
+            "athlete_id": 6090330
           }
         ],
         "year": 2020
@@ -1851,15 +1851,15 @@
         "members": [
           {
             "name": "Salme Cook",
-            "athlete_id": null
+            "athlete_id": 1705437
           },
           {
             "name": "Hilary Paul",
-            "athlete_id": null
+            "athlete_id": 2242934
           },
           {
             "name": "Jill Price",
-            "athlete_id": null
+            "athlete_id": 2769223
           },
           {
             "name": "Shannon Bearisto",
@@ -1897,19 +1897,19 @@
         "members": [
           {
             "name": "Melissa Barnes",
-            "athlete_id": null
+            "athlete_id": 6090331
           },
           {
             "name": "Samantha Rokicsak",
-            "athlete_id": null
+            "athlete_id": 4992419
           },
           {
             "name": "Claire Tantillo",
-            "athlete_id": null
+            "athlete_id": 5959199
           },
           {
             "name": "Gina Dello Russo",
-            "athlete_id": null
+            "athlete_id": 6090330
           }
         ],
         "year": 2019
@@ -1920,19 +1920,19 @@
         "members": [
           {
             "name": "Melissa Barnes",
-            "athlete_id": null
+            "athlete_id": 6090331
           },
           {
             "name": "Claire Tantillo",
-            "athlete_id": null
+            "athlete_id": 5959199
           },
           {
             "name": "Paige Metzheiser",
-            "athlete_id": null
+            "athlete_id": 5486486
           },
           {
             "name": "Gina Dello Russo",
-            "athlete_id": null
+            "athlete_id": 6090330
           }
         ],
         "year": 2018
@@ -1966,19 +1966,19 @@
         "members": [
           {
             "name": "Gina Dello Russo",
-            "athlete_id": null
+            "athlete_id": 6090330
           },
           {
             "name": "Jackie Endres",
-            "athlete_id": null
+            "athlete_id": 5311474
           },
           {
             "name": "Brea Veilleux",
-            "athlete_id": null
+            "athlete_id": 5959198
           },
           {
             "name": "Claire Tantillo",
-            "athlete_id": null
+            "athlete_id": 5959199
           }
         ],
         "year": 2017
@@ -1998,19 +1998,19 @@
         "members": [
           {
             "name": "Claire Tantillo",
-            "athlete_id": null
+            "athlete_id": 5959199
           },
           {
             "name": "Jackie Endres",
-            "athlete_id": null
+            "athlete_id": 5311474
           },
           {
             "name": "Brea Veilleux",
-            "athlete_id": null
+            "athlete_id": 5959198
           },
           {
             "name": "Kasey Suszko",
-            "athlete_id": null
+            "athlete_id": 5486488
           }
         ],
         "year": 2017
@@ -2044,11 +2044,11 @@
         "members": [
           {
             "name": "Salme Cook",
-            "athlete_id": null
+            "athlete_id": 1705437
           },
           {
             "name": "Hillary Paul",
-            "athlete_id": null
+            "athlete_id": 2242934
           },
           {
             "name": "Shanna Bearisto",
@@ -2056,7 +2056,7 @@
           },
           {
             "name": "Ashley Princiotta",
-            "athlete_id": null
+            "athlete_id": 2672028
           }
         ],
         "year": 2010
@@ -2090,11 +2090,11 @@
         "members": [
           {
             "name": "Salme Cook",
-            "athlete_id": null
+            "athlete_id": 1705437
           },
           {
             "name": "Hillary Paul",
-            "athlete_id": null
+            "athlete_id": 2242934
           },
           {
             "name": "Shanna Bearisto",
@@ -2102,7 +2102,7 @@
           },
           {
             "name": "Melissa Franzese",
-            "athlete_id": null
+            "athlete_id": 1198714
           }
         ],
         "year": 2009
@@ -2159,19 +2159,19 @@
         "members": [
           {
             "name": "Kasey Suszko",
-            "athlete_id": null
+            "athlete_id": 5486488
           },
           {
             "name": "Paige Metzheiser",
-            "athlete_id": null
+            "athlete_id": 5486486
           },
           {
             "name": "Samantha Rokicsak",
-            "athlete_id": null
+            "athlete_id": 4992419
           },
           {
             "name": "Jackie Endres",
-            "athlete_id": null
+            "athlete_id": 5311474
           }
         ],
         "year": 2016
@@ -2205,19 +2205,19 @@
         "members": [
           {
             "name": "Erin Miceli",
-            "athlete_id": null
+            "athlete_id": 6877587
           },
           {
             "name": "Caroline Corr",
-            "athlete_id": 8383277
+            "athlete_id": 6877583
           },
           {
             "name": "Trinity Lundemo",
-            "athlete_id": null
+            "athlete_id": 6877586
           },
           {
             "name": "Erica O'Kelly",
-            "athlete_id": null
+            "athlete_id": 7566162
           }
         ],
         "year": 2020
@@ -2237,19 +2237,19 @@
         "members": [
           {
             "name": "Mary Visca",
-            "athlete_id": null
+            "athlete_id": 5486487
           },
           {
             "name": "Jackie Endres",
-            "athlete_id": null
+            "athlete_id": 5311474
           },
           {
             "name": "Samantha Rokicsak",
-            "athlete_id": null
+            "athlete_id": 4992419
           },
           {
             "name": "Amy Regan",
-            "athlete_id": null
+            "athlete_id": 4173561
           }
         ],
         "year": 2016
@@ -2260,19 +2260,19 @@
         "members": [
           {
             "name": "Brea Veilleux",
-            "athlete_id": null
+            "athlete_id": 5959198
           },
           {
             "name": "Gina Dello Russo",
-            "athlete_id": null
+            "athlete_id": 6090330
           },
           {
             "name": "Claire Tantillo",
-            "athlete_id": null
+            "athlete_id": 5959199
           },
           {
             "name": "Mary Visca",
-            "athlete_id": null
+            "athlete_id": 5486487
           }
         ],
         "year": 2018
@@ -2283,19 +2283,19 @@
         "members": [
           {
             "name": "Jackie Endres",
-            "athlete_id": null
+            "athlete_id": 5311474
           },
           {
             "name": "Gina Dello Russo",
-            "athlete_id": null
+            "athlete_id": 6090330
           },
           {
             "name": "Claire Tantillo",
-            "athlete_id": null
+            "athlete_id": 5959199
           },
           {
             "name": "Mary Visca",
-            "athlete_id": null
+            "athlete_id": 5486487
           }
         ],
         "year": 2017
@@ -2306,19 +2306,19 @@
         "members": [
           {
             "name": "Kate Moyer",
-            "athlete_id": null
+            "athlete_id": 4173556
           },
           {
             "name": "Samantha Rokicsak",
-            "athlete_id": null
+            "athlete_id": 4992419
           },
           {
             "name": "Kaela Earrusso",
-            "athlete_id": null
+            "athlete_id": 4506425
           },
           {
             "name": "Amy Regan",
-            "athlete_id": null
+            "athlete_id": 4173561
           }
         ],
         "year": 2015
@@ -2329,19 +2329,19 @@
         "members": [
           {
             "name": "Ashley Princiotta",
-            "athlete_id": null
+            "athlete_id": 2672028
           },
           {
             "name": "Melissa Gibbons",
-            "athlete_id": null
+            "athlete_id": 4577260
           },
           {
             "name": "Kelly Freed",
-            "athlete_id": null
+            "athlete_id": 4173541
           },
           {
             "name": "Amy Regan",
-            "athlete_id": null
+            "athlete_id": 4173561
           }
         ],
         "year": 2014
@@ -2398,19 +2398,19 @@
         "members": [
           {
             "name": "Claire Tantillo",
-            "athlete_id": null
+            "athlete_id": 5959199
           },
           {
             "name": "Melissa Barnes",
-            "athlete_id": null
+            "athlete_id": 6090331
           },
           {
             "name": "Trinity Lundemo",
-            "athlete_id": null
+            "athlete_id": 6877586
           },
           {
             "name": "Mary Visca",
-            "athlete_id": null
+            "athlete_id": 5486487
           }
         ],
         "year": 2019
@@ -2421,19 +2421,19 @@
         "members": [
           {
             "name": "Shanna Beairsto",
-            "athlete_id": null
+            "athlete_id": 1596043
           },
           {
             "name": "Hillary Paul",
-            "athlete_id": null
+            "athlete_id": 2242934
           },
           {
             "name": "Salme Cook",
-            "athlete_id": null
+            "athlete_id": 1705437
           },
           {
             "name": "Ashley Princiotta",
-            "athlete_id": null
+            "athlete_id": 2672028
           }
         ],
         "year": 2010
@@ -2472,7 +2472,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5666139,
         "mark": "6.93",
         "name": "Alex Kainer",
         "date": "2018-02-24"
@@ -2486,21 +2486,21 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 5594993,
         "mark": "7.05",
         "name": "Evan Kainer",
         "date": "2019-03-01"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 6090322,
         "mark": "7.08",
         "name": "Andrew Loth",
         "date": "2019-02-22"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 4506448,
         "mark": "7.14",
         "name": "Brian Fratto",
         "date": "2016-03-04"
@@ -2514,7 +2514,7 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 6090321,
         "mark": "7.19",
         "name": "Nick DiMaria",
         "date": "2020-02-08"
@@ -2551,42 +2551,42 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5666139,
         "mark": "21.65",
         "name": "Alex Kainer",
         "date": "2019-02-08"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4173463,
         "mark": "21.95",
         "name": "Shane Chiaravalle",
         "date": "2016-02-27"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 6090321,
         "mark": "22.09",
         "name": "Nick DiMaria",
         "date": "2020-02-14"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 6090322,
         "mark": "22.33",
         "name": "Andrew Loth",
         "date": "2017-01-27"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 5594993,
         "mark": "22.56",
         "name": "Evan Kainer",
         "date": "2019-02-15"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 6541944,
         "mark": "22.74",
         "name": "Amar Bindra",
         "date": "2020-02-14"
@@ -2630,14 +2630,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 6090321,
         "mark": "49.13",
         "name": "Nick DiMaria",
         "date": "2020-02-14"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4173463,
         "mark": "49.40",
         "name": "Shane Chiaravalle",
         "date": "2016-02-27"
@@ -2651,14 +2651,14 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 6541944,
         "mark": "49.88",
         "name": "Amar Bindra",
         "date": "2020-02-14"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 5666139,
         "mark": "50.35",
         "name": "Alex Kainer",
         "date": "2019-02-01"
@@ -2679,7 +2679,7 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 1198705,
         "mark": "51.14",
         "name": "Kevin Morgera",
         "date": "2010-01-15"
@@ -2693,7 +2693,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4173454,
         "mark": "51.25",
         "name": "Zach Andrews",
         "date": "2016-01-29"
@@ -2716,7 +2716,7 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 6877579,
         "mark": "1:24.83",
         "name": "Rob Leiser",
         "date": "2018-12-01"
@@ -2730,7 +2730,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 5486484,
         "mark": "1:25.85",
         "name": "Tom Selvaggi",
         "date": "2016-02-06"
@@ -2744,7 +2744,7 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 2114452,
         "mark": "1:26.43",
         "name": "Andrew Ballinger",
         "date": "2010-02-06"
@@ -2758,21 +2758,21 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 5959194,
         "mark": "1:26.84",
         "name": "Raouf Laadem",
         "date": "2018-01-20"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 4173454,
         "mark": "1:26.93",
         "name": "Zach Andrews",
         "date": "2016-02-06"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 2672097,
         "mark": "1:27.07",
         "name": "Kyle Buzby",
         "date": "2011-02-05"
@@ -2795,21 +2795,21 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5486484,
         "mark": "1:54.80",
         "name": "Tom Selvaggi",
         "date": "2017-02-25"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4506436,
         "mark": "1:55.10",
         "name": "Nick Zickgraf",
         "date": "2018-02-03"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 6877578,
         "mark": "1:55.11",
         "name": "Trevor Ladue",
         "date": "2019-02-08"
@@ -2830,14 +2830,14 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4506443,
         "mark": "1:57.67",
         "name": "Michael John",
         "date": "2016-01-29"
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 4992397,
         "mark": "1:57.78",
         "name": "Greg Arabagian",
         "date": "2017-02-25"
@@ -2867,14 +2867,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4506436,
         "mark": "2:28.16",
         "name": "Nick Zickgraf",
         "date": "2017-02-19"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5486484,
         "mark": "2:30.41",
         "name": "Tom Selvaggi",
         "date": "2017-02-19"
@@ -2895,42 +2895,42 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 4173507,
         "mark": "2:37.04",
         "name": "Louis Stengel",
         "date": "2013-02-15"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 2672008,
         "mark": "2:38.09",
         "name": "David Dewan",
         "date": "2010-01-15"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4173495,
         "mark": "2:38.22",
         "name": "Zach McKeehan",
         "date": "2015-01-31"
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 4506443,
         "mark": "2:38.56",
         "name": "Michael John",
         "date": "2014-02-23"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 4992395,
         "mark": "2:38.67",
         "name": "Nathan Schaefer",
         "date": "2018-01-19"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4173490,
         "mark": "2:38.99",
         "name": "Brian Lawrey",
         "date": "2013-01-11"
@@ -2946,7 +2946,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4506436,
         "mark": "4:12.65",
         "name": "Nick Zickgraf",
         "date": "2018-02-10"
@@ -2988,7 +2988,7 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4992397,
         "mark": "4:22.23",
         "name": "Greg Arabagian",
         "date": "2017-02-10"
@@ -3009,7 +3009,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 6877578,
         "mark": "4:23.44",
         "name": "Trevor LaDue",
         "date": "2020-02-21"
@@ -3025,14 +3025,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4992397,
         "mark": "8:36.48",
         "name": "Greg Arabagian",
         "date": "2018-02-10"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4173465,
         "mark": "8:37.39",
         "name": "Tom Cunningham",
         "date": "2015-03-06"
@@ -3046,21 +3046,21 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4173459,
         "mark": "8:42.91",
         "name": "Michael Cahill",
         "date": "2013-02-15"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 6448314,
         "mark": "8:44.10",
         "name": "PJ Gunther",
         "date": "2018-02-10"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 6877581,
         "mark": "8:44.86",
         "name": "Robby Russo",
         "date": "2019-02-22"
@@ -3088,7 +3088,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 5959192,
         "mark": "8:56.32",
         "name": "Jake Catalano",
         "date": "2019-02-22"
@@ -3104,7 +3104,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4173459,
         "mark": "14:42.12",
         "name": "Michael Cahill",
         "date": "2014-02-22"
@@ -3118,14 +3118,14 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4506439,
         "mark": "15:08.69",
         "name": "Chris Banko",
         "date": "2017-03-04"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4173465,
         "mark": "15:09.52",
         "name": "Tom Cunningham",
         "date": "2016-01-22"
@@ -3139,21 +3139,21 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 5959192,
         "mark": "15:29.60",
         "name": "Jake Catalano",
         "date": "2019-02-01"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4992397,
         "mark": "15:35.81",
         "name": "Greg Arabagian",
         "date": "2018-02-03"
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 1589142,
         "mark": "15:39.75",
         "name": "Brad Antes",
         "date": "2011-12-04"
@@ -3211,21 +3211,21 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 6090323,
         "mark": "8.48",
         "name": "Dan Kaba",
         "date": "2019-02-22"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 5594992,
         "mark": "8.51",
         "name": "Steve McNally",
         "date": "2017-02-10"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 1273271,
         "mark": "8.52",
         "name": "Mohamed Abuouf",
         "date": "2010-01-08"
@@ -3246,7 +3246,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 5666139,
         "mark": "8.65",
         "name": "Alex Kainer",
         "date": "2017-02-19"
@@ -3283,14 +3283,14 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 7496788,
         "mark": "1.92",
         "name": "David Springstead",
         "date": "2020-02-28"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 7497809,
         "mark": "1.91",
         "name": "Ben Corbyn",
         "date": "2019-12-07"
@@ -3318,7 +3318,7 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 2672106,
         "mark": "1.87",
         "name": "Olutossin Olugbenga",
         "date": "2009-12-06"
@@ -3348,7 +3348,7 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5594988,
         "mark": "4.50",
         "name": "Andy Accardi",
         "date": "2018-02-10"
@@ -3362,7 +3362,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 6987520,
         "mark": "4.46",
         "name": "Nicolas Re",
         "date": "2021-12-04"
@@ -3404,7 +3404,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4506457,
         "mark": "4.00",
         "name": "Ted D'Amico",
         "date": "2014-01-10"
@@ -3420,7 +3420,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5594993,
         "mark": "6.77",
         "name": "Evan Kainer",
         "date": "2019-02-22"
@@ -3434,28 +3434,28 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 3265600,
         "mark": "6.69",
         "name": "Andreas Diaz-Borda",
         "date": "2012-01-21"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 1710558,
         "mark": "6.68",
         "name": "Nicholas Lowe",
         "date": "2010-12-05"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 7497818,
         "mark": "6.64",
         "name": "Kenny Howell",
         "date": "2020-02-28"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 2249782,
         "mark": "6.59",
         "name": "Terrance Spicer-Williams",
         "date": "2009-01-16"
@@ -3490,7 +3490,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 5594987,
         "mark": "6.44",
         "name": "Brian Jefferson",
         "date": "2018-12-01"
@@ -3520,14 +3520,14 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 1710558,
         "mark": "13.51",
         "name": "Nicholas Lowe",
         "date": "2009-01-24"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 3265600,
         "mark": "13.30",
         "name": "Andreas Diaz-Borda",
         "date": "2012-01-28"
@@ -3541,14 +3541,14 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 7497816,
         "mark": "13.17",
         "name": "Hikmat Sabeh",
         "date": "2020-02-28"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 2672111,
         "mark": "13.16",
         "name": "Naitik Vaghasia",
         "date": "2010-01-31"
@@ -3562,7 +3562,7 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 5594993,
         "mark": "13.11",
         "name": "Evan Kainer",
         "date": "2016-02-13"
@@ -3585,14 +3585,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4824559,
         "mark": "15.44",
         "name": "Neil Forrester",
         "date": "2016-12-03"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5108601,
         "mark": "14.98",
         "name": "Nicholas Krute",
         "date": "2018-01-13"
@@ -3606,7 +3606,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4506451,
         "mark": "14.37",
         "name": "Daniel Jacome",
         "date": "2015-02-22"
@@ -3634,21 +3634,21 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 6090326,
         "mark": "13.12",
         "name": "Max McCauley",
         "date": "2020-02-28"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 4506454,
         "mark": "12.89",
         "name": "Guido Porcelli",
         "date": "2014-02-01"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4173455,
         "mark": "12.74",
         "name": "Andrew Assile",
         "date": "2013-01-19"
@@ -3664,7 +3664,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5108600,
         "mark": "16.42",
         "name": "Parker Dimock",
         "date": "2019-03-01"
@@ -3678,14 +3678,14 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 6090326,
         "mark": "15.85",
         "name": "Max McCauley",
         "date": "2020-02-28"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4506452,
         "mark": "15.58",
         "name": "Cody Yersin",
         "date": "2018-02-24"
@@ -3720,14 +3720,14 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 4506451,
         "mark": "14.19",
         "name": "Daniel Jacome",
         "date": "2015-02-20"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 6541946,
         "mark": "14.10",
         "name": "Brandon Truong",
         "date": "2019-02-22"
@@ -3785,7 +3785,7 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 8327863,
         "mark": "2210 pts",
         "name": "Jimmy Johnson",
         "date": "2024-02-03"
@@ -3806,7 +3806,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 789062,
         "mark": "1992 pts",
         "name": "Michael Gallo",
         "date": "2007-02-11"
@@ -3834,19 +3834,19 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 6987516,
         "mark": "4518 pts",
         "name": "Aeden Angelone"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 7496788,
         "mark": "4485 pts",
         "name": "David Springstead"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 5594993,
         "mark": "4334 pts",
         "name": "Evan Kainer"
       },
@@ -3870,7 +3870,7 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 7496787,
         "mark": "3762 pts",
         "name": "Alex Schwindt"
       },
@@ -3891,14 +3891,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 6090321,
         "mark": "35.34",
         "name": "Nick DiMaria",
         "date": "2019-12-07"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5666139,
         "mark": "35.61",
         "name": "Alex Kainer",
         "date": "2018-12-01"
@@ -3912,7 +3912,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 6541944,
         "mark": "36.35",
         "name": "Amar Bindra",
         "date": "2019-12-07"
@@ -3926,7 +3926,7 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4173463,
         "mark": "36.63",
         "name": "Shane Chiaravalle",
         "date": "2013-12-07"
@@ -3947,7 +3947,7 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 6987517,
         "mark": "36.72",
         "name": "Jon Cucci",
         "date": "2018-12-01"
@@ -3970,35 +3970,35 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 6090321,
         "mark": "1:06.20",
         "name": "Nick DiMaria",
         "date": "2020-01-17"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4173454,
         "mark": "1:06.66",
         "name": "Zach Andrews",
         "date": "2017-02-25"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 6877578,
         "mark": "1:06.97",
         "name": "Trevor LaDue",
         "date": "2020-01-17"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 1198705,
         "mark": "1:07.05",
         "name": "Kevin Morgera",
         "date": "2010-02-13"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 4173463,
         "mark": "1:08.20",
         "name": "Shane Chiaravalle",
         "date": "2014-12-06"
@@ -4012,7 +4012,7 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 5959194,
         "mark": "1:08.50",
         "name": "Raouf Laadem",
         "date": "2018-01-27"
@@ -4026,14 +4026,14 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 5594990,
         "mark": "1:08.75",
         "name": "Logan Bagarozy",
         "date": "2016-02-27"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4506436,
         "mark": "1:09.10",
         "name": "Nick Zickgraf",
         "date": "2018-01-18"
@@ -4053,19 +4053,19 @@
         "members": [
           {
             "name": "Amar Bindra",
-            "athlete_id": null
+            "athlete_id": 6541944
           },
           {
             "name": "Dan Kaba",
-            "athlete_id": null
+            "athlete_id": 6090323
           },
           {
             "name": "John Mullen",
-            "athlete_id": null
+            "athlete_id": 6541947
           },
           {
             "name": "Nick DiMaria",
-            "athlete_id": null
+            "athlete_id": 6090321
           }
         ],
         "year": 2020
@@ -4099,19 +4099,19 @@
         "members": [
           {
             "name": "Andrew Loth",
-            "athlete_id": null
+            "athlete_id": 6090322
           },
           {
             "name": "Alex Kainer",
-            "athlete_id": null
+            "athlete_id": 5666139
           },
           {
             "name": "Vincent Russo",
-            "athlete_id": null
+            "athlete_id": 6090324
           },
           {
             "name": "Nick DiMaria",
-            "athlete_id": null
+            "athlete_id": 6090321
           }
         ],
         "year": 2018
@@ -4145,19 +4145,19 @@
         "members": [
           {
             "name": "Walter Goodwin",
-            "athlete_id": null
+            "athlete_id": 3265601
           },
           {
             "name": "Shane Chiaravalle",
-            "athlete_id": null
+            "athlete_id": 4173463
           },
           {
             "name": "Brian Fratto",
-            "athlete_id": null
+            "athlete_id": 4506448
           },
           {
             "name": "Tom Halloran",
-            "athlete_id": null
+            "athlete_id": 4173480
           }
         ],
         "year": 2014
@@ -4168,19 +4168,19 @@
         "members": [
           {
             "name": "Greg McLeod",
-            "athlete_id": null
+            "athlete_id": 2242950
           },
           {
             "name": "Olutossin Olugbenga",
-            "athlete_id": null
+            "athlete_id": 2672106
           },
           {
             "name": "Richard Fox",
-            "athlete_id": null
+            "athlete_id": 2242949
           },
           {
             "name": "David Echevarria",
-            "athlete_id": null
+            "athlete_id": 2672099
           }
         ],
         "year": 2010
@@ -4218,15 +4218,15 @@
           },
           {
             "name": "Brian Fratto",
-            "athlete_id": null
+            "athlete_id": 4506448
           },
           {
             "name": "Shane Chiaravalle",
-            "athlete_id": null
+            "athlete_id": 4173463
           },
           {
             "name": "Tom Halloran",
-            "athlete_id": null
+            "athlete_id": 4173480
           }
         ],
         "year": 2016
@@ -4241,15 +4241,15 @@
           },
           {
             "name": "Shane Chiaravalle",
-            "athlete_id": null
+            "athlete_id": 4173463
           },
           {
             "name": "Brian Fratto",
-            "athlete_id": null
+            "athlete_id": 4506448
           },
           {
             "name": "Tom Halloran",
-            "athlete_id": null
+            "athlete_id": 4173480
           }
         ],
         "year": 2015
@@ -4272,7 +4272,7 @@
           },
           {
             "name": "Kenny Howell",
-            "athlete_id": null
+            "athlete_id": 7497818
           }
         ],
         "year": 2022
@@ -4292,19 +4292,19 @@
         "members": [
           {
             "name": "Dan Kaba",
-            "athlete_id": null
+            "athlete_id": 6090323
           },
           {
             "name": "Trevor Ladue",
-            "athlete_id": null
+            "athlete_id": 6877578
           },
           {
             "name": "Alex Kainer",
-            "athlete_id": null
+            "athlete_id": 5666139
           },
           {
             "name": "Nick DiMaria",
-            "athlete_id": null
+            "athlete_id": 6090321
           }
         ],
         "year": 2019
@@ -4315,19 +4315,19 @@
         "members": [
           {
             "name": "Alex Kainer",
-            "athlete_id": null
+            "athlete_id": 5666139
           },
           {
             "name": "Andrew Loth",
-            "athlete_id": null
+            "athlete_id": 6090322
           },
           {
             "name": "Dan Kaba",
-            "athlete_id": null
+            "athlete_id": 6090323
           },
           {
             "name": "Nick DiMaria",
-            "athlete_id": null
+            "athlete_id": 6090321
           }
         ],
         "year": 2018
@@ -4338,19 +4338,19 @@
         "members": [
           {
             "name": "Dan Kaba",
-            "athlete_id": null
+            "athlete_id": 6090323
           },
           {
             "name": "Amar Bindra",
-            "athlete_id": null
+            "athlete_id": 6541944
           },
           {
             "name": "Trevor Ladue",
-            "athlete_id": null
+            "athlete_id": 6877578
           },
           {
             "name": "Nick DiMaria",
-            "athlete_id": null
+            "athlete_id": 6090321
           }
         ],
         "year": 2020
@@ -4361,19 +4361,19 @@
         "members": [
           {
             "name": "Andrew Loth",
-            "athlete_id": null
+            "athlete_id": 6090322
           },
           {
             "name": "Nick DiMaria",
-            "athlete_id": null
+            "athlete_id": 6090321
           },
           {
             "name": "Raouf Laadem",
-            "athlete_id": null
+            "athlete_id": 5959194
           },
           {
             "name": "Alex Kainer",
-            "athlete_id": null
+            "athlete_id": 5666139
           }
         ],
         "year": 2017
@@ -4384,19 +4384,19 @@
         "members": [
           {
             "name": "Shane Chiaravalle",
-            "athlete_id": null
+            "athlete_id": 4173463
           },
           {
             "name": "Zach Andrews",
-            "athlete_id": null
+            "athlete_id": 4173454
           },
           {
             "name": "Tom Halloran",
-            "athlete_id": null
+            "athlete_id": 4173480
           },
           {
             "name": "Logan Bagarozy",
-            "athlete_id": null
+            "athlete_id": 5594990
           }
         ],
         "year": 2016
@@ -4411,11 +4411,11 @@
           },
           {
             "name": "Zach Andrews",
-            "athlete_id": null
+            "athlete_id": 4173454
           },
           {
             "name": "Shane Chiaravalle",
-            "athlete_id": null
+            "athlete_id": 4173463
           },
           {
             "name": "Victor Servito",
@@ -4430,15 +4430,15 @@
         "members": [
           {
             "name": "Zach Andrews",
-            "athlete_id": null
+            "athlete_id": 4173454
           },
           {
             "name": "Shane Chiaravalle",
-            "athlete_id": null
+            "athlete_id": 4173463
           },
           {
             "name": "Michael John",
-            "athlete_id": null
+            "athlete_id": 4506443
           },
           {
             "name": "Tom Halleran",
@@ -4453,19 +4453,19 @@
         "members": [
           {
             "name": "Kevin Morgera",
-            "athlete_id": null
+            "athlete_id": 1198705
           },
           {
             "name": "Mohamed Abuouf",
-            "athlete_id": null
+            "athlete_id": 1273271
           },
           {
             "name": "Sean Fahy",
-            "athlete_id": null
+            "athlete_id": 2672100
           },
           {
             "name": "Andrew Ballinger",
-            "athlete_id": null
+            "athlete_id": 2114452
           }
         ],
         "year": 2010
@@ -4499,7 +4499,7 @@
         "members": [
           {
             "name": "Shane Chiaravalle",
-            "athlete_id": null
+            "athlete_id": 4173463
           },
           {
             "name": "Tom Halleran",
@@ -4507,11 +4507,11 @@
           },
           {
             "name": "Nick Zickgraf",
-            "athlete_id": null
+            "athlete_id": 4506436
           },
           {
             "name": "Michael John",
-            "athlete_id": null
+            "athlete_id": 4506443
           }
         ],
         "year": 2015
@@ -4577,19 +4577,19 @@
         "members": [
           {
             "name": "Andrew Ballinger",
-            "athlete_id": null
+            "athlete_id": 2114452
           },
           {
             "name": "Kevin Morgera",
-            "athlete_id": null
+            "athlete_id": 1198705
           },
           {
             "name": "Zane Brylinski",
-            "athlete_id": null
+            "athlete_id": 2672007
           },
           {
             "name": "David Dewan",
-            "athlete_id": null
+            "athlete_id": 2672008
           }
         ],
         "year": 2010
@@ -4646,11 +4646,11 @@
         "members": [
           {
             "name": "Tom Selvaggi",
-            "athlete_id": null
+            "athlete_id": 5486484
           },
           {
             "name": "Sean James",
-            "athlete_id": null
+            "athlete_id": 6448317
           },
           {
             "name": "Ronnie Melao",
@@ -4658,7 +4658,7 @@
           },
           {
             "name": "Trevor Ladue",
-            "athlete_id": null
+            "athlete_id": 6877578
           }
         ],
         "year": 2020
@@ -4669,19 +4669,19 @@
         "members": [
           {
             "name": "Jake Catalano",
-            "athlete_id": null
+            "athlete_id": 5959192
           },
           {
             "name": "Raouf Laadem",
-            "athlete_id": null
+            "athlete_id": 5959194
           },
           {
             "name": "Luke Skorka",
-            "athlete_id": null
+            "athlete_id": 5959193
           },
           {
             "name": "Jeremy Savlov",
-            "athlete_id": null
+            "athlete_id": 5959197
           }
         ],
         "year": 2017
@@ -4700,7 +4700,7 @@
           },
           {
             "name": "Kevin Morgera",
-            "athlete_id": null
+            "athlete_id": 1198705
           },
           {
             "name": "Michael Hoffman",
@@ -4715,19 +4715,19 @@
         "members": [
           {
             "name": "Louis Stengel",
-            "athlete_id": null
+            "athlete_id": 4173507
           },
           {
             "name": "Andrew Parlette",
-            "athlete_id": null
+            "athlete_id": 4506438
           },
           {
             "name": "Troy Kanaszka",
-            "athlete_id": null
+            "athlete_id": 4173487
           },
           {
             "name": "Michael John",
-            "athlete_id": null
+            "athlete_id": 4506443
           }
         ],
         "year": 2014
@@ -4738,11 +4738,11 @@
         "members": [
           {
             "name": "Michael Pawalowski",
-            "athlete_id": null
+            "athlete_id": 1589151
           },
           {
             "name": "Kevin Morgera",
-            "athlete_id": null
+            "athlete_id": 1198705
           },
           {
             "name": "Drew Ballinger",
@@ -4770,19 +4770,19 @@
         "members": [
           {
             "name": "Michael John",
-            "athlete_id": null
+            "athlete_id": 4506443
           },
           {
             "name": "Nick DiMaria",
-            "athlete_id": null
+            "athlete_id": 6090321
           },
           {
             "name": "Tom Selvaggi",
-            "athlete_id": null
+            "athlete_id": 5486484
           },
           {
             "name": "Nick Zickgraf",
-            "athlete_id": null
+            "athlete_id": 4506436
           }
         ],
         "year": 2018
@@ -4793,19 +4793,19 @@
         "members": [
           {
             "name": "Greg Arabagian",
-            "athlete_id": null
+            "athlete_id": 4992397
           },
           {
             "name": "Nick DiMaria",
-            "athlete_id": null
+            "athlete_id": 6090321
           },
           {
             "name": "Tom Selvaggi",
-            "athlete_id": null
+            "athlete_id": 5486484
           },
           {
             "name": "Nick Zickgraf",
-            "athlete_id": null
+            "athlete_id": 4506436
           }
         ],
         "year": 2017
@@ -4816,19 +4816,19 @@
         "members": [
           {
             "name": "Greg Arabagian",
-            "athlete_id": null
+            "athlete_id": 4992397
           },
           {
             "name": "Shane Chiaravalle",
-            "athlete_id": null
+            "athlete_id": 4173463
           },
           {
             "name": "Michael John",
-            "athlete_id": null
+            "athlete_id": 4506443
           },
           {
             "name": "Nick Zickgraf",
-            "athlete_id": null
+            "athlete_id": 4506436
           }
         ],
         "year": 2016
@@ -4889,7 +4889,7 @@
           },
           {
             "name": "Mohamed Abuouf",
-            "athlete_id": null
+            "athlete_id": 1273271
           },
           {
             "name": "John Hoffman",
@@ -4908,19 +4908,19 @@
         "members": [
           {
             "name": "Jake Catalano",
-            "athlete_id": null
+            "athlete_id": 5959192
           },
           {
             "name": "Jon Cucci",
-            "athlete_id": null
+            "athlete_id": 6987517
           },
           {
             "name": "Trevor Ladue",
-            "athlete_id": null
+            "athlete_id": 6877578
           },
           {
             "name": "Robby Russo",
-            "athlete_id": null
+            "athlete_id": 6877581
           }
         ],
         "year": 2019
@@ -4977,19 +4977,19 @@
         "members": [
           {
             "name": "Louis Stengel",
-            "athlete_id": null
+            "athlete_id": 4173507
           },
           {
             "name": "Zach Andrews",
-            "athlete_id": null
+            "athlete_id": 4173454
           },
           {
             "name": "Troy Kanaszka",
-            "athlete_id": null
+            "athlete_id": 4173487
           },
           {
             "name": "Andrew Parlette",
-            "athlete_id": null
+            "athlete_id": 4506438
           }
         ],
         "year": 2014
@@ -5012,21 +5012,21 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 6090330,
         "mark": "12.22",
         "name": "Gina Dello Russo",
         "date": "2022-04-23"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4173557,
         "mark": "12.71",
         "name": "Gladys Njoku",
         "date": "2015-04-19"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 1938387,
         "mark": "12.76",
         "name": "Laura Barito",
         "date": "2011-04-30"
@@ -5084,7 +5084,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 6090330,
         "mark": "23.87",
         "name": "Gina Dello Russo",
         "date": "2022-05-28"
@@ -5098,14 +5098,14 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 1938387,
         "mark": "25.62",
         "name": "Laura Barito",
         "date": "2011-05-20"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4173557,
         "mark": "26.08",
         "name": "Gladys Njoku",
         "date": "2016-04-23"
@@ -5119,7 +5119,7 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 1705437,
         "mark": "26.44",
         "name": "Salme Cook",
         "date": "2023-05-07"
@@ -5147,7 +5147,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4506444,
         "mark": "27.35",
         "name": "Michelle Moreira",
         "date": "2016-04-23"
@@ -5163,7 +5163,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 6090330,
         "mark": "54.17",
         "name": "Gina Dello Russo",
         "date": "2021-05-29"
@@ -5177,14 +5177,14 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 1705437,
         "mark": "57.51",
         "name": "Salme Cook",
         "date": "2010-04-24"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 1938387,
         "mark": "58.45",
         "name": "Laura Barito",
         "date": "2011-04-17"
@@ -5242,14 +5242,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 1705437,
         "mark": "2:12.88",
         "name": "Salme Cook",
         "date": "2010-05-20"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5959198,
         "mark": "2:17.45",
         "name": "Brea Veilleux",
         "date": "2018-05-14"
@@ -5263,7 +5263,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 5486486,
         "mark": "2:19.69",
         "name": "Paige Metzheiser",
         "date": "2016-04-23"
@@ -5277,21 +5277,21 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 5486487,
         "mark": "2:20.30",
         "name": "Mary Visca",
         "date": "2016-03-25"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 5486488,
         "mark": "2:21.07",
         "name": "Kasey Suszko",
         "date": "2016-04-23"
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 5959199,
         "mark": "2:21.45",
         "name": "Claire Tantillo",
         "date": "2017-05-15"
@@ -5321,14 +5321,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4173561,
         "mark": "4:30.71",
         "name": "Amy Regan",
         "date": "2016-05-19"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5486487,
         "mark": "4:42.99",
         "name": "Mary Visca",
         "date": "2018-05-04"
@@ -5342,7 +5342,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 5959198,
         "mark": "4:47.62",
         "name": "Brea Veilleux",
         "date": "2018-04-14"
@@ -5356,35 +5356,35 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 5311474,
         "mark": "4:54.17",
         "name": "Jackie Endres",
         "date": "2017-05-05"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4173541,
         "mark": "4:54.85",
         "name": "Kelly Freed",
         "date": "2011-05-16"
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 4173556,
         "mark": "4:54.90",
         "name": "Kate Moyer",
         "date": "2015-05-01"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 5486486,
         "mark": "4:54.94",
         "name": "Paige Metzheiser",
         "date": "2019-05-03"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 1705437,
         "mark": "4:55.53",
         "name": "Salme Cook",
         "date": "2010-03-20"
@@ -5400,14 +5400,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4173561,
         "mark": "10:25.08",
         "name": "Amy Regan",
         "date": "2013-03-23"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5486487,
         "mark": "10:28.01",
         "name": "Mary Visca",
         "date": "2017-04-14"
@@ -5421,21 +5421,21 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4506425,
         "mark": "10:51.83",
         "name": "Kaela Earrusso",
         "date": "2017-04-14"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 6448320,
         "mark": "11:03.53",
         "name": "Kristin McAtee",
         "date": "2019-04-05"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4173556,
         "mark": "11:03.85",
         "name": "Kate Moyer",
         "date": "2013-03-23"
@@ -5449,7 +5449,7 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 4992403,
         "mark": "11:07.46",
         "name": "Kiera Sheridan",
         "date": "2019-04-15"
@@ -5463,7 +5463,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4173541,
         "mark": "11:13.15",
         "name": "Kelly Freed",
         "date": "2013-03-23"
@@ -5479,21 +5479,21 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4173561,
         "mark": "16:27.32",
         "name": "Amy Regan",
         "date": "2016-05-28"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5486487,
         "mark": "17:04.79",
         "name": "Mary Visca",
         "date": "2018-04-26"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4173556,
         "mark": "17:57.08",
         "name": "Kate Moyer",
         "date": "2015-05-14"
@@ -5521,7 +5521,7 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4506425,
         "mark": "18:38.10",
         "name": "Kaela Earrusso",
         "date": "2017-05-05"
@@ -5535,14 +5535,14 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 4173547,
         "mark": "18:49.94",
         "name": "Christine Hecker",
         "date": "2015-05-01"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 2672028,
         "mark": "18:53.37",
         "name": "Ashley Princiotta",
         "date": "2013-03-29"
@@ -5558,7 +5558,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4173561,
         "mark": "34:09.44",
         "name": "Amy Regan",
         "date": "2016-04-28"
@@ -5572,7 +5572,7 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 1198714,
         "mark": "39:59.88",
         "name": "Melissa Franzese",
         "date": "2009-04-03"
@@ -5586,14 +5586,14 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 6448320,
         "mark": "40:10.56",
         "name": "Kristin McAtee",
         "date": "2019-04-19"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4992403,
         "mark": "40:29.83",
         "name": "Kiera Sheridan",
         "date": "2019-03-29"
@@ -5607,14 +5607,14 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 1596044,
         "mark": "42:25.11",
         "name": "Jamie Brabston",
         "date": "2011-03-25"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 4173551,
         "mark": "43:13.54",
         "name": "Laura Lemke",
         "date": "2014-05-02"
@@ -5658,14 +5658,14 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4173535,
         "mark": "15.19",
         "name": "Amira Dardir",
         "date": "2015-04-19"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 1938387,
         "mark": "15.31",
         "name": "Laura Barito",
         "date": "2011-05-19"
@@ -5700,7 +5700,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 6090331,
         "mark": "16.63",
         "name": "Melissa Barnes",
         "date": "2019-05-04"
@@ -5716,7 +5716,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 1938387,
         "mark": "59.49",
         "name": "Laura Barito",
         "date": "2011-05-26"
@@ -5751,7 +5751,7 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 6090331,
         "mark": "1:08.57",
         "name": "Melissa Barnes",
         "date": "2019-04-12"
@@ -5765,7 +5765,7 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 4992419,
         "mark": "1:11.33",
         "name": "Samantha Rokicsak",
         "date": "2018-04-21"
@@ -5809,21 +5809,21 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 2672028,
         "mark": "11:48.75",
         "name": "Ashley Princiotta",
         "date": "2013-05-16"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 5959199,
         "mark": "12:04.94",
         "name": "Claire Tantillo",
         "date": "2019-05-03"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 4506425,
         "mark": "12:08.62",
         "name": "Kaela Earrusso",
         "date": "2016-05-06"
@@ -5837,7 +5837,7 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4992416,
         "mark": "12:21.15",
         "name": "Kristen Okorn",
         "date": "2016-04-23"
@@ -5851,7 +5851,7 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 6877586,
         "mark": "12:47.07",
         "name": "Trinity Lundemo",
         "date": "2019-05-03"
@@ -5874,14 +5874,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4173557,
         "mark": "1.77",
         "name": "Gladys Njoku",
         "date": "2015-04-25"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4173535,
         "mark": "1.70",
         "name": "Amira Dardir",
         "date": "2015-04-21"
@@ -5902,7 +5902,7 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 6090330,
         "mark": "1.61",
         "name": "Gina Dello Russo",
         "date": "2019-05-03"
@@ -5953,7 +5953,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 6090330,
         "mark": "3.50",
         "name": "Gina Dello Russo",
         "date": "2022-05-07"
@@ -5981,7 +5981,7 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 6987525,
         "mark": "2.85",
         "name": "Victoria Agaliotis",
         "date": "2019-03-30"
@@ -6002,14 +6002,14 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 6724299,
         "mark": "2.30",
         "name": "Kira Power",
         "date": "2018-05-05"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 4173547,
         "mark": "2.23",
         "name": "Christine Hecker",
         "date": "2014-05-02"
@@ -6025,7 +6025,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 6090330,
         "mark": "6.01",
         "name": "Gina Dello Russo",
         "date": "2022-05-19"
@@ -6046,7 +6046,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4173557,
         "mark": "5.51",
         "name": "Gladys Njoku",
         "date": "2014-04-19"
@@ -6060,7 +6060,7 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4173535,
         "mark": "5.25",
         "name": "Amira Dardir",
         "date": "2014-04-19"
@@ -6081,21 +6081,21 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 5108611,
         "mark": "5.13",
         "name": "Katie Weeks",
         "date": "2015-04-24"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 1705437,
         "mark": "5.10",
         "name": "Salme Cook",
         "date": "2009-04-18"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 6094552,
         "mark": "5.10",
         "name": "Sammi Pearson",
         "date": "2017-04-22"
@@ -6111,7 +6111,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4173535,
         "mark": "11.13",
         "name": "Amira Dardir",
         "date": "2015-05-08"
@@ -6132,14 +6132,14 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 6094552,
         "mark": "10.75",
         "name": "Sammi Pearson",
         "date": "2017-04-22"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 5108611,
         "mark": "10.68",
         "name": "Katie Weeks",
         "date": "2015-04-25"
@@ -6174,7 +6174,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 6987528,
         "mark": "9.99",
         "name": "Ellie Savova",
         "date": "2019-04-27"
@@ -6190,7 +6190,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5108611,
         "mark": "13.94",
         "name": "Katie Weeks",
         "date": "2018-04-21"
@@ -6211,14 +6211,14 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4506450,
         "mark": "11.49",
         "name": "Victoria Taibe",
         "date": "2014-05-10"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 6987527,
         "mark": "11.38",
         "name": "Samantha Reilly",
         "date": "2019-03-30"
@@ -6239,21 +6239,21 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 4350432,
         "mark": "10.70",
         "name": "Allie Doyle",
         "date": "2013-04-20"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 3306829,
         "mark": "10.33",
         "name": "Liana Grandinetti",
         "date": "2011-03-25"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4506455,
         "mark": "10.31",
         "name": "Yanique Spigner",
         "date": "2014-04-19"
@@ -6269,7 +6269,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5108611,
         "mark": "47.37",
         "name": "Katie Weeks",
         "date": "2019-04-20"
@@ -6290,7 +6290,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4350432,
         "mark": "38.55",
         "name": "Allie Doyle",
         "date": "2013-04-05"
@@ -6304,21 +6304,21 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4506455,
         "mark": "34.58",
         "name": "Yanique Spigner",
         "date": "2014-04-19"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 6987527,
         "mark": "33.27",
         "name": "Samantha Reilly",
         "date": "2019-04-13"
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 4173553,
         "mark": "32.40",
         "name": "Brianna Marchal",
         "date": "2013-04-05"
@@ -6348,7 +6348,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5108611,
         "mark": "52.81",
         "name": "Katie Weeks",
         "date": "2019-04-19"
@@ -6390,7 +6390,7 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 6724300,
         "mark": "38.64",
         "name": "Jordan Detlet",
         "date": "2021-03-27"
@@ -6404,14 +6404,14 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 4506450,
         "mark": "38.21",
         "name": "Victoria Taibe",
         "date": "2014-05-02"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4506455,
         "mark": "38.16",
         "name": "Yanique Spigner",
         "date": "2015-03-27"
@@ -6434,7 +6434,7 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5108611,
         "mark": "36.04",
         "name": "Katie Weeks",
         "date": "2018-04-21"
@@ -6448,28 +6448,28 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 5793170,
         "mark": "34.83",
         "name": "Janet Vill",
         "date": "2017-04-07"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 6987527,
         "mark": "34.82",
         "name": "Samantha Reilly",
         "date": "2019-04-26"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4350432,
         "mark": "33.99",
         "name": "Allie Doyle",
         "date": "2013-05-11"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 5108606,
         "mark": "33.95",
         "name": "Ashna Manhas",
         "date": "2018-04-08"
@@ -6483,14 +6483,14 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 4173535,
         "mark": "31.28",
         "name": "Amira Dardir",
         "date": "2014-04-10"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4506450,
         "mark": "30.83",
         "name": "Victoria Taibe",
         "date": "2014-04-25"
@@ -6513,7 +6513,7 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4173535,
         "mark": "4263 pts",
         "name": "Amira Dardir",
         "date": "2015-05-15"
@@ -6555,7 +6555,7 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 5108611,
         "mark": "2916 pts",
         "name": "Katie Weeks",
         "date": "2015-04-09"
@@ -6601,7 +6601,7 @@
           },
           {
             "name": "Gina Dello Russo",
-            "athlete_id": null
+            "athlete_id": 6090330
           }
         ],
         "year": 2022
@@ -6624,7 +6624,7 @@
           },
           {
             "name": "Gina Dello Russo",
-            "athlete_id": null
+            "athlete_id": 6090330
           }
         ],
         "year": 2021
@@ -6708,7 +6708,7 @@
           },
           {
             "name": "Gladys Njoku",
-            "athlete_id": null
+            "athlete_id": 4173557
           },
           {
             "name": "Michelle Moriera",
@@ -6716,7 +6716,7 @@
           },
           {
             "name": "Melissa Gibbons",
-            "athlete_id": null
+            "athlete_id": 4577260
           }
         ],
         "year": 2014
@@ -6758,11 +6758,11 @@
           },
           {
             "name": "Laura Barito",
-            "athlete_id": null
+            "athlete_id": 1938387
           },
           {
             "name": "Salme Cook",
-            "athlete_id": null
+            "athlete_id": 1705437
           }
         ],
         "year": 2008
@@ -6796,11 +6796,11 @@
         "members": [
           {
             "name": "Laura Barito",
-            "athlete_id": null
+            "athlete_id": 1938387
           },
           {
             "name": "Salme Cook",
-            "athlete_id": null
+            "athlete_id": 1705437
           },
           {
             "name": "Caroline Pawaloski",
@@ -6863,7 +6863,7 @@
           },
           {
             "name": "Gina Dello Russo",
-            "athlete_id": null
+            "athlete_id": 6090330
           }
         ],
         "year": 2022
@@ -6897,19 +6897,19 @@
         "members": [
           {
             "name": "Paige Metzheiser",
-            "athlete_id": null
+            "athlete_id": 5486486
           },
           {
             "name": "Samantha Rokicsak",
-            "athlete_id": null
+            "athlete_id": 4992419
           },
           {
             "name": "Claire Tantillo",
-            "athlete_id": null
+            "athlete_id": 5959199
           },
           {
             "name": "Gina Dello Russo",
-            "athlete_id": null
+            "athlete_id": 6090330
           }
         ],
         "year": 2018
@@ -6920,7 +6920,7 @@
         "members": [
           {
             "name": "Salme Cook",
-            "athlete_id": null
+            "athlete_id": 1705437
           },
           {
             "name": "Caroline Pawaloski",
@@ -6928,7 +6928,7 @@
           },
           {
             "name": "Laura Barito",
-            "athlete_id": null
+            "athlete_id": 1938387
           },
           {
             "name": "Shanna Bearisto",
@@ -6943,19 +6943,19 @@
         "members": [
           {
             "name": "Melissa Barnes",
-            "athlete_id": null
+            "athlete_id": 6090331
           },
           {
             "name": "Paige Metzheiser",
-            "athlete_id": null
+            "athlete_id": 5486486
           },
           {
             "name": "Claire Tantillo",
-            "athlete_id": null
+            "athlete_id": 5959199
           },
           {
             "name": "Gina Dello Russo",
-            "athlete_id": null
+            "athlete_id": 6090330
           }
         ],
         "year": 2019
@@ -6966,7 +6966,7 @@
         "members": [
           {
             "name": "Melissa Barnes",
-            "athlete_id": null
+            "athlete_id": 6090331
           },
           {
             "name": "Laura Mathews",
@@ -6978,7 +6978,7 @@
           },
           {
             "name": "Gina Dello Russo",
-            "athlete_id": null
+            "athlete_id": 6090330
           }
         ],
         "year": 2021
@@ -7035,7 +7035,7 @@
         "members": [
           {
             "name": "Salme Cook",
-            "athlete_id": null
+            "athlete_id": 1705437
           },
           {
             "name": "Caroline Pawaloski",
@@ -7043,7 +7043,7 @@
           },
           {
             "name": "Laura Barito",
-            "athlete_id": null
+            "athlete_id": 1938387
           },
           {
             "name": "Shanna Bearisto",
@@ -7067,7 +7067,7 @@
         "members": [
           {
             "name": "Kasey Suszko",
-            "athlete_id": null
+            "athlete_id": 5486488
           },
           {
             "name": "Samantha Rokiscsak",
@@ -7079,7 +7079,7 @@
           },
           {
             "name": "Paige Metzheiser",
-            "athlete_id": null
+            "athlete_id": 5486486
           }
         ],
         "year": 2016
@@ -7090,19 +7090,19 @@
         "members": [
           {
             "name": "Mary Visca",
-            "athlete_id": null
+            "athlete_id": 5486487
           },
           {
             "name": "Claire Tantillo",
-            "athlete_id": null
+            "athlete_id": 5959199
           },
           {
             "name": "Brea Veilleux",
-            "athlete_id": null
+            "athlete_id": 5959198
           },
           {
             "name": "Paige Metzheiser",
-            "athlete_id": null
+            "athlete_id": 5486486
           }
         ],
         "year": 2018
@@ -7209,15 +7209,15 @@
           },
           {
             "name": "Brea Veilleux",
-            "athlete_id": null
+            "athlete_id": 5959198
           },
           {
             "name": "Claire Tantillo",
-            "athlete_id": null
+            "athlete_id": 5959199
           },
           {
             "name": "Kasey Suszko",
-            "athlete_id": null
+            "athlete_id": 5486488
           }
         ],
         "year": 2017
@@ -7228,19 +7228,19 @@
         "members": [
           {
             "name": "Samantha Rokicsak",
-            "athlete_id": null
+            "athlete_id": 4992419
           },
           {
             "name": "Kiera Sheridan",
-            "athlete_id": null
+            "athlete_id": 4992403
           },
           {
             "name": "Katie Brodecki",
-            "athlete_id": null
+            "athlete_id": 4992401
           },
           {
             "name": "Kaela Earrusso",
-            "athlete_id": null
+            "athlete_id": 4506425
           }
         ],
         "year": 2015
@@ -7274,19 +7274,19 @@
         "members": [
           {
             "name": "Amy Regan",
-            "athlete_id": null
+            "athlete_id": 4173561
           },
           {
             "name": "Kaela Earrusso",
-            "athlete_id": null
+            "athlete_id": 4506425
           },
           {
             "name": "Sarah Zahran",
-            "athlete_id": null
+            "athlete_id": 4173586
           },
           {
             "name": "Kelly Freed",
-            "athlete_id": null
+            "athlete_id": 4173541
           }
         ],
         "year": 2014
@@ -7302,14 +7302,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5666139,
         "mark": "10.70",
         "name": "Alex Kainer",
         "date": "2018-05-04"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5594993,
         "mark": "10.77",
         "name": "Evan Kainer",
         "date": "2019-05-15"
@@ -7323,7 +7323,7 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 6090321,
         "mark": "10.99",
         "name": "Nick DiMaria",
         "date": "2021-04-24"
@@ -7358,7 +7358,7 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 4506448,
         "mark": "11.11",
         "name": "Brian Fratto",
         "date": "2015-05-01"
@@ -7381,21 +7381,21 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5666139,
         "mark": "21.52",
         "name": "Alex Kainer",
         "date": "2019-05-15"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 6090321,
         "mark": "21.55",
         "name": "Nick DiMaria",
         "date": "2021-04-17"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 5594993,
         "mark": "22.13",
         "name": "Evan Kainer",
         "date": "2019-05-04"
@@ -7467,7 +7467,7 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 6090321,
         "mark": "48.08",
         "name": "Nick DiMaria",
         "date": "2021-05-28"
@@ -7481,14 +7481,14 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4173463,
         "mark": "49.40",
         "name": "Shane Chiaravalle",
         "date": "2016-04-23"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 4173454,
         "mark": "49.95",
         "name": "Zach Andrews",
         "date": "2017-04-22"
@@ -7509,7 +7509,7 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 5666139,
         "mark": "50.30",
         "name": "Alex Kainer",
         "date": "2018-03-31"
@@ -7546,14 +7546,14 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4173507,
         "mark": "1:54.56",
         "name": "Louis Stengel",
         "date": "2015-04-25"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 5486484,
         "mark": "1:54.61",
         "name": "Tom Selvaggi",
         "date": "2017-04-14"
@@ -7574,14 +7574,14 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4506436,
         "mark": "1:55.38",
         "name": "Nick Zickgraf",
         "date": "2015-05-08"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 6877578,
         "mark": "1:55.92",
         "name": "Trevor LaDue",
         "date": "2019-05-03"
@@ -7602,7 +7602,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 2114452,
         "mark": "1:56.42",
         "name": "Andrew Ballinger",
         "date": "2010-05-01"
@@ -7632,7 +7632,7 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4506436,
         "mark": "3:56.62",
         "name": "Nick Zickgraf",
         "date": "2017-05-15"
@@ -7660,21 +7660,21 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4173507,
         "mark": "4:00.99",
         "name": "Louis Stengel",
         "date": "2015-04-19"
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 6877581,
         "mark": "4:02.29",
         "name": "Robby Russo",
         "date": "2019-05-13"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 5486484,
         "mark": "4:02.68",
         "name": "Tom Selvaggi",
         "date": "2019-04-19"
@@ -7697,14 +7697,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4506436,
         "mark": "8:47.48",
         "name": "Nick Zickgraf",
         "date": "2016-03-25"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4506439,
         "mark": "8:48.18",
         "name": "Chris Banko",
         "date": "2017-03-24"
@@ -7739,7 +7739,7 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4506443,
         "mark": "9:02.58",
         "name": "Michael John",
         "date": "2016-03-25"
@@ -7753,7 +7753,7 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 6090328,
         "mark": "9:06.77",
         "name": "Dylan Peters",
         "date": "2021-04-24"
@@ -7776,14 +7776,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4992397,
         "mark": "14:30.97",
         "name": "Greg Arabagian",
         "date": "2018-05-14"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4173459,
         "mark": "14:45.15",
         "name": "Michael Cahill",
         "date": "2013-04-25"
@@ -7797,21 +7797,21 @@
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 4173465,
         "mark": "14:55.13",
         "name": "Tom Cunningham",
         "date": "2016-05-06"
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 6090328,
         "mark": "15:18.45",
         "name": "Dylan Peters",
         "date": "2021-04-17"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 5959192,
         "mark": "15:22.65",
         "name": "Jake Catalano",
         "date": "2019-05-13"
@@ -7862,21 +7862,21 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4173459,
         "mark": "31:21.07",
         "name": "Michael Cahill",
         "date": "2013-05-16"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4173465,
         "mark": "31:39.47",
         "name": "Tom Cunningham",
         "date": "2016-05-18"
       },
       {
         "rank": 4,
-        "athlete_id": null,
+        "athlete_id": 6090328,
         "mark": "31:56.36",
         "name": "Dylan Peters",
         "date": "2021-05-06"
@@ -7897,7 +7897,7 @@
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4506439,
         "mark": "32:57.46",
         "name": "Chris Banko",
         "date": "2016-04-08"
@@ -7918,7 +7918,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 1589142,
         "mark": "33:20.78",
         "name": "Brad Antes",
         "date": "2010-05-07"
@@ -7941,14 +7941,14 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 1273271,
         "mark": "14.81",
         "name": "Mohammed Abuouf",
         "date": "2010-05-08"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 6090323,
         "mark": "15.06",
         "name": "Dan Kaba",
         "date": "2019-05-15"
@@ -7983,14 +7983,14 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 5594992,
         "mark": "15.33",
         "name": "Steve McNally",
         "date": "2016-04-16"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 5666139,
         "mark": "15.50",
         "name": "Alex Kainer",
         "date": "2017-04-08"
@@ -8013,21 +8013,21 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4173463,
         "mark": "52.99",
         "name": "Shane Chiaravalle",
         "date": "2016-04-23"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 1198705,
         "mark": "53.80",
         "name": "Kevin Morgera",
         "date": "2010-04-23"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 6541944,
         "mark": "55.20",
         "name": "Amar Bindra",
         "date": "2021-05-06"
@@ -8041,7 +8041,7 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 6090323,
         "mark": "55.47",
         "name": "Dan Kaba",
         "date": "2019-05-15"
@@ -8069,7 +8069,7 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 5108603,
         "mark": "57.62",
         "name": "Austin McDonnell",
         "date": "2016-04-23"
@@ -8106,7 +8106,7 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 5959192,
         "mark": "9:39.61",
         "name": "Jake Catalano",
         "date": "2019-04-19"
@@ -8120,42 +8120,42 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 2672008,
         "mark": "9:50.15",
         "name": "David DeWan",
         "date": "2010-04-10"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 1589142,
         "mark": "9:50.35",
         "name": "Brad Antes",
         "date": "2010-04-10"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4173458,
         "mark": "10:06.53",
         "name": "Matt Bombard",
         "date": "2014-04-19"
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 4506431,
         "mark": "10:13.65",
         "name": "Matt DiMarco",
         "date": "2016-05-06"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 4173495,
         "mark": "10:18.44",
         "name": "Zach McKeehan",
         "date": "2015-04-19"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 4992394,
         "mark": "10:18.77",
         "name": "Adam Sisson",
         "date": "2018-04-21"
@@ -8220,28 +8220,28 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 1485001,
         "mark": "1.85",
         "name": "Jonathan Landis",
         "date": "2007-04-27"
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 7778117,
         "mark": "1.85",
         "name": "Matt Ruzich",
         "date": "2021-03-20"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 2672106,
         "mark": "1.83",
         "name": "Olutossin Olugbenga",
         "date": "2010-04-17"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 5108604,
         "mark": "1.83",
         "name": "Harry Patterson",
         "date": "2016-04-23"
@@ -8278,7 +8278,7 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 5594988,
         "mark": "4.45",
         "name": "Andy Accardi",
         "date": "2018-05-05"
@@ -8292,7 +8292,7 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 6987520,
         "mark": "4.40",
         "name": "Nicolas Re",
         "date": "2021-05-01"
@@ -8350,14 +8350,14 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 1710558,
         "mark": "6.96",
         "name": "Nicholas Lowe",
         "date": "2011-05-06"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5594993,
         "mark": "6.92",
         "name": "Evan Kainer",
         "date": "2019-05-03"
@@ -8406,14 +8406,14 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 5594987,
         "mark": "6.46",
         "name": "Brian Jefferson",
         "date": "2018-05-05"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 6541939,
         "mark": "6.42",
         "name": "Adam Moninghoff",
         "date": "2018-05-05"
@@ -8457,7 +8457,7 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 1710558,
         "mark": "13.40",
         "name": "Nicholas Lowe",
         "date": "2012-05-04"
@@ -8471,14 +8471,14 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 1589151,
         "mark": "13.28",
         "name": "Michael Pawalowski",
         "date": "2011-04-17"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 3265600,
         "mark": "13.25",
         "name": "Andreas Diaz-Borda",
         "date": "2011-04-17"
@@ -8492,21 +8492,21 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 5594987,
         "mark": "13.02",
         "name": "Brian Jefferson",
         "date": "2019-04-04"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 2672111,
         "mark": "12.94",
         "name": "Naitik Vaghasia",
         "date": "2010-04-17"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 7497818,
         "mark": "12.87",
         "name": "Kenny Howell",
         "date": "2022-04-08"
@@ -8522,21 +8522,21 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 4824559,
         "mark": "15.81",
         "name": "Neil Forrester",
         "date": "2017-04-22"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5108600,
         "mark": "14.48",
         "name": "Parker Dimock",
         "date": "2015-03-27"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4506451,
         "mark": "14.24",
         "name": "Daniel Jacome",
         "date": "2015-04-24"
@@ -8550,7 +8550,7 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 5108601,
         "mark": "13.60",
         "name": "Nicholas Krute",
         "date": "2018-03-31"
@@ -8578,7 +8578,7 @@
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 6541946,
         "mark": "12.94",
         "name": "Brandon Truong",
         "date": "2019-04-26"
@@ -8601,21 +8601,21 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5108601,
         "mark": "45.68",
         "name": "Nicholas Krute",
         "date": "2018-05-04"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 4824559,
         "mark": "45.31",
         "name": "Neil Forrester",
         "date": "2017-04-01"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 6090326,
         "mark": "43.98",
         "name": "Max McCauley",
         "date": "2019-04-27"
@@ -8636,7 +8636,7 @@
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 4506452,
         "mark": "39.47",
         "name": "Cody Yersin",
         "date": "2018-05-05"
@@ -8650,21 +8650,21 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 6541946,
         "mark": "38.94",
         "name": "Brandon Truong",
         "date": "2019-04-13"
       },
       {
         "rank": 9,
-        "athlete_id": null,
+        "athlete_id": 4506454,
         "mark": "38.73",
         "name": "Guido Porcelli",
         "date": "2014-05-02"
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 5108600,
         "mark": "38.69",
         "name": "Parker Dimock",
         "date": "2015-05-01"
@@ -8680,7 +8680,7 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 5108600,
         "mark": "52.48",
         "name": "Parker DiMock",
         "date": "2019-05-15"
@@ -8694,7 +8694,7 @@
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 4506452,
         "mark": "48.17",
         "name": "Cody Yersin",
         "date": "2018-04-08"
@@ -8729,7 +8729,7 @@
       },
       {
         "rank": 8,
-        "athlete_id": null,
+        "athlete_id": 6541946,
         "mark": "45.26",
         "name": "Brandon Truong",
         "date": "2019-04-05"
@@ -8743,7 +8743,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 5108605,
         "mark": "44.00",
         "name": "John Raziano",
         "date": "2018-03-31"
@@ -8759,21 +8759,21 @@
     "entries": [
       {
         "rank": 1,
-        "athlete_id": null,
+        "athlete_id": 2249780,
         "mark": "61.12",
         "name": "Sebastian Luna",
         "date": "2012-04-27"
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5108602,
         "mark": "56.20",
         "name": "Tanner Lyons",
         "date": "2018-03-31"
       },
       {
         "rank": 3,
-        "athlete_id": null,
+        "athlete_id": 6090327,
         "mark": "55.34",
         "name": "Dalton Newman",
         "date": "2018-04-15"
@@ -8787,21 +8787,21 @@
       },
       {
         "rank": 5,
-        "athlete_id": null,
+        "athlete_id": 2249778,
         "mark": "54.69",
         "name": "Sean Humphreys",
         "date": "2012-04-13"
       },
       {
         "rank": 6,
-        "athlete_id": null,
+        "athlete_id": 6090329,
         "mark": "54.26",
         "name": "Ryan Locke",
         "date": "2017-05-05"
       },
       {
         "rank": 7,
-        "athlete_id": null,
+        "athlete_id": 4506449,
         "mark": "54.25",
         "name": "Paul Caplan",
         "date": "2015-05-08"
@@ -8822,7 +8822,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 5108600,
         "mark": "52.03",
         "name": "Parker Dimock",
         "date": "2019-04-26"
@@ -8844,7 +8844,7 @@
       },
       {
         "rank": 2,
-        "athlete_id": null,
+        "athlete_id": 5594993,
         "mark": "6199 pts",
         "name": "Evan Kainer"
       },
@@ -8892,7 +8892,7 @@
       },
       {
         "rank": 10,
-        "athlete_id": null,
+        "athlete_id": 8327863,
         "mark": "4378 pts",
         "name": "Jimmy Johnson"
       }
@@ -8915,15 +8915,15 @@
           },
           {
             "name": "Alex Kainer",
-            "athlete_id": null
+            "athlete_id": 5666139
           },
           {
             "name": "Nick DiMaria",
-            "athlete_id": null
+            "athlete_id": 6090321
           },
           {
             "name": "Evan Kainer",
-            "athlete_id": null
+            "athlete_id": 5594993
           }
         ],
         "year": 2019
@@ -8934,19 +8934,19 @@
         "members": [
           {
             "name": "Brian Fratto",
-            "athlete_id": null
+            "athlete_id": 4506448
           },
           {
             "name": "Alex Kainer",
-            "athlete_id": null
+            "athlete_id": 5666139
           },
           {
             "name": "Evan Kainer",
-            "athlete_id": null
+            "athlete_id": 5594993
           },
           {
             "name": "Andrew Loth",
-            "athlete_id": null
+            "athlete_id": 6090322
           }
         ],
         "year": 2017
@@ -8957,19 +8957,19 @@
         "members": [
           {
             "name": "Dan Kaba",
-            "athlete_id": null
+            "athlete_id": 6090323
           },
           {
             "name": "Alex Kainer",
-            "athlete_id": null
+            "athlete_id": 5666139
           },
           {
             "name": "Vincent Russo",
-            "athlete_id": null
+            "athlete_id": 6090324
           },
           {
             "name": "Evan Kainer",
-            "athlete_id": null
+            "athlete_id": 5594993
           }
         ],
         "year": 2018
@@ -9049,19 +9049,19 @@
         "members": [
           {
             "name": "TJ Magno",
-            "athlete_id": null
+            "athlete_id": 5594989
           },
           {
             "name": "Alex Kainer",
-            "athlete_id": null
+            "athlete_id": 5666139
           },
           {
             "name": "Evan Kainer",
-            "athlete_id": null
+            "athlete_id": 5594993
           },
           {
             "name": "Brian Fratto",
-            "athlete_id": null
+            "athlete_id": 4506448
           }
         ],
         "year": 2016
@@ -9072,19 +9072,19 @@
         "members": [
           {
             "name": "Greg McLeod",
-            "athlete_id": null
+            "athlete_id": 2242950
           },
           {
             "name": "Olutossin Olugbenga",
-            "athlete_id": null
+            "athlete_id": 2672106
           },
           {
             "name": "David Echevarria",
-            "athlete_id": null
+            "athlete_id": 2672099
           },
           {
             "name": "Mohamed Abuouf",
-            "athlete_id": null
+            "athlete_id": 1273271
           }
         ],
         "year": 2010
@@ -9095,11 +9095,11 @@
         "members": [
           {
             "name": "Greg McLeod",
-            "athlete_id": null
+            "athlete_id": 2242950
           },
           {
             "name": "Walter Goodwin",
-            "athlete_id": null
+            "athlete_id": 3265601
           },
           {
             "name": "Kristopher Alvarez",
@@ -9107,7 +9107,7 @@
           },
           {
             "name": "Nicholas Lowe",
-            "athlete_id": null
+            "athlete_id": 1710558
           }
         ],
         "year": 2012
@@ -9118,7 +9118,7 @@
         "members": [
           {
             "name": "Mohamed Abuouf",
-            "athlete_id": null
+            "athlete_id": 1273271
           },
           {
             "name": "Denzel Drye",
@@ -9126,11 +9126,11 @@
           },
           {
             "name": "Nicholas Lowe",
-            "athlete_id": null
+            "athlete_id": 1710558
           },
           {
             "name": "Greg McLeod",
-            "athlete_id": null
+            "athlete_id": 2242950
           }
         ],
         "year": 2011
@@ -9150,19 +9150,19 @@
         "members": [
           {
             "name": "Dan Kaba",
-            "athlete_id": null
+            "athlete_id": 6090323
           },
           {
             "name": "Alex Kainer",
-            "athlete_id": null
+            "athlete_id": 5666139
           },
           {
             "name": "Nick Dimaria",
-            "athlete_id": null
+            "athlete_id": 6090321
           },
           {
             "name": "Zach Andrews",
-            "athlete_id": null
+            "athlete_id": 4173454
           }
         ],
         "year": 2017
@@ -9177,15 +9177,15 @@
           },
           {
             "name": "Trevor LaDue",
-            "athlete_id": null
+            "athlete_id": 6877578
           },
           {
             "name": "Alex Kainer",
-            "athlete_id": null
+            "athlete_id": 5666139
           },
           {
             "name": "Nick DiMaria",
-            "athlete_id": null
+            "athlete_id": 6090321
           }
         ],
         "year": 2019
@@ -9196,19 +9196,19 @@
         "members": [
           {
             "name": "Raouf Laadem",
-            "athlete_id": null
+            "athlete_id": 5959194
           },
           {
             "name": "Alex Kainer",
-            "athlete_id": null
+            "athlete_id": 5666139
           },
           {
             "name": "Dan Kaba",
-            "athlete_id": null
+            "athlete_id": 6090323
           },
           {
             "name": "Nick Dimaria",
-            "athlete_id": null
+            "athlete_id": 6090321
           }
         ],
         "year": 2018
@@ -9242,19 +9242,19 @@
         "members": [
           {
             "name": "Shane Chiaravalle",
-            "athlete_id": null
+            "athlete_id": 4173463
           },
           {
             "name": "Zach Andrews",
-            "athlete_id": null
+            "athlete_id": 4173454
           },
           {
             "name": "Tom Halloran",
-            "athlete_id": null
+            "athlete_id": 4173480
           },
           {
             "name": "Logan Bagarozy",
-            "athlete_id": null
+            "athlete_id": 5594990
           }
         ],
         "year": 2016
@@ -9265,7 +9265,7 @@
         "members": [
           {
             "name": "Kevin Morgera",
-            "athlete_id": null
+            "athlete_id": 1198705
           },
           {
             "name": "Drew Ballinger",
@@ -9338,7 +9338,7 @@
           },
           {
             "name": "Mohammed Abuouf",
-            "athlete_id": null
+            "athlete_id": 1273271
           },
           {
             "name": "John Hoffman",
@@ -9389,15 +9389,15 @@
         "members": [
           {
             "name": "Greg Arabagian",
-            "athlete_id": null
+            "athlete_id": 4992397
           },
           {
             "name": "Michael John",
-            "athlete_id": null
+            "athlete_id": 4506443
           },
           {
             "name": "Nick Zickgraf",
-            "athlete_id": null
+            "athlete_id": 4506436
           },
           {
             "name": "Louis Stengal",
@@ -9481,15 +9481,15 @@
         "members": [
           {
             "name": "Matt Bombard",
-            "athlete_id": null
+            "athlete_id": 4173458
           },
           {
             "name": "Nick Zickgraf",
-            "athlete_id": null
+            "athlete_id": 4506436
           },
           {
             "name": "Drew Knipfer",
-            "athlete_id": null
+            "athlete_id": 4506430
           },
           {
             "name": "Louis Stengal",
@@ -9504,19 +9504,19 @@
         "members": [
           {
             "name": "Sean James",
-            "athlete_id": null
+            "athlete_id": 6448317
           },
           {
             "name": "James Lawrence",
-            "athlete_id": null
+            "athlete_id": 6448318
           },
           {
             "name": "Robby Russo",
-            "athlete_id": null
+            "athlete_id": 6877581
           },
           {
             "name": "Trevor LaDue",
-            "athlete_id": null
+            "athlete_id": 6877578
           }
         ],
         "year": 2019
@@ -9573,19 +9573,19 @@
         "members": [
           {
             "name": "Greg Arabagian",
-            "athlete_id": null
+            "athlete_id": 4992397
           },
           {
             "name": "Nick Zickgraf",
-            "athlete_id": null
+            "athlete_id": 4506436
           },
           {
             "name": "Michael John",
-            "athlete_id": null
+            "athlete_id": 4506443
           },
           {
             "name": "Ryan Little",
-            "athlete_id": null
+            "athlete_id": 5486485
           }
         ],
         "year": 2016
@@ -9596,19 +9596,19 @@
         "members": [
           {
             "name": "Michael John",
-            "athlete_id": null
+            "athlete_id": 4506443
           },
           {
             "name": "Nathan Schaefer",
-            "athlete_id": null
+            "athlete_id": 4992395
           },
           {
             "name": "Raouf Laadem",
-            "athlete_id": null
+            "athlete_id": 5959194
           },
           {
             "name": "Greg Arabagian",
-            "athlete_id": null
+            "athlete_id": 4992397
           }
         ],
         "year": 2018

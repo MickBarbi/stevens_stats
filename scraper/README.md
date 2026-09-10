@@ -80,8 +80,14 @@ Then:
 python roster.py                     # merges the new ids into roster_raw.csv
 python history.py --missing --resume # scrape only the ids with no cached rows
 python load.py                       # rebuild; alumni come out as active:false
-python top10_from_xlsx.py <xlsx>     # re-link the record board to the new profiles
+python top10_relink.py               # re-link the record board (no xlsx needed)
+# or: python top10_from_xlsx.py <xlsx>   # full rebuild of top10.json from the workbook
 ```
+
+`top10_relink.py` re-resolves the names already in `data/top10.json` against the
+grown roster — use it after a backfill when you don't have the workbook handy.
+Names with no profile (pre-TFRRS record holders) and TFRRS duplicate-id people
+stay unlinked; it lists them.
 
 `roster.py` now **merges** with the existing `roster_raw.csv` (recomputing
 `active` from the current team pages), so once you've scraped a season's URL once
