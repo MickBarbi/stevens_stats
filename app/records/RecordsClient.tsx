@@ -163,7 +163,7 @@ export default function RecordsClient({ lists }: { lists: TopTenList[] }) {
                                   href={e.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-link no-underline hover:underline"
+                                  className="!text-fg hover:!text-brand hover:underline"
                                 >
                                   {e.mark}
                                 </a>

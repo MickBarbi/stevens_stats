@@ -356,6 +356,50 @@ export type TopTenList = {
 
 export const topTen = topTenJson as unknown as TopTenList[];
 
+// Attach the TFRRS results-page link to each individual entry, matched to a
+// scraped performance by (athlete_id, event_id) + a near-exact mark, with the
+// date as a tie-breaker (the official list and TFRRS sometimes disagree by a
+// day or two on multi-day meets). Entries without a linked athlete or a
+// matching scraped row just stay unlinked.
+{
+  const toSeconds = (raw: string): number => {
+    const t = String(raw).replace(/[^\d:.]/g, "");
+    if (t.includes(":")) {
+      const [m, s] = t.split(":");
+      return Number(m) * 60 + Number(s);
+    }
+    return Number(t);
+  };
+  const dayGap = (a: string, b: string) =>
+    Math.abs(Date.parse(a) - Date.parse(b)) / 86_400_000;
+
+  const perfByAthleteEvent = new Map<string, Performance[]>();
+  for (const p of performances) {
+    const k = `${p.athlete_id}|${p.event_id}`;
+    const bucket = perfByAthleteEvent.get(k);
+    if (bucket) bucket.push(p);
+    else perfByAthleteEvent.set(k, [p]);
+  }
+  for (const list of topTen) {
+    if (list.relay || list.event_id == null) continue;
+    for (const e of list.entries) {
+      if (e.link || !e.athlete_id || !e.date) continue;
+      const cands = perfByAthleteEvent.get(`${e.athlete_id}|${list.event_id}`);
+      if (!cands) continue;
+      const target = toSeconds(e.mark);
+      const match = cands
+        .filter(
+          (p) =>
+            p.result_link != null &&
+            Math.abs(p.mark - target) <= 0.03 &&
+            dayGap(p.date, e.date!) <= 3
+        )
+        .sort((a, b) => dayGap(a.date, e.date!) - dayGap(b.date, e.date!))[0];
+      if (match) e.link = match.result_link ?? undefined;
+    }
+  }
+}
+
 const topTenIndex = new Map<string, TopTenList>();
 for (const list of topTen) {
   if (list.event_id != null && !list.relay) {
