@@ -12,7 +12,6 @@ import {
   ReferenceDot,
   ResponsiveContainer,
 } from "recharts";
-import moment from "moment";
 import Link from "next/link";
 import { Medal, ChevronLeft, ChevronRight, LineChart } from "lucide-react";
 import AthletePicker from "../AthletePicker";
@@ -31,6 +30,22 @@ import EmptyState from "@/components/ui/EmptyState";
 
 const pickerLabel = (a: PickerAthlete) =>
   `${a.nickname ? a.nickname : a.first_name} ${a.last_name}`;
+
+// Chart date labels (epoch ms -> string). Plain Date math — the charts only
+// need month/day/year, not a whole date library.
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const fmtMonthDay = (ms: number) => {
+  const d = new Date(ms);
+  return `${MONTHS[d.getMonth()]} ${d.getDate()}`;
+};
+const fmtMonthYear = (ms: number) => {
+  const d = new Date(ms);
+  return `${MONTHS[d.getMonth()]} ’${String(d.getFullYear()).slice(-2)}`;
+};
+const fmtLongDate = (ms: number) => {
+  const d = new Date(ms);
+  return `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+};
 
 type Perf = ProgressionPerformance;
 
@@ -130,12 +145,14 @@ const monthTicks = (tsMin: number, tsMax: number): number[] => {
   const months = (tsMax - tsMin) / (1000 * 60 * 60 * 24 * 30.44);
   const stepMonths = months <= 6 ? 1 : months <= 14 ? 3 : months <= 30 ? 6 : 12;
   const out: number[] = [];
-  const cur = moment(tsMin).startOf("month");
-  const end = moment(tsMax).endOf("month");
-  while (cur.isSameOrBefore(end)) {
-    const t = cur.valueOf();
+  const lo = new Date(tsMin);
+  const cur = new Date(lo.getFullYear(), lo.getMonth(), 1);
+  const hi = new Date(tsMax);
+  const end = new Date(hi.getFullYear(), hi.getMonth() + 1, 0).getTime();
+  while (cur.getTime() <= end) {
+    const t = cur.getTime();
     if (t >= tsMin && t <= tsMax) out.push(t);
-    cur.add(stepMonths, "month");
+    cur.setMonth(cur.getMonth() + stepMonths);
   }
   return out.length >= 2 ? out : [tsMin, tsMax];
 };
@@ -251,7 +268,7 @@ const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
         // Short spans get day-level x labels; longer ones just month + year.
         const spanDays = (tsMax - tsMin) / 86_400_000;
         const xTickFormat = (ms: number) =>
-          moment(ms).format(spanDays < 75 ? "MMM D" : "MMM [’]YY");
+          spanDays < 75 ? fmtMonthDay(ms) : fmtMonthYear(ms);
 
         // A little breathing room past the last mark so its value label has
         // somewhere to sit without clipping the right edge.
@@ -306,7 +323,7 @@ const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
                   width={52}
                 />
                 <Tooltip
-                  labelFormatter={(ms) => moment(ms).format("MMM D, YYYY")}
+                  labelFormatter={(ms) => fmtLongDate(Number(ms))}
                   formatter={(value: number) => [formatMark(value, kind), "Mark"]}
                   contentStyle={{
                     background: "var(--surface-raised)",
