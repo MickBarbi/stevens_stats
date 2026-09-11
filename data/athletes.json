@@ -3317,16 +3317,16 @@
     "image_path": null,
     "graduation_year": 2025,
     "awards": [],
-    "status": "graduated",
+    "status": null,
     "year_override": null,
     "results_from": null,
     "results_through": null,
     "athlete_id": 8327863,
     "first_name": "James",
     "last_name": "Johnson",
-    "year": 3,
+    "year": 5,
     "sex": "M",
-    "active": false
+    "active": true
   },
   {
     "nickname": null,
