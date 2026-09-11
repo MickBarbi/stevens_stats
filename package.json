@@ -6,7 +6,7 @@
     "node": "22.x"
   },
   "scripts": {
-    "gen:data": "node scripts/gen-search-index.mjs && node scripts/gen-compare-data.mjs && node scripts/gen-calendar.mjs",
+    "gen:data": "node scripts/gen-search-index.mjs && node scripts/gen-compare-data.mjs && node scripts/gen-calendar.mjs && node scripts/gen-progression.mjs",
     "predev": "npm run gen:data",
     "dev": "next dev",
     "prebuild": "npm run gen:data",

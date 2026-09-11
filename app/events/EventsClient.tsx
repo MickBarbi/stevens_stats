@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useEffect, useMemo, useState } from "react";
 import type {
   BestCell,
@@ -8,7 +9,7 @@ import type {
   QualifyingStandard,
   Season,
 } from "@/lib/data";
-import { CalendarOff } from "lucide-react";
+import { CalendarOff, TrendingUp } from "lucide-react";
 import { formatMark, markKind, type MarkKind } from "@/lib/format";
 import PageHeader from "@/components/ui/PageHeader";
 import EmptyState from "@/components/ui/EmptyState";
@@ -218,6 +219,16 @@ const EventsClient = ({
           ]}
         />
       </PageHeader>
+
+      <p className="-mt-3 mb-6 text-sm">
+        <Link
+          href="/events/progression"
+          className="inline-flex items-center gap-1.5 text-link hover:underline"
+        >
+          <TrendingUp className="h-4 w-4" aria-hidden />
+          See the team&apos;s best by year, event by event →
+        </Link>
+      </p>
 
       {visibleEvents.length === 0 ? (
         <EmptyState
