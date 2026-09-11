@@ -34,20 +34,20 @@ const fmtMark = (v, kind) => {
   return v.toFixed(2);
 };
 
-// team rank (mirrors lib/data.ts teamRank)
+// all-time team-list rank (mirrors lib/data.ts teamRank)
 const topIdx = new Map();
 for (const l of topTen) {
   if (l.event_id != null && !l.relay) {
     topIdx.set(`${l.event_id}|${l.gender}|${l.season}`, l);
   }
 }
-const isSR = (athleteId, eventId, season, gender) => {
-  if (!gender) return false;
+const topRank = (athleteId, eventId, season, gender) => {
+  if (!gender) return null;
   const list = topIdx.get(
     `${eventId}|${gender}|${season === "i" ? "indoor" : "outdoor"}`
   );
   const e = list?.entries.find((x) => x.athlete_id === athleteId);
-  return e?.rank === 1;
+  return e ? e.rank : null;
 };
 
 // meet identity (mirrors lib/data.ts)
@@ -82,8 +82,8 @@ for (const p of performances) {
 
 // One headline per year — "on this day, N years ago" reads best as a spread
 // across the program's history, not six sub-marks from last spring. The
-// headline is the day's most notable mark that year: school record > lifetime
-// best > personal best > season best > anything else.
+// headline is the day's most notable mark that year:
+//   school record > all-time top-10 mark > lifetime best > PB > SB > anything.
 const out = {};
 for (const [day, list] of byDay) {
   const byYear = new Map(); // year -> { t, row }
@@ -91,16 +91,26 @@ for (const [day, list] of byDay) {
     const a = athById.get(p.athlete_id);
     if (!a) continue;
     const sex = a.sex ? a.sex.toLowerCase() : null;
-    const sr = isSR(p.athlete_id, p.event_id, p.season, sex) && p.is_overall_best;
-    const t = sr
+    const rank = topRank(p.athlete_id, p.event_id, p.season, sex);
+    const isSR = rank === 1 && p.is_overall_best;
+    // a rank-2..10 mark counts only when it's a genuine best (so an old,
+    // slower run on the same calendar date isn't mistaken for the ranked one)
+    const isTop10 =
+      rank != null &&
+      rank <= 10 &&
+      !isSR &&
+      (p.is_overall_best || p.is_personal_best);
+    const t = isSR
       ? 0
-      : p.is_overall_best
+      : isTop10
         ? 1
-        : p.is_personal_best
+        : p.is_overall_best
           ? 2
-          : p.is_season_best
+          : p.is_personal_best
             ? 3
-            : 4;
+            : p.is_season_best
+              ? 4
+              : 5;
     const year = Number(p.date.slice(0, 4));
     const cur = byYear.get(year);
     if (cur && cur.t <= t) continue;
@@ -113,7 +123,8 @@ for (const [day, list] of byDay) {
         e: evName.get(p.event_id) ?? String(p.event_id),
         m: fmtMark(p.mark, markKind(p.event_id)),
         pb: p.is_personal_best ? 1 : 0,
-        sr: sr ? 1 : 0,
+        sr: isSR ? 1 : 0,
+        t10: isTop10 ? rank : 0,
         meet: parseMeet(p.result_link),
       },
     });

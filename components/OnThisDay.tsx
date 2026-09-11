@@ -14,6 +14,7 @@ type Row = {
   m: string;
   pb?: 0 | 1;
   sr?: 0 | 1;
+  t10?: number; // all-time rank 2-10, when this mark made the top-10 list
   meet: { name: string; slug: string } | null;
 };
 
@@ -38,7 +39,9 @@ export default function OnThisDay() {
         const key = `${String(now.getMonth() + 1).padStart(2, "0")}-${String(
           now.getDate()
         ).padStart(2, "0")}`;
-        setEntries(data[key] ?? []);
+        // "history" means a past year — this year's own mark belongs to the
+        // Latest Results feed, not a nostalgia widget
+        setEntries((data[key] ?? []).filter((r) => r.y !== now.getFullYear()));
         setThisYear(now.getFullYear());
         setHeading(
           now.toLocaleDateString(undefined, { month: "long", day: "numeric" })
@@ -81,7 +84,18 @@ export default function OnThisDay() {
               <span className="ml-auto shrink-0 font-mono font-semibold tabular-nums text-fg">
                 {r.m}
               </span>
-              {r.sr ? <Badge kind="sr" /> : r.pb ? <Badge kind="pb" /> : null}
+              {r.sr ? (
+                <Badge kind="sr" />
+              ) : r.t10 ? (
+                <span
+                  title={`#${r.t10} all-time`}
+                  className="shrink-0 rounded-full border border-current px-1.5 text-[0.6rem] font-bold leading-4 text-brand"
+                >
+                  #{r.t10}
+                </span>
+              ) : r.pb ? (
+                <Badge kind="pb" />
+              ) : null}
             </div>
             <div className="mt-0.5 flex flex-wrap items-baseline gap-x-1.5 text-xs text-fg-subtle">
               <span>{r.e}</span>
