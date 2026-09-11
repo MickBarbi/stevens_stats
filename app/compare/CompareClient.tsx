@@ -221,11 +221,13 @@ function AthleteCombobox({
 
 function CompareChart({
   eventId,
+  eventName,
   a,
   b,
   names,
 }: {
   eventId: number;
+  eventName: string;
   a: [string, number][] | null;
   b: [string, number][] | null;
   names: [string, string];
@@ -267,8 +269,15 @@ function CompareChart({
   const tsMax = merged[merged.length - 1].ts;
   const spanDays = (tsMax - tsMin) / 86_400_000;
 
+  const best = (pts: [string, number][] | null) =>
+    pts && pts.length ? formatMark(pts[pts.length - 1][1], kind) : "no mark";
+  const chartLabel =
+    `${eventName} best-mark progression. ` +
+    `${names[0]}: best ${best(a)}. ${names[1]}: best ${best(b)}.`;
+
   return (
-    <ResponsiveContainer width="100%" height={190}>
+    <div role="img" aria-label={chartLabel}>
+     <ResponsiveContainer width="100%" height={190}>
       <LineChart data={merged} margin={{ top: 8, right: 12, left: 0, bottom: 0 }}>
         <CartesianGrid stroke="rgb(140 140 140 / 0.14)" vertical={false} />
         <XAxis
@@ -371,7 +380,8 @@ function CompareChart({
           />
         )}
       </LineChart>
-    </ResponsiveContainer>
+     </ResponsiveContainer>
+    </div>
   );
 }
 
@@ -663,6 +673,7 @@ export default function CompareClient({
                       <div className="mt-3">
                         <CompareChart
                           eventId={a.e}
+                          eventName={eventMeta[a.e]?.name ?? String(a.e)}
                           a={a.p}
                           b={b.p}
                           names={names}

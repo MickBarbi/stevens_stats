@@ -39,7 +39,7 @@
 
   --fg: #1e1a18;
   --fg-muted: #5b524d;
-  --fg-subtle: #877c75;
+  --fg-subtle: #726860; /* WCAG-AA (>=4.5:1) on bg / surface / white */
 
   --brand: #992211; /* Stevens maroon */
   --brand-hover: #7d1c0e;
@@ -76,7 +76,7 @@
 
     --fg: #ece7e2;
     --fg-muted: #a79e97;
-    --fg-subtle: #7e746d;
+    --fg-subtle: #928880; /* WCAG-AA on the dark bg / surfaces */
 
     --brand: #c8402f;
     --brand-hover: #d85a49;
@@ -108,7 +108,7 @@
 
   --fg: #ece7e2;
   --fg-muted: #a79e97;
-  --fg-subtle: #7e746d;
+  --fg-subtle: #928880; /* WCAG-AA on the dark bg / surfaces */
 
   --brand: #c8402f;
   --brand-hover: #d85a49;

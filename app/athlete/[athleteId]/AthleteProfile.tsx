@@ -280,6 +280,14 @@ const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
         // somewhere to sit without clipping the right edge.
         const xPad = Math.max((tsMax - tsMin) * 0.06, 5 * 86_400_000);
 
+        // text alternative for the chart — screen readers get the shape of the
+        // progression, not a wall of SVG.
+        const chartLabel =
+          `${chartData[0].event_name}, ${season === "i" ? "indoor" : "outdoor"}: ` +
+          `best mark went from ${formatMark(points[0].mark, kind)} to ` +
+          `${formatMark(pbVal, kind)} between ${fmtMonthYear(tsMin)} and ` +
+          `${fmtMonthYear(tsMax)}.`;
+
         return (
           <figure key={key} className="text-[color:var(--chart-line)]">
             <figcaption className="mb-1.5 flex items-baseline justify-between gap-2">
@@ -298,7 +306,8 @@ const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
                 </span>
               </span>
             </figcaption>
-            <ResponsiveContainer width="100%" height={210}>
+            <div role="img" aria-label={chartLabel}>
+             <ResponsiveContainer width="100%" height={210}>
               <AreaChart data={points} margin={{ top: 18, right: 14, left: 0, bottom: 2 }}>
                 <defs>
                   <linearGradient id={gradId} x1="0" y1="0" x2="0" y2="1">
@@ -367,7 +376,8 @@ const EventCharts: React.FC<{ data: Perf[] }> = ({ data }) => {
                 />
                 <ReferenceDot x={tsMax} y={pbVal} r={4} fill="currentColor" stroke="none" />
               </AreaChart>
-            </ResponsiveContainer>
+             </ResponsiveContainer>
+            </div>
           </figure>
         );
       })}

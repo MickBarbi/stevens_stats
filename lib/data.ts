@@ -84,6 +84,13 @@ export const performances = performancesJson as unknown as Performance[];
 export const qualifyingStandards = standardsJson as unknown as QualifyingStandard[];
 export const blogPosts = postsJson as unknown as BlogPost[];
 
+/** The most recent result date in the dataset — "results current as of …". */
+export const latestMarkDate = (): string | null => {
+  let d: string | null = null;
+  for (const p of performances) if (d === null || p.date > d) d = p.date;
+  return d;
+};
+
 const eventNameById = new Map(events.map((e) => [e.event_id, e.event_name]));
 const higherIsBetterById = new Map(events.map((e) => [e.event_id, e.higher_is_better]));
 
