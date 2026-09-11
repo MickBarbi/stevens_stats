@@ -705,7 +705,10 @@ export type FeedResult = Performance & {
   meet: { name: string; slug: string } | null;
 };
 
-export const latestResults = (limit = 60): FeedResult[] => {
+/** The home feed: every active-athlete mark from the last `meetCount` meets the
+ *  team competed at (so a full-squad meet isn't cut off at an arbitrary count),
+ *  with prelim + final collapsed to the athlete's best mark in each event. */
+export const latestResults = (meetCount = 2): FeedResult[] => {
   const activeById = new Map(activeAthletes().map((a) => [a.athlete_id, a]));
 
   const pbByKey = new Map<string, number>();
@@ -713,14 +716,49 @@ export const latestResults = (limit = 60): FeedResult[] => {
     if (p.is_personal_best) pbByKey.set(`${p.athlete_id}|${p.event_id}`, p.mark);
   }
 
-  return performances
-    .filter((p) => activeById.has(p.athlete_id))
-    .slice()
-    // take the most recent `limit` marks by date...
-    .sort((a, b) => b.date.localeCompare(a.date) || b.performance_id - a.performance_id)
-    .slice(0, limit)
-    // ...then, within each day, list them in the usual meet event order,
-    // best mark first inside an event.
+  const active = performances.filter(
+    (p) => activeById.has(p.athlete_id) && p.result_link
+  );
+
+  // the most recent `meetCount` meets, by their latest result date
+  const meetLatest = new Map<string, string>();
+  for (const p of active) {
+    const m = parseMeetLink(p.result_link);
+    if (!m) continue;
+    const cur = meetLatest.get(m.meetId);
+    if (!cur || p.date > cur) meetLatest.set(m.meetId, p.date);
+  }
+  const recent = new Set(
+    [...meetLatest]
+      .sort((a, b) => b[1].localeCompare(a[1]))
+      .slice(0, meetCount)
+      .map(([id]) => id)
+  );
+
+  // one row per athlete/event/meet — merge the rounds, keep the best mark
+  const keep = (a: Performance, b: Performance): Performance => ({
+    ...a,
+    is_personal_best: a.is_personal_best || b.is_personal_best,
+    is_season_best: a.is_season_best || b.is_season_best,
+    is_overall_best: a.is_overall_best || b.is_overall_best,
+  });
+  const best = new Map<string, Performance>();
+  for (const p of active) {
+    const m = parseMeetLink(p.result_link);
+    if (!m || !recent.has(m.meetId)) continue;
+    const k = `${p.athlete_id}|${p.event_id}|${m.meetId}`;
+    const cur = best.get(k);
+    if (!cur) {
+      best.set(k, p);
+      continue;
+    }
+    const hib = higherIsBetterById.get(p.event_id) ?? false;
+    const better = hib ? p.mark > cur.mark : p.mark < cur.mark;
+    best.set(k, better ? keep(p, cur) : keep(cur, p));
+  }
+
+  return [...best.values()]
+    // newest day first, then the usual meet event order, best mark first
     .sort(
       (a, b) =>
         b.date.localeCompare(a.date) ||

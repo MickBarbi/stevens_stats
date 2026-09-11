@@ -25,7 +25,7 @@ type Group = {
 };
 
 export default function LatestResults() {
-  const results = latestResults(60);
+  const results = latestResults();
 
   if (results.length === 0) {
     return (

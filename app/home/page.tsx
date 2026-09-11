@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { Newspaper } from "lucide-react";
 import { allMeets, sortedPosts } from "@/lib/data";
 import { SITE_DESCRIPTION, pageMetadata } from "@/lib/site";
 import Card from "@/components/ui/Card";
 import PageHeader from "@/components/ui/PageHeader";
-import EmptyState from "@/components/ui/EmptyState";
 import LatestResults from "@/components/LatestResults";
 import RecordsStrip from "@/components/RecordsStrip";
+import OnThisDay from "@/components/OnThisDay";
 
 // no `title` — the site default title is the strongest for a "Stevens stats" query
 export const metadata = pageMetadata({
@@ -20,29 +19,19 @@ export default function HomePage() {
 
   return (
     <div className="space-y-10">
-      <RecordsStrip />
+      {/* quick hits first — each hides itself when it has nothing */}
+      <OnThisDay />
 
-      <section>
-        <PageHeader title="Latest Results" />
-        <LatestResults />
-        <p className="mt-4 text-sm">
-          <Link href="/meet" className="text-link hover:underline">
-            Browse all {meetCount} meets →
-          </Link>
-        </p>
-      </section>
-
-      <section>
-        <h2 className="section-title mb-4">Team News</h2>
-        {posts.length === 0 ? (
-          <EmptyState icon={Newspaper} title="No team news yet">
-            Recaps and announcements will land here — check back after the next
-            meet.
-          </EmptyState>
-        ) : (
+      {posts.length > 0 && (
+        <section>
+          <h2 className="section-title mb-4">Team News</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (
-              <Link key={post.post_id} href={`/home/${post.post_id}`} className="block">
+              <Link
+                key={post.post_id}
+                href={`/home/${post.post_id}`}
+                className="block"
+              >
                 <Card interactive className="h-full p-5">
                   <h3 className="text-lg font-semibold text-fg">{post.title}</h3>
                   <p className="mt-1 text-sm text-fg-muted">{post.subheading}</p>
@@ -54,7 +43,19 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-        )}
+        </section>
+      )}
+
+      <RecordsStrip />
+
+      <section>
+        <PageHeader title="Latest Results" />
+        <LatestResults />
+        <p className="mt-4 text-sm">
+          <Link href="/meet" className="text-link hover:underline">
+            Browse all {meetCount} meets →
+          </Link>
+        </p>
       </section>
     </div>
   );
