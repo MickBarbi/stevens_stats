@@ -8,6 +8,7 @@ import { Menu, Search, X } from "lucide-react";
 import DesignerLogo from "../public/Designer.jpeg";
 import ThemeToggle from "./ThemeToggle";
 import { openSearch } from "@/lib/search";
+import { isMacPlatform } from "@/lib/platform";
 
 const LINKS = [
   { href: "/home", label: "Home" },
@@ -29,6 +30,10 @@ export default function Navbar() {
   const closeBtnRef = useRef<HTMLButtonElement>(null);
   const drawerRef = useRef<HTMLElement>(null);
   const everOpened = useRef(false);
+
+  // defaults to Mac (matches server-rendered markup) until the client checks
+  const [mac, setMac] = useState(true);
+  useEffect(() => setMac(isMacPlatform()), []);
 
   // close the drawer on navigation
   useEffect(() => setOpen(false), [pathname]);
@@ -112,7 +117,7 @@ export default function Navbar() {
               >
                 <Search className="h-4 w-4" aria-hidden />
                 <kbd className="hidden rounded border border-white/30 px-1.5 py-0.5 text-xs font-medium text-brand-fg/80 md:block">
-                  ⌘K
+                  {mac ? "⌘K" : "Ctrl K"}
                 </kbd>
               </button>
             </li>
