@@ -1,13 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Trophy } from "lucide-react";
-import { seasonYearOf, type TopTenList, type TopTenEntry } from "@/lib/data";
+import { seasonYearOf } from "@/lib/season";
+import type { TopTenList, TopTenEntry } from "@/lib/data";
 import PageHeader from "@/components/ui/PageHeader";
 import EmptyState from "@/components/ui/EmptyState";
 
 const CURRENT_SEASON_YEAR = seasonYearOf(new Date());
+
+// public/top10.json — built by scripts/gen-top10.mjs. Used to be passed in
+// as a page prop (the whole 216 KB board, serialized into every visit's page
+// payload, even though only one gender/season slice is ever shown); fetched
+// lazily instead, like the site's other client-only datasets.
+let cache: TopTenList[] | null = null;
+async function loadData(): Promise<TopTenList[]> {
+  if (cache) return cache;
+  const res = await fetch("/top10.json");
+  cache = await res.json();
+  return cache!;
+}
 
 const entrySeasonYear = (e: TopTenEntry): number | null => {
   if (e.date) {
@@ -53,22 +66,20 @@ const nameCol = (l: TopTenList, e: TopTenList["entries"][number]) => {
   return <span className="font-sans">{e.name}</span>;
 };
 
-export default function RecordsClient({ lists }: { lists: TopTenList[] }) {
+export default function RecordsClient() {
   const [gender, setGender] = useState<"m" | "f">("m");
   const [season, setSeason] = useState<"indoor" | "outdoor">("outdoor");
+  const [lists, setLists] = useState<TopTenList[] | null>(null);
 
-  if (lists.length === 0) {
-    return (
-      <div>
-        <PageHeader title="Top 10" />
-        <EmptyState icon={Trophy} title="The record book is empty">
-          The all-time top-ten lists haven&apos;t been loaded yet.
-        </EmptyState>
-      </div>
-    );
-  }
+  useEffect(() => {
+    let live = true;
+    loadData().then((d) => live && setLists(d));
+    return () => {
+      live = false;
+    };
+  }, []);
 
-  const visible = lists
+  const visible = (lists ?? [])
     .filter((l) => l.gender === gender && l.season === season)
     .sort(
       (a, b) =>
@@ -107,7 +118,13 @@ export default function RecordsClient({ lists }: { lists: TopTenList[] }) {
         </span>
       </p>
 
-      {visible.length === 0 ? (
+      {lists === null ? (
+        <p className="py-8 text-center text-sm text-fg-subtle">Loading…</p>
+      ) : lists.length === 0 ? (
+        <EmptyState icon={Trophy} title="The record book is empty">
+          The all-time top-ten lists haven&apos;t been loaded yet.
+        </EmptyState>
+      ) : visible.length === 0 ? (
         <EmptyState icon={Trophy} title="No lists for this selection">
           Try the other gender or season.
         </EmptyState>

@@ -10,11 +10,12 @@ import standardsJson from "@/data/qualifying_standards.json";
 import postsJson from "@/data/blog_posts.json";
 import topTenJson from "@/data/top10.json";
 import { alumniLabel, isFormerAthlete } from "./athlete";
+import { seasonYearOf, currentSeasonYear } from "./season";
 
 // Re-exported so existing server-side imports keep working. Client components
-// import these straight from "@/lib/athlete" instead, so they don't drag this
-// module's JSON into their bundle.
-export { alumniLabel, isFormerAthlete };
+// import these straight from "@/lib/athlete" / "@/lib/season" instead, so they
+// don't drag this module's JSON into their bundle.
+export { alumniLabel, isFormerAthlete, seasonYearOf, currentSeasonYear };
 
 export type Athlete = {
   athlete_id: number;
@@ -356,18 +357,6 @@ export const seasonName = (flag: string): Season =>
 // everything else (including the March outdoor openers) defaults to outdoor.
 export const currentSeason = (date: Date = new Date()): Season =>
   [11, 0, 1].includes(date.getMonth()) ? "indoor" : "outdoor";
-
-// The competitive year a mark counts for: indoor marks from December roll into
-// the next calendar year (matches scraper/load.py's Dec-1 cutoff). Used for the
-// Top 10 page's this-season / last-season highlighting and the Home strip.
-export const seasonYearOf = (d: Date): number =>
-  d.getFullYear() + (d.getMonth() >= 11 ? 1 : 0);
-
-/** The season treated as "this season" — the most recent one to have begun.
- *  Rolls to the next year in December, so a fall visit still points at the
- *  spring season that just finished. */
-export const currentSeasonYear = (now: Date = new Date()): number =>
-  seasonYearOf(now);
 
 // ---- Official all-time top-10 lists ---------------------------------------
 // Hand-maintained (data/top10.json). Includes events and athletes not in the

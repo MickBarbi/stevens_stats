@@ -1,4 +1,3 @@
-import { topTen } from "@/lib/data";
 import { pageMetadata } from "@/lib/site";
 import RecordsClient from "./RecordsClient";
 
@@ -12,5 +11,5 @@ export const metadata = pageMetadata({
 });
 
 export default function RecordsPage() {
-  return <RecordsClient lists={topTen} />;
+  return <RecordsClient />;
 }
