@@ -1,0 +1,56 @@
+[
+  {
+    "alumnus_id": 1,
+    "name": "A. R. Lawrence, '11",
+    "sort_year": 1912,
+    "years_label": "c. 1912",
+    "note": "Barely a year removed from campus, Lawrence won a grueling 6½-mile cross country race held by the Yonkers YMCA to select New York's Metropolitan Cross Country Team — running down a 3½-minute handicap and beating the next-closest finisher by nearly seven minutes. It's one of the earliest individually notable athletic feats on record for a Stevens man.",
+    "research_note": "Single mention found (pre-1920s deck, slide 45, 1912-11-07). Article concerns Lawrence as an alumnus, not a current student — archive tagged this 'notable_alumnus'. No other details found; first name not given, only initials.",
+    "athlete_id": null
+  },
+  {
+    "alumnus_id": 2,
+    "name": "Richard Meidell, '50",
+    "sort_year": 1947,
+    "years_label": "1947 (Penn Relays)",
+    "note": "A well-traveled all-around athlete — varsity letters in football, baseball, and track at his Detroit high school, then a stint at first base for the Great Lakes Naval Training Station team during his Navy service — Meidell landed at Stevens by way of the University of Detroit and made an immediate mark in track. In 1947 he qualified for the Penn Relays' broad jump, representing Stevens against national powers like Illinois (the defending national champion), Michigan, Army, and Navy, backed by a personal-best jump of 28 feet set while still in uniform.",
+    "research_note": "Single mention found (20s-70s deck, slide 85, 1947-03-08), archive-tagged 'notable_alumnus'. Also a member of the New York Athletic Club team that held the national A.A.U. team title at the time. Class year ('50) taken from the clipping's byline.",
+    "athlete_id": null
+  },
+  {
+    "alumnus_id": 3,
+    "name": "Al Alonso, '83",
+    "sort_year": 1982,
+    "years_label": "1980–83 (athlete); head coach from 1984 — see Head Coaches",
+    "note": "Before he became the winningest coach in program history, Alonso was the runner who got cross country to varsity status in the first place — co-founding the push from club to varsity as a student, then repeatedly breaking his own course record at Van Cortlandt Park. He was named Stevens Athlete of the Week in 1982 for leading the team to the IAC Championship as a senior, capping a college career defined by exactly the doggedness he'd later demand from the runners he coached: at one league meet he finished fourteenth, three minutes off his normal pace, having lost eight pounds to a stomach virus in the three days beforehand.",
+    "research_note": "Two mentions found, both archive-tagged 'notable_alumnus' (80s deck, slide 24, 1981-11-06 — feature profile as a junior; slide 33, 1982-10-29 — Athlete of the Week as a senior). Same person as coach_id 10 in coaches.json; kept here deliberately to cover his pre-coaching athletic career, which the coach entry only mentions in passing. Graduated 1983 per the 1984 coaching-hire clipping.",
+    "athlete_id": null
+  },
+  {
+    "alumnus_id": 4,
+    "name": "Steve Kropac, '97",
+    "sort_year": 1996,
+    "years_label": "1993–97",
+    "note": "A transfer from Rochester Institute of Technology who trained 55 to 70 miles a week, Kropac became Stevens' first-ever \"Athlete of the Season\" in 1996 by spending his career erasing records set by his own coach — running the Van Cortlandt Park cross country course a full second faster than Al Alonso's old mark, and stacking up Stevens records in the 800m, 1500m, 3000m, 5000m, and steeplechase along the way. He qualified for NCAA Regionals in both cross country and track before graduating.",
+    "research_note": "Two mentions found (90s deck, slide 30, 1993-11-12 — ECAC qualifier as a runner; slide 62, 1996-04-26 — full Athlete of the Season profile, archive-tagged 'notable_alumnus'). Records cited (800m 2:01, 1500m 4:03.7, 3000m 9:27, 5000m 16:22, steeplechase 10:20) predate top10.json's TFRRS-era data (~2008+) and may since have been broken without a surviving record — not cross-checked against current all-time lists.",
+    "athlete_id": null
+  },
+  {
+    "alumnus_id": 5,
+    "name": "Alex Kainer, '19",
+    "sort_year": 2019,
+    "years_label": "2016–19",
+    "note": "Kainer swept the men's sprint records during his four years at Stevens and still holds every one of them: the school record in the 60m, 100m, and 200m, indoors and out — a clean sweep of the sprint program that's gone unmatched since he graduated.",
+    "research_note": "From data/top10.json rank-1 entries (all still current as of the last data refresh): 60m indoor 6.93 (2018-02-24), 200m indoor 21.65 (2019-02-08), 100m outdoor 10.70 (2018-05-04), 200m outdoor 21.52 (2019-05-15). athlete_id 5666139 confirmed against athletes.json (graduation_year 2019).",
+    "athlete_id": 5666139
+  },
+  {
+    "alumnus_id": 6,
+    "name": "Laura Mathews, '24",
+    "sort_year": 2024,
+    "years_label": "2020–24",
+    "note": "Stevens' most decorated recent record-holder, Mathews still holds the school record in eight different events spanning sprints, hurdles, jumps, and both multi-events — the 60m, 100m, 200m, 60m and 100m hurdles, long jump, heptathlon, and pentathlon. Her heptathlon mark of 4,906 points, set in 2024, caps a run of records that touched nearly every discipline on the track.",
+    "research_note": "From data/top10.json rank-1 entries (all still current as of the last data refresh): 60m indoor 7.65 (2024-02-24), 200m indoor 24.22 (2024-03-09), 60H indoor 8.45 (2024-03-08), LJ indoor 5.64 (2024-02-09), pentathlon indoor 3407 pts (2024-03-01), 100m outdoor 11.79 (2023-05-06), 100H outdoor 13.61 (2024-05-16), heptathlon outdoor 4906 pts (2024-05-24). athlete_id 7498005 confirmed against athletes.json (graduation_year 2024).",
+    "athlete_id": 7498005
+  }
+]

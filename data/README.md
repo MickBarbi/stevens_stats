@@ -105,3 +105,76 @@ can't rank against alumni or handle relays). Array of:
   is committed as data and can be hand-edited.
 - Powers the `/records` page, the "Team Rank" columns on the events and athlete
   pages, and the "SR" badge (rank 1) on the home feed / athlete page.
+
+**`coaches.json`** — head-coach timeline shown on `/history` (most-recent-first
+— storage order doesn't matter, the page sorts by `start_year` descending),
+hand-typed from the program's newspaper archive (`scraper/archives/batches/`).
+Array of:
+
+```json
+{
+  "coach_id": 3,
+  "name": "Al Alonso",
+  "start_year": 1984,
+  "start_year_approximate": false,
+  "end_year": null,
+  "end_year_approximate": false,
+  "role": "Head Coach",
+  "note": "Longest-tenured coach on record — took over cross country in 1984, a year after graduating from Stevens himself.",
+  "research_note": "Longest-tenured head coach on record; still coaching as of the last archive mention.",
+  "athlete_id": null
+}
+```
+
+- `start_year` is always set (best-known, even if approximate); `end_year: null`
+  means "still coaching as of the last archive mention," not "unknown" — use
+  `end_year_approximate` for genuine uncertainty about *when* someone left.
+- `start_year_approximate` / `end_year_approximate` flag each year
+  independently — hire years are often solid, departure years are often
+  inferred from a last mention, and those are different levels of confidence.
+- `note` is the public-facing bio shown on `/history` — written to be
+  readable/interesting for a random visitor, not a research log. Pull the
+  color from the actual clippings (`scraper/archives/batches/`), not just the
+  bare facts.
+- `research_note` is the sourcing/verification record for whoever maintains
+  this file (deck + slide numbers, spelling variants, confidence caveats,
+  what's still unconfirmed) — not rendered on the page.
+- Gaps between entries are not stored — the `/history` page sorts coaches
+  most-recent-first and derives/displays each gap from that coach's
+  `start_year` against the *next-older* entry's `end_year`.
+- `athlete_id` links to `/athlete/<id>` on the rare chance this person is also
+  in the scraped roster system; almost always `null`.
+- A person can appear here *and* in `alumni.json` (e.g. Al Alonso, as both a
+  record-setting athlete and later head coach) — that's intentional, not a
+  duplicate; the two files answer different questions.
+
+**`alumni.json`** — notable historical figures shown on `/history` (rendered
+*above* the coaches list, oldest-first), hand-typed from the same archive plus
+`data/top10.json` for the most recent entries. Not the roster/athlete-profile
+system (`lib/athlete.ts`'s `alumniLabel`/`isFormerAthlete`) — most of these
+people predate the site's scraped data (~2008+) entirely. Array of:
+
+```json
+{
+  "alumnus_id": 5,
+  "name": "Alex Kainer, '19",
+  "sort_year": 2019,
+  "years_label": "2016–19",
+  "note": "Kainer swept the men's sprint records during his four years at Stevens and still holds every one of them...",
+  "research_note": "From data/top10.json rank-1 entries (all still current as of the last data refresh): 60m indoor 6.93 (2018-02-24)...",
+  "athlete_id": 5666139
+}
+```
+
+- `sort_year` orders the list; `years_label` is the freeform display string —
+  compound careers (athlete, then coach), single-year mentions, and vague
+  decades ("1990s") are all valid.
+- `note` / `research_note` follow the same split as `coaches.json`: `note` is
+  the public-facing bio (write it to be worth reading, not just a fact dump),
+  `research_note` is the sourcing record and isn't rendered.
+- Deliberately kept short for now — a handful of people spanning the archive,
+  mixing recent record-holders (clear numbers, straight from `top10.json`)
+  with older figures who are mostly a good story rather than a stat line.
+- `athlete_id` links to `/athlete/<id>`; only set for post-~2008 athletes who
+  exist in the scraped roster (e.g. recent record-holders) — expect `null` for
+  older entries.

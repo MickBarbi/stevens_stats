@@ -9,6 +9,8 @@ import performancesJson from "@/data/performances.json";
 import standardsJson from "@/data/qualifying_standards.json";
 import postsJson from "@/data/blog_posts.json";
 import topTenJson from "@/data/top10.json";
+import coachesJson from "@/data/coaches.json";
+import alumniJson from "@/data/alumni.json";
 import { alumniLabel, isFormerAthlete } from "./athlete";
 import { seasonYearOf, currentSeasonYear } from "./season";
 
@@ -74,6 +76,30 @@ export type BlogPost = {
   created_on: string;
 };
 
+// Program history (hand-maintained; see data/README.md) — coaches.json / alumni.json
+export type Coach = {
+  coach_id: number;
+  name: string;
+  start_year: number;
+  start_year_approximate: boolean;
+  end_year: number | null;
+  end_year_approximate: boolean;
+  role: string;
+  note: string;
+  research_note: string;
+  athlete_id: number | null;
+};
+
+export type NotableAlumnus = {
+  alumnus_id: number;
+  name: string;
+  sort_year: number;
+  years_label: string;
+  note: string;
+  research_note: string;
+  athlete_id: number | null;
+};
+
 // `sex` is stored "M"/"F" but every comparison (filters, top10.json,
 // qualifying_standards.json, the dropdowns) uses "m"/"f" — normalise on load.
 export const athletes = (athletesJson as unknown as Athlete[]).map((a) => ({
@@ -84,6 +110,8 @@ export const events = eventsJson as unknown as EventInfo[];
 export const performances = performancesJson as unknown as Performance[];
 export const qualifyingStandards = standardsJson as unknown as QualifyingStandard[];
 export const blogPosts = postsJson as unknown as BlogPost[];
+export const coaches = coachesJson as unknown as Coach[];
+export const notableAlumni = alumniJson as unknown as NotableAlumnus[];
 
 /** The most recent result date in the dataset — "results current as of …". */
 export const latestMarkDate = (): string | null => {
@@ -346,6 +374,15 @@ export const sortedPosts = (): BlogPost[] =>
 
 export const getPost = (id: number): BlogPost | null =>
   blogPosts.find((p) => p.post_id === id) ?? null;
+
+// ---- Program history --------------------------------------------------------
+// Most recent first — visitors care about the current/last coach more than
+// the earliest one, and it puts the still-active entry at the top.
+export const sortedCoaches = (): Coach[] =>
+  [...coaches].sort((a, b) => b.start_year - a.start_year);
+
+export const sortedAlumni = (): NotableAlumnus[] =>
+  [...notableAlumni].sort((a, b) => a.sort_year - b.sort_year);
 
 // ---- Season -----------------------------------------------------------------
 export type Season = "indoor" | "outdoor";

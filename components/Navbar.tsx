@@ -18,6 +18,7 @@ const LINKS = [
   { href: "/records", label: "Top 10" },
   { href: "/athlete", label: "Athletes" },
   { href: "/compare", label: "Compare" },
+  { href: "/history", label: "History" },
 ];
 
 export default function Navbar() {
