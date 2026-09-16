@@ -38,13 +38,13 @@
   {
     "coach_id": 4,
     "name": "Gingrich",
-    "start_year": 1929,
-    "start_year_approximate": true,
+    "start_year": 1928,
+    "start_year_approximate": false,
     "end_year": 1929,
     "end_year_approximate": true,
     "role": "Head Coach, Cross Country",
-    "note": "A Stevens professor with a running background, Gingrich agreed to coach the school's first cross country team in 1929 after a group of students simply organized themselves and asked him to lead it — the sport had no official varsity backing at the time. He ran practices three days a week and lined up meets against Rutgers and Seton Hall, hoping to build on a promising debut season. By that November, though, the student paper was already asking what had become of the team, pinning the fade-out on thin turnout in a student body of over 400.",
-    "research_note": "Only two clippings found, both fall 1929 (20s-70s deck, slides 59, 60), covering cross country practice — first name not given. Tenure is almost certainly longer than one season; the gap on either side of this entry likely reflects missing clippings, not a confirmed vacancy. Needs more research.",
+    "note": "A Stevens Language Department instructor and University of Pennsylvania grad who'd run cross country there himself, Gingrich started Stevens' first cross country team from nothing in October 1928 after a group of students simply asked him to coach it — the sport had no official varsity backing at the time, and he ran practices three days a week on a 2½-mile course he laid out with the college president. The team returned for a second season in 1929, lining up meets against Rutgers and Seton Hall, but by that November the student paper was already asking what had become of it, pinning the fade-out on thin turnout in a student body of over 400.",
+    "research_note": "9 mentions found via full-text search of the Stute (Feb 1928-Nov 1929), well beyond the 2 clippings (20s-70s deck, slides 59, 60, both fall 1929) originally found in the Slides-deck pass — see scraper/archives/search_cdm.py. The founding meeting was 1928-10-17 ('CROSS-COUNTRY TO BE INTRODUCED AT STEVENS'), pushing start_year back a year from the original entry. First name still not given, but initials appear twice: 'Mr. E. Gingrich' (1929-01-16) and 'C. E. Gingrich' (1929-10-09) — inconsistent, unresolved. Surname also appears as 'Ginrich' once (1928-10-24). Confirmed: graduate of the University of Pennsylvania, ran cross country there; Stevens Language/Modern Languages Department instructor. No mentions found before Feb 1928 or after Nov 1929 in a broadened search, so the 1929 end and one-source-of-truth 1928 start now have reasonable confidence. 3 of these newly-found clippings (1928-10-03, 1928-10-17, 1928-10-24) were added to scraper/archives/batches/stute-archives-20s-to-70s.json; 2 more exist (1929-01-16, 1929-11-27) but weren't transcribed in full — lower marginal value, left for a deeper pass.",
     "athlete_id": null
   },
   {
@@ -55,8 +55,8 @@
     "end_year": 1943,
     "end_year_approximate": true,
     "role": "Head Coach, Cross Country",
-    "note": "When students petitioned to bring back cross country after years without a team, \"Chief\" O'Keefe — a nickname that stuck from his Navy rank — volunteered to coach and pitched the Athletic Council on some genuinely ambitious plans: intercollegiate meets at Van Cortlandt Park and, eventually, Madison Square Garden. The Council signed off in October 1943, and O'Keefe's runners debuted that fall against three other colleges, though he held the team back from full competition until they'd logged more practice miles.",
-    "research_note": "Took over on the program's return after a discontinuation, per a 1943-10-06 Athletic Association Council vote to bring back the 'harrier' team (20s-70s deck, slides 80-83). First name not given in any clipping ('Mr. O'Keefe' / 'Chief O'Keefe'). Only four mentions found, all fall 1943.",
+    "note": "\"Chief\" O'Keefe wasn't Stevens faculty at all — he was Navy Chief Specialist Robert T. O'Keefe, stationed at Stevens as the Navy's own physical-training director under the wartime V-12 officer training program. When students petitioned to bring back cross country after years without a team, he volunteered to coach it alongside the Navy trainees' indoor track and baseball squads, pitching the Athletic Council on some genuinely ambitious plans: intercollegiate meets at Van Cortlandt Park and, eventually, Madison Square Garden. The Council signed off in October 1943, and O'Keefe's runners debuted that fall against three other colleges, though he held the team back from full competition until they'd logged more practice miles. Before Stevens he'd trained Navy recruits at Norfolk, where he found time to umpire baseball games between teams stacked with major-league talent.",
+    "research_note": "Full name found via full-text search: Robert T. O'Keefe, per a Stevens Indicator alumni-magazine profile (Dec 1943, 'Navy V-12 Physical Specialist at Stevens') — a Navy Chief Specialist assigned to Stevens under the V-12 College Training Program, not Stevens faculty/staff. That profile also credits him with the Navy trainees' Indoor Track and baseball teams, not just cross country ('beating Columbia 6 to 0' in baseball) and details his prior Norfolk Training Station posting. Takes over on the program's return after a discontinuation, per a 1943-10-06 Athletic Association Council vote to bring back the 'harrier' team (20s-70s deck, slides 80-83). A possible 1944-01-12 Stute mention turned up in search but its OCR text couldn't be retrieved (empty full-text field) — unconfirmed, worth a manual look. First name/rank only ('Mr. O'Keefe' / 'Chief O'Keefe') in the original four fall-1943 mentions. The Dec 1943 Indicator profile was added to scraper/archives/batches/stute-archives-20s-to-70s.json.",
     "athlete_id": null
   },
   {
@@ -67,8 +67,8 @@
     "end_year": 1948,
     "end_year_approximate": true,
     "role": "Head Coach",
-    "note": "The \"Stevens Track Club\" was barely a club at all in early 1948 — no dues, no meetings, and by its own members' admission, \"up to now, no activity.\" That changed when Tom Triol, a former champion high hurdler, offered to coach its runners through the indoor season. Under him the club ran time trials in the 220, 440, 880, and mile to fill out relay teams for intercollegiate meets, giving the sport a real foothold again after years of informal running.",
-    "research_note": "Single mention found: 'Track Club Discussed in Letter' (20s-70s deck, slide 86, 1948-02-07). Sport and tenure length unconfirmed.",
+    "note": "Track wasn't Triol's day job — he was Stevens' varsity soccer coach, having taken over that program from Frank Misar in 1946 after four years playing soccer at West Chester State Teachers College in Pennsylvania. But the \"Stevens Track Club\" was barely a club at all in early 1948 — no dues, no meetings, and by its own members' admission, \"up to now, no activity\" — and Triol, a former champion high hurdler himself, offered to pilot its runners through the indoor season as a side project. Under him the club ran time trials in the 220, 440, 880, and mile to fill out relay teams for intercollegiate meets, giving the sport a real foothold again after years of informal running.",
+    "research_note": "Full-text search turns up ~19 Triol mentions from 1946-1949, but nearly all are about his real job coaching varsity soccer (hired 1946 succeeding Frank Misar, who'd coached it 'for the last decade') — out of scope for these CC/T&F batches per EXTRACTION_PROMPT.md, so not added there, but used here for bio context. Only the original single mention, 'Track Club Discussed in Letter' (20s-70s deck, slide 86, 1948-02-07), is actually about track/cross country. Tenure as track-club coach is genuinely just that one winter per the record found; sport (indoor relay/track club) is now confirmed, soccer being his primary role.",
     "athlete_id": null
   },
   {
@@ -79,8 +79,8 @@
     "end_year": 1953,
     "end_year_approximate": true,
     "role": "Head Coach",
-    "note": "Misar ran Stevens' first-ever Interclass Track Meet in the spring of 1953, open to any student not already playing baseball, lacrosse, or tennis. When student interest sagged ahead of the event, he told the school paper flatly that its success was \"solely in the hands of the student body\" — not exactly a pep talk, but it got the point across. No coach is mentioned in the archive again for over two decades after him.",
-    "research_note": "Single mention found: 'Attention, Speedsters!!!' (20s-70s deck, slide 89, 1953-04-25). Sport and tenure length unconfirmed. No further coach mentioned in the archive until Jim Lloyd in 1974 — a roughly 21-year dormant gap in the record.",
+    "note": "Track was a rare side gig for Misar, not his career — he was Stevens' Director of Physical Education for 43 years (1928-1971), and by 1953 he'd already spent a decade-plus building the school's varsity soccer program (which he founded), coaching baseball every year since 1929, and running the gym department. He ran Stevens' first-ever Interclass Track Meet that spring anyway, open to any student not already playing baseball, lacrosse, or tennis. When student interest sagged ahead of the event, he told the school paper flatly that its success was \"solely in the hands of the student body\" — not exactly a pep talk, but it got the point across. No dedicated track coach is mentioned in the archive again for over two decades after him.",
+    "research_note": "Single CC/T&F-relevant mention found: 'Attention, Speedsters!!!' (20s-70s deck, slide 89, 1953-04-25) — sport/tenure genuinely was just that one meet. But a full-text search on 'Misar' turns up ~30 mentions from 1929 to a 1971 retirement writeup, all about his real career: founded Stevens varsity soccer in 1927/28 (coached it ~16 years, >70% win rate, handed it to Tom Triol [coach_id 6] in 1946), coached varsity baseball 1929-1960 (160-134 record), started the varsity squash program (1961 Metro Intercollegiate champions), and was 'Head Professor of Physical Education,' heading the gym department his last 8 years before retiring effective 1971-08-31 after 43 years at Stevens (arrived 1928, Springfield College grad). None of that soccer/baseball/squash material is CC/T&F content, so it wasn't added to the batches per EXTRACTION_PROMPT.md's scope rule — this note is the only place that context lives. Worth knowing if this entry's inclusion in a 'Head Coaches' (of track) list ever gets questioned: he belongs here for exactly one clipping, not a track career.",
     "athlete_id": null
   },
   {
@@ -101,10 +101,10 @@
     "start_year": 1981,
     "start_year_approximate": false,
     "end_year": 1984,
-    "end_year_approximate": true,
+    "end_year_approximate": false,
     "role": "Head Coach, Cross Country",
-    "note": "When Stevens elevated cross country to a full varsity sport in 1981 — after six years as a club team — Bill Grothe took over as its first official coach. By day he ran the college's financial aid office (he later became Registrar); by fall afternoons he built a program that quietly became one of the winningest at Stevens, trailing only the men's tennis team in win percentage over his tenure. He also inherited a ready-made star: junior Al Alonso, who had already helped push the sport to varsity status and would go on to succeed him as coach.",
-    "research_note": "Hired as first-year coach when cross country was elevated to varsity; headline 'Coach Named' (80s deck, slides 16-17, 1981-08-28). Also named Athletic Director around the same time. Also appears as 'William Grothe'. Last mention 1984-08-26 (slide 47); Al Alonso's first mention as coach follows just weeks later (1984-09-14), suggesting a clean handoff.",
+    "note": "When Stevens elevated cross country to a full varsity sport in 1981 — after six years as a club team — Bill Grothe took over as its first official coach. By day he ran the college's financial aid office; by fall afternoons he built a program that quietly became one of the winningest at Stevens, trailing only the men's tennis team in win percentage over his tenure. He also inherited a ready-made star: junior Al Alonso, who had already helped push the sport to varsity status and would go on to succeed him as coach just weeks after Grothe's last mention as coach in 1984. Grothe himself stayed at Stevens a few years longer as Registrar before leaving in 1987 for a law career at Broadcast Music, Inc.",
+    "research_note": "Hired as first-year coach when cross country was elevated to varsity; headline 'Coach Named' (80s deck, slides 16-17, 1981-08-28). Also appears as 'William Grothe'. Last mention as coach 1984-08-26 (slide 47); Al Alonso's first mention as coach follows just weeks later (1984-09-14) — a clean, confirmed handoff, so end_year_approximate is now false. CORRECTION: the original note here said Grothe was 'also named Athletic Director around the same time' — rechecked against the source (StevensNP01 item 14450, 1981-08-28) and that's wrong; the Athletic Director quoted announcing his hire is 'Buzz' Seymour, not Grothe. Grothe was Director of Financial Aid (per the original 1979/1981 clippings), then Registrar by 1987, when a Stute piece ('William Grothe, Registrar, Leaving Stevens', StevensNP01 item 14618, 1987-04-10) reported his departure after 8 years at Stevens to become staff attorney for Broadcast Music, Inc.; he'd gotten both degrees at the University of Michigan. Also ran competitively himself — placed in the faculty/staff division of a 1980 road race (StevensNP01 item 13313, 1980-10-17). Found via full-text search of stevensarchives.contentdm.oclc.org, not the original Slides-deck pass.",
     "athlete_id": null
   },
   {
@@ -115,8 +115,8 @@
     "end_year": 2003,
     "end_year_approximate": false,
     "role": "Head Coach, Cross Country & Track and Field",
-    "note": "The program's longest-tenured coach by far, Alonso took over cross country in 1984 — just a year after graduating from Stevens himself, where he'd been the driving force behind getting the sport promoted to varsity and had led the team to an IAC title in 1982. He added the head track job by the mid-1990s, and in 1995 coached Stevens' first-ever full women's track & field team, a season that earned the program NCAA All-American recognition. He was still coaching as of the archive's final batch in 2000, by then working alongside assistant coach Tom Zapata.",
-    "research_note": "Longest-tenured coach on record — first mention as coach 1984-09-14 (80s deck, slide 50), still coaching as of the archive's last batch (2000-11-17). Started as cross country coach; by 1995 also referred to as 'Head Track' coach ('Track & Field Team Finishes High', 90s deck, slide 43), so track & field appears to have been added at some point in between — exact year not confirmed. Full name 'Adalberto Alonso' is used increasingly in later clippings; 'Al Alonzo' appears once (1996-04-12), likely a typo. Was also a record-setting Stevens athlete 1980-88 before becoming coach — see the matching entry in alumni.json. An assistant coach, Tom Zapata, appears in a 2000 roster clipping (slide 14). end_year is null because the archive ends in 2000 with no departure reported, not because the tenure is confirmed to extend past 2000.",
+    "note": "The program's longest-tenured coach by far, Alonso took over cross country in 1984 — just a year after graduating from Stevens himself, where he'd been the driving force behind getting the sport promoted to varsity and had led the team to an IAC title in 1982. He added the head track job by January 1994 at the latest (a student sign-up flyer that winter lists him running both the indoor and spring track teams out of the Phys. Ed. Department), and in 1995 coached Stevens' first-ever full women's track & field team, a season that earned the program NCAA All-American recognition. He was still coaching as of the archive's final batch in 2000, by then working alongside assistant coach Tom Zapata.",
+    "research_note": "Longest-tenured coach on record — first mention as coach 1984-09-14 (80s deck, slide 50), still coaching as of the archive's last batch (2000-11-17). Started as cross country coach; a 1994-01-21 Stute recruitment flyer ('AL ALONSO, PHYS. ED. DEPT.', StevensNP01 item 16905) for the indoor/spring track teams pushes his confirmed track start back a year from the previously-known 1995 mention ('Track & Field Team Finishes High', 90s deck, slide 43) — a full-text search of 1989-1993 found no earlier track-related mention, so 1994 is the earliest currently confirmed, not necessarily the true start. Full name 'Adalberto Alonso' is used increasingly in later clippings; 'Al Alonzo' appears once (1996-04-12), likely a typo. Was also a record-setting Stevens athlete — see the matching entry in alumni.json, now corrected to 1979-83 after finding him competing as a freshman in fall 1979 (previously recorded as 1980-88, which didn't match his own 1983 graduation date anyway). An assistant coach, Tom Zapata, appears in a 2000 roster clipping (slide 14). end_year is 2003 per the site owner's own records (outside this archive's 1904-2000 coverage), not from an archive source.",
     "athlete_id": null
   },
   {
@@ -169,13 +169,13 @@
   },
   {
     "coach_id": 15,
-    "name": "John Kolibob",
+    "name": "John Kolibab",
     "start_year": 2022,
     "start_year_approximate": false,
     "end_year": null,
     "end_year_approximate": false,
     "role": "Head Coach, Cross Country & Track and Field",
-    "note": "Kolibob took over the cross country and track & field programs in 2022.",
+    "note": "Kolibab took over the cross country and track & field programs in 2022.",
     "research_note": "",
     "athlete_id": null
   }

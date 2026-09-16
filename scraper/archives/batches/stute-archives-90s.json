@@ -3340,5 +3340,22 @@
     "notability_note": null,
     "confidence_notes": "This image was rotated 90 degrees in the source file and returned no text from OCR; read directly from the image instead. It's a team-roster photo page rather than a dated news clipping — the caption date (1999-11-19) is inherited from the slide grouping, not necessarily this page's actual publication date.",
     "slide": 124
+  },
+  {
+    "deck": "cdm-search:StevensNP01",
+    "slide": 16904,
+    "headline": "Men's and Women's Track Club sign-up form",
+    "date": "1994-01-21",
+    "date_confidence": "exact",
+    "sport": "track_field",
+    "names": [
+      "Al Alonso"
+    ],
+    "meet_or_event": null,
+    "transcription": "MEN'S AND WOMEN'S TRACK CLUB\n\nANYONE INTERESTED IN PARTICIPATING IN EITHER OUR INDOOR TRACK TEAM OR OUR SPRING TRACK TEAM NEXT SEMESTER, PLEASE COMPLETE THE FOLLOWING FORM AND RETURN IT BY NEXT WEEK TO:\n\nAL ALONSO\nPHYS. ED. DEPT.\n\nNAME / CLASS / BOX # / DORM RM / EXT / HIGH SCHOOL / HOME PH / EVENTS/BEST PERFORMANCE / INDOOR OR SPRING OR BOTH (CIRCLE ONE)",
+    "summary": "A sign-up flyer in The Stute recruits for both the indoor and spring track teams, run as a club through the Phys. Ed. Department by Al Alonso — confirming he'd added track to his cross country coaching duties by January 1994, still a year before the previously-known 1995 mention.",
+    "notability": "record",
+    "notability_note": "Pushes coaches.json's Al Alonso track-coaching start back to January 1994 at the latest (was previously only confirmed by 1995). Also notable that track is described as a 'Club' here, distinct from cross country's varsity status since 1981 — suggests track & field hadn't been elevated to varsity yet as of early 1994.",
+    "confidence_notes": "Found via full-text search of stevensarchives.contentdm.oclc.org (StevensNP01 item 16904, page 8 of compound object 16905), not the original Slides-deck pass. Source: https://stevensarchives.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmGetItemInfo/StevensNP01/16904/json. Shares a page with an unrelated sports editorial and basketball/squash/fencing recaps, omitted per scope; the sign-up form itself is reproduced as a fill-in template in the original, transcribed here as field labels rather than literal broken OCR line breaks."
   }
 ]

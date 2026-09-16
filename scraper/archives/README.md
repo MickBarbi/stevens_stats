@@ -1,9 +1,36 @@
 # Stevens archives extraction
 
 Working notes for pulling structured data out of the 7 Google Slides decks of
-scanned newspaper clippings (Stevens XC/T&F, pre-1920s–2000s). No API access
-for this, so it's a manual claude.ai workflow rather than a script — this
-directory just keeps the process consistent and the output somewhere durable.
+scanned newspaper clippings (Stevens XC/T&F, pre-1920s–2000s), plus a script
+for searching the source archive site directly. This directory keeps the
+process consistent and the output somewhere durable.
+
+## 0. Searching the source site directly (`search_cdm.py`)
+
+The archive site (stevensarchives.contentdm.oclc.org) is a CONTENTdm instance.
+It doesn't advertise an API on the page, but it has one — see the docstring
+in `search_cdm.py` for the endpoints. Every newspaper/magazine page was OCR'd
+at ingestion, so this script can search by keyword (optionally with a date
+range) and pull back the exact page text and a link, instead of clicking
+through the site's viewer page by page.
+
+```sh
+python search_cdm.py "al alonso" --start-date 1980 --end-date 1985
+python search_cdm.py gingrich --no-fulltext   # fast: just list matching issues
+```
+
+Use this to verify/extend an existing `coaches.json` / `alumni.json` entry,
+or to check something before typing it in by hand. It only covers the Stute
+and Indicator collections (both catalogued 1904/1884–2000, same as the Slides
+decks below) — nothing here helps for the post-2000 coaching timeline, which
+was filled in from personal knowledge / outside sources instead.
+
+It already turned up more than the existing Slides-deck pass caught in a spot
+check: `coaches.json`'s Gingrich entry cites two clippings, both fall 1929
+("Needs more research"); a `search_cdm.py gingrich` search found 9 mentions
+from Feb 1928 through Nov 1929, including his department (Language) and that
+he ran cross country at Penn before coaching it here — pushing his likely
+start back a full year earlier than what's currently recorded.
 
 ## 1. Export each deck
 
